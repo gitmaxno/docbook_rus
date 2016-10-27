@@ -1,0 +1,49 @@
+
+***** area (db.area.inareaset) *****
+area — A region defined for a Callout in a graphic or code example.
+***** Synopsis *****
+    * alt?
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * coords
+    * label
+    * Exactly one of:
+          o units (enumeration)
+                # “calspair”
+                # “linecolumn”
+                # “linecolumnpair”
+                # “linerange”
+          o Each of:
+                # units (enumeration)
+                      # “other”
+                # otherunits (NMTOKEN)
+Required attributes are shown in bold.
+***** Description *****
+An area in an areaset has an optional xml:id. In every other respect, it is the same as an area in an areaspec.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  coords
+      Provides the coordinates of the area. The coordinates must be interpreted using the units specified.
+  label
+      Specifies an identifying number or string that may be used in presentation. The area label might be drawn on top of the figure, for example, at the position indicated by the coords attribute.
+  otherunits
+      Identifies the units used in the coords attribute when the units attribute is “other” . This attribute is forbidden otherwise.
+  units
+      Identifies the units used in the coords attribute The default units vary according to the type of callout specified: calspair for graphics and linecolumn for line-oriented elements.
+      Enumerated values:
+      “calspair”   Coordinates expressed as a pair of CALS graphic coordinates.
+      “linecolumn” Coordinates expressed as a line and column.
+      “linecolumnpairCoordinates expressed as a pair of lines and columns.
+      “linerange”  Coordinates expressed as a line range.
+  units
+      Indicates that non-standard units are used for this area . In this case otherunits must be specified.
+      Enumerated values:
+      “otherCoordinates expressed in some non-standard units.
+**** Parents ****
+These elements contain area: areaset.
+**** Children ****
+The following elements occur in area: alt.
+***** See Also *****
+area (db.area)
+area (db.area)  [Up]   areaset

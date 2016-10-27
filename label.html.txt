@@ -1,0 +1,49 @@
+
+***** label *****
+label — A label on a Question or Answer.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The label of a question or answer identifies the label that is to be used when formatting the question or answer.
+**** Processing expectations ****
+The label element is used as the label for the question or answer. A processing application might, for example, format the label as a heading preceding the question or answer contents, or it might format it as a run-in heading in the first paragraph of the question or answer.
+**** Parents ****
+These elements contain label: answer, question.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in label: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** Examples *****
+See qandaset for an example that uses this element.
+keywordset  [Up]   legalnotice

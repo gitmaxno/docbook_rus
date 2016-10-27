@@ -1,0 +1,25 @@
+
+****** Part III. Appendixes ******
+Table of Contents
+    * A._Installation
+          o 1._Installing_DocBook
+                # 1.1._Installing_the_DocBook_Schemas
+                # 1.2._XML_Catalogs_and_DocBook
+                # 1.3._Installing_the_DocBook_Stylesheets
+    * B._DocBook_Variants_and_Future_Directions
+          o 1._DocBook_Variants
+          o 2._Future_Directions
+                # 2.1._DocBook_Assembly_Mechanism
+    * C._Resources
+          o 1._Latest_Versions_of_DocBook_Schemas
+          o 2._DocBook_and_XML_Resources_on_the_Web
+          o 3._Introductory_Material_on_the_Web
+          o 4._References_and_Technical_Notes_on_the_Web
+          o 5._World_Wide_Web_Consortium_(W3C)_Recommendations
+          o 6._Related_Standards
+          o 7._Internet_RFCs
+          o 8._Books_and_Printed_Resources
+          o 9._XML_Tools
+    * D._Interchanging_DocBook_Documents
+    * E._GNU_Free_Documentation_License
+svg:*   [Up]   Installation

@@ -1,0 +1,75 @@
+
+***** imageobjectco *****
+imageobjectco — A wrapper for an image object with callouts.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o areaspec
+          o One or more of:
+                # imageobject
+          o Zero or more of:
+                # calloutlist
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The use of callouts, such as numbered bullets, provides an annotation mechanism. In an online system, these bullets are frequently “hot” and clicking on them navigates to the corresponding annotation.
+An imageobjectco is a wrapper around an areaspec and a set of alternative imageobjects. More than one imageobject may be provided (just as more than one media object may occur inside mediaobject), but they must share exactly the same callout coordinates and exactly one must be selected by the processing system. (Use multiple imageobjectco elements inside a mediaobject to provide alternatives with different callout coordinates.)
+An areaspec identifies the locations (coordinates) on the image where the callouts occur. The imageobjectco may also contain the list of annotations in a calloutlist, although the calloutlist may also occur outside the wrapper, elsewhere in the document.
+**** Processing expectations ****
+Formatted as a displayed block. It may not be rendered at all, depending on its placement within the mediaobject that contains it and the constraints on the publishing system. For a more detailed description of the semantics involved, see mediaobject.
+The mandatory processing expectations of an imageobjectco are minimal: a processor is expected to render the image, if possible, and the calloutlist, if present. If more than one imageobject is present, exactly one must be selected. A processor should select the first object that it can, although it is free to choose any of the objects according to implementation-dependent mechanisms.
+In online environments, the processing system may be able to instantiate the linking relationships between the callout marks on the image and the annotations. For example, an HTML presentation system might use the coordinate information to construct a client-side image map. Some processing systems may even be able to go a step further and generate the callout marks automatically from the coordinate information. But this level of sophistication is not mandatory.
+**** Parents ****
+These elements contain imageobjectco: inlinemediaobject, mediaobject.
+**** Children ****
+The following elements occur in imageobjectco: areaspec, calloutlist, imageobject, info (db.titleforbidden.info).
+***** See Also *****
+areaspec, calloutlist, co, coref, programlistingco, screenco
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'
+  2
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Example mediaobject</title>
+  4
+    <para>The former Sun Microsystems offices in Burlington, MA were located
+  6 on Network Drive, just off Route 3. I have no idea if they're now Oracle
+    offices or not.</para>
+  8
+    <mediaobject>
+ 10 <imageobjectco>
+    <areaspec units="calspair">
+ 12   <area xml:id="sunoffice" coords="5500,5627 5940,4984"
+
+xlink:href="http://www.oracle.com/"/>
+ 14   <areaset xml:id="rt3"
+
+   xlink:href="http://www.smartraveler.com/scripts/bostraffic.asp?index=5&amp;city=bos&amp;cityname=Boston">
+ 16     <area coords="1880,9968 2560,8875"/>
+        <area coords="2134,9421 2814,8328"/>
+ 18     <area coords="2388,8875 3068,7781"/>
+        <area coords="2642,8328 3322,7235"/>
+ 20     <area coords="2897,7781 3577,6688"/>
+        <area coords="3151,7235 3831,6141"/>
+ 22     <area coords="3405,6688 4085,5595"/>
+        <area coords="3659,6141 4339,5048"/>
+ 24     <area coords="3913,5595 4593,4502"/>
+        <area coords="4167,5048 4847,3955"/>
+ 26     <area coords="4421,4502 5101,3408"/>
+        <area coords="4676,3955 5356,2862"/>
+ 28     <area coords="4930,3408 5610,2315"/>
+        <area coords="5184,2862 5864,1768"/>
+ 30     <area coords="5438,2315 6118,1222"/>
+        <area coords="5692,1768 6372, 675"/>
+ 32     <area coords="5946,1222 6626, 129"/>
+      </areaset>
+ 34 </areaspec>
+    <imageobject>
+ 36 <imagedata fileref="figs/web/officemap.png"/>
+    </imageobject>
+ 38 </imageobjectco>
+    </mediaobject>
+ 40
+    </article>
+The former Sun Microsystems offices in Burlington, MA were located on Network Drive, just off Route 3. I have no idea if they're now Oracle offices or not.
+[figs/web/officemap.png]
+imageobject  [Up]   important

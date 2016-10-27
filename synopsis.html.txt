@@ -1,0 +1,304 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** synopsis *****
+synopsisÂ â€”Â A general-purpose element for representing the syntax of commands or functions.
+***** Synopsis *****
+    * Sequence of:
+          o info?Â (db.titleforbidden.info)
+          o One of:
+                # Zero or more of:
+                      # text
+                      # lineannotation
+                      # BibliographyÂ inlinesÂ [[+]]Â [[-]]
+                            * author
+                            * citation
+                            * citebiblioid
+                            * citerefentry
+                            * citetitle
+                            * editor
+                            * jobtitle
+                            * org
+                            * orgname
+                            * person
+                            * personname
+                      # Computer-outputÂ inlinesÂ [[+]]Â [[-]]
+                            * alt
+                            * anchor
+                            * annotation
+                            * biblioref
+                            * co
+                            * code
+                            * command
+                            * computeroutput
+                            * constant
+                            * email
+                            * envar
+                            * filename
+                            * indextermÂ (db.indexterm.endofrange)
+                            * indextermÂ (db.indexterm.singular)
+                            * indextermÂ (db.indexterm.startofrange)
+                            * inlinemediaobject
+                            * link
+                            * literal
+                            * markup
+                            * nonterminal
+                            * olink
+                            * option
+                            * optional
+                            * package
+                            * parameter
+                            * prompt
+                            * property
+                            * remark
+                            * replaceable
+                            * subscript
+                            * superscript
+                            * symbol
+                            * systemitem
+                            * tag
+                            * termdef
+                            * token
+                            * uri
+                            * userinput
+                            * xref
+                      # ErrorÂ inlinesÂ [[+]]Â [[-]]
+                            * errorcode
+                            * errorname
+                            * errortext
+                            * errortype
+                      # GraphicÂ inlinesÂ [[+]]Â [[-]]
+                            * inlinemediaobject
+                      # GUIÂ inlinesÂ [[+]]Â [[-]]
+                            * guibutton
+                            * guiicon
+                            * guilabel
+                            * guimenu
+                            * guimenuitem
+                            * guisubmenu
+                            * menuchoice
+                            * mousebutton
+                      # IndexingÂ inlinesÂ [[+]]Â [[-]]
+                            * indextermÂ (db.indexterm.endofrange)
+                            * indextermÂ (db.indexterm.singular)
+                            * indextermÂ (db.indexterm.startofrange)
+                      # KeyboardÂ inlinesÂ [[+]]Â [[-]]
+                            * accel
+                            * keycap
+                            * keycode
+                            * keycombo
+                            * keysym
+                            * shortcut
+                      # LinkingÂ inlinesÂ [[+]]Â [[-]]
+                            * anchor
+                            * biblioref
+                            * link
+                            * olink
+                            * xref
+                      # MarkupÂ inlinesÂ [[+]]Â [[-]]
+                            * code
+                            * constant
+                            * email
+                            * literal
+                            * markup
+                            * symbol
+                            * tag
+                            * token
+                            * uri
+                      # MathÂ inlinesÂ [[+]]Â [[-]]
+                            * inlineequation
+                      # Object-orientedÂ programmingÂ inlinesÂ [[+]]Â [[-]]
+                            * ooclass
+                            * ooexception
+                            * oointerface
+                      # OperatingÂ systemÂ inlinesÂ [[+]]Â [[-]]
+                            * command
+                            * computeroutput
+                            * envar
+                            * filename
+                            * prompt
+                            * userinput
+                      # ProductÂ inlinesÂ [[+]]Â [[-]]
+                            * application
+                            * database
+                            * hardware
+                            * productname
+                            * productnumber
+                            * trademark
+                      # ProgrammingÂ inlinesÂ [[+]]Â [[-]]
+                            * classname
+                            * exceptionname
+                            * function
+                            * initializer
+                            * interfacename
+                            * methodname
+                            * modifier
+                            * ooclass
+                            * ooexception
+                            * oointerface
+                            * parameter
+                            * returnvalue
+                            * type
+                            * varname
+                      # PublishingÂ inlinesÂ [[+]]Â [[-]]
+                            * abbrev
+                            * acronym
+                            * coref
+                            * date
+                            * emphasisÂ (db.emphasis)
+                            * firstterm
+                            * footnote
+                            * footnoteref
+                            * foreignphrase
+                            * glossterm
+                            * phraseÂ (db.phrase)
+                            * quote
+                            * subscript
+                            * superscript
+                            * wordasword
+                      # TechnicalÂ inlinesÂ [[+]]Â [[-]]
+                            * nonterminal
+                            * option
+                            * optional
+                            * package
+                            * parameter
+                            * property
+                            * replaceable
+                            * systemitem
+                            * termdef
+                      # UbiquitousÂ inlinesÂ [[+]]Â [[-]]
+                            * alt
+                            * anchor
+                            * annotation
+                            * biblioref
+                            * indextermÂ (db.indexterm.endofrange)
+                            * indextermÂ (db.indexterm.singular)
+                            * indextermÂ (db.indexterm.startofrange)
+                            * inlinemediaobject
+                            * link
+                            * olink
+                            * remark
+                            * subscript
+                            * superscript
+                            * xref
+                      # User-inputÂ inlinesÂ [[+]]Â [[-]]
+                            * accel
+                            * alt
+                            * anchor
+                            * annotation
+                            * biblioref
+                            * co
+                            * code
+                            * command
+                            * computeroutput
+                            * constant
+                            * email
+                            * envar
+                            * filename
+                            * guibutton
+                            * guiicon
+                            * guilabel
+                            * guimenu
+                            * guimenuitem
+                            * guisubmenu
+                            * indextermÂ (db.indexterm.endofrange)
+                            * indextermÂ (db.indexterm.singular)
+                            * indextermÂ (db.indexterm.startofrange)
+                            * inlinemediaobject
+                            * keycap
+                            * keycode
+                            * keycombo
+                            * keysym
+                            * link
+                            * literal
+                            * markup
+                            * menuchoice
+                            * mousebutton
+                            * nonterminal
+                            * olink
+                            * option
+                            * optional
+                            * package
+                            * parameter
+                            * prompt
+                            * property
+                            * remark
+                            * replaceable
+                            * shortcut
+                            * subscript
+                            * superscript
+                            * symbol
+                            * systemitem
+                            * tag
+                            * termdef
+                            * token
+                            * uri
+                            * userinput
+                            * xref
+                # textobject
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * continuation (enumeration)
+          o â€œcontinuesâ€
+          o â€œrestartsâ€
+    * linenumbering (enumeration)
+          o â€œnumberedâ€
+          o â€œunnumberedâ€
+    * startinglinenumber (integer)
+    * language
+    * xml:space (enumeration)
+          o â€œpreserveâ€
+    * label
+***** Description *****
+A synopsis is a verbatim environment for displaying command, function, and other syntax summaries.
+Unlike cmdsynopsis and funcsynopsis which have a complex interior structure, synopsis is simply a verbatim environment.
+**** Processing expectations ****
+This element is displayed â€œverbatimâ€; whitespace and line breaks within this element are significant. A synopsis element is usually displayed in a fixed-width font.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  continuation
+      Determines whether line numbering continues from the previous element or restarts.
+      Enumerated values:
+      â€œcontinuesLine numbering continues from the immediately preceding element with the same name.
+      â€œrestartsâLine numbering restarts (begins at 1, usually).
+  label
+      Specifies an identifying string for presentation purposes
+  language
+      Identifies the language (i.e. programming language) of the verbatim content.
+  linenumbering
+      Determines whether lines are numbered.
+      Enumerated values:
+      â€œnumberedâ€Lines are numbered.
+      â€œunnumberedLines are not numbered.
+  startinglinenumber
+      Specifies the initial line number.
+  xml:space
+      Can be used to indicate explicitly that whitespace in the verbatim environment is preserved. Whitespace must always be preserved in verbatim environments whether this attribute is specified or not.
+      Enumerated values:
+      â€œpreserveWhitespace must be preserved.
+*** ParentsÂ [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain synopsis: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, captionÂ (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 104_elements.
+The following elements occur in synopsis: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, co, code, command, computeroutput, constant, coref, database, date, editor, email, emphasisÂ (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), infoÂ (db.titleforbidden.info), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, lineannotation, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phraseÂ (db.phrase),
+productname, productnumber, prompt, property, quote, remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, textobject, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+cmdsynopsis, computeroutput, funcsynopsis, lineannotation, literallayout, programlisting, screen, screenshot, userinput
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example synopsis</title>
+
+  4 <synopsis>chgrp [-R [-H | -L | -P]] [-f] group file...</synopsis>
+
+  6 </article>
+chgrp [-R [-H | -L | -P]] [-f] group file...
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example synopsis</title>
+
+  4 <synopsis>int max(int int1, int int2);</synopsis>
+
+  6 </article>
+int max(int int1, int int2);
+[Prev]Â           [Home]     Â [Next]
+synopfragmentrefÂ  [Up]  Â systemitem

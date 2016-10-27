@@ -1,0 +1,143 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** itemizedlist *****
+itemizedlistÂ â€”Â A list in which each entry is marked with a bullet or other dingbat.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info?Â (db.titleforbidden.info)
+                # infoÂ (db.titleonly.info)
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # IndexingÂ inlinesÂ [[+]]Â [[-]]
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                # AdmonitionÂ elementsÂ [[+]]Â [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # FormalÂ elementsÂ [[+]]Â [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * tableÂ (db.cals.table)
+                      * tableÂ (db.html.table)
+                # GraphicÂ elementsÂ [[+]]Â [[-]]
+                      * mediaobject
+                      * screenshot
+                # InformalÂ elementsÂ [[+]]Â [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltableÂ (db.cals.informaltable)
+                      * informaltableÂ (db.html.informaltable)
+                # ListÂ elementsÂ [[+]]Â [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # ParagraphÂ elementsÂ [[+]]Â [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # PublishingÂ elementsÂ [[+]]Â [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # SynopsisÂ elementsÂ [[+]]Â [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # TechnicalÂ elementsÂ [[+]]Â [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # VerbatimÂ elementsÂ [[+]]Â [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o One or more of:
+                # listitem
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * mark (NMTOKEN)
+    * spacing (enumeration)
+          o â€œcompactâ€
+          o â€œnormalâ€
+***** Description *****
+In an itemizedlist, each member of the list is marked with a bullet, dash, or other symbol.
+**** Processing expectations ****
+Formatted as a displayed block.
+DocBook specifies neither the initial mark nor the sequence of marks to be used in nested lists. If explicit control is desired, the mark attribute should be used. The values of the mark attribute are expected to be keywords, not representations (numerical character references, entities, etc.) of the actual mark.
+DocBook does not specify a set of appropriate keywords.
+In order to enforce a standard set of marks at your organization, it may be useful to construct a customization layer that limits the values of the mark attribute to an enumerated list. See ChapterÂ 5,_Customizing_DocBook.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  mark
+      Identifies the type of mark to be used on items in this list
+  spacing
+      Specifies (a hint about) the spacing of the content
+      Enumerated values:
+      â€œcompactThe spacing should be "compact".
+      â€œnormalâThe spacing should be "normal".
+*** ParentsÂ [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain itemizedlist: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, captionÂ (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 64_elements.
+The following elements occur in itemizedlist: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable), itemizedlist, listitem, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, tableÂ (db.cals.table), tableÂ (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+***** See Also *****
+calloutlist, listitem, orderedlist, segmentedlist, simplelist, variablelist
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example itemizedlist</title>
+
+  4 <itemizedlist mark='opencircle'>
+      <listitem>
+  6     <para>TeX and LaTeX
+        </para>
+  8   </listitem>
+      <listitem override='bullet'>
+ 10     <para>Troff
+        </para>
+ 12   </listitem>
+      <listitem>
+ 14     <para>Lout
+        </para>
+ 16   </listitem>
+    </itemizedlist>
+ 18
+    </article>
+    * TeX and LaTeX
+    * Troff
+    * Lout
+[Prev]Â   [Home]   Â [Next]
+issuenumÂ  [Up]  Â itermset

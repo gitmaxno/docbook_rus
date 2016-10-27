@@ -1,0 +1,318 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** th *****
+thÂ â€”Â A table header entry in an HTML table.
+***** Synopsis *****
+    * One of:
+          o Zero or more of:
+                # text
+                # BibliographyÂ inlinesÂ [[+]]Â [[-]]
+                      * author
+                      * citation
+                      * citebiblioid
+                      * citerefentry
+                      * citetitle
+                      * editor
+                      * jobtitle
+                      * org
+                      * orgname
+                      * person
+                      * personname
+                # ErrorÂ inlinesÂ [[+]]Â [[-]]
+                      * errorcode
+                      * errorname
+                      * errortext
+                      * errortype
+                # GraphicÂ inlinesÂ [[+]]Â [[-]]
+                      * inlinemediaobject
+                # GUIÂ inlinesÂ [[+]]Â [[-]]
+                      * guibutton
+                      * guiicon
+                      * guilabel
+                      * guimenu
+                      * guimenuitem
+                      * guisubmenu
+                      * menuchoice
+                      * mousebutton
+                # IndexingÂ inlinesÂ [[+]]Â [[-]]
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                # KeyboardÂ inlinesÂ [[+]]Â [[-]]
+                      * accel
+                      * keycap
+                      * keycode
+                      * keycombo
+                      * keysym
+                      * shortcut
+                # LinkingÂ inlinesÂ [[+]]Â [[-]]
+                      * anchor
+                      * biblioref
+                      * link
+                      * olink
+                      * xref
+                # MarkupÂ inlinesÂ [[+]]Â [[-]]
+                      * code
+                      * constant
+                      * email
+                      * literal
+                      * markup
+                      * symbol
+                      * tag
+                      * token
+                      * uri
+                # MathÂ inlinesÂ [[+]]Â [[-]]
+                      * inlineequation
+                # Object-orientedÂ programmingÂ inlinesÂ [[+]]Â [[-]]
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                # OperatingÂ systemÂ inlinesÂ [[+]]Â [[-]]
+                      * command
+                      * computeroutput
+                      * envar
+                      * filename
+                      * prompt
+                      * userinput
+                # ProductÂ inlinesÂ [[+]]Â [[-]]
+                      * application
+                      * database
+                      * hardware
+                      * productname
+                      * productnumber
+                      * trademark
+                # ProgrammingÂ inlinesÂ [[+]]Â [[-]]
+                      * classname
+                      * exceptionname
+                      * function
+                      * initializer
+                      * interfacename
+                      * methodname
+                      * modifier
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                      * parameter
+                      * returnvalue
+                      * type
+                      * varname
+                # PublishingÂ inlinesÂ [[+]]Â [[-]]
+                      * abbrev
+                      * acronym
+                      * coref
+                      * date
+                      * emphasisÂ (db.emphasis)
+                      * firstterm
+                      * footnote
+                      * footnoteref
+                      * foreignphrase
+                      * glossterm
+                      * phraseÂ (db.phrase)
+                      * quote
+                      * subscript
+                      * superscript
+                      * wordasword
+                # TechnicalÂ inlinesÂ [[+]]Â [[-]]
+                      * nonterminal
+                      * option
+                      * optional
+                      * package
+                      * parameter
+                      * property
+                      * replaceable
+                      * systemitem
+                      * termdef
+                # UbiquitousÂ inlinesÂ [[+]]Â [[-]]
+                      * alt
+                      * anchor
+                      * annotation
+                      * biblioref
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                      * inlinemediaobject
+                      * link
+                      * olink
+                      * remark
+                      * subscript
+                      * superscript
+                      * xref
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # IndexingÂ inlinesÂ [[+]]Â [[-]]
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                # AdmonitionÂ elementsÂ [[+]]Â [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # FormalÂ elementsÂ [[+]]Â [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * tableÂ (db.cals.table)
+                      * tableÂ (db.html.table)
+                # GraphicÂ elementsÂ [[+]]Â [[-]]
+                      * mediaobject
+                      * screenshot
+                # InformalÂ elementsÂ [[+]]Â [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltableÂ (db.cals.informaltable)
+                      * informaltableÂ (db.html.informaltable)
+                # ListÂ elementsÂ [[+]]Â [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # ParagraphÂ elementsÂ [[+]]Â [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # PublishingÂ elementsÂ [[+]]Â [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # SynopsisÂ elementsÂ [[+]]Â [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # TechnicalÂ elementsÂ [[+]]Â [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # VerbatimÂ elementsÂ [[+]]Â [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Attributes:
+    * abbr
+    * axis
+    * headers
+    * scope (enumeration)
+          o â€œrowâ€
+          o â€œcolâ€
+          o â€œrowgroupâ€
+          o â€œcolgroupâ€
+    * rowspan (nonNegativeInteger)
+    * colspan (nonNegativeInteger)
+    * align (enumeration)
+          o â€œleftâ€
+          o â€œcenterâ€
+          o â€œrightâ€
+          o â€œjustifyâ€
+          o â€œcharâ€
+    * char
+    * charoff (enumeration)
+          o xsd:integer
+          o xsd:string (Pattern: â€œ[0-9]+%â€)
+    * valign (enumeration)
+          o â€œtopâ€
+          o â€œmiddleâ€
+          o â€œbottomâ€
+          o â€œbaselineâ€
+***** Description *****
+Identifies a â€œheadâ€ entry in an HTML table.
+**** Processing expectations ****
+This element is expected to obey the semantics described in Tables, as specified in XHTML 1.0 [XHTML].
+**** Attributes ****
+  abbr
+      Provides an abbreviated form of the cell's content and may be rendered by user agents when appropriate in place of the cell's content. Abbreviated names should be short since user agents may render them repeatedly. For instance, speech synthesizers may render the abbreviated headers relating to a particular cell before rendering that cell's content.
+  align
+      Specifies the alignment of data and the justification of text in a cell.
+      Enumerated values:
+      â€œleftâ€Left-flush data/Left-justify text. This is the default value for table data.
+      â€œcenterâCenter data/Center-justify text. This is the default value for table headers.
+      â€œrightâ€Right-flush data/Right-justify text.
+      â€œjustifyDouble-justify text.
+      â€œcharâ€Align text around a specific character. If a user agent doesn't support character alignment, behavior in the presence of this value is unspecified.
+  axis
+      This attribute may be used to place a cell into conceptual categories that can be considered to form axes in an n-dimensional space. User agents may give users access to these categories (e.g., the user may query the user agent for all cells that belong to certain categories, the user agent may present a table in the form of a table of contents, etc.). Please consult an HTML reference for more details.
+  char
+      This attribute specifies a single character within a text fragment to act as an axis for alignment. The default value for this attribute is the decimal point character for the current language as set by the lang attribute (e.g., the period in English and the comma in French). User agents are not required to support this attribute.
+  charoff
+      When present, this attribute specifies the offset to the first occurrence of the alignment character on each line. If a line doesn't include the alignment character, it should be horizontally shifted to end at the alignment position. When charoff is used to set the offset of an alignment character, the direction of offset is determined by the current text direction (set by the dir attribute). In left-to-right texts (the default), offset is from the left margin. In right-to-left texts, offset is from the right margin. User agents are not required to support this attribute.
+      Enumerated values:
+      xsd:integer                     An explicit offset.
+      xsd:string (Pattern: â€œ[0-9]+%âA percentage offset.
+  class
+      This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
+  colspan
+      Specifies the number of columns spanned by the current cell. The default value of this attribute is one (â€œ1â€ ). The value zero (â€œ0â€ ) means that the cell spans all columns from the current column to the last column of the column group (colgroup ) in which the cell is defined.
+  headers
+      Specifies the list of header cells that provide header information for the current data cell. The value of this attribute is a space-separated list of cell names; those cells must be named by setting their id attribute. Authors generally use the headers attribute to help non-visual user agents render header information about data cells (e.g., header information is spoken prior to the cell data), but the attribute may also be used in conjunction with style sheets.
+  lang
+      This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
+  onclick
+      Occurs when the pointing device button is clicked over an element.
+  ondblclick
+      Occurs when the pointing device button is double clicked over an element.
+  onkeydown
+      Occurs when a key is pressed down over an element.
+  onkeypress
+      Occurs when a key is pressed and released over an element.
+  onkeyup
+      Occurs when a key is released over an element.
+  onmousedown
+      Occurs when the pointing device button is pressed over an element.
+  onmousemove
+      Occurs when the pointing device is moved while it is over an element.
+  onmouseout
+      Occurs when the pointing device is moved away from an element.
+  onmouseover
+      Occurs when the pointing device is moved onto an element.
+  onmouseup
+      Occurs when the pointing device button is released over an element.
+  rowspan
+      Specifies the number of rows spanned by the current cell. The default value of this attribute is one (â€œ1â€ ). The value zero (â€œ0â€ ) means that the cell spans all rows from the current row to the last row of the table section (thead , tbody , or tfoot ) in which the cell is defined.
+  scope
+      Specifies the set of data cells for which the current header cell provides header information. This attribute may be used in place of the headers attribute, particularly for simple tables.
+      Enumerated values:
+      â€œrowâ€  The current cell provides header information for the rest of the row that contains it
+      â€œcolâ€  The current cell provides header information for the rest of the column that contains it.
+      â€œrowgroupThe header cell provides header information for the rest of the row group that contains it.
+      â€œcolgroupThe header cell provides header information for the rest of the column group that contains it.
+  style
+      This attribute specifies style information for the current element.
+  title
+      This attribute offers advisory information about the element for which it is set.
+  valign
+      Specifies the vertical position of data within a cell.
+      Enumerated values:
+      â€œtopâ€  Cell data is flush with the top of the cell.
+      â€œmiddleâ€Cell data is centered vertically within the cell. This is the default value.
+      â€œbottomâ€Cell data is flush with the bottom of the cell.
+      â€œbaselineAll cells in the same row as a cell whose valign attribute has this value should have their textual data positioned so that the first text line occurs on a baseline common to all cells in the row. This constraint does not apply to subsequent text lines in these cells.
+**** Parents ****
+These elements contain th: tr.
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 153_elements.
+The following elements occur in th: text, abbrev, accel, acronym, address, alt, anchor, annotation, application, author, bibliolist, biblioref, blockquote, bridgehead, calloutlist, caution, citation, citebiblioid, citerefentry, citetitle, classname, classsynopsis, cmdsynopsis, code, command, computeroutput, constant, constraintdef, constructorsynopsis, coref, database, date, destructorsynopsis, editor, email, emphasisÂ (db.emphasis), envar, epigraph, equation, errorcode, errorname, errortext, errortype, example, exceptionname, fieldsynopsis, figure, filename, firstterm, footnote, footnoteref, foreignphrase, formalpara, funcsynopsis, function, glosslist, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, important, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable),
+initializer, inlineequation, inlinemediaobject, interfacename, itemizedlist, jobtitle, keycap, keycode, keycombo, keysym, link, literal, literallayout, markup, mediaobject, menuchoice, methodname, methodsynopsis, modifier, mousebutton, msgset, nonterminal, note, olink, ooclass, ooexception, oointerface, option, optional, orderedlist, org, orgname, package, para, parameter, person, personname, phraseÂ (db.phrase), procedure, productionset, productname, productnumber, programlisting, programlistingco, prompt, property, qandaset, quote, remark, replaceable, returnvalue, revhistory, screen, screenco, screenshot, segmentedlist, shortcut, sidebar, simpara, simplelist, subscript, superscript, symbol, synopsis, systemitem, tableÂ (db.cals.table), tableÂ (db.html.table), tag, task, termdef, tip, token, trademark, type, uri, userinput, variablelist, varname, warning, wordasword, xref.
+[Prev]Â [Home]                         Â [Next]
+tgroupÂ  [Up]  Â thead (db.cals.entrytbl.thead)

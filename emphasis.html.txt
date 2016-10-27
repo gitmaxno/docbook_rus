@@ -1,0 +1,165 @@
+
+***** emphasis (db.emphasis) *****
+emphasis — Emphasized text.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An emphasis element indicates that certain text should be stressed in some way. This pattern defines the emphasis element with a very limited content model.
+**** Processing expectations ****
+Formatted inline. Emphasized text is traditionally presented in italics or boldface. A role attribute of bold or strong is often used to generate boldface, if italics is the default presentation.
+An emphasis is often used wherever its typographic presentation is desired, even when other markup might theoretically be more appropriate.
+*** Parents [[+]][[+]] ***
+This element occurs in 54_elements.
+These elements contain emphasis: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in emphasis: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property, quote,
+remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+abbrev, acronym, emphasis (db._emphasis), foreignphrase, phrase, quote, wordasword
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example emphasis</title>
+
+  4 <para>The <emphasis>most</emphasis> important example of this
+    phenomenon occurs in A. Nonymous's book
+  6 <citetitle>Power Snacking</citetitle>.
+    </para>
+  8
+    </article>
+The most important example of this phenomenon occurs in A. Nonymous's book Power Snacking.
+email   [Up]   emphasis (db._emphasis)

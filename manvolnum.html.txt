@@ -1,0 +1,62 @@
+
+***** manvolnum *****
+manvolnum — A reference volume number.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+In a DocBook reference page, the manvolnum holds the number of the volume in which the refentry belongs.
+The notion of a volume number is historical. UNIX manual pages (“man pages”), for which refentry was devised, were typically stored in three-ring binders. Each bound manual was a volume in a set and contained information about a particular class of things. For example, volume 1 was for user commands, and volume 8 was for administrator commands.
+Volume numbers need not be strictly numerical; volume “l” frequently held manual pages for local additions to the system, and the X Window System manual pages had an “x” in the volume number: for example, 1x.
+**** Processing expectations ****
+The content of manvolnum is usually printed in parentheses after the element title or citation.
+**** Parents ****
+These elements contain manvolnum: citerefentry, refmeta.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in manvolnum: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example manvolnum</title>
+
+  4 <para>For a further description of print formats, consult the
+    <citerefentry><refentrytitle>printf</refentrytitle>
+  6 <manvolnum>3S</manvolnum></citerefentry> manual page.
+    </para>
+  8
+    </article>
+For a further description of print formats, consult the printf
+<manvolnum>3S</manvolnum>
+manual page.
+locator  [Up]   markup

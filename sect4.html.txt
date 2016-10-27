@@ -1,0 +1,133 @@
+
+***** sect4 *****
+sect4 — A subsection within a Sect3.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o One of:
+                # Sequence of:
+                      # One or more of:
+                            # annotation
+                            # bridgehead
+                            # remark
+                            # revhistory
+                            # Indexing inlines [[+]] [[-]]
+                                  * indexterm (db.indexterm.endofrange)
+                                  * indexterm (db.indexterm.singular)
+                                  * indexterm (db.indexterm.startofrange)
+                            # Admonition elements [[+]] [[-]]
+                                  * caution
+                                  * important
+                                  * note
+                                  * tip
+                                  * warning
+                            # Formal elements [[+]] [[-]]
+                                  * equation
+                                  * example
+                                  * figure
+                                  * table (db.cals.table)
+                                  * table (db.html.table)
+                            # Graphic elements [[+]] [[-]]
+                                  * mediaobject
+                                  * screenshot
+                            # Informal elements [[+]] [[-]]
+                                  * informalequation
+                                  * informalexample
+                                  * informalfigure
+                                  * informaltable (db.cals.informaltable)
+                                  * informaltable (db.html.informaltable)
+                            # List elements [[+]] [[-]]
+                                  * bibliolist
+                                  * calloutlist
+                                  * glosslist
+                                  * itemizedlist
+                                  * orderedlist
+                                  * procedure
+                                  * qandaset
+                                  * segmentedlist
+                                  * simplelist
+                                  * variablelist
+                            # Paragraph elements [[+]] [[-]]
+                                  * anchor
+                                  * formalpara
+                                  * para
+                                  * simpara
+                            # Publishing elements [[+]] [[-]]
+                                  * address
+                                  * blockquote
+                                  * epigraph
+                                  * sidebar
+                            # Synopsis elements [[+]] [[-]]
+                                  * classsynopsis
+                                  * cmdsynopsis
+                                  * constructorsynopsis
+                                  * destructorsynopsis
+                                  * fieldsynopsis
+                                  * funcsynopsis
+                                  * methodsynopsis
+                            # Technical elements [[+]] [[-]]
+                                  * constraintdef
+                                  * msgset
+                                  * procedure
+                                  * productionset
+                                  * task
+                            # Verbatim elements [[+]] [[-]]
+                                  * literallayout
+                                  * programlisting
+                                  * programlistingco
+                                  * screen
+                                  * screenco
+                                  * synopsis
+                      # Optionally one of:
+                            # Sequence of:
+                                  # One or more of:
+                                        # sect5
+                                  # Zero or more of:
+                                        # simplesect
+                            # One or more of:
+                                  # simplesect
+                # Sequence of:
+                      # One or more of:
+                            # sect5
+                      # Zero or more of:
+                            # simplesect
+                # One or more of:
+                      # simplesect
+          o Zero or more of:
+                # bibliography
+                # glossary
+                # index
+                # toc
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A sect4 is a fourth-level section in a document.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes sections are numbered.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain sect4: sect3.
+*** Children [[+]][[+]] ***
+This element contains 70_elements.
+The following elements occur in sect4: address, anchor, annotation, bibliography, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glossary, glosslist, important, index, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titlereq.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, sect5, segmentedlist, sidebar, simpara, simplelist, simplesect, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title,
+titleabbrev, toc, variablelist, warning.
+***** See Also *****
+bridgehead, sect1, sect2, sect3, sect5, section, simplesect
+sect3   [Up]    sect5

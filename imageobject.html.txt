@@ -1,0 +1,48 @@
+
+***** imageobject *****
+imageobject — A wrapper for image data and its associated meta-information.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One of:
+                # imagedata (db.imagedata)
+                # imagedata (db.imagedata.mathml)
+                # imagedata (db.imagedata.svg)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An imageobject is a wrapper containing imagedata and its associated meta-information.
+If the SVG Module is used, imageobject can also contain the svg:svg element.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. It might not be rendered at all, depending on its placement within a mediaobject or inlinemediaobject and the constraints on the publishing system. For a more detailed description of the semantics involved, see mediaobject.
+**** Parents ****
+These elements contain imageobject: imageobjectco, inlinemediaobject, mediaobject.
+**** Children ****
+The following elements occur in imageobject: imagedata (db.imagedata), imagedata (db.imagedata.mathml), imagedata (db.imagedata.svg), info (db.titleforbidden.info).
+***** See Also *****
+audioobject, caption, inlinemediaobject, mediaobject, textobject, videoobject
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example imageobject</title>
+
+  4 <mediaobject>
+      <imageobject condition="web">
+  6     <imagedata fileref="figs/web/db5d_ref09.png" format="PNG" scale="70"/>
+      </imageobject>
+  8   <imageobject condition="print">
+        <imagedata fileref="figs/print/db5d_ref09.pdf" format="PDF"/>
+ 10   </imageobject>
+      <textobject>
+ 12     <phrase>The Eiffel Tower</phrase>
+      </textobject>
+ 14   <caption>
+        <para>Designed by Gustave Eiffel in 1889, The Eiffel Tower is one
+ 16           of the most widely recognized buildings in the world.
+        </para>
+ 18   </caption>
+    </mediaobject>
+ 20
+    </article>
+[The Eiffel Tower]
+Designed by Gustave Eiffel in 1889, The Eiffel Tower is one of the most widely recognized buildings in the world.
+imagedata (db.imagedata.svg)  [Up]   imageobjectco

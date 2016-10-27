@@ -1,0 +1,20 @@
+
+***** varlistentry *****
+varlistentry — A wrapper for a set of terms and the associated description in a variable list.
+***** Synopsis *****
+    * Sequence of:
+          o One or more of:
+                # term
+          o listitem
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A varlistentry is an entry in a variablelist. Each varlistentry contains one or more terms and their description or definition.
+**** Processing expectations ****
+Formatted as a displayed block.
+A term is usually formatted to make it stand out with respect to the text that follows. The best presentation depends on several factors, including the number and length of the terms. See variablelist.
+**** Parents ****
+These elements contain varlistentry: variablelist.
+**** Children ****
+The following elements occur in varlistentry: listitem, term.
+variablelist  [Up]   varname

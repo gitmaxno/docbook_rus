@@ -1,0 +1,61 @@
+
+***** author *****
+author — The name of an individual author.
+***** Synopsis *****
+    * One of:
+          o Sequence of:
+                # personname
+                # Zero or more of:
+                      # address
+                      # affiliation
+                      # contrib
+                      # email
+                      # personblurb
+                      # uri
+          o Sequence of:
+                # orgname
+                # Zero or more of:
+                      # address
+                      # affiliation
+                      # contrib
+                      # email
+                      # orgdiv
+                      # uri
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The author element holds information about the author of a document. When inside one of the bibliographic elements, author refers to the author of the document described by that element. Otherwise, it refers to the author of the current document or document section.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+*** Parents [[+]][[+]] ***
+This element occurs in 61_elements.
+These elements contain author: authorgroup, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, revision, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in author: address, affiliation, contrib, email, orgdiv, orgname, personblurb, personname, uri.
+***** See Also *****
+authorgroup, collab, contrib, editor, othercredit, personblurb, personname
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example author</title>
+  4
+      <author>
+  6     <personname>
+          <honorific>Mr</honorific>
+  8       <firstname>Norman</firstname>
+          <surname>Walsh</surname>
+ 10       <othername role='mi'>D</othername>
+        </personname>
+ 12     <affiliation>
+          <shortaffil>ATI</shortaffil>
+ 14       <jobtitle>Senior Application Analyst</jobtitle>
+          <orgname>ArborText, Inc.</orgname>
+ 16       <orgdiv>Application Developement</orgdiv>
+        </affiliation>
+ 18   </author>
+    </info>
+ 20
+    <para>…</para>
+ 22
+    </article>
+audioobject  [Up]   authorgroup

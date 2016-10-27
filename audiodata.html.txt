@@ -1,0 +1,33 @@
+
+***** audiodata *****
+audiodata — Pointer to external audio data.
+***** Synopsis *****
+    * info? (db.titleforbidden.info)
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * Each of:
+          o format
+          o Exactly one of:
+                # fileref (anyURI)
+                # entityref (ENTITY)
+Required attributes are shown in bold.
+***** Description *****
+This empty element points to external audio data.
+**** Processing expectations ****
+There are two ways to provide content for audiodata: entityref or fileref. It is best to use only one of these methods. However, if multiple sources are provided, entityref will be used in favor of fileref.
+**** Attributes ****
+Common_attributes.
+  entityref
+      Identifies the location of the data by external identifier (entity name)
+  fileref
+      Indentifies the location of the data by URI
+  format
+      Specifies the format of the data
+**** Parents ****
+These elements contain audiodata: audioobject.
+**** Children ****
+The following elements occur in audiodata: info (db.titleforbidden.info).
+***** Examples *****
+See audioobject for an example.
+attribution  [Up]   audioobject

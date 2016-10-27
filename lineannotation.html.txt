@@ -1,0 +1,67 @@
+
+***** lineannotation *****
+lineannotation — A comment on a line in a verbatim listing.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A lineannotation is an author’s or editor’s comment on a line in one of the verbatim environments. These are annotations added by the documentor; they are not part of the original listing.
+**** Processing expectations ****
+Formatted inline. In verbatim environments like programlisting, which are often presented in a fixed-width font, they may get special typographic treatment, such as italics.
+If several lineannotations occur in the same listing, they may be aligned horizontally.
+**** Parents ****
+These elements contain lineannotation: classsynopsisinfo, funcsynopsisinfo, literallayout, programlisting, rhs, screen, synopsis.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in lineannotation: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+computeroutput, literallayout, programlisting, screen, screenshot, synopsis, userinput
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example lineannotation</title>
+
+  4 <screen>
+    &lt;entry>  <lineannotation>Error: No line break before block element</lineannotation>
+  6 &lt;para>
+    A paragraph of text.
+  8 &lt;/para>&lt;/entry>
+    </screen>
+ 10
+    </article>
+  1
+  2 <entry>  Error: No line break before block element
+    <para>
+  4 A paragraph of text.
+    </para></entry>
+lineage  [Up]     link

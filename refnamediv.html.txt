@@ -1,0 +1,31 @@
+
+***** refnamediv *****
+refnamediv — The name, purpose, and classification of a reference page.
+***** Synopsis *****
+    * Sequence of:
+          o refdescriptor?
+          o One or more of:
+                # refname
+          o refpurpose
+          o Zero or more of:
+                # refclass
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A refnamediv is the first mandatory section in a refentry. It is a peer to refsynopsisdiv and refsect1.
+The elements in refnamediv identify the topic of the reference page (refdescriptor or refname), provide a concise summary (refpurpose), and classify the page (refclass).
+**** Processing expectations ****
+Formatted as a displayed block. A refnamediv usually generates a section heading, in the same typographic style as a refsect1 title, called “Name.”
+The content of this section is traditionally the refdescriptor or refname, and the refpurpose, separated by an em dash.
+The refclass may be presented, or it may be suppressed and used only to select a group of reference pages to process. You might use the value of refclass to print all the reference pages appropriate to Solaris UNIX, for example.
+Formatting reference pages may require a fairly sophisticated processing system. Much of the meta-information about a reference page (its name, type, purpose, title, and classification) is stored in wrappers near the beginning of the refentry.
+Common presentational features, such as titles and running headers, may require data from several of these wrappers plus some generated text. Other formatting often requires that these elements be reordered.
+**** Parents ****
+These elements contain refnamediv: refentry.
+**** Children ****
+The following elements occur in refnamediv: refclass, refdescriptor, refname, refpurpose.
+***** See Also *****
+refsect1, refsect2, refsect3, refsection, refsynopsisdiv
+***** Examples *****
+See reference and refentry for examples that use this element.
+refname  [Up]   refpurpose

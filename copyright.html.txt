@@ -1,0 +1,38 @@
+
+***** copyright *****
+copyright — Copyright information about a document.
+***** Synopsis *****
+    * Sequence of:
+          o One or more of:
+                # year
+          o Zero or more of:
+                # holder
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The copyright element holds information about the date(s) and holder(s) of a document copyright. If an extended block of text describing the copyright or other legal status is required, use legalnotice.
+The copyright element is confined to meta-information. For copyright statements in running text, see trademark.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+A displayed copyright notice usually includes the copyright symbol, ©, as generated text and is formatted with commas separating multiple years. Additional generated text, such as the legend “All rights reserved,” may also be generated.
+**** Parents ****
+These elements contain copyright: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in copyright: holder, year.
+***** See Also *****
+legalnotice, productname, trademark
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example copyright</title>
+  4   <copyright>
+        <year>2009</year>
+  6     <year>2010</year>
+        <holder>O'Reilly Media, Inc.</holder>
+  8   </copyright>
+    </info>
+ 10
+    <para>…</para>
+ 12
+    </article>
+contrib  [Up]    coref

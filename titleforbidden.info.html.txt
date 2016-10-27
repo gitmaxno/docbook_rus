@@ -1,0 +1,67 @@
+
+***** [[5.0]]info (db.titleforbidden.info) *****
+info — A wrapper for information about a component or other block without a title.
+***** Synopsis *****
+    * Zero or more of:
+          o “Info” elements [[+]] [[-]]
+                * *:*
+                * abstract
+                * address
+                * annotation
+                * artpagenums
+                * author
+                * authorgroup
+                * authorinitials
+                * bibliocoverage
+                * biblioid
+                * bibliomisc
+                * bibliomset
+                * bibliorelation
+                * biblioset
+                * bibliosource
+                * collab
+                * confgroup
+                * contractnum
+                * contractsponsor
+                * copyright
+                * cover
+                * date
+                * edition
+                * editor
+                * extendedlink
+                * issuenum
+                * itermset
+                * keywordset
+                * legalnotice
+                * mediaobject
+                * org
+                * orgname
+                * othercredit
+                * pagenums
+                * printhistory
+                * productname
+                * productnumber
+                * pubdate
+                * publisher
+                * publishername
+                * releaseinfo
+                * revhistory
+                * seriesvolnums
+                * subjectset
+                * volumenum
+***** Attributes *****
+Common_attributes.
+***** Description *****
+The info element contains meta-information about the element that contains it.
+**** Processing expectations ****
+Suppressed. Many of the elements in this wrapper may be used in presentation, but they are not generally printed as part of the formatting of the wrapper. The wrapper merely serves to identify where they occur.
+*** Parents [[+]][[+]] ***
+This element occurs in 111_elements.
+These elements contain info: abstract, acknowledgements, annotation, appendix, article, audiodata, audioobject, bibliodiv, bibliography, bibliolist, blockquote, book, calloutlist, caption (db.caption), caution, chapter, classsynopsisinfo, cmdsynopsis, colophon, constraintdef, dedication, epigraph, equation, example, figure, formalpara, funcsynopsis, funcsynopsisinfo, glossary, glossdiv, glosslist, imagedata (db.imagedata), imagedata (db.imagedata.mathml), imagedata (db.imagedata.svg), imageobject, imageobjectco, important, index, indexdiv, informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), inlinemediaobject, itemizedlist, legalnotice, literallayout, mediaobject, msg, msgexplan, msgmain, msgrel, msgset, msgsub, note, orderedlist, para, part, partintro, personblurb, preface, procedure, productionset, programlisting, programlistingco, qandadiv, qandaentry, qandaset, refentry, reference, refsect1, refsect2,
+refsect3, refsection, refsynopsisdiv, revhistory, screen, screenco, screenshot, sect1, sect2, sect3, sect4, sect5, section, segmentedlist, set, setindex, sidebar, simpara, simplesect, step, stepalternatives, synopsis, table (db.cals.table), table (db.html.table), task, taskprerequisites, taskrelated, tasksummary, textdata, textobject, tip, toc, tocdiv, variablelist, videodata, videoobject, warning.
+*** Children [[+]][[+]] ***
+This element contains 45_elements.
+The following elements occur in info: *:*, abstract, address, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, biblioset, bibliosource, collab, confgroup, contractnum, contractsponsor, copyright, cover, date, edition, editor, extendedlink, issuenum, itermset, keywordset, legalnotice, mediaobject, org, orgname, othercredit, pagenums, printhistory, productname, productnumber, pubdate, publisher, publishername, releaseinfo, revhistory, seriesvolnums, subjectset, volumenum.
+***** See Also *****
+info (db.info)
+info (db.info)  [Up]   info (db.titleonly.info)

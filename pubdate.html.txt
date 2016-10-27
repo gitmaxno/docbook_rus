@@ -1,0 +1,21 @@
+
+***** pubdate *****
+pubdate — The date of publication of a document.
+***** Synopsis *****
+    * One of:
+          o A date value.
+          o A dateTime value.
+          o A gYearMonth value.
+          o A gYear value.
+          o text
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The pubdate is the date of publication of a document.
+**** Processing expectations ****
+Formatted inline. Sometimes suppressed.
+**** Parents ****
+These elements contain pubdate: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+***** See Also *****
+date, edition, printhistory, releaseinfo, revhistory
+property  [Up]   publisher

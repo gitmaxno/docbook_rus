@@ -1,0 +1,12 @@
+
+***** constraint *****
+constraint — A constraint in an EBNF production.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A constraint is a cross-reference to a description of a constraint that cannot be expressed in the grammar (generally logical rather than syntactic constraints).
+**** Parents ****
+These elements contain constraint: production.
+constant  [Up]   constraintdef

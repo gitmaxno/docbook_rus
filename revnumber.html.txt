@@ -1,0 +1,49 @@
+
+***** revnumber *****
+revnumber — A document revision number.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A revnumber identifies the revision number of a document. The revision number should uniquely identify a particular revision of a document.
+**** Processing expectations ****
+Formatted inline. DocBook does not require that revnumbers be sequential or make any demands on their format. They can be numeric, alphanumeric, or whatever suits your needs.
+**** Parents ****
+These elements contain revnumber: revision.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in revnumber: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** Examples *****
+See revhistory for an example that uses this element.
+revision  [Up]   revremark

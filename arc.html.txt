@@ -1,0 +1,23 @@
+
+***** [[5.0]]arc *****
+arc — An XLink arc in an extendedlink.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * xlink:from (NMTOKEN)
+    * xlink:to (NMTOKEN)
+***** Description *****
+An arc in an extendedlink. See XML Linking Language (XLink) Version 1.0 [XLink] for more details.
+**** Processing expectations ****
+Suppressed.
+**** Attributes ****
+Common_attributes.
+  xlink:from
+      Specifies the XLink traversal-from
+  xlink:to
+      Specifies the XLink traversal-to
+**** Parents ****
+These elements contain arc: extendedlink.
+application  [Up]   area (db.area)

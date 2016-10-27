@@ -1,0 +1,125 @@
+
+� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** keycap *****
+keycap� —� The text printed on a key on a keyboard.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase� (db._phrase)
+          o replaceable
+          o Graphic� inlines� [[+]]� [[-]]
+                * inlinemediaobject
+          o Indexing� inlines� [[+]]� [[-]]
+                * indexterm� (db.indexterm.endofrange)
+                * indexterm� (db.indexterm.singular)
+                * indexterm� (db.indexterm.startofrange)
+          o Linking� inlines� [[+]]� [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous� inlines� [[+]]� [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm� (db.indexterm.endofrange)
+                * indexterm� (db.indexterm.singular)
+                * indexterm� (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * Exactly one of:
+          o function (enumeration)
+                # “alt”
+                # “backspace”
+                # “command”
+                # “control”
+                # “delete”
+                # “down”
+                # “end”
+                # “enter”
+                # “escape”
+                # “home”
+                # “insert”
+                # “left”
+                # “meta”
+                # “option”
+                # “pagedown”
+                # “pageup”
+                # “right”
+                # “shift”
+                # “space”
+                # “tab”
+                # “up”
+          o Each of:
+                # function (enumeration)
+                      # “other”
+                # otherfunction
+Required attributes are shown in bold.
+***** Description *****
+The keycap identifies the text printed on a physical key on a computer keyboard. This is distinct from any scan code that it may generate (keycode), or any symbolic name (keysym) that might exist for the key.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  function
+      Identifies the function key
+      Enumerated values:
+      “alt”   The "Alt" key
+      “backspaceThe "Backspace" key
+      “command�The "Command" key
+      “control�The "Control" key
+      “delete”The "Delete" key
+      “down”  The down arrow
+      “end”   The "End" key
+      “enter” The "Enter" or "Return" key
+      “escape”The "Escape" key
+      “home”  The "Home" key
+      “insert”The "Insert" key
+      “left”  The left arrow
+      “meta”  The "Meta" key
+      “option”The "Option" key
+      “pagedown�The page down key
+      “pageup”The page up key
+      “right” The right arrow
+      “shift” The "Shift" key
+      “space” The spacebar
+      “tab”   The "Tab" key
+      “up”    The up arrow
+  function
+      Identifies the function key
+      Enumerated values:
+      “otherIndicates a non-standard function key
+  otherfunction
+      Specifies a keyword that identifies the non-standard key
+*** Parents� [[+]][[+]] ***
+This element occurs in 52_elements.
+These elements contain keycap: bridgehead, caption� (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis� (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, keycombo, link, literallayout, member, olink, orgdiv, para, phrase� (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, shortcut, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+*** Children� [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in keycap: text, alt, anchor, annotation, biblioref, indexterm� (db.indexterm.endofrange), indexterm� (db.indexterm.singular), indexterm� (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase� (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+accel, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, keycode, keycombo, keysym, menuchoice, mousebutton, shortcut
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example keycap</title>
+
+  4 <para>The <keycap>F1</keycap> key on an IBM PC keyboard generates the
+    scan code <keycode>0x3B</keycode> when pressed.  This value
+  6 is defined as <keysym>KEY_F1</keysym> in
+    <filename class="headerfile">keyboard.h</filename>.
+  8 </para>
+
+ 10 </article>
+The F1 key on an IBM PC keyboard generates the scan code 0x3B when pressed. This value is defined as KEY_F1 in keyboard.h.
+[Prev]�   [Home]  � [Next]
+jobtitle�  [Up]  � keycode

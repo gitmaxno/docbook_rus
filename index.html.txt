@@ -1,0 +1,160 @@
+
+***** index *****
+index — An index to a book or part of a book.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o One of:
+                # Zero or more of:
+                      # indexdiv
+                # Zero or more of:
+                      # indexentry
+                # segmentedlist
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+    * type
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+An index contains the formatted index of a document.
+**** Processing expectations ****
+Formatted as a displayed block. An index in a book frequently causes a forced page break in print media.
+In many processing systems, indexes are generated automatically or semiautomatically and never appear instantiated as DocBook markup.
+Often an empty index is used to indicate where the automatically generated index should be rendered.
+Authors can choose to have several types of indexes: for example, function, command, and concept indexes. This can be achieved in DocBook with the type attribute. All of the indexterms with a particular type will be collected together in the index with the same type.
+All indexterms, irrespective of their type, appear in an index that has no type attribute.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+  type
+      Specifies the target index for this term
+*** Parents [[+]][[+]] ***
+This element occurs in 13_elements.
+These elements contain index: appendix, article, book, chapter, part, preface, sect1, sect2, sect3, sect4, sect5, section.
+*** Children [[+]][[+]] ***
+This element contains 66_elements.
+The following elements occur in index: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexdiv, indexentry, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+***** Examples *****
+An index with a title and indexdivs.
+  1 <index xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Index</title>
+
+  4 <indexdiv><title>D</title>
+    <indexentry>
+  6   <primaryie>database (bibliographic), 253, 255</primaryie>
+      <secondaryie>structure, 255</secondaryie>
+  8   <secondaryie>tools, 259</secondaryie>
+    </indexentry>
+ 10 <indexentry>
+      <primaryie>dates (language specific), 179</primaryie>
+ 12 </indexentry>
+    <indexentry>
+ 14   <primaryie>DC fonts, <emphasis>172</emphasis>, 177</primaryie>
+      <secondaryie>Math fonts, 177</secondaryie>
+ 16 </indexentry>
+    </indexdiv>
+ 18 </index>
+An index without a title or divisions.
+  1 <index xmlns='http://docbook.org/ns/docbook'>
+  2 <indexentry>
+      <primaryie>Example</primaryie>
+  4   <secondaryie>Chapter</secondaryie>
+      <seeie>Example Chapter</seeie>
+  6 </indexentry>
+
+  8 <indexentry>
+      <primaryie>Example Chapter, 35-48</primaryie>
+ 10   <seealsoie>Examples</seealsoie>
+    </indexentry>
+ 12
+    <indexentry>
+ 14   <primaryie>Examples, 18, 36, 72-133</primaryie>
+    </indexentry>
+ 16
+    </index>
+important  [Up]   indexdiv

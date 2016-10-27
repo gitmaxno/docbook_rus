@@ -1,0 +1,65 @@
+
+***** set *****
+set — A collection of books.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o toc?
+          o One or more of:
+                # book
+                # set
+          o setindex?
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A set is a collection of books. Placing multiple books in a set, as opposed to publishing each of them separately, has the advantage that ID/IDREF links can then be used across all books.
+A set is the top of the DocBook structural hierarchy. Although sets can contain other sets, nothing else can contain them.
+**** Processing expectations ****
+Formatted as a displayed block. A set may generate additional front and back matter (e.g., tables of contents and setindexs) around the books it contains.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain set: set.
+**** Children ****
+The following elements occur in set: book, info (db.titleforbidden.info), info (db.titlereq.info), set, setindex, subtitle, title, titleabbrev, toc.
+***** See Also *****
+appendix, article, book, chapter, colophon, dedication, part, partintro, preface
+***** Examples *****
+  1 <set xmlns='http://docbook.org/ns/docbook'>
+  2 <title>The Perl Series</title>
+    <info>
+  4   <author>
+        <orgname>O'Reilly Media</orgname>
+  6   </author>
+    </info>
+  8
+    <book><title>Learning Perl</title>
+ 10 <chapter><title>...</title><para>...</para></chapter>
+    </book>
+ 12
+    <book><title>Programming Perl</title>
+ 14 <chapter><title>...</title><para>...</para></chapter>
+    </book>
+ 16
+    <book><title>Advanced Perl Programming</title>
+ 18 <chapter><title>...</title><para>...</para></chapter>
+    </book>
+ 20
+    </set>
+seriesvolnums  [Up]   setindex

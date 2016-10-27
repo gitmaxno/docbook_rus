@@ -1,0 +1,99 @@
+
+***** synopfragment *****
+synopfragment — A portion of a CmdSynopsis broken out from the main body of the synopsis.
+***** Synopsis *****
+    * One or more of:
+          o arg
+          o group
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A complex cmdsynopsis can be made more manageable with synopfragments. Rather than attempting to present the entire synopsis in one large piece, parts of the synopsis can be extracted and presented elsewhere. These extracted pieces are placed in synopfragments at the end of the cmdsynopsis.
+At the point in which each piece was extracted, insert a synopfragmentref that points to the fragment. The content of the reference element will be presented inline.
+**** Processing expectations ****
+Formatted as a displayed block.
+The presentation system is responsible for generating text that makes the reader aware of the link. This can be done with numbered bullets, or any other appropriate mechanism. Whatever mark is generated for the reference must also be generated for the fragment.
+Online systems have additional flexibility. They may generate hot links between the references and the fragments, for example, or place the fragments in pop-up windows.
+**** Parents ****
+These elements contain synopfragment: cmdsynopsis.
+**** Children ****
+The following elements occur in synopfragment: arg, group.
+***** See Also *****
+arg, cmdsynopsis, group, refsynopsisdiv, sbr, synopfragmentref
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example synopfragment</title>
+
+  4 <cmdsynopsis>
+      <command>cccp</command>
+  6   <arg>-$</arg>
+      <arg>-C</arg>
+  8   <arg rep='repeat'>-D<replaceable>name</replaceable>
+      <arg>=<replaceable>definition</replaceable></arg></arg>
+ 10   <arg>-dD</arg>
+      <arg>-dM</arg>
+ 12   <sbr/>
+      <arg rep='repeat'>-I <replaceable>directory</replaceable></arg>
+ 14   <arg>-H</arg>
+      <arg>-I-</arg>
+ 16   <arg rep='repeat'>-imacros <replaceable>file</replaceable></arg>
+      <sbr/>
+ 18   <arg rep='repeat'>-include <replaceable>file</replaceable></arg>
+      <group>
+ 20     <synopfragmentref linkend="langs">languages</synopfragmentref>
+      </group>
+ 22   <arg>-lint</arg>
+      <sbr/>
+ 24   <group>
+        <arg>-M</arg>
+ 26     <arg>-MD</arg>
+        <arg>-MM</arg>
+ 28     <arg>-MMD</arg>
+      </group>
+ 30   <arg>-nostdinc</arg>
+      <arg>-P</arg>
+ 32   <arg>-pedantic</arg>
+      <sbr/>
+ 34   <arg>-pedantic-errors</arg>
+      <arg>-trigraphs</arg>
+ 36   <arg>-U<replaceable>name</replaceable></arg>
+      <sbr/>
+ 38   <arg>-undef</arg>
+      <arg choice="plain"><synopfragmentref linkend="warn">warnings
+ 40   </synopfragmentref></arg>
+      <group choice='req'>
+ 42     <arg><replaceable>infile</replaceable></arg>
+        <arg>-</arg>
+ 44   </group>
+      <group choice='req'>
+ 46     <arg><replaceable>outfile</replaceable></arg>
+        <arg>-</arg>
+ 48   </group>
+
+ 50   <synopfragment xml:id="langs">
+        <group choice="plain">
+ 52       <arg>-lang-c</arg>
+          <arg>-lang-c++</arg>
+ 54       <arg>-lang-objc</arg>
+        </group>
+ 56   </synopfragment>
+
+ 58   <synopfragment xml:id="warn">
+        <arg>-Wtrigraphs</arg>
+ 60     <arg>-Wcomment</arg>
+        <arg>-Wall</arg>
+ 62     <arg>-Wtraditional</arg>
+      </synopfragment>
+ 64
+    </cmdsynopsis>
+ 66
+    </article>
+cccp [-$] [-C] [-Dname [=definition]...] [-dD] [-dM]
+[-I directory...] [-H] [-I-] [-imacros file...]
+[-include file...] [(1) languages] [-lint]
+[[-M] | [-MD] | [-MM] | [-MMD]] [-nostdinc] [-P] [-pedantic]
+[-pedantic-errors] [-trigraphs] [-Uname]
+[-undef] (2) warnings  {[infile] | [-]} {[outfile] | [-]}
+(1) [-lang-c] | [-lang-c++] | [-lang-objc]
+(2) [-Wtrigraphs] [-Wcomment] [-Wall] [-Wtraditional]
+symbol  [Up]   synopfragmentref

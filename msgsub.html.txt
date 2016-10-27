@@ -1,0 +1,25 @@
+
+***** msgsub *****
+msgsub — A subcomponent of a message in a message set.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o msgtext
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A msgsub represents some subpart of a message. Different msgsubs might arise in different contexts.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msgsub: msg.
+**** Children ****
+The following elements occur in msgsub: info (db.titleforbidden.info), info (db.titleonly.info), msgtext, title, titleabbrev.
+msgset  [Up]   msgtext

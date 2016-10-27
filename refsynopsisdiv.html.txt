@@ -1,0 +1,117 @@
+
+***** refsynopsisdiv *****
+refsynopsisdiv — A syntactic synopsis of the subject of the reference page.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o One of:
+                # Sequence of:
+                      # One or more of:
+                            # annotation
+                            # bridgehead
+                            # remark
+                            # revhistory
+                            # Indexing inlines [[+]] [[-]]
+                                  * indexterm (db.indexterm.endofrange)
+                                  * indexterm (db.indexterm.singular)
+                                  * indexterm (db.indexterm.startofrange)
+                            # Admonition elements [[+]] [[-]]
+                                  * caution
+                                  * important
+                                  * note
+                                  * tip
+                                  * warning
+                            # Formal elements [[+]] [[-]]
+                                  * equation
+                                  * example
+                                  * figure
+                                  * table (db.cals.table)
+                                  * table (db.html.table)
+                            # Graphic elements [[+]] [[-]]
+                                  * mediaobject
+                                  * screenshot
+                            # Informal elements [[+]] [[-]]
+                                  * informalequation
+                                  * informalexample
+                                  * informalfigure
+                                  * informaltable (db.cals.informaltable)
+                                  * informaltable (db.html.informaltable)
+                            # List elements [[+]] [[-]]
+                                  * bibliolist
+                                  * calloutlist
+                                  * glosslist
+                                  * itemizedlist
+                                  * orderedlist
+                                  * procedure
+                                  * qandaset
+                                  * segmentedlist
+                                  * simplelist
+                                  * variablelist
+                            # Paragraph elements [[+]] [[-]]
+                                  * anchor
+                                  * formalpara
+                                  * para
+                                  * simpara
+                            # Publishing elements [[+]] [[-]]
+                                  * address
+                                  * blockquote
+                                  * epigraph
+                                  * sidebar
+                            # Synopsis elements [[+]] [[-]]
+                                  * classsynopsis
+                                  * cmdsynopsis
+                                  * constructorsynopsis
+                                  * destructorsynopsis
+                                  * fieldsynopsis
+                                  * funcsynopsis
+                                  * methodsynopsis
+                            # Technical elements [[+]] [[-]]
+                                  * constraintdef
+                                  * msgset
+                                  * procedure
+                                  * productionset
+                                  * task
+                            # Verbatim elements [[+]] [[-]]
+                                  * literallayout
+                                  * programlisting
+                                  * programlistingco
+                                  * screen
+                                  * screenco
+                                  * synopsis
+                      # Optionally one of:
+                            # One or more of:
+                                  # refsection
+                            # One or more of:
+                                  # refsect2
+                # One or more of:
+                      # refsection
+                # One or more of:
+                      # refsect2
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A refsynopsisdiv contains a syntactic synopsis of the function or command described by the refentry. When refentrys are used to describe other sorts of things, refsynopsisdiv should be used for whatever succinct, synopsis information seems appropriate.[6]
+**** Processing expectations ****
+Formatted as a displayed block. A refsynopsisdiv usually generates a section heading, in the same typographic style as a refsect1 title, called “Synopsis.”
+Formatting reference pages may require a fairly sophisticated processing system. Much of the meta-information about a reference page (its name, type, purpose, title, and classification) is stored in wrappers near the beginning of the refentry.
+Common presentational features, such as titles and running headers, may require data from several of these wrappers plus some generated text. Other formatting often requires that these elements be reordered.
+**** Parents ****
+These elements contain refsynopsisdiv: refentry.
+*** Children [[+]][[+]] ***
+This element contains 66_elements.
+The following elements occur in refsynopsisdiv: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, refsect2, refsection, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist,
+warning.
+***** See Also *****
+arg, cmdsynopsis, group, refnamediv, refsect1, refsect2, refsect3, refsection, sbr, synopfragment, synopfragmentref
+***** Examples *****
+See refentry for an example using this element.
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+[6]In this book, each element of the schema is described on a reference page, and the refsynopsisdiv is used for the synopsis at the beginning of each entry.
+refsection  [Up]   releaseinfo

@@ -1,0 +1,105 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** indexterm (db.indexterm.startofrange) *****
+indextermÂ â€”Â A wrapper for an indexed term that covers a range.
+***** Synopsis *****
+    * Sequence of:
+          o primary?
+          o Optionally one of:
+                # Sequence of:
+                      # secondary
+                      # Optionally one of:
+                            # Sequence of:
+                                  # tertiary
+                                  # Optionally one of:
+                                        # One or more of:
+                                              # seealso
+                                        # see
+                            # One or more of:
+                                  # seealso
+                            # see
+                # One or more of:
+                      # seealso
+                # see
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * class (enumeration)
+          o â€œstartofrangeâ€
+    * pagenum
+    * scope (enumeration)
+          o â€œallâ€
+          o â€œglobalâ€
+          o â€œlocalâ€
+    * significance (enumeration)
+          o â€œnormalâ€
+          o â€œpreferredâ€
+    * type
+    * zone (IDREFS)
+Required attributes are shown in bold.
+***** Description *****
+A â€œstart of rangeâ€ indexterm marks the start of a range. It must have an associated â€œend of rangeâ€ indexterm. The resulting index entry applies to the entire range. See indexterm_(db.indexterm.singular).
+**** Processing expectations ****
+See indexterm_(db.indexterm.singular).
+It is possible to construct index terms that are difficult to parse at best and totally illogical at worst. Consider the following:
+<indexterm class='startofrange' zone="id1 id2">...</indexterm>
+There is no way that this can fit into the semantics of an indexterm. Although it claims to be the start of a range, it does not have an xml:id for the end-of-range indexterm to point back to. In addition, it includes zoned terms, and mixing the two different methods for indicating a range in the same indexterm is probably a bad idea.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  class
+      Identifies the class of index term
+      Enumerated values:
+      â€œstartofrangeThe start of a range
+  pagenum
+      Indicates the page on which this index term occurs in some version of the printed document
+  scope
+      Specifies the scope of the index term
+      Enumerated values:
+      â€œallâ€All indexes
+      â€œglobalThe global index (as for a combined index of a set of box)
+      â€œlocalâThe local index (the index for this document only)
+  significance
+      Specifies the significance of the term
+      Enumerated values:
+      â€œnormalâ€Normal
+      â€œpreferredPreferred
+  type
+      Specifies the target index for this term
+  zone
+      Specifies the IDs of the elements to which this term applies
+*** ParentsÂ [[+]][[+]] ***
+This element occurs in 243_elements.
+These elements contain indexterm: abbrev, accel, acknowledgements, acronym, address, annotation, answer, appendix, application, arg, article, artpagenums, attribution, authorinitials, bibliocoverage, bibliodiv, bibliography, biblioid, bibliolist, bibliomisc, bibliomset, bibliorelation, bibliosource, blockquote, bridgehead, callout, calloutlist, captionÂ (db.caption), captionÂ (db.html.caption), caution, chapter, citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, colophon, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, constraintdef, contractnum, contractsponsor, contrib, country, database, dedication, edition, email, emphasisÂ (db._emphasis), emphasisÂ (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, example, exceptionname, fax, figure, filename, firstname, firstterm, footnote, foreignphrase, formalpara, funcdef, funcparams, funcsynopsisinfo, function, glossary, glossdef, glossdiv, glossentry, glosslist,
+glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, important, index, indexdiv, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), initializer, interfacename, issuenum, itemizedlist, jobtitle, keycap, keycode, keysym, label, legalnotice, lineage, lineannotation, link, listitem, literal, literallayout, manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msgexplan, msglevel, msgorig, msgtext, note, olink, option, optional, orderedlist, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, partintro, personname, phone, phraseÂ (db._phrase), phraseÂ (db.phrase), pob, postcode, preface, primary, primaryie, procedure, productname, productnumber, programlisting, prompt, property, publishername, qandadiv, qandaset, question, quote, refdescriptor, refentry, refentrytitle, refmeta, refmiscinfo, refname, refpurpose, refsect1, refsect2,
+refsect3, refsection, refsynopsisdiv, releaseinfo, remark, replaceable, returnvalue, revdescription, revnumber, revremark, screen, secondary, secondaryie, sect1, sect2, sect3, sect4, sect5, section, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, setindex, shortaffil, sidebar, simpara, simplesect, state, step, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tableÂ (db.cals.table), tag, taskprerequisites, taskrelated, tasksummary, td, term, termdef, tertiary, tertiaryie, textobject, th, tip, title, titleabbrev, toc, tocdiv, tocentry, token, trademark, type, uri, userinput, variablelist, varname, volumenum, warning, wordasword, year.
+**** Children ****
+The following elements occur in indexterm: primary, secondary, see, seealso, tertiary.
+***** See Also *****
+indexentry, indextermÂ (db.indexterm.singular), primary, primaryie, secondary, secondaryie, see, seealso, seealsoie, seeie, tertiary, tertiaryie
+***** Examples *****
+  1 <chapter xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example Chapter</title>
+
+  4 <!-- index term for "Example Chapter" is a span -->
+    <indexterm xml:id="idxexchap" class='startofrange'>
+  6   <primary>Example Chapter</primary></indexterm>
+
+  8 <!-- index term for "Example Chapter" also cross references the
+         "Examples" entry in the index -->
+ 10 <indexterm><primary>Example Chapter</primary>
+      <seealso>Examples</seealso></indexterm>
+ 12
+    <!-- index term for "Chapter, Example" refers the reader to the entry
+ 14      under which the index term is actually listed, "Example Chapter" -->
+    <indexterm><primary>Chapter</primary><secondary>Example</secondary>
+ 16   <see>Example Chapter</see></indexterm>
+
+ 18 <!-- other content -->
+
+ 20 <!-- index term, end of "Example Chapter" span -->
+    <indexterm startref="idxexchap" class="endofrange"/>
+ 22
+    <para>some content</para>
+ 24 </chapter>
+[Prev]Â                            [Home]         Â [Next]
+indexterm (db.indexterm.singular)Â  [Up]  Â info (db.info)

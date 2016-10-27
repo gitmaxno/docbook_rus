@@ -1,0 +1,49 @@
+
+***** inlineequation *****
+inlineequation — A mathematical equation or expression occurring inline.
+***** Synopsis *****
+    * Sequence of:
+          o alt?
+          o One of:
+                # One or more of:
+                      # Graphic inlines [[+]] [[-]]
+                            * inlinemediaobject
+                # One or more of:
+                      # mathphrase
+                # One or more of:
+                      # mml:*
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An inlineequations is an expression (usually mathematical) that occurs in the text flow.
+**** Processing expectations ****
+Formatted inline.
+*** Parents [[+]][[+]] ***
+This element occurs in 49_elements.
+These elements contain inlineequation: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in inlineequation: alt, inlinemediaobject, mathphrase, mml:*.
+***** See Also *****
+equation, informalequation, subscript, superscript
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example inlineequation</title>
+
+  4 <para>Einstein's theory of relativity includes one of the most
+    widely recognized formulas in the world:
+  6 <inlineequation>
+      <alt>e=mc^2</alt>
+  8   <inlinemediaobject>
+        <imageobject condition="print">
+ 10       <imagedata fileref="figs/print/db5d_refeqn03.pdf"/>
+        </imageobject>
+ 12     <imageobject condition="web">
+          <imagedata fileref="figs/web/db5d_refeqn03.png"/>
+ 14     </imageobject>
+      </inlinemediaobject>
+ 16 </inlineequation>
+    </para>
+ 18
+    </article>
+Einstein's theory of relativity includes one of the most widely recognized formulas in the world: [figs/web/db5d_refeqn03.png]
+initializer  [Up]   inlinemediaobject

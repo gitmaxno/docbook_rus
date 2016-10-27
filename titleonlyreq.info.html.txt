@@ -1,0 +1,69 @@
+
+***** [[5.0]]info (db.titleonlyreq.info) *****
+info — A wrapper for information about a component or other block with only a required title.
+***** Synopsis *****
+    * Interleave of:
+          o Interleave of:
+                # title
+                # titleabbrev?
+          o Zero or more of:
+                # “Info” elements [[+]] [[-]]
+                      * *:*
+                      * abstract
+                      * address
+                      * annotation
+                      * artpagenums
+                      * author
+                      * authorgroup
+                      * authorinitials
+                      * bibliocoverage
+                      * biblioid
+                      * bibliomisc
+                      * bibliomset
+                      * bibliorelation
+                      * biblioset
+                      * bibliosource
+                      * collab
+                      * confgroup
+                      * contractnum
+                      * contractsponsor
+                      * copyright
+                      * cover
+                      * date
+                      * edition
+                      * editor
+                      * extendedlink
+                      * issuenum
+                      * itermset
+                      * keywordset
+                      * legalnotice
+                      * mediaobject
+                      * org
+                      * orgname
+                      * othercredit
+                      * pagenums
+                      * printhistory
+                      * productname
+                      * productnumber
+                      * pubdate
+                      * publisher
+                      * publishername
+                      * releaseinfo
+                      * revhistory
+                      * seriesvolnums
+                      * subjectset
+                      * volumenum
+***** Attributes *****
+Common_attributes.
+***** Description *****
+The info element contains meta-information about the element that contains it.
+**** Processing expectations ****
+Suppressed. Many of the elements in this wrapper may be used in presentation, but they are not generally printed as part of the formatting of the wrapper. The wrapper merely serves to identify where they occur.
+**** Parents ****
+These elements contain info: example, figure, formalpara, table (db.cals.table).
+*** Children [[+]][[+]] ***
+This element contains 47_elements.
+The following elements occur in info: *:*, abstract, address, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, biblioset, bibliosource, collab, confgroup, contractnum, contractsponsor, copyright, cover, date, edition, editor, extendedlink, issuenum, itermset, keywordset, legalnotice, mediaobject, org, orgname, othercredit, pagenums, printhistory, productname, productnumber, pubdate, publisher, publishername, releaseinfo, revhistory, seriesvolnums, subjectset, title, titleabbrev, volumenum.
+***** See Also *****
+info (db.info)
+info (db.titleonly.info)  [Up]   info (db.titlereq.info)

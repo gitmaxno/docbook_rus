@@ -1,0 +1,209 @@
+
+***** caption (db.html.caption) *****
+caption — An HTML table caption.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Attributes:
+    * class
+    * style
+    * title
+    * lang
+    * onclick
+    * ondblclick
+    * onmousedown
+    * onmouseup
+    * onmouseover
+    * onmousemove
+    * onmouseout
+    * onkeypress
+    * onkeydown
+    * onkeyup
+***** Additional Constraints *****
+    * example must not occur in the descendants of caption
+    * figure must not occur in the descendants of caption
+    * table must not occur in the descendants of caption
+    * equation must not occur in the descendants of caption
+    * sidebar must not occur in the descendants of caption
+    * task must not occur in the descendants of caption
+    * caution must not occur in the descendants of caption
+    * important must not occur in the descendants of caption
+    * note must not occur in the descendants of caption
+    * tip must not occur in the descendants of caption
+    * warning must not occur in the descendants of caption
+***** Description *****
+In an HTML table, a caption is a short text description for the table it is associated with.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Attributes ****
+  class
+      This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
+  lang
+      This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
+  onclick
+      Occurs when the pointing device button is clicked over an element.
+  ondblclick
+      Occurs when the pointing device button is double clicked over an element.
+  onkeydown
+      Occurs when a key is pressed down over an element.
+  onkeypress
+      Occurs when a key is pressed and released over an element.
+  onkeyup
+      Occurs when a key is released over an element.
+  onmousedown
+      Occurs when the pointing device button is pressed over an element.
+  onmousemove
+      Occurs when the pointing device is moved while it is over an element.
+  onmouseout
+      Occurs when the pointing device is moved away from an element.
+  onmouseover
+      Occurs when the pointing device is moved onto an element.
+  onmouseup
+      Occurs when the pointing device button is released over an element.
+  style
+      This attribute specifies style information for the current element.
+  title
+      This attribute offers advisory information about the element for which it is set.
+**** Parents ****
+These elements contain caption: table (db.html.table).
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in caption: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property, quote,
+remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+audioobject, caption (db.caption), imageobject, inlinemediaobject, mediaobject, textobject, videoobject
+***** Examples *****
+See table(db.html.table) for and example that uses caption.
+caption (db.caption)  [Up]   caution

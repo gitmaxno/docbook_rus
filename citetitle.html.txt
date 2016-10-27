@@ -1,0 +1,209 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** citetitle *****
+citetitleÂ â€”Â The title of a cited work.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o BibliographyÂ inlinesÂ [[+]]Â [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o ErrorÂ inlinesÂ [[+]]Â [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o GraphicÂ inlinesÂ [[+]]Â [[-]]
+                * inlinemediaobject
+          o GUIÂ inlinesÂ [[+]]Â [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o IndexingÂ inlinesÂ [[+]]Â [[-]]
+                * indextermÂ (db.indexterm.endofrange)
+                * indextermÂ (db.indexterm.singular)
+                * indextermÂ (db.indexterm.startofrange)
+          o KeyboardÂ inlinesÂ [[+]]Â [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o LinkingÂ inlinesÂ [[+]]Â [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o MarkupÂ inlinesÂ [[+]]Â [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o MathÂ inlinesÂ [[+]]Â [[-]]
+                * inlineequation
+          o Object-orientedÂ programmingÂ inlinesÂ [[+]]Â [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o OperatingÂ systemÂ inlinesÂ [[+]]Â [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o ProductÂ inlinesÂ [[+]]Â [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o ProgrammingÂ inlinesÂ [[+]]Â [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o PublishingÂ inlinesÂ [[+]]Â [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasisÂ (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phraseÂ (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o TechnicalÂ inlinesÂ [[+]]Â [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indextermÂ (db.indexterm.endofrange)
+                * indextermÂ (db.indexterm.singular)
+                * indextermÂ (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * pubwork (enumeration)
+          o â€œarticleâ€
+          o â€œbbsâ€
+          o â€œbookâ€
+          o â€œcdromâ€
+          o â€œchapterâ€
+          o â€œdvdâ€
+          o â€œemailmessageâ€
+          o â€œgopherâ€
+          o â€œjournalâ€
+          o â€œmanuscriptâ€
+          o â€œnewspostingâ€
+          o â€œpartâ€
+          o â€œrefentryâ€
+          o â€œsectionâ€
+          o â€œseriesâ€
+          o â€œsetâ€
+          o â€œwebpageâ€
+          o â€œwikiâ€
+***** Description *****
+A citetitle provides inline markup for the title of a cited work.
+**** Processing expectations ****
+Formatted inline. Often italicized for books and quoted for articles.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  pubwork
+      Identifies the nature of the publication being cited
+      Enumerated values:
+      â€œarticleâ€  An article
+      â€œbbsâ€      A bulletin board system
+      â€œbookâ€     A book
+      â€œcdromâ€    A CD-ROM
+      â€œchapterâ€  A chapter (as of a book)
+      â€œdvdâ€      A DVD
+      â€œemailmessageAn email message
+      â€œgopherâ€   A gopher page
+      â€œjournalâ€  A journal
+      â€œmanuscriptâ€A manuscript
+      â€œnewspostingâA posting to a newsgroup
+      â€œpartâ€     A part (as of a book)
+      â€œrefentryâ€ A reference entry
+      â€œsectionâ€  A section (as of a book or article)
+      â€œseriesâ€   A series
+      â€œsetâ€      A set (as of books)
+      â€œwebpageâ€  A web page
+      â€œwikiâ€     A wiki page
+*** ParentsÂ [[+]][[+]] ***
+This element occurs in 55_elements.
+These elements contain citetitle: attribution, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, emphasisÂ (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in citetitle: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasisÂ (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phraseÂ (db.phrase), productname, productnumber, prompt, property,
+quote, remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+citation, citebiblioid, citerefentry
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example citetitle</title>
+
+  4 <para>For a complete methodology for DTD creation, see
+    <citetitle pubwork="book">Developing SGML DTDs: From Text to Model
+  6 to Markup</citetitle> by Eve Maler and Jeanne El Andaloussi.
+    </para>
+  8
+    </article>
+For a complete methodology for DTD creation, see Developing SGML DTDs: From Text to Model to Markup by Eve Maler and Jeanne El Andaloussi.
+[Prev]Â       [Home] Â [Next]
+citerefentryÂ  [Up]    Â city

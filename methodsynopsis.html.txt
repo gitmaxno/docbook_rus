@@ -1,0 +1,38 @@
+
+***** methodsynopsis *****
+methodsynopsis — A syntax summary for a method.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # modifier
+          o Optionally one of:
+                # type
+                # void
+          o methodname
+          o One of:
+                # One or more of:
+                      # methodparam
+                # void
+          o Zero or more of:
+                # exceptionname
+          o Zero or more of:
+                # modifier
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * language
+***** Description *****
+A methodsynopsis contains the syntax summary of a method (generally speaking, methods in the object-oriented programming language sense).
+This is one of the few places where DocBook attempts to model as well as describe. Unlike funcsynopsis which was designed with C language function prototypes in mind, the content model of methodsynopsis was designed to capture a wide range of semantics.
+**** Processing expectations ****
+For the most part, the processing application is expected to generate all of the parentheses, semicolons, commas, and so on required in the rendered synopsis.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  language
+      Identifies the language (i.e. programming language) of the content.
+*** Parents [[+]][[+]] ***
+This element occurs in 74_elements.
+These elements contain methodsynopsis: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, classsynopsis, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in methodsynopsis: exceptionname, methodname, methodparam, modifier, type, void.
+methodparam  [Up]   modifier

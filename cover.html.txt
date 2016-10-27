@@ -1,0 +1,196 @@
+
+***** [[5.0]]cover *****
+cover — Additional content for the cover of a publication.
+***** Synopsis *****
+    * One or more of:
+          o bridgehead
+          o remark
+          o revhistory
+          o Graphic elements [[+]] [[-]]
+                * mediaobject
+                * screenshot
+          o Informal elements [[+]] [[-]]
+                * informalequation
+                * informalexample
+                * informalfigure
+                * informaltable (db.cals.informaltable)
+                * informaltable (db.html.informaltable)
+          o List elements [[+]] [[-]]
+                * bibliolist
+                * calloutlist
+                * glosslist
+                * itemizedlist
+                * orderedlist
+                * procedure
+                * qandaset
+                * segmentedlist
+                * simplelist
+                * variablelist
+          o Paragraph elements [[+]] [[-]]
+                * anchor
+                * formalpara
+                * para
+                * simpara
+          o Publishing elements [[+]] [[-]]
+                * address
+                * blockquote
+                * epigraph
+                * sidebar
+          o Synopsis elements [[+]] [[-]]
+                * classsynopsis
+                * cmdsynopsis
+                * constructorsynopsis
+                * destructorsynopsis
+                * fieldsynopsis
+                * funcsynopsis
+                * methodsynopsis
+          o Technical elements [[+]] [[-]]
+                * constraintdef
+                * msgset
+                * procedure
+                * productionset
+                * task
+          o Verbatim elements [[+]] [[-]]
+                * literallayout
+                * programlisting
+                * programlistingco
+                * screen
+                * screenco
+                * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The cover element contains additional material to be printed on the cover of a publication. Multiple cover elements may be used to hold material for the inside and outside front and back covers, the spine, dust jackets, etc.
+Because there is likely to be great variation in the number of covers, and the means by which the cover elements are processed, DocBook does not attempt to define semantics for their order or relationship to one another.
+The title, authors, and other bibliographic metadata that appears in the info element should not be repeated inside the cover. The intent is merely that cover can contain any additional material required.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed.
+**** Parents ****
+These elements contain cover: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+*** Children [[+]][[+]] ***
+This element contains 45_elements.
+The following elements occur in cover: address, anchor, bibliolist, blockquote, bridgehead, calloutlist, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, fieldsynopsis, formalpara, funcsynopsis, glosslist, informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, task, variablelist.
+***** Examples *****
+The following example shows a cover tag as it might have appeared in the source for the first edition of this book.
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>DocBook</title>
+  4   <subtitle>The Definitive Guide</subtitle>
+      <biblioid class="isbn">978-0-596-8050-2-9</biblioid>
+  6   <authorgroup>
+        <author>
+  8       <personname>
+
+<firstname>Norman</firstname>
+ 10
+<surname>Walsh</surname>
+          </personname>
+ 12     </author>
+      </authorgroup>
+ 14   <publisher>
+        <publishername>O'Reilly Media, Inc.</publishername>
+ 16     <address><city>Beijing</city></address>
+        <address><city>Cambridge</city></address>
+ 18     <address><city>Farnham</city></address>
+        <address><city>Köln</city></address>
+ 20     <address><city>Paris</city></address>
+        <address><city>Sebastopol</city></address>
+ 22     <address><city>Taipei</city></address>
+        <address><city>Tokyo</city></address>
+ 24   </publisher>
+      <copyright>
+ 26     <year>2010</year>
+        <holder>Norman Walsh, All rights reserved.</holder>
+ 28   </copyright>
+      <releaseinfo>Published by O'Reilly Media, Inc.,
+ 30 101 Morris Street, Sebastopol, CA 95472.</releaseinfo>
+      <editor>
+ 32     <personname>
+          <firstname>Richard L.</firstname>
+ 34       <surname>Hamilton</surname>
+        </personname>
+ 36   </editor>
+      <revhistory>
+ 38     <revision>
+          <date>March 2010</date>
+ 40       <revremark>Second Edition.</revremark>
+        </revision>
+ 42     <revision>
+          <date>October 1999</date>
+ 44       <revremark>First Edition.</revremark>
+        </revision>
+ 46   </revhistory>
+      <legalnotice>
+ 48     <para>Nutshell Handbook, the Nutshell Handbook logo, and the…</para>
+        <para>Many of the designations used by manufacturers…</para>
+ 50     <para>While every precaution has been taken in the preparation…</para>
+      </legalnotice>
+ 52   <cover>
+        <para role="tagline">The Official Documentation for DocBook</para>
+ 54     <mediaobject>
+          <imageobject>
+ 56
+<imagedata fileref="graphics/duck-cover.png">
+
+  <info>
+ 58
+    <othercredit>
+
+      <orgname>O'Reilly Media</orgname>
+ 60
+    </othercredit>
+
+    <othercredit>
+ 62
+      <orgname>Dover Archives</orgname>
+
+    </othercredit>
+ 64
+  </info>
+
+</imagedata>
+ 66       </imageobject>
+        </mediaobject>
+ 68   </cover>
+      <cover>
+ 70     <mediaobject>
+          <imageobject>
+ 72
+<imagedata fileref="graphics/duck-backcover.png"/>
+          </imageobject>
+ 74     </mediaobject>
+        <para>DocBook is a system for writing structured documents using…</para>
+ 76     <para><citetitle>DocBook: The Definitive Guide</citetitle> is the…</para>
+        <itemizedlist>
+ 78       <listitem>
+
+<para>A brief introduction to  …</para>
+ 80       </listitem>
+          <listitem>
+ 82
+<para>A guide to creating documents with the DocBook schema…</para>
+          </listitem>
+ 84       <listitem>
+
+<para>…</para>
+ 86       </listitem>
+        </itemizedlist>
+ 88     <para>In an era of collaborative creation of technology, …</para>
+        <formalpara>
+ 90       <title>Norman Walsh</title>
+          <para>is a …</para>
+ 92     </formalpara>
+      </cover>
+ 94 </info>
+
+ 96 <preface>
+    <title>Preface</title>
+ 98
+    <para>DocBook provides a system …</para>
+100 </preface>
+
+102 <!-- … -->
+
+104 </book>
+In this example, we assume that the first cover element contains additional material for the front cover and the second cover element contains additional material for the back cover.
+country  [Up]   database

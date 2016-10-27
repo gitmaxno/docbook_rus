@@ -1,0 +1,307 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** entry *****
+entryÂ â€”Â A cell in a table.
+***** Synopsis *****
+    * One of:
+          o Zero or more of:
+                # text
+                # BibliographyÂ inlinesÂ [[+]]Â [[-]]
+                      * author
+                      * citation
+                      * citebiblioid
+                      * citerefentry
+                      * citetitle
+                      * editor
+                      * jobtitle
+                      * org
+                      * orgname
+                      * person
+                      * personname
+                # ErrorÂ inlinesÂ [[+]]Â [[-]]
+                      * errorcode
+                      * errorname
+                      * errortext
+                      * errortype
+                # GraphicÂ inlinesÂ [[+]]Â [[-]]
+                      * inlinemediaobject
+                # GUIÂ inlinesÂ [[+]]Â [[-]]
+                      * guibutton
+                      * guiicon
+                      * guilabel
+                      * guimenu
+                      * guimenuitem
+                      * guisubmenu
+                      * menuchoice
+                      * mousebutton
+                # IndexingÂ inlinesÂ [[+]]Â [[-]]
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                # KeyboardÂ inlinesÂ [[+]]Â [[-]]
+                      * accel
+                      * keycap
+                      * keycode
+                      * keycombo
+                      * keysym
+                      * shortcut
+                # LinkingÂ inlinesÂ [[+]]Â [[-]]
+                      * anchor
+                      * biblioref
+                      * link
+                      * olink
+                      * xref
+                # MarkupÂ inlinesÂ [[+]]Â [[-]]
+                      * code
+                      * constant
+                      * email
+                      * literal
+                      * markup
+                      * symbol
+                      * tag
+                      * token
+                      * uri
+                # MathÂ inlinesÂ [[+]]Â [[-]]
+                      * inlineequation
+                # Object-orientedÂ programmingÂ inlinesÂ [[+]]Â [[-]]
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                # OperatingÂ systemÂ inlinesÂ [[+]]Â [[-]]
+                      * command
+                      * computeroutput
+                      * envar
+                      * filename
+                      * prompt
+                      * userinput
+                # ProductÂ inlinesÂ [[+]]Â [[-]]
+                      * application
+                      * database
+                      * hardware
+                      * productname
+                      * productnumber
+                      * trademark
+                # ProgrammingÂ inlinesÂ [[+]]Â [[-]]
+                      * classname
+                      * exceptionname
+                      * function
+                      * initializer
+                      * interfacename
+                      * methodname
+                      * modifier
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                      * parameter
+                      * returnvalue
+                      * type
+                      * varname
+                # PublishingÂ inlinesÂ [[+]]Â [[-]]
+                      * abbrev
+                      * acronym
+                      * coref
+                      * date
+                      * emphasisÂ (db.emphasis)
+                      * firstterm
+                      * footnote
+                      * footnoteref
+                      * foreignphrase
+                      * glossterm
+                      * phraseÂ (db.phrase)
+                      * quote
+                      * subscript
+                      * superscript
+                      * wordasword
+                # TechnicalÂ inlinesÂ [[+]]Â [[-]]
+                      * nonterminal
+                      * option
+                      * optional
+                      * package
+                      * parameter
+                      * property
+                      * replaceable
+                      * systemitem
+                      * termdef
+                # UbiquitousÂ inlinesÂ [[+]]Â [[-]]
+                      * alt
+                      * anchor
+                      * annotation
+                      * biblioref
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                      * inlinemediaobject
+                      * link
+                      * olink
+                      * remark
+                      * subscript
+                      * superscript
+                      * xref
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # IndexingÂ inlinesÂ [[+]]Â [[-]]
+                      * indextermÂ (db.indexterm.endofrange)
+                      * indextermÂ (db.indexterm.singular)
+                      * indextermÂ (db.indexterm.startofrange)
+                # AdmonitionÂ elementsÂ [[+]]Â [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # FormalÂ elementsÂ [[+]]Â [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * tableÂ (db.cals.table)
+                      * tableÂ (db.html.table)
+                # GraphicÂ elementsÂ [[+]]Â [[-]]
+                      * mediaobject
+                      * screenshot
+                # InformalÂ elementsÂ [[+]]Â [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltableÂ (db.cals.informaltable)
+                      * informaltableÂ (db.html.informaltable)
+                # ListÂ elementsÂ [[+]]Â [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # ParagraphÂ elementsÂ [[+]]Â [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # PublishingÂ elementsÂ [[+]]Â [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # SynopsisÂ elementsÂ [[+]]Â [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # TechnicalÂ elementsÂ [[+]]Â [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # VerbatimÂ elementsÂ [[+]]Â [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * align (enumeration)
+          o â€œcenterâ€
+          o â€œcharâ€
+          o â€œjustifyâ€
+          o â€œleftâ€
+          o â€œrightâ€
+    * char
+    * charoff (decimal)
+    * At most one of:
+          o colname
+          o namest
+          o spanname
+          o All or none of:
+                # namest
+                # nameend
+    * colsep (enumeration)
+          o â€œ0â€
+          o â€œ1â€
+    * morerows (integer)
+    * rotate (enumeration)
+          o â€œ0â€
+          o â€œ1â€
+    * rowsep (enumeration)
+          o â€œ0â€
+          o â€œ1â€
+    * valign (enumeration)
+          o â€œbottomâ€
+          o â€œmiddleâ€
+          o â€œtopâ€
+***** Description *****
+An entry is a cell in a table.
+Each entry may specify its starting column. Entries that do not explicitly specify a starting column begin implicitly in the column that is immediately adjacent to the preceding cell. Note that entrys with the morerows attribute from preceding rows implicitly occupy cells in the succeeding rows.
+A row is not required to be full. It is legal for some entries to be completely absent (at the beginning, middle, or end of a row).
+**** Processing expectations ****
+This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd].
+The content of entry is formatted to fit within the table cell that it occupies. Horizontal and vertical spanning may allow the content of an entry to occupy several physical cells.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  align
+      Specifies the horizontal alignment of text in an entry.
+      Enumerated values:
+      â€œcenterâCentered.
+      â€œcharâ€Aligned on a particular character.
+      â€œjustifyLeft and right justified.
+      â€œleftâ€Left justified.
+      â€œrightâ€Right justified.
+  char
+      Specifies the alignment character when align is set to â€œcharâ€ .
+  charoff
+      Specifies the percentage of the column's total width that should appear to the left of the first occurance of the character identified in char when align is set to â€œcharâ€ .
+  colname
+      Specifies a column specification by name.
+  colsep
+      Specifies the presence or absence of the column separator
+      Enumerated values:
+      â€œ0No column separator rule.
+      â€œ1Provide a column separator rule on the right
+  morerows
+      Specifies the number of additional rows which this entry occupies. Defaults to zero.
+  nameend
+      Specifies an ending column by name.
+  namest
+      Specifies a starting column by name.
+  namest
+      Specifies a starting column by name.
+  rotate
+      Specifies the rotation of this entry. A value of 1 (true) rotates the cell 90 degrees counter-clockwise. A value of 0 (false) leaves the cell unrotated.
+      Enumerated values:
+      â€œ0Do not rotate the cell.
+      â€œ1Rotate the cell 90 degrees counter-clockwise.
+  rowsep
+      Specifies the presence or absence of the row separator
+      Enumerated values:
+      â€œ0No row separator rule.
+      â€œ1Provide a row separator rule below
+  spanname
+      Specifies a span by name.
+  valign
+      Specifies the vertical alignment of text in an entry.
+      Enumerated values:
+      â€œbottomAligned on the bottom of the entry.
+      â€œmiddleAligned in the middle.
+      â€œtopâ€Aligned at the top of the entry.
+**** Parents ****
+These elements contain entry: rowÂ (db.entrytbl.row), rowÂ (db.row).
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 153_elements.
+The following elements occur in entry: text, abbrev, accel, acronym, address, alt, anchor, annotation, application, author, bibliolist, biblioref, blockquote, bridgehead, calloutlist, caution, citation, citebiblioid, citerefentry, citetitle, classname, classsynopsis, cmdsynopsis, code, command, computeroutput, constant, constraintdef, constructorsynopsis, coref, database, date, destructorsynopsis, editor, email, emphasisÂ (db.emphasis), envar, epigraph, equation, errorcode, errorname, errortext, errortype, example, exceptionname, fieldsynopsis, figure, filename, firstterm, footnote, footnoteref, foreignphrase, formalpara, funcsynopsis, function, glosslist, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, important, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable),
+initializer, inlineequation, inlinemediaobject, interfacename, itemizedlist, jobtitle, keycap, keycode, keycombo, keysym, link, literal, literallayout, markup, mediaobject, menuchoice, methodname, methodsynopsis, modifier, mousebutton, msgset, nonterminal, note, olink, ooclass, ooexception, oointerface, option, optional, orderedlist, org, orgname, package, para, parameter, person, personname, phraseÂ (db.phrase), procedure, productionset, productname, productnumber, programlisting, programlistingco, prompt, property, qandaset, quote, remark, replaceable, returnvalue, revhistory, screen, screenco, screenshot, segmentedlist, shortcut, sidebar, simpara, simplelist, subscript, superscript, symbol, synopsis, systemitem, tableÂ (db.cals.table), tableÂ (db.html.table), tag, task, termdef, tip, token, trademark, type, uri, userinput, variablelist, varname, warning, wordasword, xref.
+***** See Also *****
+colspec, entrytbl, informaltable, row, spanspec, table, tbody, tfoot, tgroup, thead
+[Prev]Â                  [Home]   Â [Next]
+emphasis (db._emphasis)Â  [Up]  Â entrytbl

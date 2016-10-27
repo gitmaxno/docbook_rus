@@ -1,0 +1,134 @@
+
+***** informalexample *****
+informalexample — A displayed example without a title.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o caption? (db.caption)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * floatstyle
+    * width (nonNegativeInteger)
+***** Description *****
+An informalexample is a wrapper for an example without a title. Examples often contain programlistings or other large block elements.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  floatstyle
+      Specifies style information to be used when rendering the float
+  width
+      Specifies the width (in characters) of the element
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain informalexample: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 61_elements.
+The following elements occur in informalexample: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caption (db.caption), caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
+***** See Also *****
+equation, example, figure, informalequation, informalfigure, informaltable, table
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example informalexample</title>
+
+  4 <informalexample>
+    <programlisting>
+  6 sub print_content_model {
+        my($self) = shift;
+  8     local($_) = shift;
+        local(*FILE) = shift;
+ 10
+        my(@cm) = $self->format_content_model2($_);
+ 12     foreach $_ (@cm) {
+            print FILE $self->make_links($_, 1, 1), "\n";
+ 14     }
+    }
+ 16 </programlisting>
+    </informalexample>
+ 18
+    </article>
+  1
+  2 sub print_content_model {
+        my($self) = shift;
+  4     local($_) = shift;
+        local(*FILE) = shift;
+  6
+        my(@cm) = $self->format_content_model2($_);
+  8     foreach $_ (@cm) {
+            print FILE $self->make_links($_, 1, 1), "\n";
+ 10     }
+    }
+informalequation  [Up]   informalfigure

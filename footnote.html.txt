@@ -1,0 +1,129 @@
+
+***** footnote *****
+footnote — A footnote.
+***** Synopsis *****
+    * One or more of:
+          o annotation
+          o bridgehead
+          o remark
+          o revhistory
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Admonition elements [[+]] [[-]]
+                * caution
+                * important
+                * note
+                * tip
+                * warning
+          o Formal elements [[+]] [[-]]
+                * equation
+                * example
+                * figure
+                * table (db.cals.table)
+                * table (db.html.table)
+          o Graphic elements [[+]] [[-]]
+                * mediaobject
+                * screenshot
+          o Informal elements [[+]] [[-]]
+                * informalequation
+                * informalexample
+                * informalfigure
+                * informaltable (db.cals.informaltable)
+                * informaltable (db.html.informaltable)
+          o List elements [[+]] [[-]]
+                * bibliolist
+                * calloutlist
+                * glosslist
+                * itemizedlist
+                * orderedlist
+                * procedure
+                * qandaset
+                * segmentedlist
+                * simplelist
+                * variablelist
+          o Paragraph elements [[+]] [[-]]
+                * anchor
+                * formalpara
+                * para
+                * simpara
+          o Publishing elements [[+]] [[-]]
+                * address
+                * blockquote
+                * epigraph
+                * sidebar
+          o Synopsis elements [[+]] [[-]]
+                * classsynopsis
+                * cmdsynopsis
+                * constructorsynopsis
+                * destructorsynopsis
+                * fieldsynopsis
+                * funcsynopsis
+                * methodsynopsis
+          o Technical elements [[+]] [[-]]
+                * constraintdef
+                * msgset
+                * procedure
+                * productionset
+                * task
+          o Verbatim elements [[+]] [[-]]
+                * literallayout
+                * programlisting
+                * programlistingco
+                * screen
+                * screenco
+                * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label (NMTOKEN)
+***** Additional Constraints *****
+    * footnote must not occur in the descendants of footnote
+    * example must not occur in the descendants of footnote
+    * figure must not occur in the descendants of footnote
+    * table must not occur in the descendants of footnote
+    * equation must not occur in the descendants of footnote
+    * indexterm must not occur in the descendants of footnote
+    * sidebar must not occur in the descendants of footnote
+    * task must not occur in the descendants of footnote
+    * epigraph must not occur in the descendants of footnote
+    * caution must not occur in the descendants of footnote
+    * important must not occur in the descendants of footnote
+    * note must not occur in the descendants of footnote
+    * tip must not occur in the descendants of footnote
+    * warning must not occur in the descendants of footnote
+***** Description *****
+This element is a wrapper around the contents of a footnote.
+Additional references to the same footnote may be generated with footnoteref.
+**** Processing expectations ****
+The footnote element usually generates a mark (a superscript symbol or number) at the place in the flow of the document in which it occurs. The body of the footnote is then presented elsewhere, typically at the bottom of the page.
+Alternative presentations are also possible. In print environments that do not support footnotes at the bottom of the page, they may be presented as endnotes occurring at the end of the component that contains the footnote. Online systems may choose to present them inline or as “pop ups,” or links, or any combination thereof.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Identifies the desired footnote mark
+*** Parents [[+]][[+]] ***
+This element occurs in 54_elements.
+These elements contain footnote: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** Children [[+]][[+]] ***
+This element contains 59_elements.
+The following elements occur in footnote: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example footnote</title>
+
+  4 <para>An annual percentage rate (<abbrev>APR</abbrev>) of 13.9%<footnote>
+    <para>The prime rate, as published in the <citetitle>Wall Street
+  6 Journal</citetitle> on the first business day of the month,
+    plus 7.0%.
+  8 </para>
+    </footnote>
+ 10 will be charged on all balances carried forward.
+    </para>
+ 12
+    </article>
+An annual percentage rate (APR) of 13.9%[3] will be charged on all balances carried forward.
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+[3]The prime rate, as published in the Wall Street Journal on the first business day of the month, plus 7.0%.
+firstterm  [Up]   footnoteref

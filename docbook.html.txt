@@ -1,0 +1,551 @@
+
+[figs/web/cover.png]
+****** DocBook 5: The Definitive Guide ******
+by Norman Walsh
+Edited by Richard Hamilton
+ISBN: 9780596805029, published in conjunction with XML_Press.
+Version 1.0.4 for DocBook V5.0
+Updated: 19 October, 2011
+This is the online edition of the DocBook V5.0 book. References to V5.1 elements and features have been removed. There is a separate online_guide for DocBook V5.1.
+
+(back_cover)
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+Table of Contents
+    * 1._Preface
+          o 1._Why_Read_This_Book?
+          o 2._This_Book's_Audience
+          o 3._Organization_of_This_Book
+          o 4._Conventions_Used_in_This_Book
+          o 5._Using_Code_Examples
+          o 6._Safari®_Books_Online
+          o 7._How_to_Contact_Us
+          o 8._Acknowledgments
+    * I._Introduction
+          o 1._Getting_Started_with_DocBook
+                # 1._A_Short_DocBook_History
+                      # 1.1._The_HaL_and_O’Reilly_Era
+                      # 1.2._The_Davenport_Era
+                      # 1.3._The_OASIS_Era
+                # 2._DocBook_V5.0
+                      # 2.1._What’s_New_in_DocBook_V5.0?
+                # 3._Finally_in_a_Namespace
+                      # 3.1._Namespace_Usage_Policy
+                # 4._Relaxing_with_DocBook
+                # 5._Why_Switch_to_DocBook_V5.0?
+                # 6._Schema_Jungle
+                      # 6.1._Where_to_Get_the_Schemas
+                      # 6.2._DocBook_Documentation
+                # 7._Backward_Compatibility
+          o 2._Creating_DocBook_Documents
+                # 1._Making_an_XML_Document
+                      # 1.1._An_XML_Declaration
+                      # 1.2._A_Document_Type_Declaration
+                      # 1.3._An_Internal_Subset
+                      # 1.4._The_Document_(or_Root)_Element
+                # 2._Physical_Divisions:_Breaking_a_Document_into_Separate_Files
+                # 3._Logical_Divisions:_The_Categories_of_Elements_in_DocBook
+                      # 3.1._Sets
+                      # 3.2._Books
+                      # 3.3._Components
+                      # 3.4._Sections
+                      # 3.5._Meta-Information
+                      # 3.6._Block_Elements
+                      # 3.7._Inline_Elements
+                # 4._Roots:_Starting_Your_DocBook_Document
+                # 5._Making_a_DocBook_Book
+                # 6._Making_a_Chapter
+                # 7._Making_an_Article
+                # 8._Making_a_Reference_Page
+                # 9._Making_Front_and_Back_Matter
+                      # 9.1._Making_an_Index
+                      # 9.2._Making_a_Glossary
+                      # 9.3._Making_a_Bibliography
+          o 3._Validating_DocBook_Documents
+                # 1._ID/IDREF_Constraints_and_Validation
+                # 2._Validating_Your_Documents
+                # 3._Understanding_Validation_Errors
+                      # 3.1._Character_Data_Not_Allowed_Here
+                      # 3.2._Misspelled_Start_Tag
+                      # 3.3._Out-of-Context_Start_Tag
+          o 4._Publishing_DocBook_Documents
+                # 1._A_Survey_of_Stylesheet_Languages
+                      # 1.1._Stylesheet_Examples
+                # 2._Using_XSL_to_Publish_DocBook_Documents
+          o 5._Customizing_DocBook
+                # 1._Should_You_Do_This?
+                # 2._If_You_Change_DocBook,_It’s_Not_DocBook_Anymore!
+                      # 2.1._Namespace_and_Version
+                      # 2.2._Public_Identifiers
+                # 3._Customization_Layers
+                      # 3.1._RELAX_NG_Syntax
+                      # 3.2._DocBook_Schema_Structure
+                      # 3.3._The_General_Structure_of_Customization_Layers
+                # 4._Writing,_Testing,_and_Using_a_Customization_Layer
+                      # 4.1._Deciding_What_to_Change
+                      # 4.2._Deciding_How_to_Change_a_Customization_Layer
+                      # 4.3._Using_Your_Customization_Layer
+                      # 4.4._Testing_Your_Work
+                # 5._Removing_Elements
+                      # 5.1._Removing_msgset
+                      # 5.2._Removing_Computer_Inlines
+                      # 5.3._Removing_Synopsis_Elements
+                      # 5.4._Removing_Sectioning_Elements
+                      # 5.5._Removing_Admonitions_from_Table_Entries
+                # 6._Removing_Attributes
+                      # 6.1._Subsetting_the_Common_Attributes
+                # 7._Adding_Elements
+                # 8._Adding_Attributes
+                # 9._Other_Modifications
+                      # 9.1._Changing_the_Contents_of_the_role_Attribute
+                      # 9.2._Adding_a_Value_to_an_Enumerated_Attribute
+    * II._Reference
+          o I._DocBook_Element_Reference
+                # abbrev - An abbreviation, especially one followed by a period
+                # abstract - A summary
+                # accel - A graphical user interface (GUI) keyboard shortcut
+                # acknowledgements - Acknowledgements of a book or other component
+                # acronym - An often pronounceable word made from the initial (or selected) letters of a name or phrase
+                # address - A real-world address, generally a postal address
+                # affiliation - The institutional affiliation of an individual
+                # alt - A text-only annotation, often used for accessibility
+                # anchor - A spot in the document
+                # annotation - An annotation
+                # answer - An answer to a question posed in a QandASet
+                # appendix - An appendix in a Book or Article
+                # application - The name of a software program
+                # arc - An XLink arc in an extendedlink
+                # area_(db.area) - A region defined for a Callout in a graphic or code example
+                # area_(db.area.inareaset) - A region defined for a Callout in a graphic or code example
+                # areaset - A set of related areas in a graphic or code example
+                # areaspec - A collection of regions in a graphic or code example
+                # arg - An argument in a CmdSynopsis
+                # article - An article
+                # artpagenums - The page numbers of an article as published
+                # attribution - The source of a block quote or epigraph
+                # audiodata - Pointer to external audio data
+                # audioobject - A wrapper for audio data and its associated meta-information
+                # author - The name of an individual author
+                # authorgroup - Wrapper for author information when a document has multiple authors or collabarators
+                # authorinitials - The initials or other short identifier for an author
+                # bibliocoverage - The spatial or temporal coverage of a document
+                # bibliodiv - A section of a Bibliography
+                # biblioentry - An entry in a Bibliography
+                # bibliography - A bibliography
+                # biblioid - An identifier for a document
+                # bibliolist - A wrapper for a list of bibliography entries
+                # bibliomisc - Untyped bibliographic information
+                # bibliomixed - An entry in a Bibliography
+                # bibliomset - A cooked container for related bibliographic information
+                # biblioref - A cross-reference to a bibliographic entry
+                # bibliorelation - The relationship of a document to another
+                # biblioset - A raw container for related bibliographic information
+                # bibliosource - The source of a document
+                # blockquote - A quotation set off from the main text
+                # book - A book
+                # bridgehead - A free-floating heading
+                # callout - A called out description of a marked Area
+                # calloutlist - A list of callout s
+                # caption_(db.caption) - A caption
+                # caption_(db.html.caption) - An HTML table caption
+                # caution - A note of caution
+                # chapter - A chapter, as of a book
+                # citation - An inline bibliographic reference to another published work
+                # citebiblioid - A citation of a bibliographic identifier
+                # citerefentry - A citation to a reference page
+                # citetitle - The title of a cited work
+                # city - The name of a city in an address
+                # classname - The name of a class, in the object-oriented programming sense
+                # classsynopsis - The syntax summary for a class definition
+                # classsynopsisinfo - Information supplementing the contents of a ClassSynopsis
+                # cmdsynopsis - A syntax summary for a software command
+                # co - The location of a callout embedded in text
+                # code - An inline code fragment
+                # col - Specifications for a column in an HTML table
+                # colgroup - A group of columns in an HTML table
+                # collab - Identifies a collaborator
+                # colophon - Text at the back of a book describing facts about its production
+                # colspec - Specifications for a column in a table
+                # command - The name of an executable program or other software command
+                # computeroutput - Data, generally text, displayed or presented by a computer
+                # confdates - The dates of a conference for which a document was written
+                # confgroup - A wrapper for document meta-information about a conference
+                # confnum - An identifier, frequently numerical, associated with a conference for which a document was written
+                # confsponsor - The sponsor of a conference for which a document was written
+                # conftitle - The title of a conference for which a document was written
+                # constant - A programming or system constant
+                # constraint - A constraint in an EBNF production
+                # constraintdef - The definition of a constraint in an EBNF production
+                # constructorsynopsis - A syntax summary for a constructor
+                # contractnum - The contract number of a document
+                # contractsponsor - The sponsor of a contract
+                # contrib - A summary of the contributions made to a document by a credited source
+                # copyright - Copyright information about a document
+                # coref - A cross reference to a co
+                # country - The name of a country
+                # cover - Additional content for the cover of a publication
+                # database - The name of a database, or part of a database
+                # date - The date of publication or revision of a document
+                # dedication - The dedication of a book or other component
+                # destructorsynopsis - A syntax summary for a destructor
+                # edition - The name or number of an edition of a document
+                # editor - The name of the editor of a document
+                # email - An email address
+                # emphasis_(db.emphasis) - Emphasized text
+                # emphasis_(db._emphasis) - A limited span of emphasized text
+                # entry - A cell in a table
+                # entrytbl - A subtable appearing in place of an Entry in a table
+                # envar - A software environment variable
+                # epigraph - A short inscription at the beginning of a document or component
+                # equation - A displayed mathematical equation
+                # errorcode - An error code
+                # errorname - An error name
+                # errortext - An error message.
+                # errortype - The classification of an error message
+                # example - A formal example, with a title
+                # exceptionname - The name of an exception
+                # extendedlink - An XLink extended link
+                # fax - A fax number
+                # fieldsynopsis - The name of a field in a class definition
+                # figure - A formal figure, generally an illustration, with a title
+                # filename - The name of a file
+                # firstname - The first name of a person
+                # firstterm - The first occurrence of a term
+                # footnote - A footnote
+                # footnoteref - A cross reference to a footnote (a footnote mark)
+                # foreignphrase - A word or phrase in a language other than the primary language of the document
+                # formalpara - A paragraph with a title
+                # funcdef - A function (subroutine) name and its return type
+                # funcparams - Parameters for a function referenced through a function pointer in a synopsis
+                # funcprototype - The prototype of a function
+                # funcsynopsis - The syntax summary for a function definition
+                # funcsynopsisinfo - Information supplementing the FuncDefs of a FuncSynopsis
+                # function - The name of a function or subroutine, as in a programming language
+                # glossary - A glossary
+                # glossdef - A definition in a GlossEntry
+                # glossdiv - A division in a Glossary
+                # glossentry - An entry in a Glossary or GlossList
+                # glosslist - A wrapper for a list of glossary entries
+                # glosssee - A cross-reference from one glossentry to another
+                # glossseealso - A cross-reference from one GlossEntry to another
+                # glossterm - A glossary term
+                # group - A group of elements in a CmdSynopsis
+                # guibutton - The text on a button in a GUI
+                # guiicon - Graphic and/or text appearing as a icon in a GUI
+                # guilabel - The text of a label in a GUI
+                # guimenu - The name of a menu in a GUI
+                # guimenuitem - The name of a terminal menu item in a GUI
+                # guisubmenu - The name of a submenu in a GUI
+                # hardware - A physical part of a computer system
+                # holder - The name of the individual or organization that holds a copyright
+                # honorific - The title of a person
+                # imagedata_(db.imagedata) - Pointer to external image data
+                # imagedata_(db.imagedata.mathml) - A MathML expression in a media object
+                # imagedata_(db.imagedata.svg) - An SVG drawing in a media object
+                # imageobject - A wrapper for image data and its associated meta-information
+                # imageobjectco - A wrapper for an image object with callouts
+                # important - An admonition set off from the text
+                # index - An index to a book or part of a book
+                # indexdiv - A division in an index
+                # indexentry - An entry in an index
+                # indexterm_(db.indexterm.endofrange) - Identifies the end of a range associated with an indexed term
+                # indexterm_(db.indexterm.singular) - A wrapper for an indexed term
+                # indexterm_(db.indexterm.startofrange) - A wrapper for an indexed term that covers a range
+                # info_(db.info) - A wrapper for information about a component or other block
+                # info_(db.titleforbidden.info) - A wrapper for information about a component or other block without a title
+                # info_(db.titleonly.info) - A wrapper for information about a component or other block with only a title
+                # info_(db.titleonlyreq.info) - A wrapper for information about a component or other block with only a required title
+                # info_(db.titlereq.info) - A wrapper for information about a component or other block with a required title
+                # informalequation - A displayed mathematical equation without a title
+                # informalexample - A displayed example without a title
+                # informalfigure - A untitled figure
+                # informaltable_(db.cals.informaltable) - A table without a title
+                # informaltable_(db.html.informaltable) - An HTML table without a title
+                # initializer - The initializer for a FieldSynopsis
+                # inlineequation - A mathematical equation or expression occurring inline
+                # inlinemediaobject - An inline media object (video, audio, image, and so on)
+                # interfacename - The name of an interface
+                # issuenum - The number of an issue of a journal
+                # itemizedlist - A list in which each entry is marked with a bullet or other dingbat
+                # itermset - A set of index terms in the meta-information of a document
+                # jobtitle - The title of an individual in an organization
+                # keycap - The text printed on a key on a keyboard
+                # keycode - The internal, frequently numeric, identifier for a key on a keyboard
+                # keycombo - A combination of input actions
+                # keysym - The symbolic name of a key on a keyboard
+                # keyword - One of a set of keywords describing the content of a document
+                # keywordset - A set of keywords describing the content of a document
+                # label - A label on a Question or Answer
+                # legalnotice - A statement of legal obligations or requirements
+                # lhs - The left-hand side of an EBNF production
+                # lineage - The portion of a person's name indicating a relationship to ancestors
+                # lineannotation - A comment on a line in a verbatim listing
+                # link - A hypertext link
+                # listitem - A wrapper for the elements of a list item
+                # literal - Inline text that is some literal value
+                # literallayout - A block of text in which line breaks and white space are to be reproduced faithfully
+                # locator - An XLink locator in an extendedlink
+                # manvolnum - A reference volume number
+                # markup - A string of formatting markup in text that is to be represented literally
+                # mathphrase - A mathematical phrase, an expression that can be represented with ordinary text and a small amount of markup
+                # mediaobject - A displayed media object (video, audio, image, etc.)
+                # member - An element of a simple list
+                # menuchoice - A selection or series of selections from a menu
+                # methodname - The name of a method
+                # methodparam - Parameters to a method
+                # methodsynopsis - A syntax summary for a method
+                # modifier - Modifiers in a synopsis
+                # mousebutton - The conventional name of a mouse button
+                # msg - A message in a message set
+                # msgaud - The audience to which a message in a message set is relevant
+                # msgentry - A wrapper for an entry in a message set
+                # msgexplan - Explanatory material relating to a message in a message set
+                # msginfo - Information about a message in a message set
+                # msglevel - The level of importance or severity of a message in a message set
+                # msgmain - The primary component of a message in a message set
+                # msgorig - The origin of a message in a message set
+                # msgrel - A related component of a message in a message set
+                # msgset - A detailed set of messages, usually error messages
+                # msgsub - A subcomponent of a message in a message set
+                # msgtext - The actual text of a message component in a message set
+                # nonterminal - A non-terminal in an EBNF production
+                # note - A message set off from the text
+                # olink - A link that addresses its target indirectly
+                # ooclass - A class in an object-oriented programming language
+                # ooexception - An exception in an object-oriented programming language
+                # oointerface - An interface in an object-oriented programming language
+                # option - An option for a software command
+                # optional - Optional information
+                # orderedlist - A list in which each entry is marked with a sequentially incremented label
+                # org - An organization and associated metadata
+                # orgdiv - A division of an organization
+                # orgname - The name of an organization
+                # otheraddr - Uncategorized information in address
+                # othercredit - A person or entity, other than an author or editor, credited in a document
+                # othername - A component of a persons name that is not a first name, surname, or lineage
+                # package - A software or application package
+                # pagenums - The numbers of the pages in a book, for use in a bibliographic entry
+                # para - A paragraph
+                # paramdef - Information about a function parameter in a programming language
+                # parameter - A value or a symbolic reference to a value
+                # part - A division in a book
+                # partintro - An introduction to the contents of a part
+                # person - A person and associated metadata
+                # personblurb - A short description or note about a person
+                # personname - The personal name of an individual
+                # phone - A telephone number
+                # phrase_(db.phrase) - A span of text
+                # phrase_(db._phrase) - A limited span of text
+                # pob - A post office box in an address
+                # postcode - A postal code in an address
+                # preface - Introductory matter preceding the first chapter of a book
+                # primary - The primary word or phrase under which an index term should be sorted
+                # primaryie - A primary term in an index entry, not in the text
+                # printhistory - The printing history of a document
+                # procedure - A list of operations to be performed in a well-defined sequence
+                # production - A production in a set of EBNF productions
+                # productionrecap - A cross-reference to an EBNF production
+                # productionset - A set of EBNF productions
+                # productname - The formal name of a product
+                # productnumber - A number assigned to a product
+                # programlisting - A literal listing of all or part of a program
+                # programlistingco - A program listing with associated areas used in callouts
+                # prompt - A character or string indicating the start of an input field in a computer display
+                # property - A unit of data associated with some part of a computer system
+                # pubdate - The date of publication of a document
+                # publisher - The publisher of a document
+                # publishername - The name of the publisher of a document
+                # qandadiv - A titled division in a QandASet
+                # qandaentry - A question/answer set within a QandASet
+                # qandaset - A question-and-answer set
+                # question - A question in a QandASet
+                # quote - An inline quotation
+                # refclass - The scope or other indication of applicability of a reference entry
+                # refdescriptor - A description of the topic of a reference page
+                # refentry - A reference page (originally a UNIX man-style reference page)
+                # refentrytitle - The title of a reference page
+                # reference - A collection of reference entries
+                # refmeta - Meta-information for a reference entry
+                # refmiscinfo - Meta-information for a reference entry other than the title and volume number
+                # refname - The name of (one of) the subject(s) of a reference page
+                # refnamediv - The name, purpose, and classification of a reference page
+                # refpurpose - A short (one sentence) synopsis of the topic of a reference page
+                # refsect1 - A major subsection of a reference entry
+                # refsect2 - A subsection of a refsect1
+                # refsect3 - A subsection of a refsect2
+                # refsection - A recursive section in a refentry
+                # refsynopsisdiv - A syntactic synopsis of the subject of the reference page
+                # releaseinfo - Information about a particular release of a document
+                # remark - A remark (or comment) intended for presentation in a draft manuscript
+                # replaceable - Content that may or must be replaced by the user
+                # returnvalue - The value returned by a function
+                # revdescription - A extended description of a revision to a document
+                # revhistory - A history of the revisions to a document
+                # revision - An entry describing a single revision in the history of the revisions to a document
+                # revnumber - A document revision number
+                # revremark - A description of a revision to a document
+                # rhs - The right-hand side of an EBNF production
+                # row_(db.entrytbl.row) - A row in a table
+                # row_(db.row) - A row in a table
+                # sbr - An explicit line break in a command synopsis
+                # screen - Text that a user sees or might see on a computer screen
+                # screenco - A screen with associated areas used in callouts
+                # screenshot - A representation of what the user sees or might see on a computer screen
+                # secondary - A secondary word or phrase in an index term
+                # secondaryie - A secondary term in an index entry, rather than in the text
+                # sect1 - A top-level section of document
+                # sect2 - A subsection within a Sect1
+                # sect3 - A subsection within a Sect2
+                # sect4 - A subsection within a Sect3
+                # sect5 - A subsection within a Sect4
+                # section - A recursive section
+                # see - Part of an index term directing the reader instead to another entry in the index
+                # seealso - Part of an index term directing the reader also to another entry in the index
+                # seealsoie - A See also entry in an index, rather than in the text
+                # seeie - A See entry in an index, rather than in the text
+                # seg - An element of a list item in a segmented list
+                # seglistitem - A list item in a segmented list
+                # segmentedlist - A segmented list, a list of sets of elements
+                # segtitle - The title of an element of a list item in a segmented list
+                # seriesvolnums - Numbers of the volumes in a series of books
+                # set - A collection of books
+                # setindex - An index to a set of books
+                # shortaffil - A brief description of an affiliation
+                # shortcut - A key combination for an action that is also accessible through a menu
+                # sidebar - A portion of a document that is isolated from the main narrative flow
+                # simpara - A paragraph that contains only text and inline markup, no block elements
+                # simplelist - An undecorated list of single words or short phrases
+                # simplemsgentry - A wrapper for a simpler entry in a message set
+                # simplesect - A section of a document with no subdivisions
+                # spanspec - Formatting information for a spanned column in a table
+                # state - A state or province in an address
+                # step - A unit of action in a procedure
+                # stepalternatives - Alternative steps in a procedure
+                # street - A street address in an address
+                # subject - One of a group of terms describing the subject matter of a document
+                # subjectset - A set of terms describing the subject matter of a document
+                # subjectterm - A term in a group of terms describing the subject matter of a document
+                # subscript - A subscript (as in H2 O, the molecular formula for water)
+                # substeps - A wrapper for steps that occur within steps in a procedure
+                # subtitle - The subtitle of a document
+                # superscript - A superscript (as in x^2, the mathematical notation for x multiplied by itself)
+                # surname - A family name; in western cultures the last name
+                # symbol - A name that is replaced by a value before processing
+                # synopfragment - A portion of a CmdSynopsis broken out from the main body of the synopsis
+                # synopfragmentref - A reference to a fragment of a command synopsis
+                # synopsis - A general-purpose element for representing the syntax of commands or functions
+                # systemitem - A system-related item or term
+                # table_(db.cals.table) - A formal table in a document
+                # table_(db.html.table) - A formal (captioned) HTML table in a document
+                # tag - A component of XML (or SGML) markup
+                # task - A task to be completed
+                # taskprerequisites - The prerequisites for a task
+                # taskrelated - Information related to a task
+                # tasksummary - A summary of a task
+                # tbody_(db.cals.entrytbl.tbody) - A wrapper for the rows of a table or informal table
+                # tbody_(db.cals.tbody) - A wrapper for the rows of a table or informal table
+                # tbody_(db.html.tbody) - A wrapper for the rows of an HTML table or informal HTML table
+                # td - A table entry in an HTML table
+                # term - The word or phrase being defined or described in a variable list
+                # termdef - An inline definition of a term
+                # tertiary - A tertiary word or phrase in an index term
+                # tertiaryie - A tertiary term in an index entry, rather than in the text
+                # textdata - Pointer to external text data
+                # textobject - A wrapper for a text description of an object and its associated meta-information
+                # tfoot_(db.cals.tfoot) - A table footer consisting of one or more rows
+                # tfoot_(db.html.tfoot) - A table footer consisting of one or more rows in an HTML table
+                # tgroup - A wrapper for the main content of a table, or part of a table
+                # th - A table header entry in an HTML table
+                # thead_(db.cals.entrytbl.thead) - A table header consisting of one or more rows
+                # thead_(db.cals.thead) - A table header consisting of one or more rows
+                # thead_(db.html.thead) - A table header consisting of one or more rows in an HTML table
+                # tip - A suggestion to the user, set off from the text
+                # title - The text of the title of a section of a document or of a formal block-level element
+                # titleabbrev - The abbreviation of a title
+                # toc - A table of contents
+                # tocdiv - A division in a table of contents
+                # tocentry - A component title in a table of contents
+                # token - A unit of information
+                # tr - A row in an HTML table
+                # trademark - A trademark
+                # type - The classification of a value
+                # uri - A Uniform Resource Identifier
+                # userinput - Data entered by the user
+                # varargs - An empty element in a function synopsis indicating a variable number of arguments
+                # variablelist - A list in which each entry is composed of a set of one or more terms and an associated description
+                # varlistentry - A wrapper for a set of terms and the associated description in a variable list
+                # varname - The name of a variable
+                # videodata - Pointer to external video data
+                # videoobject - A wrapper for video data and its associated meta-information
+                # void - An empty element in a function synopsis indicating that the function in question takes no arguments
+                # volumenum - The volume number of a document in a set (as of books in a set or articles in a journal)
+                # warning - An admonition set off from the text
+                # wordasword - A word meant specifically as a word and not representing anything else
+                # xref - A cross reference to another part of the document
+                # year - The year of publication of a document
+                # *:* - Any element from almost any namespace
+                # mml:* - Any element from the MathML namespace
+                # svg:* - Any element from the SVG namespace
+    * III._Appendixes
+          o A._Installation
+                # 1._Installing_DocBook
+                      # 1.1._Installing_the_DocBook_Schemas
+                      # 1.2._XML_Catalogs_and_DocBook
+                      # 1.3._Installing_the_DocBook_Stylesheets
+          o B._DocBook_Variants_and_Future_Directions
+                # 1._DocBook_Variants
+                # 2._Future_Directions
+                      # 2.1._DocBook_Assembly_Mechanism
+          o C._Resources
+                # 1._Latest_Versions_of_DocBook_Schemas
+                # 2._DocBook_and_XML_Resources_on_the_Web
+                # 3._Introductory_Material_on_the_Web
+                # 4._References_and_Technical_Notes_on_the_Web
+                # 5._World_Wide_Web_Consortium_(W3C)_Recommendations
+                # 6._Related_Standards
+                # 7._Internet_RFCs
+                # 8._Books_and_Printed_Resources
+                # 9._XML_Tools
+          o D._Interchanging_DocBook_Documents
+          o E._GNU_Free_Documentation_License
+    * Glossary
+    * Index
+List of Figures
+    * 3.1. <oXygen/>_XML_Editor_validation
+    * 2. The_Pythagorean_Theorem_Illustrated
+List of Tables
+    * 1.1. Renamed_elements
+    * 1.2. Recommended_mapping_for_removed_elements
+    * 3. Sample_CALS_Table
+    * 4. Sample_HTML_Table
+List of Examples
+    * 1.1. DocBook_V4.5_document
+    * 1.2. DocBook_V5.0_document
+    * 2.1. A_typical_book
+    * 2.2. A_typical_chapter
+    * 2.3. A_typical_article
+    * 2.4. A_sample_reference_page
+    * 4.1. A_fragment_of_a_CSS_stylesheet
+    * 4.2. A_fragment_of_an_XSL_stylesheet
+    * 4.3. A_fragment_of_XQuery
+    * 5.1. Adding_cleartext_with_a_customization_layer
+    * 5.2. Removing_msgset
+    * 5.3. Removing_msgentry
+    * 5.4. Removing_computer_inlines
+    * 5.5. Removing_cmdsynopsis_and_funcsynopsis
+    * 5.6. Removing_the_sect4_and_sect5_elements
+    * 5.7. Limiting_recursive_sections_to_three_levels
+    * 5.8. Limiting_recursive_sections_to_three_levels_using_Schematron
+    * 5.9. Removing_admonitions_from_tables
+    * 5.10. Removing_continuation_from_orderedlist
+    * 5.11. Removing_common_attributes
+    * 5.12. Adding_a_sect6_element
+    * 5.13. Adding_born_and_died_attributes
+    * 5.14. Changing_role_on_procedure
+    * 5.15. Adding_a_value_to_an_enumeration
+    * 25. A_DSSSL_Function
+    * 26. Example_index_terms
+    * 27. The_Grand_Unified_Theory
+List of Equations
+    * 1. Fermat's_Last_Theorem
+    * 2. Fermat's_Last_Theorem
+    * 3. Fermat's_Last_Theorem

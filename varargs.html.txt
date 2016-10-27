@@ -1,0 +1,33 @@
+
+***** varargs *****
+varargs — An empty element in a function synopsis indicating a variable number of arguments.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A varargs indicates that a function takes a variable number of arguments.
+**** Processing expectations ****
+The varargs element produces generated text that indicates that the function takes a variable number of arguments. The exact generated text may vary. One common result is (…).
+**** Parents ****
+These elements contain varargs: funcprototype.
+***** See Also *****
+funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, returnvalue, void
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example varargs</title>
+
+  4 <funcsynopsis>
+    <funcsynopsisinfo>
+  6 #include &lt;varargs.h&gt;
+    </funcsynopsisinfo>
+  8 <funcprototype>
+      <funcdef>int <function>max</function></funcdef>
+ 10   <varargs/>
+    </funcprototype>
+ 12 </funcsynopsis>
+
+ 14 </article>
+#include <varargs.h>
+int max(...);
+userinput  [Up]   variablelist

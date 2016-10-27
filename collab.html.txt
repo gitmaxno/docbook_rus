@@ -1,0 +1,45 @@
+
+***** collab *****
+collab — Identifies a collaborator.
+***** Synopsis *****
+    * Sequence of:
+          o One or more of:
+                # org
+                # orgname
+                # person
+                # personname
+          o Zero or more of:
+                # affiliation
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+This element identifies a collaborative partner in a document. It associates the name of a collaborator with his or her affiliation.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+**** Parents ****
+These elements contain collab: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in collab: affiliation, org, orgname, person, personname.
+***** See Also *****
+author, authorgroup, contrib, editor, othercredit, personblurb, personname
+***** Examples *****
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>DocBook: The Definitive Guide</title>
+  4   <collab>
+        <personname><firstname>Lenny</firstname>
+  6     <surname>Muellner</surname></personname>
+      </collab>
+  8   <collab>
+        <personname><firstname>Norman</firstname>
+ 10     <surname>Walsh</surname></personname>
+      </collab>
+ 12 </info>
+
+ 14 <chapter><title>Just an Example</title>
+    <para>This is just an example, in real life, Lenny and Norm are both
+ 16 <tag>author</tag>s.
+    </para>
+ 18 </chapter>
+    </book>
+colgroup  [Up]   colophon

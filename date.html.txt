@@ -1,0 +1,23 @@
+
+***** date *****
+date — The date of publication or revision of a document.
+***** Synopsis *****
+    * One of:
+          o A date value.
+          o A dateTime value.
+          o A gYearMonth value.
+          o A gYear value.
+          o text
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The date element identifies a date.
+**** Processing expectations ****
+Formatted inline.
+DocBook does not specify the format of the date.
+*** Parents [[+]][[+]] ***
+This element occurs in 60_elements.
+These elements contain date: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, revision, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+***** See Also *****
+edition, printhistory, pubdate, releaseinfo, revhistory
+database  [Up]   dedication

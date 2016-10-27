@@ -1,0 +1,106 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** database *****
+databaseÂ â€”Â The name of a database, or part of a database.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phraseÂ (db._phrase)
+          o replaceable
+          o GraphicÂ inlinesÂ [[+]]Â [[-]]
+                * inlinemediaobject
+          o IndexingÂ inlinesÂ [[+]]Â [[-]]
+                * indextermÂ (db.indexterm.endofrange)
+                * indextermÂ (db.indexterm.singular)
+                * indextermÂ (db.indexterm.startofrange)
+          o LinkingÂ inlinesÂ [[+]]Â [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indextermÂ (db.indexterm.endofrange)
+                * indextermÂ (db.indexterm.singular)
+                * indextermÂ (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * class (enumeration)
+          o â€œaltkeyâ€
+          o â€œconstraintâ€
+          o â€œdatatypeâ€
+          o â€œfieldâ€
+          o â€œforeignkeyâ€
+          o â€œgroupâ€
+          o â€œindexâ€
+          o â€œkey1â€
+          o â€œkey2â€
+          o â€œnameâ€
+          o â€œprimarykeyâ€
+          o â€œprocedureâ€
+          o â€œrecordâ€
+          o â€œruleâ€
+          o â€œsecondarykeyâ€
+          o â€œtableâ€
+          o â€œuserâ€
+          o â€œviewâ€
+***** Description *****
+The name of a database, or part of a database.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  class
+      Identifies the class of database artifact
+      Enumerated values:
+      â€œaltkeyâ€   An alternate or secondary key
+      â€œconstraintâ€A constraint
+      â€œdatatypeâ€ A data type
+      â€œfieldâ€    A field
+      â€œforeignkeyâ€A foreign key
+      â€œgroupâ€    A group
+      â€œindexâ€    An index
+      â€œkey1â€     The first or primary key
+      â€œkey2â€     An alternate or secondary key
+      â€œnameâ€     A name
+      â€œprimarykeyâ€The primary key
+      â€œprocedureâ€A (stored) procedure
+      â€œrecordâ€   A record
+      â€œruleâ€     A rule
+      â€œsecondarykeyThe secondary key
+      â€œtableâ€    A table
+      â€œuserâ€     A user
+      â€œviewâ€     A view
+*** ParentsÂ [[+]][[+]] ***
+This element occurs in 50_elements.
+These elements contain database: bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, emphasisÂ (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in database: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+application, filename, hardware, productname
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example database</title>
+
+  4 <para>The <database>ProjectStatus</database> database has been updated.
+    Please note that <database class='field'>Year</database> has been
+  6 extended to four digits.
+    </para>
+  8
+    </article>
+The ProjectStatus database has been updated. Please note that Year has been extended to four digits.
+[Prev]Â [Home] Â [Next]
+coverÂ   [Up]    Â date

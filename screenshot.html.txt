@@ -1,0 +1,44 @@
+
+***** screenshot *****
+screenshot — A representation of what the user sees or might see on a computer screen.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o mediaobject
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A screenshot is a graphical environment for displaying an image of what the user might see on a computer screen. It is often used to display application screenshots, dialog boxes, and other components of a graphical user interface.
+**** Processing expectations ****
+Formatted as a displayed block.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain screenshot: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in screenshot: info (db.info), info (db.titleforbidden.info), mediaobject, subtitle, title, titleabbrev.
+***** See Also *****
+computeroutput, lineannotation, literallayout, programlisting, screen, synopsis, userinput
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example screenshot</title>
+
+  4 <screenshot>
+      <info>
+  6     <bibliomisc role="resolution">640x480x256</bibliomisc>
+      </info>
+  8   <mediaobject>
+        <imageobject>
+ 10       <imagedata fileref="copilot.gif"/>
+        </imageobject>
+ 12   </mediaobject>
+    </screenshot>
+ 14
+    </article>
+screenco  [Up]   secondary

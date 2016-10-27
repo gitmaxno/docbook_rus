@@ -1,0 +1,26 @@
+
+***** qandaentry *****
+qandaentry — A question/answer set within a QandASet.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o question
+          o Zero or more of:
+                # answer
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A qandaentry is an entry in a qandaset. Each qandaentry defines a question and (possibly) its answer or answers.
+**** Processing expectations ****
+Formatted as a displayed block. The questions are usually presented before the answers, and often the answers are indented to make the questions stand out.
+**** Parents ****
+These elements contain qandaentry: qandadiv, qandaset.
+**** Children ****
+The following elements occur in qandaentry: answer, info (db.titleforbidden.info), info (db.titleonly.info), question, title, titleabbrev.
+qandadiv  [Up]   qandaset

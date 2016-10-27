@@ -1,0 +1,87 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** filename *****
+filenameÂ â€”Â The name of a file.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phraseÂ (db._phrase)
+          o replaceable
+          o GraphicÂ inlinesÂ [[+]]Â [[-]]
+                * inlinemediaobject
+          o IndexingÂ inlinesÂ [[+]]Â [[-]]
+                * indextermÂ (db.indexterm.endofrange)
+                * indextermÂ (db.indexterm.singular)
+                * indextermÂ (db.indexterm.startofrange)
+          o LinkingÂ inlinesÂ [[+]]Â [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indextermÂ (db.indexterm.endofrange)
+                * indextermÂ (db.indexterm.singular)
+                * indextermÂ (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * class (enumeration)
+          o â€œdevicefileâ€
+          o â€œdirectoryâ€
+          o â€œextensionâ€
+          o â€œheaderfileâ€
+          o â€œlibraryfileâ€
+          o â€œpartitionâ€
+          o â€œsymlinkâ€
+    * path
+***** Description *****
+A filename is the name of a file on a local or network disk. It may be a simple name or may include a path or other elements specific to the operating system.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  class
+      Identifies the class of filename
+      Enumerated values:
+      â€œdevicefileâA device
+      â€œdirectoryâ€A directory
+      â€œextensionâ€A filename extension
+      â€œheaderfileâA header file (as for a programming language)
+      â€œlibraryfileA library file
+      â€œpartitionâ€A partition (as of a hard disk)
+      â€œsymlinkâ€ A symbolic link
+  path
+      Specifies the path of the filename
+*** ParentsÂ [[+]][[+]] ***
+This element occurs in 51_elements.
+These elements contain filename: bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasisÂ (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+*** ChildrenÂ [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in filename: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+application, computeroutput, database, envar, hardware, productname, prompt, systemitem, userinput
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example filename</title>
+
+  4 <para>The symbolic constants for error numbers are defined in
+    <filename class='headerfile'>errno.h</filename> in
+  6 <filename class='directory'>/usr/include/sys</filename>.
+    </para>
+  8
+    </article>
+The symbolic constants for error numbers are defined in errno.h in /usr/include/sys.
+[Prev]Â [Home]    Â [Next]
+figureÂ  [Up]  Â firstname

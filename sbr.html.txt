@@ -1,0 +1,18 @@
+
+***** sbr *****
+sbr — An explicit line break in a command synopsis.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes.
+***** Description *****
+For the most part, DocBook attempts to describe document structure rather than presentation. However, in some complex environments, there may be no reasonable set of processing expectations that can guarantee correct formatting.
+There are two such environments in DocBook: cmdsynopsis and rhs. Within a long synopsis or long “righthand side,” it may be necessary to specify the location of a line break explicitly.
+The sbr element indicates the position of such a line break. It is purely presentational.
+**** Processing expectations ****
+An sbr causes a line break.
+**** Parents ****
+These elements contain sbr: arg, cmdsynopsis, group, rhs.
+***** See Also *****
+arg, cmdsynopsis, group, refsynopsisdiv, synopfragment, synopfragmentref
+row (db.row)  [Up]   screen

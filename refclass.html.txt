@@ -1,0 +1,22 @@
+
+***** refclass *****
+refclass — The scope or other indication of applicability of a reference entry.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o application
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The refclass element describes the applicability or scope of a refentry. A refclass might indicate that the entry was only applicable to a particular application, for example, or only to a particular vendor’s operating system.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+Formatting reference pages may require a fairly sophisticated processing system. Much of the meta-information about a reference page (its name, type, purpose, title, and classification) is stored in wrappers near the beginning of the refentry.
+Common presentational features, such as titles and running heads, may require data from several of these wrappers plus some generated text. Other formatting often requires that these elements be reordered.
+**** Parents ****
+These elements contain refclass: refnamediv.
+**** Children ****
+The following elements occur in refclass: text, application.
+***** Examples *****
+See refentry for an example using this element.
+quote   [Up]   refdescriptor

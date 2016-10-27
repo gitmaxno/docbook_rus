@@ -1,0 +1,47 @@
+
+***** areaspec *****
+areaspec — A collection of regions in a graphic or code example.
+***** Synopsis *****
+    * One or more of:
+          o area (db.area)
+          o areaset
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * Exactly one of:
+          o units (enumeration)
+                # “calspair”
+                # “linecolumn”
+                # “linecolumnpair”
+                # “linerange”
+          o Each of:
+                # units (enumeration)
+                      # “other”
+                # otherunits (NMTOKEN)
+Required attributes are shown in bold.
+***** Description *****
+An areaspec holds a collection of regions and/or region sets in a graphic, program listing, or screen that are associated with callout descriptions. See area for a description of the attributes.
+**** Processing expectations ****
+Suppressed. This element provides data for processing but it is not expected to be rendered directly.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  otherunits
+      Identifies the units used in the coords attribute when the units attribute is “other” . This attribute is forbidden otherwise.
+  units
+      Identifies the units used in the coords attribute The default units vary according to the type of callout specified: calspair for graphics and linecolumn for line-oriented elements.
+      Enumerated values:
+      “calspair”   Coordinates expressed as a pair of CALS graphic coordinates.
+      “linecolumn” Coordinates expressed as a line and column.
+      “linecolumnpairCoordinates expressed as a pair of lines and columns.
+      “linerange”  Coordinates expressed as a line range.
+  units
+      Indicates that non-standard units are used for this area . In this case otherunits must be specified.
+      Enumerated values:
+      “otherCoordinates expressed in some non-standard units.
+**** Parents ****
+These elements contain areaspec: imageobjectco, programlistingco, screenco.
+**** Children ****
+The following elements occur in areaspec: area (db.area), areaset.
+***** See Also *****
+calloutlist, co, coref, imageobjectco, programlistingco, screenco
+areaset  [Up]      arg

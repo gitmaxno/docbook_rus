@@ -1,0 +1,764 @@
+
+***** Creating DocBook Documents *****
+$Revision$
+This chapter explains in concrete, practical terms how to make DocBook documents. It’s an overview of all the kinds of markup that are possible in DocBook documents. It explains how to create several kinds of DocBook documents: books, sets of books, chapters, articles, and reference manual entries. The idea is to give you enough basic information to actually start writing. The information here is intentionally skeletal; you can find the details in the reference section of this book.
+**** 1. Making an XML Document ****
+An XML document consists of an optional XML declaration, an optional Document Type Declaration, which includes an optional internal subset, and a document (or root) element. We’ll discuss each of these in turn.
+In XML vocabularies like DocBook, which are defined with RELAX NG (and also in the case of vocabularies defined with W3C’s XML Schema), it is common to omit the Document Type Declaration entirely. The Document Type Declaration associates a document with a particular Document Type Definition (DTD).
+*** 1.1. An XML Declaration ***
+XML documents often begin with an XML declaration that identifies a few simple aspects of the document, for example:
+<?xml version="1.0" encoding="utf-8"?>
+Identifying the version of XML ensures that future changes to the XML specification will not alter the semantics of this document. The encoding declaration tells the processor what character encoding this document uses. It must match the actual encoding that you use. The complete details of the XML declaration are described in the W3C standard, Extensible Markup Language (XML) 1.0 [XML].
+If your document uses XML 1.0 and an encoding of either utf-8 or utf-16, the XML declaration is not required. But it is never wrong to include it. If you do not include an XML declaration, your document must conform to XML 1.0. If you want to use XML 1.1, you must include an XML declaration and specify version="1.1" in it.
+The XML declaration is syntactically similar to a processing instruction, but it is not one. The XML declaration, if it is present, must be absolutely the first thing in your document and it may not appear anywhere else.
+*** 1.2. A Document Type Declaration ***
+XML documents don’t require a DTD, and if you are using RELAX NG, often they will not include one. Historically, DocBook XML documents have almost always had one.
+The Document Type Declaration identifies what the root element of the document will be and may specify the DTD that should be used when parsing the document. A typical Document Type Declaration for a DocBook V4.5 document looks like this:
+  1 <?xml version='1.0'?>
+  2 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+This declaration indicates that the root element will be book and that the DTD used will be DocBook V4.5, identified with both its public and system identifiers. In this example, the DTD is identified with an HTTP URI. System identifiers in XML must be URIs. Almost all systems accept filenames and interpret them locally as file: URLs, but it’s always correct to fully qualify them.
+You can specify a DTD for DocBook V5.0 documents:
+  1 <?xml version='1.0'?>
+  2 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+                   "http://www.oasis-open.org/docbook/xml/5.0/docbook.dtd">
+But the limited constraints that can be expressed in DTDs mean that the resultant document may or may not really be valid DocBook V5.0. The normative schema for DocBook V5.0 is the RELAX NG grammar with its Schematron annotations.
+The only reason to use a DTD with DocBook V5.0 is if your editing environment (or other tool) requires one, for example, for syntax-directed editing. If you’re using a tool that requires DTDs, check with the vendor, as maybe a more recent version is available that supports RELAX NG.
+*** 1.3. An Internal Subset ***
+Even if you aren’t using the DTD version of DocBook V5.0, you may still want to use a Document Type Declaration to provide local declarations such as entities:
+  1 <?xml version='1.0'?>
+  2 <!DOCTYPE book [
+    <!ENTITY nwalsh "Norman Walsh">
+  4 <!ENTITY chap1 SYSTEM "chap1.xml">
+    <!ENTITY chap2 SYSTEM "chap2.xml">
+  6 ]>
+These declarations form what is known as the internal subset. In this example, the DTD has been omitted, but the two are not mutually exclusive. If you are using a DTD (which is technically known as the external subset), you can include the internal subset immediately after the DTD:
+  1 <?xml version='1.0'?>
+  2 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0/EN"
+                   "http://www.oasis-open.org/docbook/xml/5.0/docbook.dtd" [
+  4 <!ENTITY nwalsh "Norman Walsh">
+    <!ENTITY chap1 SYSTEM "chap1.xml">
+  6 <!ENTITY chap2 SYSTEM "chap2.xml">
+    ]>
+When both are specified, the internal subset is parsed first. If multiple declarations for an entity occur, the first declaration is used. This means that declarations in the internal subset override declarations in the external subset.
+*** 1.4. The Document (or Root) Element ***
+All XML documents must have exactly one root element, although it may have sibling comments and processing instructions. If the document has a Document Type Declaration, the root element usually immediately follows it:
+  1 <?xml version='1.0'?>
+  2 <!DOCTYPE book [
+    <!ENTITY nwalsh "Norman Walsh">
+  4 <!ENTITY chap1 SYSTEM "chap1.xml">
+    <!ENTITY chap2 SYSTEM "chap2.xml">
+  6 ]>
+    <book xmlns="http://docbook.org/ns/docbook" version="5.0">…</book>
+The important point is that the root element must be physically present immediately after the Document Type Declaration. You cannot place the root element of the document in an external entity.
+**** 2. Physical Divisions: Breaking a Document into Separate Files ****
+The rest of this chapter describes how you can break documents into logical chunks, such as books, chapters, sections, and so on. Before we begin, and while the subject of the internal subset is fresh in your mind, let’s take a quick look at how to break documents into separate files.
+Actually, we’ve already told you how to do it. If you recall, in the preceding sections we had declarations of the form:
+<!ENTITY name SYSTEM "filename">
+If you refer to the entity name in your document after this declaration, the system will insert the contents of the file filename into your document at that point. So, if you’ve got a book that consists of three chapters and two appendixes, you might create a file called book.xml, which looks like this:
+  1 <!DOCTYPE book [
+  2 <!ENTITY chap1 SYSTEM "chap1.xml">
+    <!ENTITY chap2 SYSTEM "chap2.xml">
+  4 <!ENTITY chap3 SYSTEM "chap3.xml">
+    <!ENTITY appa SYSTEM "appa.xml">
+  6 <!ENTITY appb SYSTEM "appb.xml">
+    ]>
+  8 <book xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <title>My First Book</title>
+ 10 &chap1;
+    &chap2;
+ 12 &chap3;
+    &appa;
+ 14 &appb;
+    </book>
+You can then write the chapters and appendixes conveniently in separate files.
+Documents that you reference with external parsed entities cannot have a Document Type Declaration. For example, Chapter 1 might begin like this:
+  1 <chapter xml:id="ch1"><title>My First Chapter</title>
+  2 <para>My first paragraph.</para>
+    …
+But it must not begin with its own Document Type Declaration:
+  1 <!DOCTYPE chapter>
+  2 <chapter xmlns="http://docbook.org/ns/docbook"
+             xml:id="ch1">
+  4 <title>My First Chapter</title>
+    <para>My first paragraph.</para>
+  6 …
+It is also possible to construct documents from different files using XInclude. Recasting the previous example using XInclude yields:
+  1 <book xmlns="http://docbook.org/ns/docbook"
+  2       xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+    <title>My First Book</title>
+  4 <xi:include href="chap1.xml"/>
+    <xi:include href="chap2.xml"/>
+  6 <xi:include href="chap3.xml"/>
+    <xi:include href="appa.xml"/>
+  8 <xi:include href="appb.xml"/>
+    </book>
+Notice that we can completely omit the Document Type Declaration in this case, but we must declare the XInclude namespace.
+The essential trade-offs between external parsed entities and XInclude are:
+    * XInclude can be used in a document that does not have a Document Type Declaration. Many web services applications (ones that rely on SOAP, anyway) forbid a Document Type Declaration and therefore cannot use entities of any sort.
+    * The documents referenced by XInclude are complete, free-standing XML documents. They can declare their own local entities using a Document Type Declaration. Documents referenced by external parsed entities cannot have a Document Type Declaration. If they use entities, those entities must be declared in the document that does the including.
+    * External parsed entities can have multiple top-level elements. They are not required to be “single rooted.” XIncluded documents must be wholly well-formed XML.
+    * All XML validators support external parsed entities. (Validators that do not are not conformant XML processors.) XInclude is a separate specification and may or may not be supported by tools.
+    * The XML validator expands entities and therefore “sees” the entire document. This means that ID/IDREF links can freely cross entity boundaries. Because XIncluded documents are free-standing, a document containing an IDREF that crosses a document boundary cannot be valid. It can be well-formed, and processors can do the right thing, but the validator cannot determine that the document is valid. What’s more, the same ID value can occur in several XIncluded documents without causing a validity error. This may cause subsequent processing to fail.
+    * As time passes, the use of DTD-based mechanisms like entities is diminishing. If you have an eye on the future, to the extent that it is practical, it is probably better to use XInclude than entities.
+**** 3. Logical Divisions: The Categories of Elements in DocBook ****
+DocBook elements can be divided broadly into these categories:
+Sets
+Books
+Divisions, which divide books
+Components, which divide books or divisions
+Sections, which subdivide components
+Meta-information elements
+Block elements
+Inline elements
+In the rest of this section, we’ll describe briefly the elements that make up these categories. This section is designed to give you an overview. It is not an exhaustive list of every element in DocBook.
+For more information about any specific element and the elements that it may contain, consult the reference page for the element in question.
+*** 3.1. Sets ***
+A set contains two or more books. It’s the hierarchical top of DocBook. You use the set tag, for example, for a series of books on a single subject that you want to access and maintain as a single unit, such as the manuals for series of computer systems or the documentation (tutorial, reference, etc.) for a programming language. Sets are allowed to contain other sets, though this is not common.
+*** 3.2. Books ***
+A book is probably the most common top-level element in a document. The DocBook definition of a book is very loose and general. Given the variety of books authored with DocBook and the number of different conventions for book organization used around the world, any attempt to impose a strict ordering of elements would make the content model extremely complex. Therefore, DocBook gives you free rein. You can use a local customization (see Chapter 5,_Customizing_DocBook) if you want to impose a more strict ordering for your applications.
+A book consists of a mixture of the following elements:
+  Dedication
+      The dedication pages almost always occur at the front of a book.
+  Navigational components
+      There are a couple of component-level elements designed for navigation: toc, for Tables of Contents and Lists of Titles (for lists of figures, tables, examples, etc.); and index, for indexes.
+  Divisions
+      Divisions are the first hierarchical level below book. Divisions contain parts and references. A part contains components. A reference contains refentrys. These are discussed more thoroughly in Section 8,_“Making_a_Reference_Page”.
+      Books can contain components directly and are not required to contain divisions.
+  Components
+      These are the chapter-like elements of a book.
+*** 3.3. Components ***
+Components are the chapter-like elements of a book or part: preface, chapter, appendix, glossary, and bibliography. An article can also occur at the component level. We describe articles in more detail in Section 7,_“Making_an_Article”. Components generally contain block elements and/or sections, and some can contain navigational components and refentrys.
+*** 3.4. Sections ***
+There are several flavors of sectioning elements in DocBook:
+  sect1, sect2, sect3, sect4, sect5
+      The sect1…sect5 elements are sectioning elements. They can occur in most component-level elements. These numbered section elements must be properly nested (sect2s can only occur inside sect1s, sect3s can only occur inside sect2s, and so on). There are five levels of numbered sections.
+  section
+      The section element is an alternative to numbered sections. The section element is recursive, meaning that you can nest it to any depth desired.
+  simplesect
+      In addition to numbered sections, there is the simplesect element. It is a terminal section that can occur at any level, but it cannot have any other sectioning element nested within it.
+      A distinguishing feature of simplesect is that it does not occur in the Table of Contents.
+  bridgehead
+      A bridgehead provides a section title without any containing section.
+  refsect1…refsect3
+      These elements, which occur only in refentrys, are analogous to the numbered section elements in components. There are only three levels of numbered section elements in a refentry.
+  refsection
+      The refsection element is a recursive division in a refentry. It is an alternative to the numbered reference section tags (refsect1…refsect3). Like the section element, the refsection element is recursive.
+  glossdiv, bibliodiv, and indexdiv
+      The glossary, bibliography, and index elements can be broken into top-level divisions, but not sections. Unlike sections, these elements do not nest.
+*** 3.5. Meta-Information ***
+All of the elements at the section level and above, and many other elements, include a wrapper for meta-information about the content. That element is named info. In earlier versions of DocBook, there were many similarly named elements for this purpose: bookinfo, chapterinfo, etc. In DocBook V5.0, there is only one.
+The meta-information wrapper is designed to contain bibliographic information about the content (author, title, publisher, and so on) as well as other meta-information such as revision histories, keyword sets, and index terms.
+An info can contain:
+  title
+      The text of the title of a section of a document or of a formal block-level element
+  titleabbrev
+      The abbreviation of a title
+  subtitle
+      The subtitle of a document
+  abstract
+      A summary
+  address
+      A real-world address, generally a postal address
+  annotation
+      An annotation
+  artpagenums
+      The page numbers of an article as published
+  author
+      The name of an individual author
+  authorgroup
+      A wrapper for author information when a document has multiple authors or collaborators
+  authorinitials
+      The initials or other short identifier for an author
+  bibliocoverage
+      The spatial or temporal coverage of a document
+  biblioid
+      An identifier for a document
+  bibliomisc
+      Untyped bibliographic information
+  bibliomset
+      A cooked container for related bibliographic information
+  bibliorelation
+      The relationship of a document to another
+  biblioset
+      A raw container for related bibliographic information
+  bibliosource
+      The source of a document
+  collab
+      Identifies a collaborator
+  confgroup
+      A wrapper for document meta-information about a conference
+  contractnum
+      The contract number of a document
+  contractsponsor
+      The sponsor of a contract
+  copyright
+      Copyright information about a document
+  date
+      The date of publication or revision of a document
+  edition
+      The name or number of an edition of a document
+  editor
+      The name of the editor of a document
+  extendedlink
+      An XLink extended link
+  issuenum
+      The number of an issue of a journal
+  itermset
+      A set of index terms in the meta-information of a document
+  keywordset
+      A set of keywords describing the content of a document
+  legalnotice
+      A statement of legal obligations or requirements
+  mediaobject
+      A displayed media object (video, audio, image, etc.)
+  orgname
+      The name of an organization
+  othercredit
+      A person or entity, other than an author or editor, credited in a document
+  pagenums
+      The numbers of the pages in a book, for use in a bibliographic entry
+  printhistory
+      The printing history of a document
+  productname
+      The formal name of a product
+  productnumber
+      A number assigned to a product
+  pubdate
+      The date of publication of a document
+  publisher
+      The publisher of a document
+  publishername
+      The name of the publisher of a document
+  releaseinfo
+      Information about a particular release of a document
+  revhistory
+      A history of the revisions to a document
+  seriesvolnums
+      Numbers of the volumes in a series of books
+  subjectset
+      A set of terms describing the subject matter of a document
+  volumenum
+      The volume number of a document in a set (as of books in a set or articles in a journal)
+The title, titleabbrev, and subtitle elements can usually appear either immediately before or inside the info wrapper (but not both). This means you don’t need the extra wrapper in the common case where all you want to specify is a title.
+*** 3.6. Block Elements ***
+The block elements occur immediately below the component and sectioning elements. These are the (roughly) paragraph-level elements in DocBook. They can be divided into a number of categories: lists, admonitions, line-specific environments, synopses of several sorts, tables, figures, examples, and a dozen or more miscellaneous elements.
+** 3.6.1. Block versus inline elements **
+At the paragraph level, it’s convenient to divide elements into two classes, block and inline. From a structural point of view, this distinction is based loosely on their relative size, but it’s easiest to describe the difference in terms of their presentation.
+Block elements are usually presented with a paragraph (or larger) break before and after them. Most can contain other block elements, and many can contain character data and inline elements. Paragraphs, lists, sidebars, tables, and block quotations are all common examples of block elements.
+Inline elements are generally represented without any obvious breaks. The most common distinguishing mark of inline elements is a font change, but inline elements may present no visual distinction at all. Inline elements contain character data and possibly other inline elements, but they never contain block elements. Inline elements are used to mark up data such as cross-references, filenames, commands, options, subscripts and superscripts, and glossary terms.
+** 3.6.2. Lists **
+There are eight list elements in DocBook:
+  calloutlist
+      A list of callouts and their descriptions. The callouts are marks, frequently numbered and typically on a graphic (imageobjectco) or verbatim environment (programlistingco or screenco), that are described in a calloutlist.
+  bibliolist
+      A list of bibliography entries (biblioentry or bibliomixed elements).
+  glosslist
+      A list of glossary terms and their definitions.
+  itemizedlist
+      An unordered (bulleted) list. There are attributes to control the marks used.
+  orderedlist
+      A numbered list. There are attributes to control the type of enumeration.
+  segmentedlist
+      A repeating set of named items. For example, a list of states and their capitals might be represented as a segmentedlist. Segmented lists consist of segtitles, seglistitems, and segs.
+  simplelist
+      An unadorned list of items. simplelists can be inline or arranged in columns.
+  variablelist
+      A list of terms and definitions or descriptions. (This list of list types is a variablelist.)
+** 3.6.3. Admonitions **
+There are five types of admonitions in DocBook: caution, important, note, tip, and warning.
+All of the admonitions have the same structure: an optional title followed by paragraph-level elements. DocBook does not impose any specific semantics on the individual admonitions. For example, DocBook does not mandate that warnings be reserved for cases where bodily harm can result.
+** 3.6.4. Line-specific environments **
+These environments preserve whitespace and line breaks in the source text. DocBook does not provide the equivalent of HTML’s br tag, so there’s no way to interject a line break into normal running text.
+  address
+      The address element is intended for postal addresses. In addition to being line-specific, address contains additional elements suitable for marking up names and addresses: city, country, fax, otheraddr, personname, phone, pob, postcode, state, and street.
+  literallayout
+      A literallayout does not have any semantic association beyond the preservation of whitespace and line breaks. In particular, while programlisting and screen are frequently presented in a fixed-width font, a change of fonts is not ordinarily implied by literallayout.
+  programlisting and programlistingco
+      The programlisting and programlistingco elements are verbatim environments, usually presented in Courier or some other fixed-width font, for program sources, code fragments, and similar listings. The two elements are the same, except that programlistingco supports markup for callouts.
+  screen and screenco
+      The screen and screenco elements are verbatim or literal environments for text screen captures, other fragments of an ASCII display, and similar things. screen is also a frequent catchall for any verbatim text. The two elements are the same, except that screenco supports markup for callouts.
+  screenshot
+      screenshot is actually a wrapper for a mediaobject intended for screenshots of a GUI, for example.
+  synopsis
+      A synopsis is a verbatim environment for command and function synopses.
+** 3.6.5. Examples, figures, and tables **
+Examples, figures, and tables are supported with the block-level elements: example, informalexample, figure, informalfigure, table, and informaltable.
+The distinction between formal and informal elements is that formal elements have titles while informal ones do not.
+DocBook supports CALS tables (defined with tgroup, colspec, spanspec, thead, tfoot, tbody, row, entry, entrytbl, and caption) and HTML tables (defined with col, colgroup, thead, tfoot, tbody, tr, td, and caption).
+** 3.6.6. Paragraphs **
+There are three paragraph elements: para, simpara (simple paragraphs may not contain other block-level elements), and formalpara (formal paragraphs have titles).
+** 3.6.7. Equations **
+There are two block-equation elements, equation and informalequation (for inline equations, use inlineequation).
+Informal equations don’t have titles. For reasons of backward compatibility, equations are not required to have titles. However, it may be more difficult for some stylesheet languages to properly enumerate equations if they lack titles.
+** 3.6.8. Graphics and media **
+Graphics occur most frequently in figures and screenshots, but they can also occur outside those wrappers. DocBook considers a mediaobject a block element, even if it occurs in an inline context. For graphics that you want to be represented inline, use inlinemediaobject.
+Media objects (and inline media objects) can contain five kinds of content:
+  audioobject
+      A wrapper for audio data and its associated meta-information. (Which contains audiodata.)
+  imageobject
+      A wrapper for image data and its associated meta-information. (Which contains imagedata.)
+  imageobjectco
+      A wrapper for an image object with callouts. (Which contains imagedata and callout-related information).
+  videoobject
+      A wrapper for video data and its associated meta-information. (Which contains videodata.)
+  textobject
+      A wrapper for a text description of an object and its associated meta-information. (Which contains textdata.)
+The audio, image, video, and text data in a media object are, by definition, alternatives.
+** 3.6.9. Questions and answers **
+The qandaset element is suitable for FAQs (Frequently Asked Questions) and other similar collections of questions and answers. Each qandaentry contains a question and its answer(s). The set of questions and answers can be divided into sections with qandadiv.
+** 3.6.10. Procedures and tasks **
+A procedure contains steps, which may contain substeps or stepalternatives.
+The task element is a wrapper around the procedure element that provides additional, optional elements, including tasksummary, taskprerequisites, example, and taskrelated.
+** 3.6.11. Synopses **
+DocBook provides a number of elements for describing command, function, and class synopses:
+  cmdsynopsis
+      A syntax summary for a software command. A cmdsynopsis contains arg, command, and group elements. For long synopses, the sbr tag can be used to indicate where a break should occur. Complex synopses can be composed from synopfragments.
+  funcsynopsis
+      The syntax summary for a function definition. A function synopsis consists of one or more funcprototypes and may include additional, literal information in a funcsynopsisinfo. Each prototype consists of modifiers, a funcdef, and a collection of paramdef, varargs, and/or void elements.
+  classsynopsis
+      The syntax summary for a class definition. A class synopsis consists of one or more ooclass, ooexception, or oointerface elements followed by zero or more constructorsynopsis, destructorsynopsis, fieldsynopsis, and methodsynopsis elements Like funcsynopsis, it may include additional, literal information, in this case, in a classsynopsisinfo.
+** 3.6.12. Miscellaneous block elements **
+The following block elements are also available:
+  blockquote
+      A block quotation. Block quotations may have attributions.
+  epigraph
+      A short introduction, typically a quotation, at the beginning of a document or component. The epigraph element may include an attribution element.
+  msgset
+      A set of related error messages.
+  sidebar
+      A sidebar.
+*** 3.7. Inline Elements ***
+Users of DocBook are provided with a surfeit of inline elements. Inline elements are used to mark up running text. In published documents, inline elements often cause a font change or other small change, but they do not cause line or paragraph breaks.
+In practice, writers generally settle on the tagging of inline elements that suits their time and subject matter. This may be a large number of elements or only a handful. What is important is that you choose to mark up not every possible item, but only those for which distinctive tagging will be useful in the production of the finished document for the readers who will search through it.
+The following comprehensive list may be a useful tool for the process of narrowing down the elements that you will choose to mark up; it is not intended to overwhelm you by its sheer length. For convenience, we’ve divided the inlines into several subcategories.
+The classification used here is not meant to be authoritative, only helpful in providing a feel for the nature of the inlines. Several elements appear in more than one category, and arguments could be made to support the placement of additional elements in other categories or entirely new categories.
+** 3.7.1. Traditional publishing inlines **
+These inlines identify things that commonly occur in general writing:
+  abbrev
+      An abbreviation, especially one followed by a period.
+  acronym
+      An often pronounceable word made from the initial (or selected) letters of a name or phrase.
+  emphasis
+      Emphasized text.
+  footnote
+      A footnote. The location of the footnote element identifies the location of the first reference to the footnote. Additional references to the same footnote can be inserted with footnoteref.
+  phrase
+      A span of text.
+  quote
+      An inline quotation.
+  trademark
+      A trademark.
+** 3.7.2. Cross-references **
+The cross-reference inlines identify both explicit cross-references, such as link, and implicit cross-references, such as glossterm. You can make most of the implicit references explicit with a linkend attribute.
+  anchor
+      A spot in the document
+  citation
+      An inline bibliographic reference to another published work
+  citerefentry
+      A citation to a reference page
+  citetitle
+      The title of a cited work
+  firstterm
+      The first occurrence of a term
+  glossterm
+      A glossary term
+  link
+      A hypertext link
+  olink
+      A link that addresses its target indirectly
+  xref
+      A cross-reference to another part of the document
+** 3.7.3. Markup **
+These inlines are used to mark up text for special presentation:
+  foreignphrase
+      A word or phrase in a language other than the primary language of the document
+  wordasword
+      A word meant specifically as a word and not representing anything else
+  computeroutput
+      Data, generally text, displayed or presented by a computer
+  literal
+      Inline text that is some literal value
+  markup
+      A string of formatting markup in text that is to be represented literally
+  prompt
+      A character or string indicating the start of an input field in a computer display
+  replaceable
+      Content that may or must be replaced by the user
+  tag
+      A component of XML (or SGML) markup
+  userinput
+      Data entered by the user
+** 3.7.4. Mathematics **
+DocBook does not define a complete set of elements for representing equations. The Mathematical Markup Language (MathML) [MathML] is a standard that defines a comprehensive grammar for representing equations. MathML markup may be used in any of the equation elements (equation,informalequation, and inlineequation). For simple mathematics equations that do not require extensive markup, the mathphrase element is an alternative.
+  inlineequation
+      A mathematical equation or expression occurring inline
+  mathphrase
+      A mathematical phrase that can be represented with ordinary text and a small amount of markup
+  subscript
+      A subscript (as in H2O, the molecular formula for water)
+  superscript
+      A superscript (as in x2, the mathematical notation for x multiplied by itself)
+** 3.7.5. User interfaces **
+These elements describe aspects of a user interface:
+  accel
+      A graphical user interface (GUI) keyboard shortcut
+  guibutton
+      The text on a button in a GUI
+  guiicon
+      A graphic and/or text appearing as an icon in a GUI
+  guilabel
+      The text of a label in a GUI
+  guimenu
+      The name of a menu in a GUI
+  guimenuitem
+      The name of a terminal menu item in a GUI
+  guisubmenu
+      The name of a submenu in a GUI
+  keycap
+      The text printed on a key on a keyboard
+  keycode
+      The internal, frequently numeric, identifier for a key on a keyboard
+  keycombo
+      A combination of input actions
+  keysym
+      The symbolic name of a key on a keyboard
+  menuchoice
+      A selection or series of selections from a menu
+  mousebutton
+      The conventional name of a mouse button
+  shortcut
+      A key combination for an action that is also accessible through a menu
+** 3.7.6. Programming languages and constructs **
+Many of the technical inlines in DocBook are related to programming:
+  classname
+      The name of a class, in the object-oriented programming sense
+  constant
+      A programming or system constant
+  errorcode
+      An error code
+  errorname
+      An error name
+  errortype
+      The classification of an error message
+  function
+      The name of a function or subroutine, as in a programming language
+  literal
+      Inline text that is some literal value
+  msgtext
+      The actual text of a message component in a message set
+  parameter
+      A value or a symbolic reference to a value
+  property
+      A unit of data associated with some part of a computer system
+  replaceable
+      Content that may or must be replaced by the user
+  returnvalue
+      The value returned by a function
+  symbol
+      A name that is replaced by a value before processing
+  token
+      A unit of information
+  type
+      The classification of a value
+  varname
+      The name of a variable
+** 3.7.7. Operating systems **
+These inlines identify parts of an operating system, or an operating environment:
+  application
+      The name of a software program
+  command
+      The name of an executable program or other software command
+  envar
+      A software environment variable
+  filename
+      The name of a file
+  msgtext
+      The actual text of a message component in a message set
+  option
+      An option for a software command
+  parameter
+      A value or a symbolic reference to a value
+  prompt
+      A character or string indicating the start of an input field in a computer display
+  systemitem
+      A system-related item or term
+** 3.7.8. General purpose **
+There are also a number of general-purpose technical inlines:
+  application
+      The name of a software program
+  database
+      The name of a database, or part of a database
+  email
+      An email address
+  filename
+      The name of a file
+  hardware
+      A physical part of a computer system
+  literal
+      Inline text that is some literal value
+  option
+      An option for a software command
+  optional
+      Optional information
+  replaceable
+      Content that may or must be replaced by the user
+  symbol
+      A name that is replaced by a value before processing
+  token
+      A unit of information
+  type
+      The classification of a value
+**** 4. Roots: Starting Your DocBook Document ****
+There’s one final detail of the physical and logical structures of DocBook that we’ve left out: where can your document begin? In other words, what are the valid “document elements” of DocBook documents? Naturally, you can start at set and book, but can you also start at chapter? What about para or personname?
+If you come to DocBook from the DTD days, this question may seem odd. A DTD doesn’t provide any facility to impose constraints on where a document can begin. If the element occurs in the DTD, you can start with it.
+RELAX NG does give us the ability to impose such constraints. In fact, it requires that we do. Of course, we could make the constraint vacuous by listing every possible element as a potential document element.
+But, on reflection, that’s not necessarily the best choice. It’s valuable to have metadata associated with documents, so only elements with an info element can be root elements, but not every element with an info element is currently included. In DocBook V5.0 the following elements are available: acknowledgements, appendix, article, bibliography, book, chapter, colophon, dedication, glossary, index, para, part, preface, refentry, reference, refsect1, refsect2, refsect3, refsection, sect1, sect2, sect3, sect4, sect5, section, set, setindex, and toc.
+With the next point release of DocBook, V5.1, the technical committee may take the position that any element that can contain an info wrapper can be a document element. This would dramatically expand the list of valid root elements.
+**** 5. Making a DocBook Book ****
+A typical book, in English at least, consists of some meta-information in an info (title, author, copyright, etc.), one or more prefaces, several chapters, and perhaps a few appendixes. A book may also contain bibliographys, glossarys, indexes, and a colophon.
+Example 2.1,_“A_typical_book” shows the structure of a typical book. Additional content is required where the ellipses occur.
+Example 2.1. A typical book
+  1 <book>
+  2 <info>
+      <title>My First Book</title>
+  4   <author>
+        <personname><firstname>Jane</firstname><surname>Doe</surname></personname>
+  6   </author>
+      <copyright><year>2010</year><holder>Jane Doe</holder></copyright>
+  8 </info>
+    <preface><title>Foreword</title> ... </preface>
+ 10 <chapter> ... </chapter>
+    <chapter> ... </chapter>
+ 12 <chapter> ... </chapter>
+    <appendix> ... </appendix>
+ 14 <appendix> ... </appendix>
+    <index> ... </index>
+ 16 </book>
+**** 6. Making a Chapter ****
+chapters, prefaces, and appendixes all have a similar structure. They consist of a title, possibly some additional meta-information, and any number of block-level elements followed by any number of top-level sections. Each section may in turn contain any number of block-level elements followed by any number from the next section level, as shown in Example 2.2,_“A_typical_chapter”.
+Example 2.2. A typical chapter
+  1 <chapter><title>My Chapter</title>
+  2   <para> ... </para>
+      <section><title>First Section</title>
+  4     <para> ... </para>
+        <example> ... </example>
+  6   </section>
+    </chapter>
+**** 7. Making an Article ****
+For documents smaller than a book, such as journal articles, white papers, or technical notes, article is frequently the most logical starting point. The body of an article is essentially the same as the body of a chapter or any other component-level element, as shown in Example 2.3,_“A_typical_article”.
+articles may include appendixes, bibliographys, indexes, and glossarys.
+Example 2.3. A typical article
+  1 <article>
+  2   <info>
+        <title>My Article</title>
+  4     <author><honorific>Dr</honorific><firstname>Emilio</firstname>
+                <surname>Lizardo</surname></author>
+  6   </info>
+      <para> ... </para>
+  8   <section><title>On the Possibility of Going Home</title>
+        <para> ... </para>
+ 10   </section>
+      <bibliography> ... </bibliography>
+ 12 </article>
+**** 8. Making a Reference Page ****
+The reference page or manual page in DocBook was inspired by, and in fact designed to reproduce, the common UNIX “manpage” concept. (We use the word “page” loosely here to mean a document of variable length containing reference material on a specific topic.) DocBook is rich in markup tailored for such documents, which often vary greatly in content, however well structured they may be. To reflect both the structure and the variability of such texts, DocBook specifies that reference pages have a strict sequence of parts, even though several of them are actually optional.
+Of the following sequence of elements that may appear in a refentry, only two are obligatory: refnamediv and either refsect1 or refsection.
+  info
+      The info element contains meta-information about the reference page (which should not be confused with refmeta, which it precedes). It marks up information about the author of the document, or the product to which it pertains, or the document’s revision history, or other such information.
+  refmeta
+      refmeta contains a title for the reference page (which may be inferred if the refmeta element is not present) and an indication of the volume number in which this reference page occurs. The manvolnum is a very UNIX-centric concept. In traditional UNIX documentation, the subject of a reference page is typically identified by name and volume number; this allows you to distinguish between the uname command, “uname(1)” in volume 1 of the documentation, and the uname function, “uname(3)” in volume 3.
+      Additional information of this sort, such as conformance or vendor information specific to the particular environment you are working in, may be stored in refmiscinfo.
+  refnamediv
+      The first obligatory element is refnamediv, which is a wrapper for information about whatever you’re documenting, rather than the document itself. It can begin with a refdescriptor if several items are being documented as a group and the group has a name. The refnamediv must contain at least one refname, that is, the name of whatever you’re documenting, and a single short statement that sums up the use or function of the item(s) at a glance: its refpurpose. Also available is the refclass, intended to detail the operating system configurations that the software element in question supports.
+      If no refentrytitle is given in the refmeta, the title of the reference page is the refdescriptor, if present, or the first refname.
+  refsynopsisdiv
+      A refsynopsisdiv is intended to provide a quick synopsis of the topic covered by the reference page. For commands, this is generally a syntax summary of the command, and for functions, the function prototype, but other options are possible. A title is allowed, but not required, presumably because the application that processes reference pages will generate the appropriate title if it is not given. In traditional UNIX documentation, its title is always “Synopsis.”
+  refsect1…refsect3
+      Within refentrys, there are only three levels of sectioning elements: refsect1, refsect2, and refsect3.
+  refsection
+      As with sect1, sect2, etc., there is a recursive version of the reference section elements: refsection.
+Example 2.4,_“A_sample_reference_page” shows the beginning of a refentry that illustrates one possible reference page.
+Example 2.4. A sample reference page
+  1 <refentry xml:id="printf">
+  2   <refmeta>
+        <refentrytitle>printf</refentrytitle>
+  4       <manvolnum>3S</manvolnum>
+      </refmeta>
+  6
+      <refnamediv>
+  8     <refname>printf</refname>
+        <refname>fprintf</refname>
+ 10     <refname>sprintf</refname>
+        <refpurpose>print formatted output</refpurpose>
+ 12   </refnamediv>
+
+ 14   <refsynopsisdiv>
+        <funcsynopsis>
+ 16       <funcsynopsisinfo>
+            #include <stdio.h>
+ 18       </funcsynopsisinfo>
+
+ 20       <funcprototype>
+            <funcdef>int <function>printf</function></funcdef>
+ 22         <paramdef>const char *<parameter>format</parameter></paramdef>
+            <varargs/>
+ 24       </funcprototype>
+
+ 26       <funcprototype>
+            <funcdef>int <function>fprintf</function></funcdef>
+ 28         <paramdef>FILE *<parameter>strm</parameter></paramdef>
+            <paramdef>const char *<parameter>format</parameter></paramdef>
+ 30         <varargs/>
+          </funcprototype>
+ 32
+          <funcprototype>
+ 34         <funcdef>int <function>sprintf</function></funcdef>
+            <paramdef>char *<parameter>s</parameter></paramdef>
+ 36         <paramdef>const char *<parameter>format</parameter></paramdef>
+            <varargs/>
+ 38       </funcprototype>
+        </funcsynopsis>
+ 40
+      </refsynopsisdiv>
+ 42
+      <refsect1><title>Description</title>
+ 44     <para><indexterm><primary>functions</primary>
+                         <secondary>printf</secondary></indexterm>
+ 46           <indexterm><primary>printing function</primary></indexterm>
+
+ 48       <function>printf</function> places output on the standard
+          output stream stdout.
+ 50     </para>
+      </refsect1>
+ 52 </refentry>
+**** 9. Making Front and Back Matter ****
+DocBook contains markup for the usual variety of front and back matter necessary for books and articles: indexes, glossaries, bibliographies, and tables of contents. In many cases, these components are generated automatically, at least in part, from your document by an external processor, but you can create them by hand, and in either case, store them in DocBook.
+Some forms of back matter, such as indexes and glossaries, usually require additional markup in the document to make generation by an application possible. Bibliographies are usually composed by hand like the rest of your text, unless you are automatically selecting bibliographic entries out of some larger database. Our principal concern here is to acquaint you with the kind of markup you need to include in your documents if you want to construct these components.
+Front matter, like the table of contents, is almost always generated automatically from the text of a document by the processing application. If you need information about how to mark up a table of contents in DocBook, please consult the reference page for toc.
+*** 9.1. Making an Index ***
+ In some highly structured documents such as reference manuals, you can automate the whole process of generating an index successfully without altering or adding to the original source. You can design a processing application to select the information and compile it into an adequate index. But this is rare.
+In most cases—and even in the case of some reference manuals—a useful index still requires human intervention to mark occurrences of words or concepts that will appear in the text of the index.
+** 9.1.1. Marking index terms **
+DocBook distinguishes two kinds of index markers: those that are singular and result in a single page entry in the index itself, and those that are multiple and refer to a range of pages.
+You put a singular index marker where the subject it refers to actually occurs in your text:
+  1 <para>
+  2   <indexterm><primary>Big Cats</primary>
+      <secondary>Tigers</secondary></indexterm>
+  4   The tiger is a very large cat indeed.
+    </para>
+This index term has two levels, primary and secondary. They correspond to an increasing amount of indented text in the resultant index. DocBook allows for three levels of index terms, with the third labeled tertiary.
+There are two ways that you can index a range of text. The first is to put index marks at both the beginning and end of the discussion. The mark at the beginning asserts that it is the start of a range, and the mark at the end refers back to the beginning. In this way, the processing application can determine what range of text is indexed. Here’s the previous tiger example recast as starting and ending index terms:
+  1 <para>
+  2   <indexterm xml:id="tiger-desc" class="startofrange">
+      <primary>Big Cats</primary>
+  4   <secondary>Tigers</secondary></indexterm>
+      The tiger is a very large cat indeed…
+  6 </para>
+    ⋮
+  8 <para>
+    So much for tigers<indexterm startref="tiger-desc" class="endofrange"/>.
+ 10 Let's talk about leopards.
+    </para>
+Note that the mark at the start of the range identifies itself as the start of a range with the class attribute, and provides an xml:id. The mark at the end of the range points back to the start.
+Another way to mark up a range of text is to specify that the entire content of an element, such as a chapter or section, is the complete range. In this case, all you need is for the index term to point to the xml:id of the element that contains the content in question. The zone attribute of indexterm provides this functionality.
+One of the interesting features of this method is that the actual index marks do not have to occur anywhere near the text being indexed. It is possible to collect all of them together, for example, in one file, but it is not invalid to have the index marker occur near the element it indexes.
+Suppose the discussion of tigers in your document comprises a whole text object (such as a sect1 or a chapter) with an xml:id value of tiger-desc. You can put the following tag anywhere in your document to index that range of text:
+  1 <indexterm zone="tiger-desc">
+  2 <primary>Big Cats</primary>
+    <secondary>Tigers</secondary></indexterm>
+DocBook also contains markup for index hits that point to other index hits (e.g., “See Cats, big” or “See also Lions”). See the reference pages for see and seealso.
+** 9.1.2. Printing an index **
+After you have added the appropriate markup to your document, an external application can use this information to build an index. The resultant index must have information about the page numbers on which the concepts appear. It’s usually the document formatter that builds the index. In this case, it may never be instantiated in DocBook.
+However, there are applications that can produce an index marked up in DocBook. The following example includes some one- and two-level indexentry elements (which correspond to the primary and secondary levels in the indexterms themselves) that begin with the letter D:
+  1 <index><title>Index</title>
+  2   <indexdiv><title>D</title>
+        <indexentry>
+  4       <primaryie>database (bibliographic), 253, 255</primaryie>
+             <secondaryie>structure, 255</secondaryie>
+  6          <secondaryie>tools, 259</secondaryie>
+        </indexentry>
+  8     <indexentry>
+          <primaryie>dates (language specific), 179</primaryie>
+ 10     </indexentry>
+        <indexentry>
+ 12       <primaryie>DC fonts, <emphasis>172</emphasis>, 177</primaryie>
+             <secondaryie>Math fonts, 177</secondaryie>
+ 14     </indexentry>
+      </indexdiv>
+ 16 </index>
+The structure of indexentry is parallel to the structure of indexterm. Where indexterm has primary, secondary, tertiary, see, and seealso, indexentry has primaryie, secondaryie, tertiaryie, seeie, and seealsoie.
+*** 9.2. Making a Glossary ***
+A glossary, like a bibliography, is often constructed by hand. However, some applications are capable of building a skeletal index from glossary term markup in the document. If all of your terms are defined in some glossary database, it may even be possible to construct the complete glossary automatically.
+To enable automatic glossary generation, or simply automatic linking from glossary terms in the text to glossary entries, you must add markup to your documents. In the text, you mark up a term for compilation later with the inline glossterm tag. This tag can have a linkend attribute whose value is the ID of the actual entry in the glossary.[1]
+For instance, if you have this markup in your document:
+<glossterm linkend="xml">Extensible Markup Language</glossterm> is a new standard…
+ your glossary might look like this:
+  1 <glossary><title>Example Glossary</title>
+  2 ⋮
+      <glossdiv><title>E</title>
+  4
+        <glossentry xml:id="xml"><glossterm>Extensible Markup Language</glossterm>
+  6       <acronym>XML</acronym>
+          <glossdef>
+  8        <para>Some reasonable definition here.</para>
+           <glossseealso otherterm="sgml">
+ 10       </glossdef>
+        </glossentry>
+ 12
+      </glossdiv>
+ 14 ⋮
+    </glossary>
+Note that the glossterm tag reappears in the glossary to mark up the term and distinguish it from its definition within the glossentry. The xml:id that the glossentry referenced in the text is the ID of the glossentry in the glossary itself. You can use the link between source and glossary to create a link in electronic formats, as we have done with the HTML and PDF forms of the glossary in this book.
+You can use the baseform attribute on glossterm and firstterm when the term marked up in context is in a different form, for example, plural. Here is an example:
+  1 <para>
+  2   Using <glossterm baseform="DTD">DTDs</glossterm> can
+      be hazardous to your sanity.
+  4 </para>
+*** 9.3. Making a Bibliography ***
+There are two ways to set up a bibliography in DocBook: you can have the data raw or cooked. When you use “raw” data, you wrap your entry in the biblioentry element and mark up each item individually. The processor determines the display order and supplies punctuation. When you use “cooked” data, you wrap your entry in the bibliomixed and provide the data in the order in which you want it displayed, and you include the punctuation.
+Here’s an example of a raw bibliographical item, wrapped in the biblioentry element:
+  1 <biblioentry xreflabel="Kites75">
+  2   <authorgroup>
+        <author><firstname>Andrea</firstname><surname>Bahadur</surname></author>
+  4     <author><firstname>Mark</firstname><surname>Shwarek</surname></author>
+      </authorgroup>
+  6   <copyright><year>1974</year><year>1975</year>
+         <holder>Product Development International Holding N. V.</holder>
+  8      </copyright>
+      <isbn>0-88459-021-6</isbn>
+ 10   <publisher>
+        <publishername>Plenary Publications International, Inc.</publishername>
+ 12   </publisher>
+      <title>Kites</title>
+ 14   <subtitle>Ancient Craft to Modern Sport</subtitle>
+      <pagenums>988-999</pagenums>
+ 16   <seriesinfo>
+        <title>The Family Creative Workshop</title>
+ 18     <seriesvolnums>1-22</seriesvolnums>
+        <editor>
+ 20       <firstname>Allen</firstname>
+          <othername role=middle>Davenport</othername>
+ 22       <surname>Bragdon</surname>
+          <contrib>Editor in Chief</contrib>
+ 24     </editor>
+      </seriesinfo>
+ 26 </biblioentry>
+The “raw” data in a biblioentry is comprehensive to a fault—there are enough fields to suit a host of different bibliographical styles, and that is the point. An abundance of data requires processing applications to select, punctuate, order, and format the bibliographical data, and it is unlikely that all the information provided will actually be output.
+All the “cooked” data in a bibliomixed entry in a bibliography, on the other hand, is intended to be presented to the reader in the form and sequence in which it is provided. It even includes punctuation between the fields of data:
+  1 <bibliomixed>
+  2   <bibliomset relation="article">
+        <surname>Walsh</surname>, <firstname>Norman</firstname>.
+  4     <title role="article">Introduction to Cascading Style Sheets</title>.
+      </bibliomset>
+  6   <bibliomset relation="journal">
+        <title>The World Wide Web Journal</title>
+  8     <volumenum>2</volumenum><issuenum>1</issuenum>.
+        <publishername>O'Reilly & Associates, Inc.</publishername> and
+ 10     <corpname>The World Wide Web Consortium</corpname>.
+        <pubdate>Winter, 1996</pubdate></bibliomset>.
+ 12 </bibliomixed>
+Clearly, these two ways of marking up bibliographical entries are suited to different circumstances. You should use one or the other for your bibliography, not both. Strictly speaking, mingling the raw and the cooked may be “kosher” as far as the schema is concerned, but it will almost certainly cause problems for most processing applications.
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+[1]Some formatters are able to establish the link by examining the content of the terms and the glossary. In that case, the author does not need to make explicit links.
+Getting Started with DocBook  [Up]   Validating DocBook Documents

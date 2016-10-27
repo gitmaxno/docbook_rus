@@ -1,0 +1,91 @@
+
+� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** colgroup *****
+colgroup� —� A group of columns in an HTML table.
+***** Synopsis *****
+    * Zero or more of:
+          o col
+***** Attributes *****
+Attributes:
+    * align (enumeration)
+          o “left”
+          o “center”
+          o “right”
+          o “justify”
+          o “char”
+    * char
+    * charoff (enumeration)
+          o xsd:integer
+          o xsd:string (Pattern: “[0-9]+%”)
+    * span (nonNegativeInteger)
+    * valign (enumeration)
+          o “top”
+          o “middle”
+          o “bottom”
+          o “baseline”
+    * width
+***** Description *****
+Identifies a column group in an HTML table.
+**** Processing expectations ****
+Processed like an HTML colgroup.
+**** Attributes ****
+  align
+      Specifies the alignment of data and the justification of text in a cell.
+      Enumerated values:
+      “left”Left-flush data/Left-justify text. This is the default value for table data.
+      “center�Center data/Center-justify text. This is the default value for table headers.
+      “right�Right-flush data/Right-justify text.
+      “justifyDouble-justify text.
+      “char”Align text around a specific character. If a user agent doesn't support character alignment, behavior in the presence of this value is unspecified.
+  char
+      This attribute specifies a single character within a text fragment to act as an axis for alignment. The default value for this attribute is the decimal point character for the current language as set by the lang attribute (e.g., the period in English and the comma in French). User agents are not required to support this attribute.
+  charoff
+      When present, this attribute specifies the offset to the first occurrence of the alignment character on each line. If a line doesn't include the alignment character, it should be horizontally shifted to end at the alignment position. When charoff is used to set the offset of an alignment character, the direction of offset is determined by the current text direction (set by the dir attribute). In left-to-right texts (the default), offset is from the left margin. In right-to-left texts, offset is from the right margin. User agents are not required to support this attribute.
+      Enumerated values:
+      xsd:integer                     An explicit offset.
+      xsd:string (Pattern: “[0-9]+%�A percentage offset.
+  class
+      This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
+  lang
+      This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
+  onclick
+      Occurs when the pointing device button is clicked over an element.
+  ondblclick
+      Occurs when the pointing device button is double clicked over an element.
+  onkeydown
+      Occurs when a key is pressed down over an element.
+  onkeypress
+      Occurs when a key is pressed and released over an element.
+  onkeyup
+      Occurs when a key is released over an element.
+  onmousedown
+      Occurs when the pointing device button is pressed over an element.
+  onmousemove
+      Occurs when the pointing device is moved while it is over an element.
+  onmouseout
+      Occurs when the pointing device is moved away from an element.
+  onmouseover
+      Occurs when the pointing device is moved onto an element.
+  onmouseup
+      Occurs when the pointing device button is released over an element.
+  span
+      This attribute, which must be an integer > 0, specifies the number of columns in a column group. In the absence of a span attribute, each colgroup defines a column group containing one column. If the span attribute is set to N > 0, the current colgroup element defines a column group containing N columns. User agents must ignore this attribute if the colgroup element contains one or more col elements.
+  style
+      This attribute specifies style information for the current element.
+  title
+      This attribute offers advisory information about the element for which it is set.
+  valign
+      Specifies the vertical position of data within a cell.
+      Enumerated values:
+      “top”  Cell data is flush with the top of the cell.
+      “middle�Cell data is centered vertically within the cell. This is the default value.
+      “bottom�Cell data is flush with the bottom of the cell.
+      “baselineAll cells in the same row as a cell whose valign attribute has this value should have their textual data positioned so that the first text line occurs on a baseline common to all cells in the row. This constraint does not apply to subsequent text lines in these cells.
+  width
+      This attribute specifies a default width for each column in the current column group. In addition to the standard pixel, percentage, and relative values, this attribute allows the special form “0*” (zero asterisk) which means that the width of the each column in the group should be the minimum width necessary to hold the column's contents. This implies that a column's entire contents must be known before its width may be correctly computed. Authors should be aware that specifying “0*” will prevent visual user agents from rendering a table incrementally. This attribute is overridden for any column in the column group whose width is specified via a col element.
+**** Parents ****
+These elements contain colgroup: informaltable� (db.html.informaltable), table� (db.html.table).
+**** Children ****
+The following elements occur in colgroup: col.
+[Prev]� [Home] � [Next]
+col�     [Up]  � collab

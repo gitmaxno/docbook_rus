@@ -1,0 +1,143 @@
+
+***** partintro *****
+partintro — An introduction to the contents of a part.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o One of:
+                # Sequence of:
+                      # One or more of:
+                            # annotation
+                            # bridgehead
+                            # remark
+                            # revhistory
+                            # Indexing inlines [[+]] [[-]]
+                                  * indexterm (db.indexterm.endofrange)
+                                  * indexterm (db.indexterm.singular)
+                                  * indexterm (db.indexterm.startofrange)
+                            # Admonition elements [[+]] [[-]]
+                                  * caution
+                                  * important
+                                  * note
+                                  * tip
+                                  * warning
+                            # Formal elements [[+]] [[-]]
+                                  * equation
+                                  * example
+                                  * figure
+                                  * table (db.cals.table)
+                                  * table (db.html.table)
+                            # Graphic elements [[+]] [[-]]
+                                  * mediaobject
+                                  * screenshot
+                            # Informal elements [[+]] [[-]]
+                                  * informalequation
+                                  * informalexample
+                                  * informalfigure
+                                  * informaltable (db.cals.informaltable)
+                                  * informaltable (db.html.informaltable)
+                            # List elements [[+]] [[-]]
+                                  * bibliolist
+                                  * calloutlist
+                                  * glosslist
+                                  * itemizedlist
+                                  * orderedlist
+                                  * procedure
+                                  * qandaset
+                                  * segmentedlist
+                                  * simplelist
+                                  * variablelist
+                            # Paragraph elements [[+]] [[-]]
+                                  * anchor
+                                  * formalpara
+                                  * para
+                                  * simpara
+                            # Publishing elements [[+]] [[-]]
+                                  * address
+                                  * blockquote
+                                  * epigraph
+                                  * sidebar
+                            # Synopsis elements [[+]] [[-]]
+                                  * classsynopsis
+                                  * cmdsynopsis
+                                  * constructorsynopsis
+                                  * destructorsynopsis
+                                  * fieldsynopsis
+                                  * funcsynopsis
+                                  * methodsynopsis
+                            # Technical elements [[+]] [[-]]
+                                  * constraintdef
+                                  * msgset
+                                  * procedure
+                                  * productionset
+                                  * task
+                            # Verbatim elements [[+]] [[-]]
+                                  * literallayout
+                                  * programlisting
+                                  * programlistingco
+                                  * screen
+                                  * screenco
+                                  * synopsis
+                      # Optionally one of:
+                            # Sequence of:
+                                  # One or more of:
+                                        # section
+                                  # Zero or more of:
+                                        # simplesect
+                            # One or more of:
+                                  # simplesect
+                            # Sequence of:
+                                  # One or more of:
+                                        # sect1
+                                  # Zero or more of:
+                                        # simplesect
+                            # One or more of:
+                                  # refentry
+                # Sequence of:
+                      # One or more of:
+                            # section
+                      # Zero or more of:
+                            # simplesect
+                # One or more of:
+                      # simplesect
+                # Sequence of:
+                      # One or more of:
+                            # sect1
+                      # Zero or more of:
+                            # simplesect
+                # One or more of:
+                      # refentry
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Description *****
+A partintro contains introductory text, often an overview of the content of the part.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed.
+The partintro content is often printed on a part separator page.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain partintro: part, reference.
+*** Children [[+]][[+]] ***
+This element contains 68_elements.
+The following elements occur in partintro: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, refentry, remark, revhistory, screen, screenco, screenshot, sect1, section, segmentedlist, sidebar, simpara, simplelist, simplesect, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev,
+variablelist, warning.
+***** See Also *****
+appendix, article, book, chapter, colophon, dedication, part, preface, set
+***** Examples *****
+See part for an example that uses this element.
+part    [Up]   person

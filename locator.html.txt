@@ -1,0 +1,21 @@
+
+***** [[5.0]]locator *****
+locator — An XLink locator in an extendedlink.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * xlink:label (NMTOKEN)
+Required attributes are shown in bold.
+***** Description *****
+A locator in an extendedlink. See XML Linking Language (XLink) Version 1.0[XLink] for more details.
+**** Processing expectations ****
+Suppressed.
+**** Attributes ****
+Common_attributes.
+  xlink:label
+      Specifies the XLink label
+**** Parents ****
+These elements contain locator: extendedlink.
+literallayout  [Up]   manvolnum

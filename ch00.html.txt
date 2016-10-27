@@ -1,0 +1,97 @@
+
+Preface
+DocBook provides a system for writing structured documents using XML. It is particularly well-suited to books and papers about computer hardware and software, though it is by no means limited to them. Because it is a large and robust format, and because its main structures correspond to the general notion of what constitutes a book, DocBook has been adopted by a large and growing community of authors. DocBook is supported “out of the box” by a wide range of tools, both open source and commercial. In short, DocBook is an easy-to-understand and widely used schema. Worldwide, hundreds (perhaps thousands) of organizations use DocBook for millions of pages of documentation in a wide variety of print and online formats.
+**** 1. Why Read This Book? ****
+This book is designed to be the clear, concise, normative reference to the DocBook schema. This book is the official documentation for DocBook.
+We hope to answer, definitively, all the questions you might have about all the elements and attributes in DocBook. In particular, we cover the following subjects:
+  Getting started with DocBook:
+      With around 400 elements, DocBook can be a bit overwhelming at first. We get you up to speed quickly.
+  Writing DocBook documents:
+      Where should you start and what should you do?
+  Parsing and validating DocBook documents:
+      After you've written a document, how can you tell if it really conforms to the DocBook schema?
+  Publishing DocBook documents:
+      After you've written one, what do you do with it? We introduce some popular free tools you can use to publish DocBook documents in print and various electronic formats.
+  Customizing the schema:
+      Many individuals and corporations have created custom schemas based on DocBook. We show you how to write a “customization layer” to tailor DocBook for your content.
+  Understanding the elements:
+      Each element is extensively documented, including the intended semantics and the purpose of all its attributes. An example of proper usage is included for most elements.
+  Using the DocBook stylesheets:
+      The DocBook XSL Stylesheets, part of the DocBook_project at SourceForge, have become the de facto standard way to process DocBook. This book contains a brief description about using the stylesheets, but for detailed information we recommend Bob Stayton's excellent book, DocBook XSL: The Complete Guide[Stayton07].
+  Getting more information:
+      Finally, we direct you to other places you can go for information about DocBook, XML, and other relevant topics.
+**** 2. This Book's Audience ****
+We expect that most readers will have some familiarity with XML. Even if your experience goes no farther than writing a few HTML pages, you're probably in good shape. If you're not already familiar with XML, there are many popular books, including Erik Ray's Learning XML[Ray03]. For a list of other resources, consult Appendix C,_Resources.
+**** Note ****
+The previous edition of this book described some of the SGML-specific features available to users of the DocBook DTD versions 4.x and earlier. In this edition, we don't cover SGML at all. Starting with DocBook V5.0, DocBook is normatively an XML vocabulary.
+**** 3. Organization of This Book ****
+This book is divided into three parts:
+Part I: Introduction is an introduction to DocBook and includes the following chapters:
+  Chapter 1,_Getting_Started_with_DocBook
+      Getting Started with DocBook
+  Chapter 2,_Creating_DocBook_Documents
+      Creating DocBook Documents
+  Chapter 3,_Validating_DocBook_Documents
+      Validating DocBook Documents
+  Chapter 4,_Publishing_DocBook_Documents
+      Publishing DocBook Documents
+  Chapter 5,_Customizing_DocBook
+      Customizing DocBook
+  DocBook_Element_Reference
+      A reference guide to the DocBook elements.
+Part III: Appendixes:
+  Appendix A,_Installation
+      Describes how to install the DocBook schema and stylesheets.
+  Appendix B,_DocBook_Variants_and_Future_Directions
+      Describes DocBook variants and discusses future directions.
+  Appendix C,_Resources
+      Lists websites, books and other resources.
+  Appendix D,_Interchanging_DocBook_Documents
+      An interchange checklist. Things to consider when sharing DocBook documents with others.
+  Appendix E,_GNU_Free_Documentation_License
+      A copy of the GNU Free Documentation License.
+At the end of this book you'll find a Glossary and an Index.
+**** 4. Conventions Used in This Book ****
+The following typographical conventions are used in this book:
+  Italic
+      Indicates new terms, URLs, email addresses, filenames, and file extensions.
+  Constant width
+      Used for program listings, as well as within paragraphs to refer to element and attribute names, program examples, attribute value literals, start- and end-tags, and source code example text.
+  Constant width bold
+      Shows commands or other text that should be typed literally by the user.
+  Constant width italic
+      Shows text that should be replaced with user-supplied values or by values determined by context. An example is filename, where the word “filename” is a placeholder for the actual filename.
+**** Tip ****
+This icon signifies a tip, suggestion, or general note.
+**** Caution ****
+This icon indicates a warning or caution.
+**** 5. Using Code Examples ****
+This book is here to help you get your job done. In general, you may use the code in this book in your programs and documentation. You do not need to contact us for permission unless you’re reproducing a significant portion of the code. For example, writing a program that uses several chunks of code from this book does not require permission. Selling or distributing a CD-ROM of examples from O’Reilly books does require permission. Answering a question by citing this book and quoting example code does not require permission. Incorporating a significant amount of example code from this book into your product’s documentation does require permission.
+We appreciate, but do not require, attribution. An attribution usually includes the title, author, publisher, and ISBN. For example: “DocBook: The Definitive Guide, Second Edition by Norman Walsh. Copyright 2010 O’Reilly Media, Inc., ISBN: 978-0-596-8050-2-9.”
+If you feel your use of code examples falls outside fair use or the permission given above, feel free to contact us at <permissions@oreilly.com>.
+**** 6. Safari® Books Online ****
+**** Note ****
+When you see a Safari® Books Online icon on the cover of your favorite technology book, that means the book is available online through the O’Reilly Network Safari Bookshelf.
+Safari offers a solution that’s better than e-books. It’s a virtual library that lets you easily search thousands of top tech books, cut and paste code samples, download chapters, and find quick answers when you need the most accurate, current information. Try it for free at http://my.safaribooksonline.com.
+**** 7. How to Contact Us ****
+Please address comments and questions concerning this book to the publisher:
+O’Reilly Media, Inc.
+1005 Gravenstein Highway North
+Sebastopol, CA 95472
+800-998-9938 (in the United States or Canada)
+707-829-0515 (international or local)
+707 829-0104 (fax)
+We have a web page for this book, where we list errata, examples, and any additional information. You can access this page at:
+http://www.oreilly.com/catalog/%3Ccatalog%20page%3E
+Don’t forget to update the <url> attribute, too.
+To comment or ask technical questions about this book, send email to:
+<bookquestions@oreilly.com>
+For more information about our books, conferences, Resource Centers, and the O’Reilly Network, see our web site at:
+http://www.oreilly.com
+**** 8. Acknowledgments ****
+This book wouldn't exist, there wouldn't have been any point in writing it, were it not for DocBook's enthusiastic support from an entire community of writers, engineers, managers, and other users. My thanks to you all.
+It also wouldn't exist if my wife was not so understanding and supportive. Writing a book invariable takes more time and effort than one imagines, time first borrowed from, then begged, and eventually stolen from other activities. Thank you, Deb!
+And, to conclude a series, it also wouldn't exist were it not for Dick Hamilton's encouragement and hard work. Dick first persuaded me to complete a second edition in print, then offered to publish it. He negotiated with O'Reilly, agreed to edit it, and wrote more of it than he could be persuaded to take credit for. Thank you, Dick.
+Several sections in this book use material from “DocBook_V5.0:_The_Transition_Guide,” also known as the “DocBook How-to.” Thanks to Jirka Kosek and Michael Smith for their work on the How-to.
+Thanks to Nancy Harrison, Scott Hudson, Mauritz Jeanson, Jirka Kosek, and Larry Rowland for their technical review of the book.
+Thanks to Bob Stayton for being Secretary to the Technical Committee and to Scott Hudson for chairing the eLearning and Publisher's Subcommittees and for being the driving force behind those two initiatives. Thanks also to the entire DocBook Technical Committee for contributing time every month to the continued maintenance of DocBook.

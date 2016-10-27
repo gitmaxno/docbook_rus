@@ -1,0 +1,83 @@
+
+***** segmentedlist *****
+segmentedlist — A segmented list, a list of sets of elements.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # segtitle
+          o One or more of:
+                # seglistitem
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A segmentedlist consists of a set of headings (segtitles) and a list of parallel sets of elements. Every seglistitem contains a set of elements that have a one-to-one correspondence with the headings. Each of these elements is contained in a seg.
+**** Processing expectations ****
+Segmented lists can be formatted in a number of ways. Two popular formats are tabular and as a list of repeated headings and elements. In a tabular presentation, the segmentedlist is the table. In the list presentation, the segmentedlist surrounds the entire list of blocks of heading/element pairs.
+Specifying the output format for lists is not part of the normative definition of DocBook. However, the tabular and list formats are supported in the open source DocBook stylesheets using the list-presentation attribute on the <?dbhtml> and <?dbfo> processing instructions. The examples on this reference page show how to use these processing instructions.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain segmentedlist: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in segmentedlist: info (db.titleforbidden.info), info (db.titleonly.info), seglistitem, segtitle, title, titleabbrev.
+***** See Also *****
+calloutlist, itemizedlist, listitem, orderedlist, simplelist, variablelist
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example segmentedlist</title>
+
+  4 <para>The capitals of the states of the United States of America are:
+
+  6 <segmentedlist><title>State Capitals</title>
+    <?dbhtml list-presentation="list"?>
+  8 <?dbfo   list-presentation="list"?>
+    <segtitle>State</segtitle>
+ 10 <segtitle>Capital</segtitle>
+    <seglistitem><seg>Alabama</seg><seg>Montgomery</seg></seglistitem>
+ 12 <seglistitem><seg>Alaska</seg><seg>Juneau</seg></seglistitem>
+    <seglistitem><seg>Arkansas</seg><seg>Little Rock</seg></seglistitem>
+ 14 </segmentedlist>
+
+ 16 …
+    </para>
+ 18
+    </article>
+The capitals of the states of the United States of America are:
+State Capitals
+State:Alabama
+Capital:Montgomery
+State:Alaska
+Capital:Juneau
+State:Arkansas
+Capital:Little Rock
+…
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example segmentedlist</title>
+
+  4 <para><segmentedlist><title>State Capitals</title>
+    <?dbhtml list-presentation="table"?>
+  6 <?dbfo   list-presentation="table"?>
+    <segtitle>State</segtitle>
+  8 <segtitle>Capital</segtitle>
+    <seglistitem><seg>Alabama</seg><seg>Montgomery</seg></seglistitem>
+ 10 <seglistitem><seg>Alaska</seg><seg>Anchorage</seg></seglistitem>
+    <seglistitem><seg>Arkansas</seg><seg>Little Rock</seg></seglistitem>
+ 12 </segmentedlist>
+
+ 14 …
+    </para>
+ 16
+    </article>
+State Capitals
+State    Capital
+Alabama  Montgomery
+Alaska   Anchorage
+Arkansas Little Rock
+…
+seglistitem  [Up]   segtitle

@@ -1,0 +1,85 @@
+
+***** paramdef *****
+paramdef — Information about a function parameter in a programming language.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o funcparams
+          o initializer
+          o parameter
+          o phrase (db._phrase)
+          o replaceable
+          o type
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * choice (enumeration) [default=“opt”]
+          o “opt”
+          o “req”
+***** Description *****
+In the syntax summary for a function in a programming language, paramdef provides the description of a parameter to the function. Typically, this includes the data type of the parameter and its name. For parameters that are pointers to functions, it also includes a summary of the nested parameters.
+Within the paramdef, the parameter name is identified with parameter, and the rest of the content is assumed to be the data type.
+In the following definition, str is the name of the parameter and char * is its type:
+<paramdef>char *<parameter>str</parameter></paramdef>
+Sometimes a data type requires punctuation on both sides of the parameter. For example, the a parameter in this definition is an array of char *:
+<paramdef>char *<parameter>a</parameter>[]</paramdef>
+**** Processing expectations ****
+Formatted inline. For a complete description of the processing expectations, see funcsynopsis.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  choice
+      Indicates optionality.
+      Enumerated values:
+      “optFormatted to indicate that it is optional.
+      “reqFormatted to indicate that it is required.
+**** Parents ****
+These elements contain paramdef: funcprototype.
+*** Children [[+]][[+]] ***
+This element contains 20_elements.
+The following elements occur in paramdef: text, alt, anchor, annotation, biblioref, funcparams, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlinemediaobject, link, olink, parameter, phrase (db._phrase), remark, replaceable, subscript, superscript, type, xref.
+***** See Also *****
+funcdef, funcparams, funcprototype, funcsynopsisinfo, function, parameter, returnvalue, varargs, void
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example paramdef</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6   <funcdef>int <function>max</function></funcdef>
+      <paramdef>int <parameter>int1</parameter></paramdef>
+  8   <paramdef>int <parameter>int2</parameter></paramdef>
+    </funcprototype>
+ 10 </funcsynopsis>
+
+ 12 </article>
+int max(int1, int2);
+int int1;
+int int2;
+para    [Up]   parameter

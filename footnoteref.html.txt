@@ -1,0 +1,51 @@
+
+***** footnoteref *****
+footnoteref — A cross reference to a footnote (a footnote mark).
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * label
+Required attributes are shown in bold.
+***** Additional Constraints *****
+    * @linkend on footnoteref must point to a footnote.
+***** Description *****
+This element forms an IDREF link to a footnote. It generates the same mark or link as the footnote to which it points.
+In technical documentation, footnoteref occurs most frequently in tables.
+**** Processing expectations ****
+The footnoteref element usually generates the same mark as the footnote to which it points, although its mark can be influenced by the label attribute.
+**** Attributes ****
+Common_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+*** Parents [[+]][[+]] ***
+This element occurs in 54_elements.
+These elements contain footnoteref: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example footnoteref</title>
+
+  4 <informaltable>
+    <tgroup cols='2'>
+  6 <tbody>
+    <row>
+  8 <entry>foo<footnote xml:id='fnrex1a'><para>A meaningless
+    word</para></footnote></entry>
+ 10 <entry>3<footnote xml:id='fnrex1b'><para>A meaningless
+    number</para></footnote></entry>
+ 12 </row>
+    <row>
+ 14 <entry>bar<footnoteref linkend='fnrex1a'/></entry>
+    <entry>5<footnoteref linkend='fnrex1b'/></entry>
+ 16 </row>
+    </tbody>
+ 18 </tgroup>
+    </informaltable>
+ 20
+    </article>
+foo[a] 3[b]
+bar[a] 5[b]
+[a]A meaningless word
+[b]A meaningless number
+footnote  [Up]   foreignphrase

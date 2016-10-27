@@ -1,0 +1,21 @@
+
+***** ooclass *****
+ooclass — A class in an object-oriented programming language.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # modifier
+                # package
+          o classname
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The ooclass element identifies programming language classes, generally from object-oriented programming languages. The ooclass is a wrapper for the classname plus some modifiers.
+**** Processing expectations ****
+Formatted inline.
+*** Parents [[+]][[+]] ***
+This element occurs in 51_elements.
+These elements contain ooclass: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsis, classsynopsisinfo, code, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in ooclass: classname, modifier, package.
+olink   [Up]   ooexception

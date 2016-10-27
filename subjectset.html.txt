@@ -1,0 +1,45 @@
+
+***** subjectset *****
+subjectset — A set of terms describing the subject matter of a document.
+***** Synopsis *****
+    * One or more of:
+          o subject
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * scheme (NMTOKEN)
+***** Description *****
+A subjectset is a container for a set of subjects. All of the subjects within a subjectset should come from the same controlled vocabulary.
+A document can be described using terms from more than one controlled vocabulary. In order to do this, you should use the scheme attribute to distinguish between controlled vocabularies.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Subjects are rarely displayed to a reader. Usually, they are reserved for searching and retrieval purposes.
+DocBook does not specify a relationship between subjectsets in different parts of a document or between a subjectset and the subjectsets of enclosing parts of the document.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  scheme
+      Identifies the controlled vocabulary used by this set's terms
+**** Parents ****
+These elements contain subjectset: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in subjectset: subject.
+***** See Also *****
+keyword, keywordset, subject, subjectterm
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example subjectset</title>
+  4   <subjectset scheme="libraryofcongress">
+        <subject>
+  6       <subjectterm>Electronic Publishing</subjectterm>
+        </subject>
+  8     <subject>
+          <subjectterm>SGML (Computer program language)</subjectterm>
+ 10     </subject>
+      </subjectset>
+ 12 </info>
+
+ 14 <para>…</para>
+
+ 16 </article>
+…
+subject  [Up]   subjectterm

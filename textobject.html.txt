@@ -1,0 +1,99 @@
+
+***** textobject *****
+textobject — A wrapper for a text description of an object and its associated meta-information.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One of:
+                # One or more of:
+                      # annotation
+                      # bridgehead
+                      # remark
+                      # revhistory
+                      # Indexing inlines [[+]] [[-]]
+                            * indexterm (db.indexterm.endofrange)
+                            * indexterm (db.indexterm.singular)
+                            * indexterm (db.indexterm.startofrange)
+                      # Admonition elements [[+]] [[-]]
+                            * caution
+                            * important
+                            * note
+                            * tip
+                            * warning
+                      # Formal elements [[+]] [[-]]
+                            * equation
+                            * example
+                            * figure
+                            * table (db.cals.table)
+                            * table (db.html.table)
+                      # Graphic elements [[+]] [[-]]
+                            * mediaobject
+                            * screenshot
+                      # Informal elements [[+]] [[-]]
+                            * informalequation
+                            * informalexample
+                            * informalfigure
+                            * informaltable (db.cals.informaltable)
+                            * informaltable (db.html.informaltable)
+                      # List elements [[+]] [[-]]
+                            * bibliolist
+                            * calloutlist
+                            * glosslist
+                            * itemizedlist
+                            * orderedlist
+                            * procedure
+                            * qandaset
+                            * segmentedlist
+                            * simplelist
+                            * variablelist
+                      # Paragraph elements [[+]] [[-]]
+                            * anchor
+                            * formalpara
+                            * para
+                            * simpara
+                      # Publishing elements [[+]] [[-]]
+                            * address
+                            * blockquote
+                            * epigraph
+                            * sidebar
+                      # Synopsis elements [[+]] [[-]]
+                            * classsynopsis
+                            * cmdsynopsis
+                            * constructorsynopsis
+                            * destructorsynopsis
+                            * fieldsynopsis
+                            * funcsynopsis
+                            * methodsynopsis
+                      # Technical elements [[+]] [[-]]
+                            * constraintdef
+                            * msgset
+                            * procedure
+                            * productionset
+                            * task
+                      # Verbatim elements [[+]] [[-]]
+                            * literallayout
+                            * programlisting
+                            * programlistingco
+                            * screen
+                            * screenco
+                            * synopsis
+                # phrase (db.phrase)
+                # textdata
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A textobject is a wrapper containing a textual description of a media object and its associated meta-information. A textobject is only allowed in mediaobject as a fallback. It cannot be the primary content.
+There are two different forms of textobject, and it is not unreasonable for a media object to contain both of them.
+In the first form, the content of a textobject is simply a phrase. This form is a mechanism for providing a simple “alt text” for a media object. The phrase might be used, for example, as the value of the alt attribute on an HTML img, with the primary content of the image coming from one of the other objects in the media object.
+In the second form, the content of textobject is a longer, prose description. This form could be used when rendering to devices that are incapable of displaying any of the other alternatives.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. It might not be rendered at all, depending on its placement within a mediaobject or inlinemediaobject and the constraints on the publishing system. For a more detailed description of the semantics involved, see mediaobject.
+*** Parents [[+]][[+]] ***
+This element occurs in 11_elements.
+These elements contain textobject: classsynopsisinfo, funcsynopsisinfo, informaltable (db.cals.informaltable), inlinemediaobject, literallayout, mediaobject, programlisting, screen, synopsis, table (db.cals.table).
+*** Children [[+]][[+]] ***
+This element contains 62_elements.
+The following elements occur in textobject: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, phrase (db.phrase), procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, textdata, tip, variablelist, warning.
+***** See Also *****
+audioobject, caption, imageobject, inlinemediaobject, mediaobject, videoobject
+textdata  [Up]   tfoot (db.cals.tfoot)

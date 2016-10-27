@@ -1,0 +1,33 @@
+
+***** personblurb *****
+personblurb — A short description or note about a person.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A short description of a person.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed.
+**** Parents ****
+These elements contain personblurb: author, biblioentry, bibliomixed, bibliomset, biblioset, editor, othercredit, person.
+**** Children ****
+The following elements occur in personblurb: anchor, formalpara, info (db.titleforbidden.info), info (db.titleonly.info), para, simpara, title, titleabbrev.
+***** See Also *****
+author, authorgroup, collab, contrib, editor, othercredit, personname
+***** Examples *****
+See authorgroup for an example that uses this element.
+person  [Up]   personname

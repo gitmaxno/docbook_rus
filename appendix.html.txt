@@ -1,0 +1,175 @@
+
+***** appendix *****
+appendix — An appendix in a Book or Article.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o Sequence of:
+                # Zero or more of:
+                      # bibliography
+                      # glossary
+                      # index
+                      # toc
+                # One of:
+                      # Sequence of:
+                            # One or more of:
+                                  # annotation
+                                  # bridgehead
+                                  # remark
+                                  # revhistory
+                                  # Indexing inlines [[+]] [[-]]
+                                        * indexterm (db.indexterm.endofrange)
+                                        * indexterm (db.indexterm.singular)
+                                        * indexterm (db.indexterm.startofrange)
+                                  # Admonition elements [[+]] [[-]]
+                                        * caution
+                                        * important
+                                        * note
+                                        * tip
+                                        * warning
+                                  # Formal elements [[+]] [[-]]
+                                        * equation
+                                        * example
+                                        * figure
+                                        * table (db.cals.table)
+                                        * table (db.html.table)
+                                  # Graphic elements [[+]] [[-]]
+                                        * mediaobject
+                                        * screenshot
+                                  # Informal elements [[+]] [[-]]
+                                        * informalequation
+                                        * informalexample
+                                        * informalfigure
+                                        * informaltable (db.cals.informaltable)
+                                        * informaltable (db.html.informaltable)
+                                  # List elements [[+]] [[-]]
+                                        * bibliolist
+                                        * calloutlist
+                                        * glosslist
+                                        * itemizedlist
+                                        * orderedlist
+                                        * procedure
+                                        * qandaset
+                                        * segmentedlist
+                                        * simplelist
+                                        * variablelist
+                                  # Paragraph elements [[+]] [[-]]
+                                        * anchor
+                                        * formalpara
+                                        * para
+                                        * simpara
+                                  # Publishing elements [[+]] [[-]]
+                                        * address
+                                        * blockquote
+                                        * epigraph
+                                        * sidebar
+                                  # Synopsis elements [[+]] [[-]]
+                                        * classsynopsis
+                                        * cmdsynopsis
+                                        * constructorsynopsis
+                                        * destructorsynopsis
+                                        * fieldsynopsis
+                                        * funcsynopsis
+                                        * methodsynopsis
+                                  # Technical elements [[+]] [[-]]
+                                        * constraintdef
+                                        * msgset
+                                        * procedure
+                                        * productionset
+                                        * task
+                                  # Verbatim elements [[+]] [[-]]
+                                        * literallayout
+                                        * programlisting
+                                        * programlistingco
+                                        * screen
+                                        * screenco
+                                        * synopsis
+                            # Optionally one of:
+                                  # Sequence of:
+                                        # One or more of:
+                                              # section
+                                        # Zero or more of:
+                                              # simplesect
+                                  # One or more of:
+                                        # simplesect
+                                  # Sequence of:
+                                        # One or more of:
+                                              # sect1
+                                        # Zero or more of:
+                                              # simplesect
+                                  # One or more of:
+                                        # refentry
+                      # Sequence of:
+                            # One or more of:
+                                  # section
+                            # Zero or more of:
+                                  # simplesect
+                      # One or more of:
+                            # simplesect
+                      # Sequence of:
+                            # One or more of:
+                                  # sect1
+                            # Zero or more of:
+                                  # simplesect
+                      # One or more of:
+                            # refentry
+                # Zero or more of:
+                      # bibliography
+                      # glossary
+                      # index
+                      # toc
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+Appendixes usually occur at the end of a document.
+**** Processing expectations ****
+Formatted as a displayed block. Usually introduces a forced page break and often starts on the next recto page. Sometimes restarts page numbering. Typically, appendixes are lettered rather than numbered, and appear in the table of contents.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain appendix: article, book, part.
+*** Children [[+]][[+]] ***
+This element contains 72_elements.
+The following elements occur in appendix: address, anchor, annotation, bibliography, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glossary, glosslist, important, index, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titlereq.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, refentry, remark, revhistory, screen, screenco, screenshot, sect1, section, segmentedlist, sidebar, simpara, simplelist, simplesect, subtitle, synopsis, table (db.cals.table), table (db.html.table),
+task, tip, title, titleabbrev, toc, variablelist, warning.
+***** See Also *****
+article, book, chapter, colophon, dedication, part, partintro, preface, set
+***** Examples *****
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example book</title>
+
+  4 <chapter>
+    <title>Required Chapter</title>
+  6
+    <para>At least one chapter, reference, part, or article is required in
+  8 a book.
+    </para>
+ 10
+    </chapter>
+ 12
+    <appendix>
+ 14 <title>Demonstration Appendix</title>
+
+ 16 <para>This appendix demonstrates an appendix in a book. It has the
+    same broad content model as a chapter.
+ 18 </para>
+
+ 20 </appendix>
+    </book>
+answer  [Up]   application

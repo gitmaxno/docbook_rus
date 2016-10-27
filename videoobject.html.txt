@@ -1,0 +1,46 @@
+
+***** videoobject *****
+videoobject — A wrapper for video data and its associated meta-information.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o videodata
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A videoobject is a wrapper containing videodata and its associated meta-information.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. It might not be rendered at all, depending on its placement within a mediaobject or inlinemediaobject and the constraints on the publishing system. For a more detailed description of the semantics involved, see mediaobject.
+**** Parents ****
+These elements contain videoobject: inlinemediaobject, mediaobject.
+**** Children ****
+The following elements occur in videoobject: info (db.titleforbidden.info), videodata.
+***** See Also *****
+audioobject, caption, imageobject, inlinemediaobject, mediaobject, textobject
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example videoobject</title>
+
+  4 <mediaobject>
+      <videoobject>
+  6     <videodata fileref='movie.avi'/>
+      </videoobject>
+  8   <imageobject>
+        <imagedata fileref='movie-frame.gif'/>
+ 10   </imageobject>
+      <textobject>
+ 12     <para>This video illustrates the proper way to assemble an
+        inverting time distortion device.
+ 14     </para>
+        <warning>
+ 16       <para>It is imperative that the primary and secondary temporal
+          couplings not be mounted in the wrong order. Temporal
+ 18       catastrophe is the likely result. The future you destroy
+          may be your own.
+ 20       </para>
+        </warning>
+ 22   </textobject>
+    </mediaobject>
+ 24
+    </article>
+videodata  [Up]     void

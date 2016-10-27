@@ -1,0 +1,37 @@
+
+***** thead (db.cals.entrytbl.thead) *****
+thead — A table header consisting of one or more rows.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # colspec
+          o One or more of:
+                # row (db.entrytbl.row)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * valign (enumeration)
+          o “bottom”
+          o “middle”
+          o “top”
+***** Description *****
+The thead wrapper identifies the rows of a table that form the head of the table, as distinct from the body (tbody) and foot (tfoot) rows.
+Header rows are always rendered at the beginning of the table.
+**** Processing expectations ****
+This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd]. Header rows are often presented in an alternate typographic style, such as boldface.
+In paged media, if a table spans across multiple pages, header rows are printed at the top of each new page.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  valign
+      Specifies the vertical alignment of text in an entry.
+      Enumerated values:
+      “bottomAligned on the bottom of the entry.
+      “middleAligned in the middle.
+      “top”Aligned at the top of the entry.
+**** Parents ****
+These elements contain thead: entrytbl.
+**** Children ****
+The following elements occur in thead: colspec, row (db.entrytbl.row).
+***** See Also *****
+colspec, entry, entrytbl, informaltable, row, spanspec, table, tbody, tfoot, tgroup, thead (db.cals.thead)
+th      [Up]   thead (db.cals.thead)

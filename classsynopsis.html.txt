@@ -1,0 +1,43 @@
+
+***** classsynopsis *****
+classsynopsis — The syntax summary for a class definition.
+***** Synopsis *****
+    * Sequence of:
+          o One or more of:
+                # Object-oriented programming inlines [[+]] [[-]]
+                      * ooclass
+                      * ooexception
+                      * oointerface
+          o Zero or more of:
+                # classsynopsisinfo
+                # constructorsynopsis
+                # destructorsynopsis
+                # fieldsynopsis
+                # methodsynopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * class (enumeration)
+          o “class”
+          o “interface”
+    * language
+***** Description *****
+A classsynopsis contains the syntax summary of a class (generally speaking, a class in the object-oriented programming language sense).
+This is one of the few places where DocBook attempts to model as well as describe. Unlike funcsynopsis, which was designed with C language function prototypes in mind, the content model of classsynopsis was designed to capture a wide range of object-oriented language semantics.
+**** Processing expectations ****
+For the most part, the processing application is expected to generate all of the parentheses, semicolons, commas, and so on required in the rendered synopsis. The exception to this rule is that the spacing and other punctuation inside a parameter that is a pointer to a function must be provided in the source markup.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  class
+      Specifies the nature of the synopsis
+      Enumerated values:
+      “class” This is the synopsis of a class
+      “interfaceThis is the synopsis of an interface
+  language
+      Identifies the language (i.e. programming language) of the content.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain classsynopsis: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in classsynopsis: classsynopsisinfo, constructorsynopsis, destructorsynopsis, fieldsynopsis, methodsynopsis, ooclass, ooexception, oointerface.
+classname  [Up]   classsynopsisinfo

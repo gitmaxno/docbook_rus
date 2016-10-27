@@ -1,0 +1,53 @@
+
+***** Interchanging DocBook Documents *****
+$Revision$
+One of the early factors that motivated the development of DocBook was the desire for companies to interchange documents. In particular, UNIX vendors wanted to be able to interchange common UNIX documentation.
+A great deal of effort went into making sure that DocBook could handle most (probably all) of the documents that were likely to be exchanged. This avoids the guaranteed problem of interchanging documents created with extended schemas.
+However, simply using DocBook or a subset of it is not enough to ensure successful interchange. If you send someone your DocBook files, you must also tell the recipient about the markup your documents use, any additional markup conventions, and any processing expectations that impose constraints.
+This appendix provides a sample interchange questionnaire to help draw your attention to those areas that might cause problems.
+For maximum portability, delivered DocBook documents should be accompanied by a filled-out interchange questionnaire. Because each situation is unique, you may need to supply additional information (such as layout specifications) in order to deliver a complete package.
+***** DocBook and XML Usage *****
+   1. What version of the schema are you using?
+   2. Did you use any markup features of the schema that have been flagged as obsolete (to be removed at the next major version of DocBook)? If so, which ones?
+   3. Did you extend DocBook in any way, inside or outside the provided customization mechanisms? How? All extensions must be negotiated with the recipient.
+   4. Did you remove markup from DocBook to create a subset? If you used a subset of DocBook, supply the subset you used.
+   5. Did you use the supplied catalog or another one, or none at all? If you used a catalog other than the one supplied, provide it.
+   6. Did you use SVG, MathML, XInclude, XLink, or any other XML schema?
+   7. Did you use character sets other than UTF-8? If so, which ones? How did you use them?
+***** Processing Requirements and Markup Interpretation *****
+   1. What formatting that you applied do you require your interchange partner to apply? For example, where and how must text be generated in order for the documents to make sense?
+   2. Did you supply your stylesheet and information regarding its format and version?
+   3. How did you create tables of contents, lists of titles, and indexes? Are they stored in DocBook form? If so, did you generate them (and according to what rules) or create them by hand?
+   4. If you used the xml:lang common attribute, why, and to what effect?
+   5. If you used the remap common attribute, why, and to what effect?
+   6. If you used the role common attribute, why, and to what effect?
+   7. If you used the effectivity attributes, which did you use, why, and to what effect?
+   8. What values did you give to the label attribute and how are they to be interpreted for rendering?
+   9. What values did you give to the mark and override attributes for lists and how are they to be interpreted for rendering?
+  10. Did you use the renderas attribute on sections and/or bridgeheads?
+  11. Did you supply all keyword values you used for attributes whose declared values are not enumerated tokens, along with the expected processing for the occurrence of each keyword?
+  12. Did you use markup to control width, size, and/or positioning settings (such as “fold-out” or “centered”) for graphics, line specific regions, and tables? If so, how?
+  13. For rendering of sidebars, must these appear in the flow of the text where they appear in your files, or may they float?
+  14. Did you use callouts? If so, what are the processing expectations for callout marks?
+  15. Did you use itemizedlists? If so, what are the processing expectations for the marks on list items and nested lists?
+  16. For mediaobject and inlinemediaobject, what method(s) did you use for providing graphic data: element content, fileref attribute, or entityref attribute?
+  17. For mediaobject and inlinemediaobject, what method(s) did you use for selecting between alternative presentations?
+  18. How did you specify column widths in tables? Did you use vertical spans? Did you use horizontal spans?
+  19. Did you use entrytbls?
+  20. If you used the type attribute on the link elements, why, and to what effect?
+  21. If you used the xref, do your interchange partners need additional information about the semantics of the link? Have you provided it, perhaps with role?
+  22. Did you use the subject attribute on glossdef? If so, did you use a thesaurus of terms? If so, what is it?
+  23. If you used the class attribute on refmiscinfo, why and to what effect?
+  24. If you used link and provided URLs that are queries, what back-end processing is required to resolve those queries?
+  25. Is there a fileref or entityref attribute on every audiodata, imagedata, and videodata element. If one is not present, what is the expectation?
+  26. If your bibliographys or glossarys have special processing expectations, such as the ability to display only those entries that are cited, have you described them?
+  27. If your bibliographys contain biblioentrys, what are the processing expectations? Which fields are selected for display? What punctuation is added, and where?
+  28. Do glossterms or other elements have implicit linking relationships that must be obeyed or handled in presentation?
+  29. Did you use any processing instructions? Why and what for? Are they in entities?
+  30. What copy fitting have you already done, and for what outputs?
+  31. Are the revisions in your revhistorys sorted in any particular way?
+  32. If you use any of the *synopsis elements, describe how you define and markup “arguments,” “options,” “parameters,” etc.
+***** Miscellaneous *****
+   1. Have you checked your files for viruses?
+   2. If you used bridgehead, have you joined a recovery support group?
+Resources  [Up]   GNU Free Documentation License

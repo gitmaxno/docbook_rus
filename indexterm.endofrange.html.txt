@@ -1,0 +1,32 @@
+
+***** indexterm (db.indexterm.endofrange) *****
+indexterm — Identifies the end of a range associated with an indexed term.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * class (enumeration)
+          o “endofrange”
+    * startref (IDREF)
+Required attributes are shown in bold.
+***** Description *****
+An “end of range” indexterm marks the end of a range. It must have an associated “start of range” indexterm. The resultant index entry applies to the entire range. See indexterm_(db.indexterm.singular).
+**** Processing expectations ****
+See indexterm_(db.indexterm.singular).
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  class
+      Identifies the class of index term
+      Enumerated values:
+      “endofrangeThe end of a range
+  startref
+      Points to the start of the range
+*** Parents [[+]][[+]] ***
+This element occurs in 243_elements.
+These elements contain indexterm: abbrev, accel, acknowledgements, acronym, address, annotation, answer, appendix, application, arg, article, artpagenums, attribution, authorinitials, bibliocoverage, bibliodiv, bibliography, biblioid, bibliolist, bibliomisc, bibliomset, bibliorelation, bibliosource, blockquote, bridgehead, callout, calloutlist, caption (db.caption), caption (db.html.caption), caution, chapter, citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, colophon, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, constraintdef, contractnum, contractsponsor, contrib, country, database, dedication, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, example, exceptionname, fax, figure, filename, firstname, firstterm, footnote, foreignphrase, formalpara, funcdef, funcparams, funcsynopsisinfo, function, glossary, glossdef, glossdiv, glossentry, glosslist,
+glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, important, index, indexdiv, informalexample, informalfigure, informaltable (db.cals.informaltable), initializer, interfacename, issuenum, itemizedlist, jobtitle, keycap, keycode, keysym, label, legalnotice, lineage, lineannotation, link, listitem, literal, literallayout, manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msgexplan, msglevel, msgorig, msgtext, note, olink, option, optional, orderedlist, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, partintro, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, preface, primary, primaryie, procedure, productname, productnumber, programlisting, prompt, property, publishername, qandadiv, qandaset, question, quote, refdescriptor, refentry, refentrytitle, refmeta, refmiscinfo, refname, refpurpose, refsect1, refsect2,
+refsect3, refsection, refsynopsisdiv, releaseinfo, remark, replaceable, returnvalue, revdescription, revnumber, revremark, screen, secondary, secondaryie, sect1, sect2, sect3, sect4, sect5, section, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, setindex, shortaffil, sidebar, simpara, simplesect, state, step, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, table (db.cals.table), tag, taskprerequisites, taskrelated, tasksummary, td, term, termdef, tertiary, tertiaryie, textobject, th, tip, title, titleabbrev, toc, tocdiv, tocentry, token, trademark, type, uri, userinput, variablelist, varname, volumenum, warning, wordasword, year.
+***** See Also *****
+indexentry, indexterm (db.indexterm.singular), primary, primaryie, secondary, secondaryie, see, seealso, seealsoie, seeie, tertiary, tertiaryie
+indexentry  [Up]   indexterm (db.indexterm.singular)

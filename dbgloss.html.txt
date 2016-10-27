@@ -1,0 +1,76 @@
+
+***** Glossary *****
+  attribute
+      Attributes augment the element on which they appear; they also provide additional information about the element.
+      Attributes appear as name-value pairs in the element’s start tag. For example, to assign the value hostname to the role attribute of systemitem, you would use the markup: <systemitem role="hostname">.
+  callout
+      A pointer, verbal or graphical or both, to a component of an illustration or a text object.
+  character reference
+      A character reference is a mechanism for inserting an arbitrary Unicode character into a document. They’re most often used for characters that aren’t available on the author’s keyboard or font. Syntactically, they have the form &#number; where “number” is the Unicode codepoint of the character expressed as a decimal number. Hexadecimal numbers can also be used with character references of the form &#xnumber;.
+      For example, you can type &#169; (or &#xa9;) to insert a © symbol.
+  cooked
+      “Cooked” data, as distinct from “raw,” is a collection of elements and character data that’s ready for presentation. The processor is not expected to rearrange, select, or suppress any of the elements, but simply present them as specified.
+      See Also raw.
+  Document Type Declaration (DTD)
+      A set of declarations that defines the names of the elements and their attributes, and that specifies rules for their combination or sequence.
+  effectivity
+      A term used to identify attributes used for profiling or conditional processing. DocBook contains a set of effectivity attributes that allow you to flag elements as being “effective” under particular conditions. For example, you might set the value of the os effectivity attribute to “linux” to indicate that this element is applicable to the Linux operating system. With the DocBook stylesheets, if you set the profile.os parameter to “linux” this element will be included. If you set the parameter to some other value, the element will be excluded. Further information about using the DocBook stylesheets for profiling can be found in Bob Stayton’s DocBook XSL: The Complete Guide.
+  element
+      Elements define the hierarchical structure of a document. Most elements have start and end tags and contain some part of the document content. Empty elements have only a start tag and have no content.
+  entity
+      A name assigned (by means of a declaration) to some chunk of data so that it can be referred to by that name; the data can be of various kinds (e.g., a special character or a chapter or a set of declarations in a DTD), and the way in which it is referred to depends on the type of data and where it is being referenced.
+  external entity
+      An external entity is a general entity that refers to another document. External entities are often used to incorporate parsable text documents, like legal notices or chapters, into larger units, like chapters or books.
+  external subset
+      Element, attribute, and other declarations that compose (part of) a document type definition that are stored in an external entity, and referenced from a document’s Document Type Declaration using a system identifier and optionally a public identifier.
+  float
+      Text objects such as sidebars, figures, tables, and graphics are said to float when their actual place in the document is not fixed. For presentation on a printed page, for instance, a graphic may float to the top of the next page if it is too tall to fit on the page in which it actually falls, in the sequence of words and the sequence of other like objects in a document.
+  formal public identifier
+      A public identifier that conforms to the specification of formal public identifiers in ISO 8879.
+  general entity
+      An entity referenced by a name that starts with an ampersand (&) and ends with a semicolon. Most of the time general entities are used in document instances, not in the schema. There are two types, external and internal entities, and they refer either to special characters or to text objects such as commonly repeated phrases or names or chapters.
+  internal entity
+      A general entity that references a piece of text (including its markup and even other internal entities), usually as a keyboard shortcut.
+  internal subset
+      Element, attribute, and other declarations that compose (part of) a document type definition that are stored in a document, within the Document Type Declaration.
+  meta-information
+      Meta-information is information about a document, such as the specification of its author or its date of composition, as opposed to the content of a document itself.
+  NVDL
+      NVDL is the Namespace-based Validation Dispatching Language; see http://www.nvdl.org/.
+  processing instruction
+      An essentially arbitrary string preceded by a question mark and delimited by angle brackets that is intended to convey information to an application that processes an XML instance. For example, the processing instruction <?linebreak> might cause the formatter to introduce a line break at the position where the processing instruction occurs.
+      In XML documents, processing instructions should have the form:
+      <?pitarget param1="value1" param2="value2"?>
+      The pitarget should be a name that the processing application will recognize. Additional information in the processing instruction should be added using “attribute syntax.”
+  public identifier
+      An abstract identifier for an XML document, DTD, or external entity.
+  raw
+      “Raw” data is just a collection of elements, with no additional punctuation or information about presentation. To continue the cooking metaphor, raw data is just a set of ingredients. It’s up to the processor to select appropriate elements, arrange them for display, and add required presentational information.
+      See Also cooked.
+  RELAX NG
+      RELAX NG is a grammar-based schema language for XML; see http://relaxng.org/.
+  Schematron
+      Schematron is a language for making assertions about patterns found in XML documents; see http://www.schematron.com/.
+  SGML
+      Standard Generalized Markup Language is an international standard (ISO 8879) that specifies the rules for the creation of platform-independent markup languages for electronic texts.
+  stylesheet
+      A file that specifies the presentation or appearance of a document; there are several standards for such stylesheets, including CSS, FOSIs, DSSSL, and XSL.
+  system identifier
+      In SGML, a local, system-dependent identifier for a document, DTD, or external entity. Usually a filename on the local system.
+      In XML, a system identifier is required to be a URI.
+  tag
+      An XML element name enclosed in angle brackets (<>), used to mark up the semantics or structure of a document. <para> is a tag in DocBook used to mark the beginning of a paragraph.
+  URI
+      Uniform Resource Identifier, the W3C’s codification of the name and address syntax of present and future objects on the Internet. In its most basic form, a URI consists of a scheme name (such as file, http, ftp, news, mailto, gopher) followed by a colon, followed by a path whose nature is determined by the scheme that precedes it (see RFC 1630).
+      URI is the umbrella term for URNs, URLs, and all other Uniform Resource Identifiers.
+  URL
+      Uniform Resource Locator, a name and address for an existing object accessible over the Internet. http://www.docbook.org is an example of a URL (see RFC 1738).
+  W3C
+      The World_Wide_Web_Consortium.
+  wrapper
+      Some elements, such as chapter, have important semantic significance. Other elements serve no obvious purpose except to contain a number of other elements. For example, info has no important semantics; it merely serves as a container for the meta-information about a book. Elements that are just containers are sometimes called “wrappers.”
+  XML
+      The Extensible_Markup_Language, a subset of SGML designed specifically for use over the Web.
+  XSL
+      Extensible Stylesheet Language (XSL), an evolving language for stylesheets to be attached to XML documents. The stylesheet is itself an XML document.
+GNU Free Documentation License  [Up]    Index

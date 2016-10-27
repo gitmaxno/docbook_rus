@@ -1,0 +1,75 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** tgroup *****
+tgroupÂ â€”Â A wrapper for the main content of a table, or part of a table.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # colspec
+          o Zero or more of:
+                # spanspec
+          o thead?Â (db.cals.thead)
+          o tfoot?Â (db.cals.tfoot)
+          o tbodyÂ (db.cals.tbody)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * align (enumeration)
+          o â€œcenterâ€
+          o â€œcharâ€
+          o â€œjustifyâ€
+          o â€œleftâ€
+          o â€œrightâ€
+    * char
+    * charoff (decimal)
+    * cols (positiveInteger)
+    * colsep (enumeration)
+          o â€œ0â€
+          o â€œ1â€
+    * rowsep (enumeration)
+          o â€œ0â€
+          o â€œ1â€
+    * tgroupstyle
+Required attributes are shown in bold.
+***** Description *****
+A tgroup surrounds a logically complete portion of a table. Most tables consist of a single tgroup, but complex tables with widely varying column specifications may be easier to code using multiple tgroups.
+The tgroup specifies the number of columns in the table, and contains all of the header, body, and footer rows, along with any additional column or span specifications necessary to express the geometry of the table.
+Most of the properties of rows, columns, and cells inherit their default characteristics from the enclosing tgroup.
+**** Processing expectations ****
+This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd].
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  align
+      Specifies the horizontal alignment of text in an entry.
+      Enumerated values:
+      â€œcenterâCentered.
+      â€œcharâ€Aligned on a particular character.
+      â€œjustifyLeft and right justified.
+      â€œleftâ€Left justified.
+      â€œrightâ€Right justified.
+  char
+      Specifies the alignment character when align is set to â€œcharâ€ .
+  charoff
+      Specifies the percentage of the column's total width that should appear to the left of the first occurance of the character identified in char when align is set to â€œcharâ€ .
+  cols
+      The number of columns in the table. Must be an integer greater than zero.
+  colsep
+      Specifies the presence or absence of the column separator
+      Enumerated values:
+      â€œ0No column separator rule.
+      â€œ1Provide a column separator rule on the right
+  rowsep
+      Specifies the presence or absence of the row separator
+      Enumerated values:
+      â€œ0No row separator rule.
+      â€œ1Provide a row separator rule below
+  tgroupstyle
+      Additional style information for downstream processing; typically the name of a style.
+**** Parents ****
+These elements contain tgroup: informaltableÂ (db.cals.informaltable), tableÂ (db.cals.table).
+**** Children ****
+The following elements occur in tgroup: colspec, spanspec, tbodyÂ (db.cals.tbody), tfootÂ (db.cals.tfoot), theadÂ (db.cals.thead).
+***** See Also *****
+colspec, entry, entrytbl, informaltable, row, spanspec, table, tbody, tfoot, thead
+[Prev]Â                [Home] Â [Next]
+tfoot (db.html.tfoot)Â  [Up]      Â th

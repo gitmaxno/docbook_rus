@@ -1,0 +1,390 @@
+
+****** Part II. Reference ******
+Table of Contents
+    * I._DocBook_Element_Reference
+          o abbrev - An abbreviation, especially one followed by a period
+          o abstract - A summary
+          o accel - A graphical user interface (GUI) keyboard shortcut
+          o acknowledgements - Acknowledgements of a book or other component
+          o acronym - An often pronounceable word made from the initial (or selected) letters of a name or phrase
+          o address - A real-world address, generally a postal address
+          o affiliation - The institutional affiliation of an individual
+          o alt - A text-only annotation, often used for accessibility
+          o anchor - A spot in the document
+          o annotation - An annotation
+          o answer - An answer to a question posed in a QandASet
+          o appendix - An appendix in a Book or Article
+          o application - The name of a software program
+          o arc - An XLink arc in an extendedlink
+          o area_(db.area) - A region defined for a Callout in a graphic or code example
+          o area_(db.area.inareaset) - A region defined for a Callout in a graphic or code example
+          o areaset - A set of related areas in a graphic or code example
+          o areaspec - A collection of regions in a graphic or code example
+          o arg - An argument in a CmdSynopsis
+          o article - An article
+          o artpagenums - The page numbers of an article as published
+          o attribution - The source of a block quote or epigraph
+          o audiodata - Pointer to external audio data
+          o audioobject - A wrapper for audio data and its associated meta-information
+          o author - The name of an individual author
+          o authorgroup - Wrapper for author information when a document has multiple authors or collabarators
+          o authorinitials - The initials or other short identifier for an author
+          o bibliocoverage - The spatial or temporal coverage of a document
+          o bibliodiv - A section of a Bibliography
+          o biblioentry - An entry in a Bibliography
+          o bibliography - A bibliography
+          o biblioid - An identifier for a document
+          o bibliolist - A wrapper for a list of bibliography entries
+          o bibliomisc - Untyped bibliographic information
+          o bibliomixed - An entry in a Bibliography
+          o bibliomset - A cooked container for related bibliographic information
+          o biblioref - A cross-reference to a bibliographic entry
+          o bibliorelation - The relationship of a document to another
+          o biblioset - A raw container for related bibliographic information
+          o bibliosource - The source of a document
+          o blockquote - A quotation set off from the main text
+          o book - A book
+          o bridgehead - A free-floating heading
+          o callout - A called out description of a marked Area
+          o calloutlist - A list of callout s
+          o caption_(db.caption) - A caption
+          o caption_(db.html.caption) - An HTML table caption
+          o caution - A note of caution
+          o chapter - A chapter, as of a book
+          o citation - An inline bibliographic reference to another published work
+          o citebiblioid - A citation of a bibliographic identifier
+          o citerefentry - A citation to a reference page
+          o citetitle - The title of a cited work
+          o city - The name of a city in an address
+          o classname - The name of a class, in the object-oriented programming sense
+          o classsynopsis - The syntax summary for a class definition
+          o classsynopsisinfo - Information supplementing the contents of a ClassSynopsis
+          o cmdsynopsis - A syntax summary for a software command
+          o co - The location of a callout embedded in text
+          o code - An inline code fragment
+          o col - Specifications for a column in an HTML table
+          o colgroup - A group of columns in an HTML table
+          o collab - Identifies a collaborator
+          o colophon - Text at the back of a book describing facts about its production
+          o colspec - Specifications for a column in a table
+          o command - The name of an executable program or other software command
+          o computeroutput - Data, generally text, displayed or presented by a computer
+          o confdates - The dates of a conference for which a document was written
+          o confgroup - A wrapper for document meta-information about a conference
+          o confnum - An identifier, frequently numerical, associated with a conference for which a document was written
+          o confsponsor - The sponsor of a conference for which a document was written
+          o conftitle - The title of a conference for which a document was written
+          o constant - A programming or system constant
+          o constraint - A constraint in an EBNF production
+          o constraintdef - The definition of a constraint in an EBNF production
+          o constructorsynopsis - A syntax summary for a constructor
+          o contractnum - The contract number of a document
+          o contractsponsor - The sponsor of a contract
+          o contrib - A summary of the contributions made to a document by a credited source
+          o copyright - Copyright information about a document
+          o coref - A cross reference to a co
+          o country - The name of a country
+          o cover - Additional content for the cover of a publication
+          o database - The name of a database, or part of a database
+          o date - The date of publication or revision of a document
+          o dedication - The dedication of a book or other component
+          o destructorsynopsis - A syntax summary for a destructor
+          o edition - The name or number of an edition of a document
+          o editor - The name of the editor of a document
+          o email - An email address
+          o emphasis_(db.emphasis) - Emphasized text
+          o emphasis_(db._emphasis) - A limited span of emphasized text
+          o entry - A cell in a table
+          o entrytbl - A subtable appearing in place of an Entry in a table
+          o envar - A software environment variable
+          o epigraph - A short inscription at the beginning of a document or component
+          o equation - A displayed mathematical equation
+          o errorcode - An error code
+          o errorname - An error name
+          o errortext - An error message.
+          o errortype - The classification of an error message
+          o example - A formal example, with a title
+          o exceptionname - The name of an exception
+          o extendedlink - An XLink extended link
+          o fax - A fax number
+          o fieldsynopsis - The name of a field in a class definition
+          o figure - A formal figure, generally an illustration, with a title
+          o filename - The name of a file
+          o firstname - The first name of a person
+          o firstterm - The first occurrence of a term
+          o footnote - A footnote
+          o footnoteref - A cross reference to a footnote (a footnote mark)
+          o foreignphrase - A word or phrase in a language other than the primary language of the document
+          o formalpara - A paragraph with a title
+          o funcdef - A function (subroutine) name and its return type
+          o funcparams - Parameters for a function referenced through a function pointer in a synopsis
+          o funcprototype - The prototype of a function
+          o funcsynopsis - The syntax summary for a function definition
+          o funcsynopsisinfo - Information supplementing the FuncDefs of a FuncSynopsis
+          o function - The name of a function or subroutine, as in a programming language
+          o glossary - A glossary
+          o glossdef - A definition in a GlossEntry
+          o glossdiv - A division in a Glossary
+          o glossentry - An entry in a Glossary or GlossList
+          o glosslist - A wrapper for a list of glossary entries
+          o glosssee - A cross-reference from one glossentry to another
+          o glossseealso - A cross-reference from one GlossEntry to another
+          o glossterm - A glossary term
+          o group - A group of elements in a CmdSynopsis
+          o guibutton - The text on a button in a GUI
+          o guiicon - Graphic and/or text appearing as a icon in a GUI
+          o guilabel - The text of a label in a GUI
+          o guimenu - The name of a menu in a GUI
+          o guimenuitem - The name of a terminal menu item in a GUI
+          o guisubmenu - The name of a submenu in a GUI
+          o hardware - A physical part of a computer system
+          o holder - The name of the individual or organization that holds a copyright
+          o honorific - The title of a person
+          o imagedata_(db.imagedata) - Pointer to external image data
+          o imagedata_(db.imagedata.mathml) - A MathML expression in a media object
+          o imagedata_(db.imagedata.svg) - An SVG drawing in a media object
+          o imageobject - A wrapper for image data and its associated meta-information
+          o imageobjectco - A wrapper for an image object with callouts
+          o important - An admonition set off from the text
+          o index - An index to a book or part of a book
+          o indexdiv - A division in an index
+          o indexentry - An entry in an index
+          o indexterm_(db.indexterm.endofrange) - Identifies the end of a range associated with an indexed term
+          o indexterm_(db.indexterm.singular) - A wrapper for an indexed term
+          o indexterm_(db.indexterm.startofrange) - A wrapper for an indexed term that covers a range
+          o info_(db.info) - A wrapper for information about a component or other block
+          o info_(db.titleforbidden.info) - A wrapper for information about a component or other block without a title
+          o info_(db.titleonly.info) - A wrapper for information about a component or other block with only a title
+          o info_(db.titleonlyreq.info) - A wrapper for information about a component or other block with only a required title
+          o info_(db.titlereq.info) - A wrapper for information about a component or other block with a required title
+          o informalequation - A displayed mathematical equation without a title
+          o informalexample - A displayed example without a title
+          o informalfigure - A untitled figure
+          o informaltable_(db.cals.informaltable) - A table without a title
+          o informaltable_(db.html.informaltable) - An HTML table without a title
+          o initializer - The initializer for a FieldSynopsis
+          o inlineequation - A mathematical equation or expression occurring inline
+          o inlinemediaobject - An inline media object (video, audio, image, and so on)
+          o interfacename - The name of an interface
+          o issuenum - The number of an issue of a journal
+          o itemizedlist - A list in which each entry is marked with a bullet or other dingbat
+          o itermset - A set of index terms in the meta-information of a document
+          o jobtitle - The title of an individual in an organization
+          o keycap - The text printed on a key on a keyboard
+          o keycode - The internal, frequently numeric, identifier for a key on a keyboard
+          o keycombo - A combination of input actions
+          o keysym - The symbolic name of a key on a keyboard
+          o keyword - One of a set of keywords describing the content of a document
+          o keywordset - A set of keywords describing the content of a document
+          o label - A label on a Question or Answer
+          o legalnotice - A statement of legal obligations or requirements
+          o lhs - The left-hand side of an EBNF production
+          o lineage - The portion of a person's name indicating a relationship to ancestors
+          o lineannotation - A comment on a line in a verbatim listing
+          o link - A hypertext link
+          o listitem - A wrapper for the elements of a list item
+          o literal - Inline text that is some literal value
+          o literallayout - A block of text in which line breaks and white space are to be reproduced faithfully
+          o locator - An XLink locator in an extendedlink
+          o manvolnum - A reference volume number
+          o markup - A string of formatting markup in text that is to be represented literally
+          o mathphrase - A mathematical phrase, an expression that can be represented with ordinary text and a small amount of markup
+          o mediaobject - A displayed media object (video, audio, image, etc.)
+          o member - An element of a simple list
+          o menuchoice - A selection or series of selections from a menu
+          o methodname - The name of a method
+          o methodparam - Parameters to a method
+          o methodsynopsis - A syntax summary for a method
+          o modifier - Modifiers in a synopsis
+          o mousebutton - The conventional name of a mouse button
+          o msg - A message in a message set
+          o msgaud - The audience to which a message in a message set is relevant
+          o msgentry - A wrapper for an entry in a message set
+          o msgexplan - Explanatory material relating to a message in a message set
+          o msginfo - Information about a message in a message set
+          o msglevel - The level of importance or severity of a message in a message set
+          o msgmain - The primary component of a message in a message set
+          o msgorig - The origin of a message in a message set
+          o msgrel - A related component of a message in a message set
+          o msgset - A detailed set of messages, usually error messages
+          o msgsub - A subcomponent of a message in a message set
+          o msgtext - The actual text of a message component in a message set
+          o nonterminal - A non-terminal in an EBNF production
+          o note - A message set off from the text
+          o olink - A link that addresses its target indirectly
+          o ooclass - A class in an object-oriented programming language
+          o ooexception - An exception in an object-oriented programming language
+          o oointerface - An interface in an object-oriented programming language
+          o option - An option for a software command
+          o optional - Optional information
+          o orderedlist - A list in which each entry is marked with a sequentially incremented label
+          o org - An organization and associated metadata
+          o orgdiv - A division of an organization
+          o orgname - The name of an organization
+          o otheraddr - Uncategorized information in address
+          o othercredit - A person or entity, other than an author or editor, credited in a document
+          o othername - A component of a persons name that is not a first name, surname, or lineage
+          o package - A software or application package
+          o pagenums - The numbers of the pages in a book, for use in a bibliographic entry
+          o para - A paragraph
+          o paramdef - Information about a function parameter in a programming language
+          o parameter - A value or a symbolic reference to a value
+          o part - A division in a book
+          o partintro - An introduction to the contents of a part
+          o person - A person and associated metadata
+          o personblurb - A short description or note about a person
+          o personname - The personal name of an individual
+          o phone - A telephone number
+          o phrase_(db.phrase) - A span of text
+          o phrase_(db._phrase) - A limited span of text
+          o pob - A post office box in an address
+          o postcode - A postal code in an address
+          o preface - Introductory matter preceding the first chapter of a book
+          o primary - The primary word or phrase under which an index term should be sorted
+          o primaryie - A primary term in an index entry, not in the text
+          o printhistory - The printing history of a document
+          o procedure - A list of operations to be performed in a well-defined sequence
+          o production - A production in a set of EBNF productions
+          o productionrecap - A cross-reference to an EBNF production
+          o productionset - A set of EBNF productions
+          o productname - The formal name of a product
+          o productnumber - A number assigned to a product
+          o programlisting - A literal listing of all or part of a program
+          o programlistingco - A program listing with associated areas used in callouts
+          o prompt - A character or string indicating the start of an input field in a computer display
+          o property - A unit of data associated with some part of a computer system
+          o pubdate - The date of publication of a document
+          o publisher - The publisher of a document
+          o publishername - The name of the publisher of a document
+          o qandadiv - A titled division in a QandASet
+          o qandaentry - A question/answer set within a QandASet
+          o qandaset - A question-and-answer set
+          o question - A question in a QandASet
+          o quote - An inline quotation
+          o refclass - The scope or other indication of applicability of a reference entry
+          o refdescriptor - A description of the topic of a reference page
+          o refentry - A reference page (originally a UNIX man-style reference page)
+          o refentrytitle - The title of a reference page
+          o reference - A collection of reference entries
+          o refmeta - Meta-information for a reference entry
+          o refmiscinfo - Meta-information for a reference entry other than the title and volume number
+          o refname - The name of (one of) the subject(s) of a reference page
+          o refnamediv - The name, purpose, and classification of a reference page
+          o refpurpose - A short (one sentence) synopsis of the topic of a reference page
+          o refsect1 - A major subsection of a reference entry
+          o refsect2 - A subsection of a refsect1
+          o refsect3 - A subsection of a refsect2
+          o refsection - A recursive section in a refentry
+          o refsynopsisdiv - A syntactic synopsis of the subject of the reference page
+          o releaseinfo - Information about a particular release of a document
+          o remark - A remark (or comment) intended for presentation in a draft manuscript
+          o replaceable - Content that may or must be replaced by the user
+          o returnvalue - The value returned by a function
+          o revdescription - A extended description of a revision to a document
+          o revhistory - A history of the revisions to a document
+          o revision - An entry describing a single revision in the history of the revisions to a document
+          o revnumber - A document revision number
+          o revremark - A description of a revision to a document
+          o rhs - The right-hand side of an EBNF production
+          o row_(db.entrytbl.row) - A row in a table
+          o row_(db.row) - A row in a table
+          o sbr - An explicit line break in a command synopsis
+          o screen - Text that a user sees or might see on a computer screen
+          o screenco - A screen with associated areas used in callouts
+          o screenshot - A representation of what the user sees or might see on a computer screen
+          o secondary - A secondary word or phrase in an index term
+          o secondaryie - A secondary term in an index entry, rather than in the text
+          o sect1 - A top-level section of document
+          o sect2 - A subsection within a Sect1
+          o sect3 - A subsection within a Sect2
+          o sect4 - A subsection within a Sect3
+          o sect5 - A subsection within a Sect4
+          o section - A recursive section
+          o see - Part of an index term directing the reader instead to another entry in the index
+          o seealso - Part of an index term directing the reader also to another entry in the index
+          o seealsoie - A See also entry in an index, rather than in the text
+          o seeie - A See entry in an index, rather than in the text
+          o seg - An element of a list item in a segmented list
+          o seglistitem - A list item in a segmented list
+          o segmentedlist - A segmented list, a list of sets of elements
+          o segtitle - The title of an element of a list item in a segmented list
+          o seriesvolnums - Numbers of the volumes in a series of books
+          o set - A collection of books
+          o setindex - An index to a set of books
+          o shortaffil - A brief description of an affiliation
+          o shortcut - A key combination for an action that is also accessible through a menu
+          o sidebar - A portion of a document that is isolated from the main narrative flow
+          o simpara - A paragraph that contains only text and inline markup, no block elements
+          o simplelist - An undecorated list of single words or short phrases
+          o simplemsgentry - A wrapper for a simpler entry in a message set
+          o simplesect - A section of a document with no subdivisions
+          o spanspec - Formatting information for a spanned column in a table
+          o state - A state or province in an address
+          o step - A unit of action in a procedure
+          o stepalternatives - Alternative steps in a procedure
+          o street - A street address in an address
+          o subject - One of a group of terms describing the subject matter of a document
+          o subjectset - A set of terms describing the subject matter of a document
+          o subjectterm - A term in a group of terms describing the subject matter of a document
+          o subscript - A subscript (as in H2 O, the molecular formula for water)
+          o substeps - A wrapper for steps that occur within steps in a procedure
+          o subtitle - The subtitle of a document
+          o superscript - A superscript (as in x^2, the mathematical notation for x multiplied by itself)
+          o surname - A family name; in western cultures the last name
+          o symbol - A name that is replaced by a value before processing
+          o synopfragment - A portion of a CmdSynopsis broken out from the main body of the synopsis
+          o synopfragmentref - A reference to a fragment of a command synopsis
+          o synopsis - A general-purpose element for representing the syntax of commands or functions
+          o systemitem - A system-related item or term
+          o table_(db.cals.table) - A formal table in a document
+          o table_(db.html.table) - A formal (captioned) HTML table in a document
+          o tag - A component of XML (or SGML) markup
+          o task - A task to be completed
+          o taskprerequisites - The prerequisites for a task
+          o taskrelated - Information related to a task
+          o tasksummary - A summary of a task
+          o tbody_(db.cals.entrytbl.tbody) - A wrapper for the rows of a table or informal table
+          o tbody_(db.cals.tbody) - A wrapper for the rows of a table or informal table
+          o tbody_(db.html.tbody) - A wrapper for the rows of an HTML table or informal HTML table
+          o td - A table entry in an HTML table
+          o term - The word or phrase being defined or described in a variable list
+          o termdef - An inline definition of a term
+          o tertiary - A tertiary word or phrase in an index term
+          o tertiaryie - A tertiary term in an index entry, rather than in the text
+          o textdata - Pointer to external text data
+          o textobject - A wrapper for a text description of an object and its associated meta-information
+          o tfoot_(db.cals.tfoot) - A table footer consisting of one or more rows
+          o tfoot_(db.html.tfoot) - A table footer consisting of one or more rows in an HTML table
+          o tgroup - A wrapper for the main content of a table, or part of a table
+          o th - A table header entry in an HTML table
+          o thead_(db.cals.entrytbl.thead) - A table header consisting of one or more rows
+          o thead_(db.cals.thead) - A table header consisting of one or more rows
+          o thead_(db.html.thead) - A table header consisting of one or more rows in an HTML table
+          o tip - A suggestion to the user, set off from the text
+          o title - The text of the title of a section of a document or of a formal block-level element
+          o titleabbrev - The abbreviation of a title
+          o toc - A table of contents
+          o tocdiv - A division in a table of contents
+          o tocentry - A component title in a table of contents
+          o token - A unit of information
+          o tr - A row in an HTML table
+          o trademark - A trademark
+          o type - The classification of a value
+          o uri - A Uniform Resource Identifier
+          o userinput - Data entered by the user
+          o varargs - An empty element in a function synopsis indicating a variable number of arguments
+          o variablelist - A list in which each entry is composed of a set of one or more terms and an associated description
+          o varlistentry - A wrapper for a set of terms and the associated description in a variable list
+          o varname - The name of a variable
+          o videodata - Pointer to external video data
+          o videoobject - A wrapper for video data and its associated meta-information
+          o void - An empty element in a function synopsis indicating that the function in question takes no arguments
+          o volumenum - The volume number of a document in a set (as of books in a set or articles in a journal)
+          o warning - An admonition set off from the text
+          o wordasword - A word meant specifically as a word and not representing anything else
+          o xref - A cross reference to another part of the document
+          o year - The year of publication of a document
+          o *:* - Any element from almost any namespace
+          o mml:* - Any element from the MathML namespace
+          o svg:* - Any element from the SVG namespace
+Customizing DocBook  [Up]   DocBook Element Reference

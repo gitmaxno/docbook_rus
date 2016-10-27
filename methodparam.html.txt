@@ -1,0 +1,51 @@
+
+Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** methodparam *****
+methodparamÂ â€”Â Parameters to a method.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # modifier
+          o type?
+          o One of:
+                # Sequence of:
+                      # Zero or more of:
+                            # modifier
+                      # parameter
+                      # initializer?
+                # funcparams
+          o Zero or more of:
+                # modifier
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * choice (enumeration) [default=â€œreqâ€]
+          o â€œoptâ€
+          o â€œplainâ€
+          o â€œreqâ€
+    * rep (enumeration) [default=â€œnorepeatâ€]
+          o â€œnorepeatâ€
+          o â€œrepeatâ€
+***** Description *****
+In the syntax summary of a constructorsynopsis, destructorsynopsis, or methodsynopsis, methodparam provides the description of a parameter to the method. Typically, this includes the data type of the parameter and its name, but may also include an initial value and other modifiers.
+**** Processing expectations ****
+Formatted inline. For a complete description of the processing expectations, see classsynopsis.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  choice
+      Indicates optionality.
+      Enumerated values:
+      â€œoptâ€Formatted to indicate that it is optional.
+      â€œplainFormatted without indication.
+      â€œreqâ€Formatted to indicate that it is required.
+  rep
+      Indicates whether or not repetition is possible.
+      Enumerated values:
+      â€œnorepeatCan not be repeated.
+      â€œrepeatâ€Can be repeated.
+**** Parents ****
+These elements contain methodparam: constructorsynopsis, destructorsynopsis, methodsynopsis.
+**** Children ****
+The following elements occur in methodparam: funcparams, initializer, modifier, parameter, type.
+[Prev]Â     [Home]         Â [Next]
+methodnameÂ  [Up]  Â methodsynopsis

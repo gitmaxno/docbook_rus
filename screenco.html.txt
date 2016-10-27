@@ -1,0 +1,98 @@
+
+***** screenco *****
+screenco — A screen with associated areas used in callouts.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o areaspec
+          o screen
+          o Zero or more of:
+                # calloutlist
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The callouts, such as numbered bullets, are an annotation mechanism. In an online system, these bullets are frequently “hot,” and clicking on them navigates to the corresponding annotation.
+A screenco is a wrapper around an areaspec and a screen. An areaspec identifies the locations (coordinates) in the screen where the callouts occur. The screenco may also contain the list of annotations in a calloutlist, although the calloutlist may also occur outside of the wrapper, elsewhere in the document.
+It is also possible to embed co elements directly in the verbatim text, in order to avoid the overhead of calculating the correct coordinates. If you decide to follow this route, use a screen and a calloutlist without the screenco wrapper. A screenco must specify at least one coordinate.
+For a complete description of callouts, see callout.
+**** Processing expectations ****
+Formatted as a displayed block. This element is displayed “verbatim”; whitespace and line breaks within this element are significant.
+The mandatory processing expectations of a screenco are minimal: a system is expected to render the program listing and the callout list, if present.
+If explicit co elements are embedded in a screen, they must generate appropriate callout marks.
+In online environments, the processing system may be able to instantiate the linking relationships between the callout marks in the program listing and the annotations. Some systems may even be able to go a step further and generate the callout marks automatically from the coordinate information, but this level of sophistication is not mandatory.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain screenco: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in screenco: areaspec, calloutlist, info (db.titleforbidden.info), screen.
+***** See Also *****
+areaspec, calloutlist, co, coref, imageobjectco, programlistingco
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example screenco</title>
+
+  4 <screenco>
+    <areaspec>
+  6 <area xml:id="dos" coords='5'/>
+    <area xml:id="autoexec.bat" coords='10'/>
+  8 <area xml:id="command.com" coords='11'/>
+    <area xml:id="config.sys" coords='12'/>
+ 10 <area xml:id="wina20.386" coords='14'/>
+    </areaspec>
+ 12 <screen> Volume in drive C is SYSTEM         Serial number is 2350:717C
+     Directory of  C:\
+ 14
+    10/17/97   9:04         &lt;DIR>    bin
+ 16 10/16/97  14:11         &lt;DIR>    DOS
+    10/16/97  14:40         &lt;DIR>    Program Files
+ 18 10/16/97  14:46         &lt;DIR>    TEMP
+    10/17/97   9:04         &lt;DIR>    tmp
+ 20 10/16/97  14:37         &lt;DIR>    WINNT
+    10/16/97  14:25             119  AUTOEXEC.BAT
+ 22  2/13/94   6:21          54,619  COMMAND.COM
+    10/16/97  14:25             115  CONFIG.SYS
+ 24 11/16/97  17:17      61,865,984  pagefile.sys
+     2/13/94   6:21           9,349  WINA20.386</screen>
+ 26 <calloutlist>
+    <callout arearefs="dos">
+ 28 <para>This directory holds <trademark>MS-DOS</trademark>, the
+    operating system that was installed before <trademark>Windows
+ 30 NT</trademark>.
+    </para>
+ 32 </callout>
+
+ 34 <callout arearefs="autoexec.bat command.com config.sys">
+    <para>System startup code for DOS.
+ 36 </para>
+    </callout>
+ 38
+    <callout arearefs="wina20.386">
+ 40 <para>Some sort of <trademark>Windows 3.1</trademark> hack for some 386 processors,
+    as I recall.
+ 42 </para>
+    </callout>
+ 44 </calloutlist>
+    </screenco>
+ 46
+    </article>
+<screenco>
+  1  Volume in drive C is SYSTEM         Serial number is 2350:717C
+  2  Directory of  C:\
+
+  4 10/17/97   9:04         <DIR>    bin
+    10/16/97  14:11         <DIR>    DOS
+  6 10/16/97  14:40         <DIR>    Program Files
+    10/16/97  14:46         <DIR>    TEMP
+  8 10/17/97   9:04         <DIR>    tmp
+    10/16/97  14:37         <DIR>    WINNT
+ 10 10/16/97  14:25             119  AUTOEXEC.BAT
+     2/13/94   6:21          54,619  COMMAND.COM
+ 12 10/16/97  14:25             115  CONFIG.SYS
+    11/16/97  17:17      61,865,984  pagefile.sys
+ 14  2/13/94   6:21           9,349  WINA20.386
+[1]       This directory holds MS-DOS™, the operating system that was installed before Windows NT™.
+[2][3][4] System startup code for DOS.
+[5]       Some sort of Windows 3.1™ hack for some 386 processors, as I recall.
+</screenco>
+Compare this example with the example for co.
+screen  [Up]   screenshot

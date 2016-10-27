@@ -1,0 +1,22 @@
+
+***** seglistitem *****
+seglistitem — A list item in a segmented list.
+***** Synopsis *****
+    * One or more of:
+          o seg
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Additional Constraints *****
+    * The number of seg elements must be the same as the number of segtitle elements in the parent segmentedlist
+***** Description *****
+A segmentedlist consists of a set of headings (segtitles) and a list of parallel sets of elements. Each set of elements is stored in a seglistitem.
+**** Processing expectations ****
+Segmented lists can be formatted in a number of ways. Two popular formats are tabular and as a list of repeated headings and elements. In a tabular presentation, each seglistitem is a row in the table. In the list presentation, each seglistitem contains a block of heading/element pairs.
+DocBook cannot detect errors caused by too many or too few segs in a seglistitem. You will have to rely on external processes to find those errors.
+**** Parents ****
+These elements contain seglistitem: segmentedlist.
+**** Children ****
+The following elements occur in seglistitem: seg.
+***** Examples *****
+See segmentedlist for an example that uses this element.
+seg     [Up]   segmentedlist

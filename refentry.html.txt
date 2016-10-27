@@ -1,0 +1,193 @@
+
+***** refentry *****
+refentry — A reference page (originally a UNIX man-style reference page).
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+          o info? (db.titleforbidden.info)
+          o refmeta?
+          o One or more of:
+                # refnamediv
+          o refsynopsisdiv?
+          o One of:
+                # One or more of:
+                      # refsection
+                # One or more of:
+                      # refsect1
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A refentry is a reference page. In UNIX parlance this has historically been called a “man page” (short for manual page).
+A refentry is an appropriate wrapper for any small unit of reference documentation describing a single topic. Canonical examples are programming language functions and user commands (one refentry per function or command).[5]
+On some projects, the structure of reference pages may be rigorously defined right down to the number, order, and title of individual sections (some or all of which may be required).
+**** Processing expectations ****
+Formatted as a displayed block. It is not uncommon for refentrys to introduce a forced page break in print media.
+Formatting reference pages may require a fairly sophisticated processing system. Much of the meta-information about a reference page (its name, type, purpose, title, and classification) is stored in wrappers near the beginning of the refentry.
+Common presentational features, such as titles and running heads, may require data from several of these wrappers plus some generated text. Other formatting often requires that these elements be reordered.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain refentry: appendix, article, chapter, part, partintro, preface, reference, section.
+**** Children ****
+The following elements occur in refentry: indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), refmeta, refnamediv, refsect1, refsection, refsynopsisdiv.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example refentry</title>
+
+  4 <refentry xml:id="ls">
+
+  6   <refmeta>
+        <refentrytitle>ls</refentrytitle>
+  8     <manvolnum>1</manvolnum>
+      </refmeta>
+ 10
+      <refnamediv>
+ 12     <refname>ls</refname>
+        <refpurpose>list contents of a directory</refpurpose>
+ 14     <refclass>UNIX/Linux</refclass>
+      </refnamediv>
+ 16
+      <refsynopsisdiv>
+ 18     <cmdsynopsis>
+          <command>/usr/bin/ls</command>
+ 20       <arg choice="opt">
+            <option>aAbcCdfFgilLmnopqrRstux1</option>
+ 22       </arg>
+          <arg choice="opt" rep="repeat">file</arg>
+ 24     </cmdsynopsis>
+      </refsynopsisdiv>
+ 26
+      <refsect1><title>Description</title>
+ 28   <para>For each file that is a directory, <command>ls</command>
+      lists the contents of the directory; for each file that is an
+ 30   ordinary file, <command>ls</command> repeats its name and any
+      other information requested.
+ 32   </para>
+      <para>…</para>
+ 34   </refsect1>
+    </refentry>
+ 36
+    </article>
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example refentry</title>
+
+  4 <refentry xml:id="printf">
+
+  6   <refmeta>
+        <refentrytitle>printf</refentrytitle>
+  8     <manvolnum>3S</manvolnum>
+      </refmeta>
+ 10
+      <refnamediv>
+ 12     <refname>printf</refname>
+        <refname>fprintf</refname>
+ 14     <refname>sprintf</refname>
+        <refpurpose>print formatted output</refpurpose>
+ 16   </refnamediv>
+
+ 18   <refsynopsisdiv>
+
+ 20     <funcsynopsis>
+          <funcsynopsisinfo>
+ 22         #include &lt;stdio.h&gt;
+          </funcsynopsisinfo>
+ 24       <funcprototype>
+            <funcdef>int <function>printf</function></funcdef>
+ 26         <paramdef>const char *<parameter>format</parameter></paramdef>
+            <paramdef>...</paramdef>
+ 28       </funcprototype>
+
+ 30       <funcprototype>
+            <funcdef>int <function>fprintf</function></funcdef>
+ 32         <paramdef>FILE *<parameter>strm</parameter></paramdef>
+            <paramdef>const char *<parameter>format</parameter></paramdef>
+ 34         <paramdef>...</paramdef>
+          </funcprototype>
+ 36
+          <funcprototype>
+ 38         <funcdef>int <function>sprintf</function></funcdef>
+            <paramdef>char *<parameter>s</parameter></paramdef>
+ 40         <paramdef>const char *<parameter>format</parameter></paramdef>
+            <paramdef>...</paramdef>
+ 42       </funcprototype>
+        </funcsynopsis>
+ 44
+      </refsynopsisdiv>
+ 46
+      <refsect1><title>Description</title>
+ 48   <para><function>printf</function> places output on the standard
+      output stream stdout.
+ 50   </para>
+      <para>…</para>
+ 52   </refsect1>
+    </refentry>
+ 54
+    </article>
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example refentry</title>
+
+  4 <refentry xml:id="iovec">
+
+  6   <refmeta>
+        <refentrytitle>iovec</refentrytitle>
+  8     <manvolnum>9S</manvolnum>
+      </refmeta>
+ 10
+      <refnamediv>
+ 12     <refname>iovec</refname>
+        <refpurpose>data storage structure for I/O using uio</refpurpose>
+ 14   </refnamediv>
+
+ 16   <refsynopsisdiv>
+        <synopsis>
+ 18       #include &lt;sys/uio.h&gt;
+        </synopsis>
+ 20   </refsynopsisdiv>
+
+ 22   <refsect1><title>Interface Level</title>
+      <para>Architecture independent level 1 (DDI/DKI).
+ 24   </para>
+      </refsect1>
+ 26
+      <refsect1><title>Description</title>
+ 28
+      <para>
+ 30     An <code>iovec</code> structure describes a data
+        storage area for transfer in a
+ 32     <citerefentry><refentrytitle>uio</refentrytitle>
+          <manvolnum>9S</manvolnum>
+ 34     </citerefentry>
+        structure. Conceptually, it may be thought of as
+ 36     a base address and length specification.
+      </para>
+ 38
+      </refsect1>
+ 40   <refsect1><title>Structure Members</title>
+
+ 42   <programlisting>
+         caddr_t  iov_base;  /* base address of the data storage area */
+ 44                          /* represented by the iovec structure */
+         int      iov_len;   /* size of the data storage area in bytes */
+ 46   </programlisting>
+
+ 48   <para>…</para>
+      </refsect1>
+ 50 </refentry>
+
+ 52 </article>
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+[5]You’re reading a refentry right now.
+refdescriptor  [Up]   refentrytitle

@@ -1,0 +1,18 @@
+
+***** rhs *****
+rhs — The right-hand side of an EBNF production.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o lineannotation
+          o nonterminal
+          o sbr
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The righthand side (rhs) of a production provides a definition for the nonterminal on the lefthand side (lhs) of the production.
+**** Parents ****
+These elements contain rhs: production.
+**** Children ****
+The following elements occur in rhs: text, lineannotation, nonterminal, sbr.
+revremark  [Up]   row (db.entrytbl.row)

@@ -1,0 +1,70 @@
+
+***** shortcut *****
+shortcut — A key combination for an action that is also accessible through a menu.
+***** Synopsis *****
+    * One or more of:
+          o keycap
+          o keycombo
+          o keysym
+          o mousebutton
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * Exactly one of:
+          o action (enumeration)
+                # “click”
+                # “double-click”
+                # “press”
+                # “seq”
+                # “simul”
+          o Each of:
+                # action (enumeration)
+                      # “other”
+                # otheraction
+Required attributes are shown in bold.
+***** Description *****
+A shortcut contains the key combination that is a shortcut for a menuchoice. Users who are familiar with the shortcuts can access the functionality of the corresponding menu choice, without navigating through the menu structure to find the right menu item.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  action
+      Identifies the nature of the action taken. If keycombo contains more than one element, simul is the default, otherwise there is no default.
+      Enumerated values:
+      “click”    A (single) mouse click.
+      “double-clickA double mouse click.
+      “press”    A mouse or key press.
+      “seq”      Sequential clicks or presses.
+      “simul”    Simultaneous clicks or presses.
+  action
+      Identifies the nature of the action taken
+      Enumerated values:
+      “otherIndicates a non-standard action
+  otheraction
+      Identifies the non-standard action in some unspecified way.
+*** Parents [[+]][[+]] ***
+This element occurs in 51_elements.
+These elements contain shortcut: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, menuchoice, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+**** Children ****
+The following elements occur in shortcut: keycap, keycombo, keysym, mousebutton.
+***** See Also *****
+accel, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, keycap, keycode, keycombo, keysym, menuchoice, mousebutton
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example shortcut</title>
+
+  4 <para>You can exit from GNU Emacs with
+    <menuchoice>
+  6   <shortcut>
+        <keycombo><keysym>C-x</keysym><keysym>C-c</keysym></keycombo>
+  8   </shortcut>
+      <guimenu>Files</guimenu>
+ 10   <guimenuitem>Exit Emacs</guimenuitem>
+    </menuchoice>.
+ 12 </para>
+
+ 14 </article>
+You can exit from GNU Emacs with
+<menuchoice>C-x-C-cFilesExit Emacs</menuchoice>
+.
+shortaffil  [Up]   sidebar

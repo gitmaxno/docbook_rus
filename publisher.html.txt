@@ -1,0 +1,34 @@
+
+***** publisher *****
+publisher — The publisher of a document.
+***** Synopsis *****
+    * Sequence of:
+          o publishername
+          o Zero or more of:
+                # address
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A publisher associates a publishername and an address. Many publishers have offices in more than one city. A publisher can be used to list or distinguish between the multiple offices.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+**** Parents ****
+These elements contain publisher: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in publisher: address, publishername.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example publisher</title>
+  4   <publisher>
+        <publishername>O'Reilly Media, Inc.</publishername>
+  6     <address><street>101 ...</street>
+        ...
+  8     </address>
+      </publisher>
+ 10 </info>
+
+ 12 <para>…</para>
+
+ 14 </article>
+pubdate  [Up]   publishername

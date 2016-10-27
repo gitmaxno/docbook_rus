@@ -1,0 +1,91 @@
+
+***** programlistingco *****
+programlistingco — A program listing with associated areas used in callouts.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o areaspec
+          o programlisting
+          o Zero or more of:
+                # calloutlist
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+Callouts, such as numbered bullets, are an annotation mechanism. In an online system, these bullets are frequently “hot,” and clicking on them sends you to the corresponding annotation.
+A programlistingco is a wrapper around an areaspec and a programlisting. An areaspec identifies the locations (coordinates) in the programlisting where the callouts occur. The programlistingco may also contain the list of annotations in a calloutlist, although the calloutlist may also occur outside the wrapper, elsewhere in the document.
+It is also possible to embed co elements directly in the verbatim text, in order to avoid having to calculate the correct coordinates. If you decided to go this route, use a programlisting and a calloutlist without the programlistingco wrapper. A programlistingco must specify at least one coordinate.
+For a complete description of callouts, see callout.
+**** Processing expectations ****
+Formatted as a displayed block. This element is displayed “verbatim”; whitespace and line breaks within this element are significant.
+The mandatory processing expectations of a programlistingco are minimal: a system is expected to render the program listing and the callout list, if present.
+If explicit co elements are embedded in a programlisting, they must generate appropriate callout marks.
+In online environments, the processing system may be able to instantiate the linking relationships between the callout marks in the program listing and the annotations. Some systems may even be able to go a step further and generate the callout marks automatically from the coordinate information, but this level of sophistication is not mandatory.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain programlistingco: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in programlistingco: areaspec, calloutlist, info (db.titleforbidden.info), programlisting.
+***** See Also *****
+areaspec, calloutlist, co, coref, imageobjectco, screenco
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example programlistingco</title>
+
+  4 <programlistingco>
+    <areaspec>
+  6 <areaset xml:id="ex.plco.const">
+      <area xml:id="ex.plco.c1" coords='4'/>
+  8   <area xml:id="ex.plco.c2" coords='8'/>
+    </areaset>
+ 10 <area xml:id="ex.plco.ret" coords='12'/>
+    <area xml:id="ex.plco.dest" coords='12'/>
+ 12 </areaspec>
+    <programlisting>
+ 14 sub do_nothing_useful {
+        my($a, $b, $c);
+ 16
+        $a = new A;
+ 18     $a->does_nothing_either();
+        $b = new B;
+ 20     $c = "frog";
+
+ 22     return ($a, $c);
+    }
+ 24 </programlisting>
+    <calloutlist>
+ 26   <callout arearefs="ex.plco.const">
+        <para>These are calls to the constructor
+ 28       <function>new</function> in the object classes.
+        </para>
+ 30   </callout>
+      <callout arearefs="ex.plco.ret">
+ 32     <para>This function returns a two-element list.
+        </para>
+ 34   </callout>
+      <callout arearefs="ex.plco.dest">
+ 36     <para>The <emphasis>destructor</emphasis>
+          (<function>DESTROY</function>) for the object
+ 38       <literal>$b</literal> will be called automatically
+          for this object since there can be no other references
+ 40       to it outside this function.
+        </para>
+ 42   </callout>
+    </calloutlist>
+ 44 </programlistingco>
+
+ 46 </article>
+  1
+  2 sub do_nothing_useful {
+        my($a, $b, $c);
+  4                                                            [1]
+        $a = new A;
+  6     $a->does_nothing_either();
+        $b = new B;
+  8     $c = "frog";                                           [1]
+
+ 10     return ($a, $c);
+    }
+[1] These are calls to the constructor new in the object classes.
+[2] This function returns a two-element list.
+[3] The destructor (DESTROY) for the object $b will be called automatically for this object since there can be no other references to it outside this function.
+programlisting  [Up]   prompt

@@ -1,0 +1,32 @@
+
+***** refmeta *****
+refmeta — Meta-information for a reference entry.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+          o refentrytitle
+          o manvolnum?
+          o Zero or more of:
+                # refmiscinfo
+          o Zero or more of:
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A refmeta holds the title of the reference page, the number of the volume in which this reference page occurs, and possibly other miscellaneous information (typically used in printing the reference page).
+**** Processing expectations ****
+Suppressed. Most of the elements contained in refmeta are used in presentation, but they are not generally printed as part of the formatting of the refmeta wrapper—it merely serves to identify where they occur.
+**** Parents ****
+These elements contain refmeta: refentry.
+**** Children ****
+The following elements occur in refmeta: indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), manvolnum, refentrytitle, refmiscinfo.
+***** Examples *****
+See refentry for examples that use this element.
+reference  [Up]   refmiscinfo

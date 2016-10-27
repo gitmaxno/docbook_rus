@@ -1,0 +1,12 @@
+
+***** lhs *****
+lhs — The left-hand side of an EBNF production.
+***** Synopsis *****
+    * text
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The lefthand side (lhs) of a production is a nonterminal defined in terms of the righthand side (rhs) of the production.
+**** Parents ****
+These elements contain lhs: production.
+legalnotice  [Up]   lineage

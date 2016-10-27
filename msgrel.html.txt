@@ -1,0 +1,26 @@
+
+***** msgrel *****
+msgrel — A related component of a message in a message set.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o msgtext
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+Every msg has one primary message (msgmain). It may also have any number of related messages, stored in msgrel elements within the same msg.
+Related messages are usually messages that appear elsewhere in response to the same event (or set of events) that triggered the main message. For example, if a network client produces a failure or warning message, a related message might appear on the server console.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msgrel: msg.
+**** Children ****
+The following elements occur in msgrel: info (db.titleforbidden.info), info (db.titleonly.info), msgtext, title, titleabbrev.
+msgorig  [Up]   msgset

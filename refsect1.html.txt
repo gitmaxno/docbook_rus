@@ -1,0 +1,121 @@
+
+***** refsect1 *****
+refsect1 — A major subsection of a reference entry.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o One of:
+                # Sequence of:
+                      # One or more of:
+                            # annotation
+                            # bridgehead
+                            # remark
+                            # revhistory
+                            # Indexing inlines [[+]] [[-]]
+                                  * indexterm (db.indexterm.endofrange)
+                                  * indexterm (db.indexterm.singular)
+                                  * indexterm (db.indexterm.startofrange)
+                            # Admonition elements [[+]] [[-]]
+                                  * caution
+                                  * important
+                                  * note
+                                  * tip
+                                  * warning
+                            # Formal elements [[+]] [[-]]
+                                  * equation
+                                  * example
+                                  * figure
+                                  * table (db.cals.table)
+                                  * table (db.html.table)
+                            # Graphic elements [[+]] [[-]]
+                                  * mediaobject
+                                  * screenshot
+                            # Informal elements [[+]] [[-]]
+                                  * informalequation
+                                  * informalexample
+                                  * informalfigure
+                                  * informaltable (db.cals.informaltable)
+                                  * informaltable (db.html.informaltable)
+                            # List elements [[+]] [[-]]
+                                  * bibliolist
+                                  * calloutlist
+                                  * glosslist
+                                  * itemizedlist
+                                  * orderedlist
+                                  * procedure
+                                  * qandaset
+                                  * segmentedlist
+                                  * simplelist
+                                  * variablelist
+                            # Paragraph elements [[+]] [[-]]
+                                  * anchor
+                                  * formalpara
+                                  * para
+                                  * simpara
+                            # Publishing elements [[+]] [[-]]
+                                  * address
+                                  * blockquote
+                                  * epigraph
+                                  * sidebar
+                            # Synopsis elements [[+]] [[-]]
+                                  * classsynopsis
+                                  * cmdsynopsis
+                                  * constructorsynopsis
+                                  * destructorsynopsis
+                                  * fieldsynopsis
+                                  * funcsynopsis
+                                  * methodsynopsis
+                            # Technical elements [[+]] [[-]]
+                                  * constraintdef
+                                  * msgset
+                                  * procedure
+                                  * productionset
+                                  * task
+                            # Verbatim elements [[+]] [[-]]
+                                  * literallayout
+                                  * programlisting
+                                  * programlistingco
+                                  * screen
+                                  * screenco
+                                  * synopsis
+                      # Optional one or more of:
+                            # refsect2
+                # One or more of:
+                      # refsect2
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+Reference pages have their own hierarchical structure. A refsect1 is a major division in a refentry, analogous to a sect1 elsewhere in the document.
+The value of a separate hierarchical structure is that it allows the content model of sections in reference pages to be customized differently than the content model of sections outside. For example, because of this split, it was easy to add a recursive sectioning element (section) as a peer to sect1 in DocBook V3.1 without introducing it to refentrys, in which it would not be desirable.
+**** Processing expectations ****
+Formatted as a displayed block.
+In some environments, the name, number, and order of major divisions in a reference page are strictly defined by house style. For example, one style requires that the first major section after the synopsis be the “Description,” which it must have as its title.
+In those cases, it may be useful to replace refsect1 in the content model with a set of named sections (following the pattern of refnamediv and refsynopsisdiv).
+Formatting reference pages may require a fairly sophisticated processing system. Much of the meta-information about a reference page (its name, type, purpose, title, and classification) is stored in wrappers near the beginning of the refentry.
+Common presentational features, such as titles and running headers, may require data from several of these wrappers plus some generated text. Other formatting often requires that these elements be reordered.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain refsect1: refentry.
+*** Children [[+]][[+]] ***
+This element contains 65_elements.
+The following elements occur in refsect1: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titlereq.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, refsect2, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+***** See Also *****
+refnamediv, refsect2, refsect3, refsection, refsynopsisdiv
+refpurpose  [Up]   refsect2

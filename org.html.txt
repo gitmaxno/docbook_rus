@@ -1,0 +1,48 @@
+
+***** [[5.0]]org *****
+org — An organization and associated metadata.
+***** Synopsis *****
+    * Sequence of:
+          o orgname
+          o Zero or more of:
+                # address
+                # affiliation
+                # email
+                # orgdiv
+                # uri
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An org associates an organization name with other information about the organization.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context.
+*** Parents [[+]][[+]] ***
+This element occurs in 61_elements.
+These elements contain org: affiliation, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, collab, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in org: address, affiliation, email, orgdiv, orgname, uri.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook' version='5.0'>
+  2 <title>Example org</title>
+
+  4 <para>This book was edited by <org><orgname>XML Press</orgname>
+      <address><city>Fort Collins</city>,
+  6   <state>CO</state></address></org> and published by
+      <org><orgname>O'Reilly Media, Inc.</orgname>
+  8   <address><city>Sebastopol</city>, <state>CA</state>
+      </address></org>.
+ 10 </para>
+
+ 12 </article>
+This book was edited by
+<org>XML Press
+Fort Collins,
+  CO
+</org>
+and published by
+<org>O'Reilly Media, Inc.
+Sebastopol, CA
+  
+</org>
+.
+orderedlist  [Up]   orgdiv

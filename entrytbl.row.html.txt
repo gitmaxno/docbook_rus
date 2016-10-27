@@ -1,0 +1,47 @@
+
+***** row (db.entrytbl.row) *****
+row — A row in a table.
+***** Synopsis *****
+    * One or more of:
+          o entry
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * rowsep (enumeration)
+          o “0”
+          o “1”
+    * valign (enumeration)
+          o “bottom”
+          o “middle”
+          o “top”
+***** Description *****
+A row is a row in a table. It contains all of the cells (entrys or entrytbls) that appear in that row.
+**** Processing expectations ****
+This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd].
+Within a row, cells are arranged horizontally from the start of the row to the end. Cells can, but are not required to, specify the column in which they occur, so it is possible for a row to contain fewer cells than there are columns in the table. This introduces missing cells, which are assumed to be empty. These missing cells can occur anywhere in the row.
+Once a cell has been allocated to a column, subsequent cells may not fill preceding columns. In other words, while three cells can specify that they occur in columns 1, 3, and 5, they cannot specify that they occur in columns 1, 5, and 3. Once a column is passed, you can never go back.
+If cells do not specify the column in which they occur, they are placed in the next available column. Calculation of the next available column is complicated by horizontal and vertical spanning. Cells from preceding rows can have a vertical span that causes them to extend into the current row, thus occupying space in the current row. These logically occupied cells are skipped when looking for the next available column. Similarly, if a cell has a horizontal span, it logically occupies the columns that follow it. Cells can simultaneously span rows and columns.
+Each of the following conditions is an error:
+    * A cell spans beyond the boundaries of the table.
+    * A row contains more cells than there are columns in the table.
+    * The arrangement of cells in a row forces one or more cells past the last column of the table.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  rowsep
+      Specifies the presence or absence of the row separator
+      Enumerated values:
+      “0No row separator rule.
+      “1Provide a row separator rule below
+  valign
+      Specifies the vertical alignment of text in an entry.
+      Enumerated values:
+      “bottomAligned on the bottom of the entry.
+      “middleAligned in the middle.
+      “top”Aligned at the top of the entry.
+**** Parents ****
+These elements contain row: tbody (db.cals.entrytbl.tbody), thead (db.cals.entrytbl.thead).
+**** Children ****
+The following elements occur in row: entry.
+***** See Also *****
+colspec, entry, entrytbl, informaltable, row (db.row), spanspec, table, tbody, tfoot, tgroup, thead
+rhs     [Up]   row (db.row)

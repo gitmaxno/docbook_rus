@@ -1,0 +1,27 @@
+
+***** coref *****
+coref — A cross reference to a co.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * label
+Required attributes are shown in bold.
+***** Description *****
+The coref element plays a role for callouts that is analogous to the role of footnoteref for footnotes.
+Use one co and one or more coref elements when you want to indicate that the same callout should appear in several places.
+**** Note ****
+A coref is not a cross-reference to a callout (use xref for that); rather, it is an indication that the callout appears semantically in more than one place.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+*** Parents [[+]][[+]] ***
+This element occurs in 54_elements.
+These elements contain coref: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+***** See Also *****
+areaspec, calloutlist, co, imageobjectco, programlistingco, screenco
+copyright  [Up]   country

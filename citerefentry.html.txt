@@ -1,0 +1,35 @@
+
+***** citerefentry *****
+citerefentry — A citation to a reference page.
+***** Synopsis *****
+    * Sequence of:
+          o refentrytitle
+          o manvolnum?
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+This element is a citation to a refentry. It must include a refentrytitle that should exactly match the title of a refentry.
+**** Processing expectations ****
+This element implicitly links to the refentry with the same refentrytitle (in the same volume, as defined by manvolnum).
+Formatted inline. Usually the manvolnum is put in parentheses.
+*** Parents [[+]][[+]] ***
+This element occurs in 54_elements.
+These elements contain citerefentry: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in citerefentry: manvolnum, refentrytitle.
+***** See Also *****
+citation, citebiblioid, citetitle
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example citerefentry</title>
+
+  4 <para>For a further description of print formats, consult the
+    <citerefentry><refentrytitle>printf</refentrytitle>
+  6 <manvolnum>3S</manvolnum></citerefentry> manual page.
+    </para>
+  8
+    </article>
+For a further description of print formats, consult the printf
+<manvolnum>3S</manvolnum>
+manual page.
+citebiblioid  [Up]   citetitle

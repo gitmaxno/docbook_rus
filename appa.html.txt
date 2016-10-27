@@ -1,0 +1,68 @@
+
+***** Installation *****
+$Revision$
+**** 1. Installing DocBook ****
+If you use editing software that already supports DocBook, then DocBook should be installed with that software. Although at this writing, DocBook V5.0 is new, many tools already support V5.0. The DocBook_Wiki has a list of editing and other tools that support DocBook, along with other relevant information and links to further information.
+If you are not using a tool that directly supports DocBook, then you will need to install one or more of the DocBook schemas directly. This appendix describes how to do that.
+The most recent version of the DocBook V5.x schemas can be found at http://docbook.org/schemas/5x.html. At the time this was written the most recent version was V5.0. The directory for V5.0 (http://docbook.org/xml/5.0/) contains the RELAX NG schema, DTD, W3C XML schema, Schematron rules, tools to convert DocBook V4.x to V5.0, and a sample catalog file.
+*** 1.1. Installing the DocBook Schemas ***
+The schemas may be installed in any convenient directory. If you download the file docbook-5.0.zip and unpack it, it will create a directory structure that puts each schema in its own directory. This directory structure matches the structure in the sample catalog.xml file, so you should be able to set up the catalog file (described in Section 1.2,_“XML_Catalogs_and_DocBook”) with minimal effort.
+Once you have unpacked the schemas, you will need to set them up so that your tools can use them. While each tool has its own procedure for accessing schemas, many use XML Catalogs: OASIS Standard V1.1 [XML-CAT] as a common means to locate schemas, stylesheets, and other files. The next section describes how to set up a catalog for DocBook using the sample catalog.xml file from the distribution.
+*** 1.2. XML Catalogs and DocBook ***
+  SGML instances require either a public or system identifier to specify the schema. Public identifiers are abstract identifiers that must be mapped to a schema file to be useful. For the SGML versions of DocBook, the distribution included a catalog file, docbook.cat that provided mappings for all of the public identifiers referenced by DocBook. Unlike SGML, which allows an instance to use only a public identifier, XML requires a system identifier in the form of a URI. For the XML version of DocBook, the distribution contains a sample catalog file using the XML Catalogs: OASIS Standard V1.1 [XML-CAT], which is used by many XML tools.
+To quote the standard, an XML catalog “defines an entity catalog that maps both external identifiers and arbitrary URI references to URI references.” This means that you can define mappings through an XML catalog that tell tools where you have put the schemas (and other files, like the stylesheets) on your system. Those tools can then access them without having to resolve a remote URL.
+** 1.2.1. Installing and setting up the DocBook XML catalog **
+One way to set up a catalog for DocBook is install the DocBook stylesheets (see Section 1.3,_“Installing_the_DocBook_Stylesheets”), which also sets up a catalog. You can also use the sample catalog from the schema distribution, which can be found at: http://docbook.org/xml/5.0/catalog.xml. The sample is a starting place, but it will almost surely not work “out of the box.” To make it work, you need to make the catalog available to your tools, and you will also need to update the catalog entries to point to the right location on your system. Here is an example based on the sample file:
+  1 <catalog prefer="public"
+  2        xml:base="file:///usr/share/xml/docbook/schema/rng/5.0/">
+      <public publicId="-//OASIS//DTD DocBook XML 5.0//EN"
+  4           uri="dtd/docbook.dtd"/>
+      <system systemId="http://docbook.org/xml/5.0/dtd/docbook.dtd"
+  6           uri="dtd/docbook.dtd"/>
+      <uri name="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng"
+  8        uri="rng/docbook.rng"/>
+    </catalog>
+In this example, the public and system elements describe where to find the DTD associated with named public and system identifiers. The uri element describes where to find the RELAX NG schema. In all three cases, the uri attribute identifies a relative path to the file. The absolute path is constructed by concatenating the value of the xml:base attribute on the catalog element to the value of the uri attribute. If there is no xml:base attribute, the value of the uri attribute is used as is.
+To make the catalog work on your system, set the xml:base attribute to the directory on your system that contains the schema directories. That should be the only change you need to make to the sample catalog.
+If you already have other XML schemas installed, you probably already have a catalog file. On Linux systems, this is often in /etc/xml/catalog.xml. In that case, you can add the following line to that file, replacing /usr/share/xml/docbook/catalog.xml with the location of the DocBook catalog file on your system:
+<nextCatalog catalog="file:///usr/share/xml/docbook/catalog.xml">
+ Some XML and XSL applications use the environment variable XML_CATALOG_FILES, which contains a delimited list of catalog filenames. Here is an example:
+XML_CATALOG_FILES=/usr/share/xml/docbook/catalog.xml:/etc/xml/catalog
+(On a Windows system, use semicolons instead of colons to delimit the filenames.)
+Many applications also provide a configuration option that allows you to set the location of a catalog file. Check the documentation for your tool for details.
+This description only scratches the surface of XML Catalogs. For a full description, go to the XML Catalogs: OASIS Standard V1.1 [XML-CAT] or Bob Stayton’s DocBook XSL: The Complete Guide [Stayton07].
+** 1.2.2. Getting the ISO entity sets **
+   Modern schema languages (including RELAX NG and W3X XML Schema) do not include the ISO Entity Sets. Therefore, you need to use other means if you want to use these or other sets of entities. For the ISO Entity Sets, some editors give you the ability to easily select needed characters and insert them into a document.
+You can also directly include entity definitions in the prolog of your document. The World Wide Web Consortium (W3C) maintains the ISO_Entity_Set_Definitions and you can reference them from the document prolog as shown here:
+  1 <?xml version="1.0" encoding="utf-8"?>
+  2 <!DOCTYPE article [
+    <!ENTITY % isopub SYSTEM "http://www.w3.org/2003/entities/iso8879/isopub.ent">
+  4 %isopub;
+    ]>
+  6 <article xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <title>DocBook V5.0 &ndash; the superb documentation format</title>
+  8 …
+    </article>
+For your convenience there is also a flattened entity definition file which contains all entity definitions.
+  1 <?xml version="1.0" encoding="utf-8"?>
+  2 <!DOCTYPE article [
+    <!ENTITY % allent SYSTEM "http://www.w3.org/2003/entities/2007/w3centities-f.ent">
+  4 %allent;
+    ]>
+  6 <article xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <title>DocBook V5.0 &ndash; the superb documentation format</title>
+  8 …
+    </article>
+*** 1.3. Installing the DocBook Stylesheets ***
+Members of the OASIS DocBook Technical Committee and other interested people have developed a set of XSL stylesheets that can be used to transform DocBook into various forms, including: HTML, FO (for print), HTML Help, Java Help, ePub, and other formats.
+The definitive guide to using the stylesheets is Bob Stayton’s DocBook XSL: The Complete Guide [Stayton07]. The description below is sufficient to install and run the stylesheets in their standard form. However, to do any serious work with the stylesheets or to customize them, you should read Stayton’s book.
+Procedure for Installing DocBook XSL Stylesheets
+   1. Download the latest stylesheets from http://sourceforge.net/projects/docbook/. Look for a file with the name: docbook-xsl-ns-X.YY.Z.zip, where X.YY.Z is the version number of the latest stable release of the stylesheets.
+   2. Unpack the distribution into a directory on your system. The exact location is your choice. On Windows systems you might use a folder named: C:\docbook\stylesheets. On a Linux/UNIX-based system you might use a directory named /usr/share/xml/docbook/stylesheets, or a directory under your home directory. As long as you have permissions to create and write in the directory, it doesn’t matter where it is.
+   3. When you unpack the distribution, it will create a directory named docbook-xsl-ns-X.YY.Z that will contain the stylesheets.
+   4. This is all you need to do to install the distribution, however, on Linux/UNIX systems, you can run an install script that will set up catalogs for you. Look for a file named INSTALL for details.
+You will also need an XSLT processor. If you are running Linux, you may already have xsltproc or Saxon installed on your system. If not, most Linux distributions will let you install one of these packages through their application installer.
+If you are running Windows or Mac, you can find information about these applications at:
+    * xsltproc: http://xmlsoft.org/XSLT/xsltproc2.html
+    * Saxon: http://saxon.sourceforge.net/
+Part  III .  Appendixes [Up]   DocBook Variants and Future Directions

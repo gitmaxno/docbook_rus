@@ -1,0 +1,108 @@
+
+***** Resources *****
+$Revision$
+The quantity of information about XML grows daily. This appendix collects the references mentioned explicitly in this book and identifies additional resources related to DocBook and XML.
+**** 1. Latest Versions of DocBook Schemas ****
+Since July, 1998, the DocBook Technical Committee of OASIS (Organization for the Advancement of Structured Information Standards) at http://www.oasis-open.org/ has been responsible for the advancement and maintenance of the DocBook schemas, including any schemas from a subcommittee that are approved by the DocBook Technical Committee.
+The latest releases of DocBook can be obtained from the official DocBook home page at http://www.oasis-open.org/docbook/. All normative versions of the DocBook standard, including derivatives like the Publisher’s schema, are available at this site.
+Information about the most commonly used, non-normative customizations of the DocBook schema, such as Simplified DocBook and DocBook Website, can be found at http://docbook.org/.
+**** Note ****
+The only schemas that are considered normative standards are those that have been approved through the OASIS process by the DocBook Technical Committee.
+**** 2. DocBook and XML Resources on the Web ****
+The following websites and lists are excellent starting places for information about DocBook and XML:
+  The most recent version of this book
+      The most recent online version of this book can be found at http://docbook.org/.
+  DocBook mailing lists
+      OASIS maintains two public DocBook mailing lists:
+        docbook@lists.oasis-open.org
+            This list is for general questions, comments, and discussion about DocBook, including questions about the schemas, syntax, semantics, and markup.
+            An archive is maintained at: http://lists.oasis-open.org/archives/docbook/.
+        docbook-apps@lists.oasis-open.org
+            This list is for questions, comments, and discussion about implementing DocBook, including questions about formatting, processing, using the stylesheets, and editing.
+            An archive is maintained at: http://lists.oasis-open.org/archives/docbook-apps/.
+      You can subscribe to either list at: http://www.oasis-open.org/mlmanage/.
+  DocBook stylesheets
+      The DocBook_stylesheets are a set of stylesheets for use with an XSLT engine like xsltproc or Saxon. The stylesheets can transform DocBook XML documents (including documents using DocBook 5.0 and earlier versions) into output formats like HTML, PDF, various help formats, and the ePub ebook format. The stylesheets are open source software maintained by the DocBook community.
+  DocBook Wiki
+      The DocBook_Wiki contains a wide variety of DocBook information, from FAQs to lists of consultants.
+  Robin Cover’s “Cover Pages”
+      A large list of XML resources: http://xml.coverpages.org.
+  comp.text.xml
+      Newsgroup devoted to XML issues. This newsgroup can be accessed through Google Groups at: http://groups.google.com/group/comp.text.xml.
+  FAQ
+      A good XML FAQ is available at http://xml.silmaril.ie/.
+  XML.com
+      XML.com, run by O’Reilly Media, is a site devoted to news and information about XML.
+**** 3. Introductory Material on the Web ****
+These documents provide a good starting place for learning about XML.
+[XML-Intro] TEI, ed.“A Gentle Introduction to XML.”Text Encoding Initiative (TEI), March 2002, http://www.tei-c.org/Guidelines/P4/html/SG.html.
+[XML-Tech] Norman Walsh.“A Technical Introduction to XML.”February 1998, http://nwalsh.com/docs/articles/xml/.
+[RNG-Intro] James Clark and Makoto Murata.“RELAX NG Tutorial.”OASIS Open, December 2001, http://www.relaxng.org/tutorial.html.
+**** 4. References and Technical Notes on the Web ****
+[XML-CAT] Norman Walsh, ed.XML Catalogs: OASIS Standard V1.1. Organization for the Advancement of Structured Information Standards (OASIS), 2005-10-07, http://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html.
+[CALS] Eric Severson and Harvey Bingham, ed.Table Interoperability: Issues for the CALS Table Model. Organization for the Advancement of Structured Information Standards (OASIS), 1995-11-21, OASIS Technical Research Paper 9501:1995, http://www.oasis-open.org/html/a501.htm.
+[calsdtd] Harvey Bingham, ed.CALS Table Model Document Type Definition. Organization for the Advancement of Structured Information Standards (OASIS), 1995-10-19, OASIS Technical Memorandum TM 9502:1995, http://www.oasis-open.org/html/a502.htm.
+[cals-xchg] Harvey Bingham, ed.Exchange Table Model Document Type Definition. Organization for the Advancement of Structured Information Standards (OASIS), 1996-05-08, OASIS Technical Resolution TR 9503:1995, http://www.oasis-open.org/specs/a503.htm.
+[TGN] Thesaurus of Geographic Names Online. J. Paul Getty Trust, http://www.getty.edu/research/tools/vocabulary/tgn.
+**** 5. World Wide Web Consortium (W3C) Recommendations ****
+[HTML] Dave Raggett, et al., ed.HTML 4.01 Specification. World Wide Web Consortium, 1999-12-24,  http://www.w3.org/TR/html401/.
+[MathML] David Carlisle, et al., ed.Mathematical Markup Language (MathML) Version 2.0. Second Edition, World Wide Web Consortium, 2003-10-21,  http://www.w3.org/TR/MathML/.
+[XHTML] W3C HTML Working Group, ed.XHTML 1.0 The Extensible HyperText Markup Language. Second Edition, W3C Recommendation, 2000-01-26,  http://www.w3.org/TR/xhtml1.
+[XLink] Steve DeRose, Eve Maler, and David Orchard, ed.XML Linking Language (XLink) Version 1.0. World Wide Web Consortium, 2001-06-27, http://www.w3.org/TR/xlink/.
+[XML] Tim Bray, et al., ed.Extensible Markup Language (XML) 1.0. Fifth Edition, World Wide Web Consortium, 2008-11-26, http://www.w3.org/TR/xml.
+[XML-ID] Jonathan Marsh, et al., ed.xml:id Version 1.0. World Wide Web Consortium, 2005-09-09, http://www.w3.org/TR/xml-id/.
+[XML-NS] Tim Bray, et al., ed.Namespaces in XML. Third Edition, World Wide Web Consortium, 2009-12-08, http://www.w3.org/TR/xml-names/.
+[XPath] Anders Berglund, et al., ed.XML Path Language (XPath) 2.0. World Wide Web Consortium, 2007-01-23, http://www.w3.org/TR/xpath20/.
+[XQuery] Scott Boag, et al., ed.XQuery 1.0: An XML Query Language. World Wide Web Consortium, 2007-01-23, http://www.w3.org/TR/xquery/.
+[XSLT-1] James Clark, ed.XSL Transformations (XSLT) Version 1.0. World Wide Web Consortium, 1999-12-16, http://www.w3.org/TR/xslt.
+[XSLT-2] Michael Kay, ed.XSL Transformations (XSLT) Version 2.0. World Wide Web Consortium, 2007-01-23, http://www.w3.org/TR/xslt20/.
+**** 6. Related Standards ****
+[DCMI] Dublin Core Metadata Initiative.Dublin Core Metadata Element Set, Version 1.1. Dublin Core Metadata Initiative, January 2008, http://dublincore.org/documents/dces/. Now also an ISO standard: ISO 15836:2009.
+[NVDL] ISO.Namespace-based Validation Dispatching Language (NVDL). International Organization for Standardization, ISO/IEC 19757-4, 2006-06-01, http://www.nvdl.org/.
+[Unicode] Julie D Allen, et al., ed.The Unicode Standard Version 5.2.0. The Unicode Consortium, December 2009, http://www.unicode.org/standard/standard.html.
+**** 7. Internet RFCs ****
+RFCs (“Request for Comments”) are standards documents produced by the Internet Engineering Task Force (IETF).
+[RFC-1630] Tim Berners-Lee. Universal Resource Identifiers in WWW. Network Working Group, Internet Engineering Task Force (IETF), June 1994, http://www.apps.ietf.org/rfc/rfc1630.html.
+[RFC-1736] J Kunze Functional Recommendations for Internet Resource Locators. Network Working Group, Internet Engineering Task Force (IETF), February 1995, http://www.apps.ietf.org/rfc/rfc1736.html.
+[RFC-1737] K Sollins Functional Requirements for Uniform Resource Names. Network Working Group, Internet Engineering Task Force (IETF), December 1994, http://www.apps.ietf.org/rfc/rfc1737.html.
+[RFC-1738] T Berners-Lee, L Masinter, and M McCahill. Uniform Resource Locators (URL). Network Working Group, Internet Engineering Task Force (IETF), December 1994, http://www.apps.ietf.org/rfc/rfc1738.html.
+[RFC-3066] H Alvestrand Tags for the Identification of Languages. Network Working Group, Internet Engineering Task Force (IETF), December 1994, http://www.apps.ietf.org/rfc/rfc3066.html.
+**** 8. Books and Printed Resources ****
+[Fitz04] Michael Fitzgerald.XML Hacks:100 Industrial-Strength Tips and Tools. Sebastopol, CA:O’Reilly, July 2004, ISBN: 978-0596007119.
+[Harold03] Elliotte Rusty Harold.Effective XML:50 Specific Ways to Improve Your XML. Boston:Addison-Wesley, October 2003, ISBN: 978-0321150400.
+[Harold04] Elliotte Rusty Harold and W Scott Means.XML in a Nutshell. Sebastopol, CA:O’Reilly, October 2003, ISBN: 978-0596007645.
+[Kay08] Michael Kay.XSLT 2.0 and XPath 2.0 Programmer’s Reference. Indianapolis, IN:Wrox, May 2008, ISBN: 978-0470192740.
+[Maler95] Eve Maler and Jeanne El Andaloussi.Developing SGML DTDs: From Text to Model to Markup. Prentice Hall, December 1995, ISBN: 978-0596004200. This book is out of print. However, the information on document schema modeling is still relevant and has not been superseded to date. Although the book is out of print, the authors have made an online version available at:  http://www.xmlgrrl.com/publications/DSDTD/index.html.
+[Ray03] Erik Ray.Learning XML. Second Edition, Sebastopol, CA:O’Reilly, September 2003, ISBN: 978-0596004200.
+[Stayton07] Bob Stayton.DocBook XSL: The Complete Guide. Fourth Edition, Sagehill Enterprises, 2007, ISBN: 978-0974152134. The essential guide to the DocBook XSL stylesheets.
+[Tidwell08] Doug Tidwell.XSLT. Second Edition, Sebastopol, CA:O’Reilly, June 2008, ISBN: 978-0596527211.
+[Vlist03] Eric van der Vlist.RELAX NG. Sebastopol, CA:O’Reilly, July 2003, ISBN: 978-0596004217.
+**** 9. XML Tools ****
+Here is information about some of the tools mentioned in this book. If you are running Linux, you may be able to load some of these tools using a package manager like Synaptic, yum, or apt. Needless to say, this is not a comprehensive list; there are other capable tools available. However, these are a good starting place.
+  RELAX NG
+      A variety of tools that support RELAX NG can be found at: http://relaxng.org/. These include:
+        MSV
+            Sun Multi-Schema XML Validator (from Sun Microsystems). MSV is an open source program that validates RELAX NG as well as other schema languages including W3C XML Schema.
+            https://msv.dev.java.net/
+        Jing
+            An open source RELAX NG validator that supports both compact and XML syntax.
+            http://www.thaiopensource.com/relaxng/jing.html
+        Trang
+            An open source program that is a companion to Jing, Trang converts between various XML schema languages. It supports both compact and XML syntax for RELAX NG, XML 1.0 DTDs, and W3C XML Schemas, though it only supports W3C XML Schemas for output.
+            http://www.thaiopensource.com/relaxng/trang.html
+        EMACS nXML mode
+            This is an open source addon for emacs that supports syntax-directed editing using a RELAX NG compact mode schema. It validates as you type and will show you at any point what the valid set of elements, attributes, and attribute values is. It also supports automatic completion of partially typed elements, attributes, and attribute values.
+            http://www.thaiopensource.com/nxml-mode/
+  Saxon
+      Saxon is an XSLT processor. The basic processor is available as an open source product, and there are also commercial versions that offer additional features. The latest versions of Saxon support both XSLT 1.0 and 2.0.
+      http://saxon.sourceforge.net/
+  xsltproc
+      Xsltproc is an open source XSLT processor that supports XSLT 1.0.
+      http://xmlsoft.org/XSLT/xsltproc2.html
+  <oXygen/> XML Editor
+      The <oXygen/> XML Editor is a popular commercial editor. The latest versions support DocBook V5.0, including both the RELAX NG and Schematron rules. It is also integrated with the DocBook stylesheets.
+      http://oxygenxml.com
+  XMLmind XML Editor (XXE)
+      The XMLmind XML Editor is a popular commercial editor that comes in two varieties, a personal edition and a professional edition. The personal edition is free for non-commercial use. Both versions support DocBook V5.0.
+      http://www.xmlmind.com/xmleditor/
+DocBook Variants and Future Directions  [Up]   Interchanging DocBook Documents

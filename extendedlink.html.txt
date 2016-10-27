@@ -1,0 +1,18 @@
+
+***** [[5.0]]extendedlink *****
+extendedlink — An XLink extended link.
+***** Synopsis *****
+    * One or more of:
+          o arc
+          o locator
+***** Attributes *****
+Common_attributes.
+***** Description *****
+An XLink extended link. See XLink for more details.
+**** Processing expectations ****
+Suppressed.
+**** Parents ****
+These elements contain extendedlink: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in extendedlink: arc, locator.
+exceptionname  [Up]      fax

@@ -1,0 +1,169 @@
+
+***** funcsynopsis *****
+funcsynopsis — The syntax summary for a function definition.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One or more of:
+                # funcprototype
+                # funcsynopsisinfo
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * language
+***** Description *****
+A funcsynopsis contains the syntax summary of a function prototype or a set of function prototypes. The content model of this element was designed specifically to capture the semantics of most C-language function prototypes (for use in UNIX reference pages).
+This is one of the few places where DocBook attempts to model as well as describe. Using funcsynopsis for languages that are unrelated to C may prove difficult.
+**** Processing expectations ****
+For the most part, the processing application is expected to generate all of the parentheses, semicolons, commas, and so on required in the rendered synopsis. The exception to this rule is that the spacing and other punctuation inside a parameter that is a pointer to a function must be provided in the source markup.
+With sufficient author cooperation, it should be possible to mark up a function synopsis with enough clarity so that a processing system can generate either K&R-style or ANSI-style renderings.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  language
+      Identifies the language (i.e. programming language) of the content.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain funcsynopsis: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in funcsynopsis: funcprototype, funcsynopsisinfo, info (db.titleforbidden.info).
+***** See Also *****
+cmdsynopsis, synopsis
+***** Examples *****
+There are two common presentation styles for function synopses, “K&R” style and “ANSI” style.
+**** K&R Examples ****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6   <?dbhtml funcsynopsis-style='kr'?>
+      <funcdef>int <function>max</function></funcdef>
+  8   <paramdef>int <parameter>int1</parameter></paramdef>
+      <paramdef>int <parameter>int2</parameter></paramdef>
+ 10 </funcprototype>
+    </funcsynopsis>
+ 12
+    </article>
+int max(int1, int2);
+int int1;
+int int2;
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcsynopsisinfo>
+  6 #include &lt;varargs.h&gt;
+    </funcsynopsisinfo>
+  8 <funcprototype>
+      <?dbhtml funcsynopsis-style='kr'?>
+ 10   <funcdef>int <function>max</function></funcdef>
+      <varargs/>
+ 12 </funcprototype>
+    </funcsynopsis>
+ 14
+    </article>
+#include <varargs.h>
+int max(...);
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6 <?dbhtml funcsynopsis-style='kr'?>
+    <funcdef>int <function>rand</function></funcdef>
+  8   <void/>
+    </funcprototype>
+ 10 </funcsynopsis>
+
+ 12 </article>
+int rand();
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6   <?dbhtml funcsynopsis-style='kr'?>
+      <funcdef>void <function>qsort</function></funcdef>
+  8     <paramdef>void *<parameter>dataptr</parameter>[]</paramdef>
+        <paramdef>int <parameter>left</parameter></paramdef>
+ 10     <paramdef>int <parameter>right</parameter></paramdef>
+        <paramdef>int <parameter>(* comp)</parameter>
+ 12       <funcparams>void *, void *</funcparams></paramdef>
+    </funcprototype>
+ 14 </funcsynopsis>
+
+ 16 </article>
+void qsort( dataptr,    
+           left,       
+           right,      
+           (* comp));  
+void * dataptr[];
+int    left;
+int    right;
+int (* comp) (void *, void *);
+**** ANSI Examples ****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6   <?dbhtml funcsynopsis-style='ansi'?>
+      <funcdef>int <function>max</function></funcdef>
+  8   <paramdef>int <parameter>int1</parameter></paramdef>
+      <paramdef>int <parameter>int2</parameter></paramdef>
+ 10 </funcprototype>
+    </funcsynopsis>
+ 12
+    </article>
+int max(int int1, int int2);
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcsynopsisinfo>
+  6 #include &lt;varargs.h&gt;
+    </funcsynopsisinfo>
+  8 <funcprototype>
+      <?dbhtml funcsynopsis-style='ansi'?>
+ 10   <funcdef>int <function>max</function></funcdef>
+      <varargs/>
+ 12 </funcprototype>
+    </funcsynopsis>
+ 14
+    </article>
+#include <varargs.h>
+int max(...);
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6 <?dbhtml funcsynopsis-style='ansi'?>
+    <funcdef>int <function>rand</function></funcdef>
+  8   <void/>
+    </funcprototype>
+ 10 </funcsynopsis>
+
+ 12 </article>
+int rand(void);
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcsynopsis</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6   <?dbhtml funcsynopsis-style='ansi'?>
+      <funcdef>void <function>qsort</function></funcdef>
+  8     <paramdef>void *<parameter>dataptr</parameter>[]</paramdef>
+        <paramdef>int <parameter>left</parameter></paramdef>
+ 10     <paramdef>int <parameter>right</parameter></paramdef>
+        <paramdef>int <parameter>(* comp)</parameter>
+ 12       <funcparams>void *, void *</funcparams></paramdef>
+    </funcprototype>
+ 14 </funcsynopsis>
+
+ 16 </article>
+void qsort( void * dataptr[],
+           int    left,
+           int    right,
+           int    (* comp) (void *, void *));
+funcprototype  [Up]   funcsynopsisinfo

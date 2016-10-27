@@ -1,0 +1,30 @@
+
+***** anchor *****
+anchor — A spot in the document.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes (ID required).
+***** Description *****
+An anchor identifies a single spot in the content. This may serve as the target for a cross-reference, for example, from a link. The anchor element may occur almost anywhere.
+**** Processing expectations ****
+An anchor has no content and generally produces no output. It is a link target.
+*** Parents [[+]][[+]] ***
+This element occurs in 242_elements.
+These elements contain anchor: abbrev, abstract, accel, acknowledgements, acronym, address, annotation, answer, appendix, application, arg, article, artpagenums, attribution, authorinitials, bibliocoverage, bibliodiv, bibliography, biblioid, bibliolist, bibliomisc, bibliomset, bibliorelation, bibliosource, blockquote, bridgehead, callout, calloutlist, caption (db.caption), caption (db.html.caption), caution, chapter, citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, colophon, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, constraintdef, contractnum, contractsponsor, contrib, country, cover, database, dedication, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, epigraph, errorcode, errorname, errortext, errortype, example, exceptionname, fax, figure, filename, firstname, firstterm, footnote, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glossary, glossdef, glossdiv, glosslist,
+glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, important, index, indexdiv, informalexample, informalfigure, initializer, interfacename, issuenum, itemizedlist, jobtitle, keycap, keycode, keysym, label, legalnotice, lineage, lineannotation, link, listitem, literal, literallayout, manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msgexplan, msglevel, msgorig, msgtext, note, olink, option, optional, orderedlist, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, partintro, personblurb, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, preface, primary, primaryie, printhistory, procedure, productname, productnumber, programlisting, prompt, property, publishername, qandadiv, qandaset, question, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, refsect1, refsect2, refsect3, refsection, refsynopsisdiv,
+releaseinfo, remark, replaceable, returnvalue, revdescription, revnumber, revremark, screen, secondary, secondaryie, sect1, sect2, sect3, sect4, sect5, section, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, setindex, shortaffil, sidebar, simpara, simplesect, state, step, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, taskprerequisites, taskrelated, tasksummary, td, term, termdef, tertiary, tertiaryie, textobject, th, tip, title, titleabbrev, toc, tocdiv, tocentry, token, trademark, type, uri, userinput, variablelist, varname, volumenum, warning, wordasword, year.
+***** See Also *****
+link, olink, xref
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example anchor</title>
+
+  4 <para>The anchor element<anchor xml:id="example.anchor.1"/> is empty and contributes
+    nothing to the flow of the content in which it occurs.  It is only useful
+  6 as a target.
+    </para>
+  8
+    </article>
+The anchor element is empty and contributes nothing to the flow of the content in which it occurs. It is only useful as a target.
+alt     [Up]   annotation

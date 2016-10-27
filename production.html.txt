@@ -1,0 +1,19 @@
+
+***** production *****
+production — A production in a set of EBNF productions.
+***** Synopsis *****
+    * Sequence of:
+          o lhs
+          o rhs
+          o Zero or more of:
+                # constraint
+***** Attributes *****
+Common_attributes (ID required) and common_linking_attributes.
+***** Description *****
+A production is a single production in an Extended Backus-Naur Form (EBNF) grammar.
+Individual productions have two parts: a lefthand side (lhs) and a righthand side (rhs). Each nonterminal on the lefthand side is defined in terms of other nonterminals and literals on the righthand side.
+**** Parents ****
+These elements contain production: productionset.
+**** Children ****
+The following elements occur in production: constraint, lhs, rhs.
+procedure  [Up]   productionrecap

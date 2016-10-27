@@ -1,0 +1,30 @@
+
+***** msg *****
+msg — A message in a message set.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o msgmain
+          o Zero or more of:
+                # msgrel
+                # msgsub
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+In a msgset, each msgentry contains at least one msg. A msg consists of a main message (msgmain), and optionally one or more submessages (msgsub) or related messages (msgrel).
+Additional information or explanation for the message is contained in the siblings of msg within the msgentry.
+See msgset.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msg: msgentry.
+**** Children ****
+The following elements occur in msg: info (db.titleforbidden.info), info (db.titleonly.info), msgmain, msgrel, msgsub, title, titleabbrev.
+mousebutton  [Up]   msgaud

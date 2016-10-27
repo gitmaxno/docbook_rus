@@ -1,0 +1,73 @@
+
+***** reference *****
+reference — A collection of reference entries.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o partintro?
+          o One or more of:
+                # refentry
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A reference is a collection of refentrys. In a book, a reference can occur at either the part or the chapter level.
+Reference pages are usually bound together by topic; in traditional UNIX documentation they are most frequently bound into volumes. See manvolnum.
+**** Processing expectations ****
+Formatted as a displayed block. A reference often introduces a forced page break and may start on the next recto page. Frequently, it also produces a separator page, on which may be printed the content of the partintro.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain reference: book, part.
+**** Children ****
+The following elements occur in reference: info (db.titleforbidden.info), info (db.titlereq.info), partintro, refentry, subtitle, title, titleabbrev.
+***** Examples *****
+  1 <reference xmlns='http://docbook.org/ns/docbook'>
+  2   <title>Reference Pages</title>
+
+  4   <refentry>
+        <refnamediv>
+  6       <refdescriptor>GNU as</refdescriptor>
+          <refname>as</refname>
+  8       <refpurpose>the portable GNU assembler</refpurpose>
+        </refnamediv>
+ 10     <refsynopsisdiv><title>SYNOPSIS</title>
+        <synopsis>...</synopsis>
+ 12     </refsynopsisdiv>
+        <refsect1><title>DESCRIPTION</title>
+ 14     <para>...</para>
+        </refsect1>
+ 16   </refentry>
+
+ 18   <refentry>
+        <refnamediv>
+ 20       <refname>awk</refname>
+          <refpurpose>pattern scanning and text processing language</refpurpose>
+ 22     </refnamediv>
+        <refsynopsisdiv><title>SYNOPSIS</title>
+ 24     <synopsis>...</synopsis>
+        </refsynopsisdiv>
+ 26     <refsect1><title>DESCRIPTION</title>
+        <para>...</para>
+ 28     </refsect1>
+      </refentry>
+ 30
+      <!-- ... -->
+ 32
+    </reference>
+refentrytitle  [Up]   refmeta

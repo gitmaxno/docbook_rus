@@ -1,0 +1,34 @@
+
+***** glossentry *****
+glossentry — An entry in a Glossary or GlossList.
+***** Synopsis *****
+    * Sequence of:
+          o glossterm
+          o acronym?
+          o abbrev?
+          o Zero or more of:
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+          o One of:
+                # One or more of:
+                      # glossdef
+                # glosssee
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * sortas
+***** Description *****
+A glossentry is a wrapper around a glossary term and its definition.
+**** Processing expectations ****
+Formatted as a displayed block. Glossary entries are usually formatted to highlight the terms and definitions, frequently in a style similar to varlistentrys.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  sortas
+      Specifies the string by which the element's content is to be sorted; if unspecified, the content is used
+**** Parents ****
+These elements contain glossentry: glossary, glossdiv, glosslist.
+**** Children ****
+The following elements occur in glossentry: abbrev, acronym, glossdef, glosssee, glossterm, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange).
+glossdiv  [Up]   glosslist

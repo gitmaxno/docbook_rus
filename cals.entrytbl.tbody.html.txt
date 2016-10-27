@@ -1,0 +1,33 @@
+
+***** tbody (db.cals.entrytbl.tbody) *****
+tbody — A wrapper for the rows of a table or informal table.
+***** Synopsis *****
+    * One or more of:
+          o row (db.entrytbl.row)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * valign (enumeration)
+          o “bottom”
+          o “middle”
+          o “top”
+***** Description *****
+The tbody wrapper identifies the rows of a table that form the body of the table, as distinct from the header (thead) and footer (tfoot) rows.
+In most tables, the tbody contains most of the rows.
+**** Processing expectations ****
+This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd].
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  valign
+      Specifies the vertical alignment of text in an entry.
+      Enumerated values:
+      “bottomAligned on the bottom of the entry.
+      “middleAligned in the middle.
+      “top”Aligned at the top of the entry.
+**** Parents ****
+These elements contain tbody: entrytbl.
+**** Children ****
+The following elements occur in tbody: row (db.entrytbl.row).
+***** See Also *****
+colspec, entry, entrytbl, informaltable, row, spanspec, table, tbody (db.cals.tbody), tfoot, tgroup, thead
+tasksummary  [Up]   tbody (db.cals.tbody)

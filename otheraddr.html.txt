@@ -1,0 +1,70 @@
+
+***** otheraddr *****
+otheraddr — Uncategorized information in address.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+Within an address, otheraddr is a wrapper for parts of an address other than street, pob, postcode, city, state, country, phone, fax, and email, all of which have elements specific to their content.
+In early versions of DocBook, address was not allowed to contain character data (it was a database-like collection of fields). In that context, a wrapper was necessary for any random pieces of information that might be required for an address. With the introduction of character data directly in the address element, otheraddr may have lost most of its raison d’être.
+**** Processing expectations ****
+Formatted inline. This element may inherit the verbatim qualities of an address.
+**** Parents ****
+These elements contain otheraddr: address.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in otheraddr: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+address, city, country, email, fax, phone, pob, postcode, state, street
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example otheraddr</title>
+
+  4 <para>Please deliver to:
+    <address>The Law Offices of Dewey, Cheatem, and Howe
+  6 <street>100 Main Street</street>
+    <otheraddr>Third Floor</otheraddr>
+  8 <city>Anytown</city>, <state>NY</state> <postcode>12345</postcode>
+    <country>USA</country>
+ 10 </address>
+    </para>
+ 12
+    </article>
+Please deliver to:
+The Law Offices of Dewey, Cheatem, and Howe
+100 Main Street
+Third Floor
+Anytown, NY 12345
+USA
+orgname  [Up]   othercredit

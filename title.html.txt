@@ -1,0 +1,165 @@
+
+***** title *****
+title — The text of the title of a section of a document or of a formal block-level element.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The title element is widely used in DocBook. It identifies the titles of documents and parts of documents, and is the required caption on formal objects. It is also allowed as an optional title or caption on many additional block elements.
+**** Processing expectations ****
+Formatted as a displayed block. Titles are often repeated in several locations: for example, at the location where the object occurs, in the table of contents, and in running headers and footers.
+DocBook does not offer any mechanism for indicating where a line break should occur in long titles. Titles are often repeated and no single line break is likely to be correct in all of the places where a title is used. Instead, you will have to rely on your processing system to provide a mechanism, such as a processing instruction, for identifying the location of forced line breaks.
+*** Parents [[+]][[+]] ***
+This element occurs in 84_elements.
+These elements contain title: abstract, acknowledgements, annotation, appendix, article, bibliodiv, biblioentry, bibliography, bibliolist, bibliomixed, bibliomset, biblioset, blockquote, book, calloutlist, caution, chapter, colophon, constraintdef, dedication, equation, example, figure, formalpara, glossary, glossdiv, glosslist, important, index, indexdiv, info (db.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), itemizedlist, legalnotice, msg, msgexplan, msgmain, msgrel, msgset, msgsub, note, orderedlist, part, partintro, personblurb, preface, procedure, productionset, qandadiv, qandaentry, qandaset, reference, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revhistory, screenshot, sect1, sect2, sect3, sect4, sect5, section, segmentedlist, set, setindex, sidebar, simplesect, step, table (db.cals.table), task, taskprerequisites, taskrelated, tasksummary, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in title: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property, quote,
+remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+subtitle, titleabbrev
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example title</title>
+
+  4 <section>
+      <title>A Top Level Section</title>
+  6
+      <para>Actual content.</para>
+  8 </section>
+
+ 10 </article>
+tip     [Up]   titleabbrev

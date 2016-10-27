@@ -1,0 +1,148 @@
+
+***** informalfigure *****
+informalfigure — A untitled figure.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o caption? (db.caption)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * floatstyle
+    * label
+    * pgwide (enumeration)
+          o “0”
+          o “1”
+***** Description *****
+An informalfigure is a figure without a title. Figures often contain mediaobjects, or other large display elements.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  floatstyle
+      Specifies style information to be used when rendering the float
+  label
+      Specifies an identifying string for presentation purposes
+  pgwide
+      Indicates if the element is rendered across the column or the page
+      Enumerated values:
+      “0The element should be rendered in the current text flow (with the flow column width).
+      “1The element should be rendered across the full text page.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain informalfigure: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 61_elements.
+The following elements occur in informalfigure: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caption (db.caption), caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
+***** See Also *****
+equation, example, figure, informalequation, informalexample, informaltable, table
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example informalfigure</title>
+
+  4 <informalfigure>
+    <mediaobject>
+  6   <imageobject condition="print">
+        <info>
+  8       <author>
+            <personname>
+ 10           <firstname>Norman</firstname>
+              <surname>Walsh</surname>
+ 12         </personname>
+          </author>
+ 14       <pubdate>1998</pubdate>
+        </info>
+ 16
+        <imagedata fileref="figs/print/db5d_ref10.pdf" format="PDF" role="keep-together"/>
+ 18   </imageobject>
+
+ 20   <imageobject condition="web">
+        <imagedata fileref="figs/web/db5d_ref10.png" format="PNG"/>
+ 22   </imageobject>
+
+ 24   <textobject>
+        <phrase>Wat Arun</phrase>
+ 26   </textobject>
+
+ 28   <caption><para>Wat Arun, Temple of the Dawn, on the Chao Phraya
+      River in Bangkok, Thailand. In April 1998, Wat Arun was in the
+ 30   midst of renovation.</para></caption>
+    </mediaobject>
+ 32 </informalfigure>
+
+ 34 </article>
+[Wat Arun]
+Wat Arun, Temple of the Dawn, on the Chao Phraya River in Bangkok, Thailand. In April 1998, Wat Arun was in the midst of renovation.
+informalexample  [Up]   informaltable (db.cals.informaltable)

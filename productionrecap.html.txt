@@ -1,0 +1,14 @@
+
+***** productionrecap *****
+productionrecap — A cross-reference to an EBNF production.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A productionrecap is a cross-reference to a production.
+**** Processing expectations ****
+A productionrecap is rendered exactly like the production to which it refers. The purpose of the productionrecap element is to allow a productionset to contain copies of productions defined elsewhere. This frequently makes it easier for readers to understand.
+**** Parents ****
+These elements contain productionrecap: productionset.
+production  [Up]   productionset

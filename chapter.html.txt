@@ -1,0 +1,188 @@
+
+***** chapter *****
+chapter — A chapter, as of a book.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o Sequence of:
+                # Zero or more of:
+                      # bibliography
+                      # glossary
+                      # index
+                      # toc
+                # One of:
+                      # Sequence of:
+                            # One or more of:
+                                  # annotation
+                                  # bridgehead
+                                  # remark
+                                  # revhistory
+                                  # Indexing inlines [[+]] [[-]]
+                                        * indexterm (db.indexterm.endofrange)
+                                        * indexterm (db.indexterm.singular)
+                                        * indexterm (db.indexterm.startofrange)
+                                  # Admonition elements [[+]] [[-]]
+                                        * caution
+                                        * important
+                                        * note
+                                        * tip
+                                        * warning
+                                  # Formal elements [[+]] [[-]]
+                                        * equation
+                                        * example
+                                        * figure
+                                        * table (db.cals.table)
+                                        * table (db.html.table)
+                                  # Graphic elements [[+]] [[-]]
+                                        * mediaobject
+                                        * screenshot
+                                  # Informal elements [[+]] [[-]]
+                                        * informalequation
+                                        * informalexample
+                                        * informalfigure
+                                        * informaltable (db.cals.informaltable)
+                                        * informaltable (db.html.informaltable)
+                                  # List elements [[+]] [[-]]
+                                        * bibliolist
+                                        * calloutlist
+                                        * glosslist
+                                        * itemizedlist
+                                        * orderedlist
+                                        * procedure
+                                        * qandaset
+                                        * segmentedlist
+                                        * simplelist
+                                        * variablelist
+                                  # Paragraph elements [[+]] [[-]]
+                                        * anchor
+                                        * formalpara
+                                        * para
+                                        * simpara
+                                  # Publishing elements [[+]] [[-]]
+                                        * address
+                                        * blockquote
+                                        * epigraph
+                                        * sidebar
+                                  # Synopsis elements [[+]] [[-]]
+                                        * classsynopsis
+                                        * cmdsynopsis
+                                        * constructorsynopsis
+                                        * destructorsynopsis
+                                        * fieldsynopsis
+                                        * funcsynopsis
+                                        * methodsynopsis
+                                  # Technical elements [[+]] [[-]]
+                                        * constraintdef
+                                        * msgset
+                                        * procedure
+                                        * productionset
+                                        * task
+                                  # Verbatim elements [[+]] [[-]]
+                                        * literallayout
+                                        * programlisting
+                                        * programlistingco
+                                        * screen
+                                        * screenco
+                                        * synopsis
+                            # Optionally one of:
+                                  # Sequence of:
+                                        # One or more of:
+                                              # section
+                                        # Zero or more of:
+                                              # simplesect
+                                  # One or more of:
+                                        # simplesect
+                                  # Sequence of:
+                                        # One or more of:
+                                              # sect1
+                                        # Zero or more of:
+                                              # simplesect
+                                  # One or more of:
+                                        # refentry
+                      # Sequence of:
+                            # One or more of:
+                                  # section
+                            # Zero or more of:
+                                  # simplesect
+                      # One or more of:
+                            # simplesect
+                      # Sequence of:
+                            # One or more of:
+                                  # sect1
+                            # Zero or more of:
+                                  # simplesect
+                      # One or more of:
+                            # refentry
+                # Zero or more of:
+                      # bibliography
+                      # glossary
+                      # index
+                      # toc
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A chapter is a chapter of a book.
+**** Processing expectations ****
+Formatted as a displayed block. Usually introduces a forced page break and often starts on the next recto page. The first chapter of a document usually restarts page numbering. Typically, chapters are numbered and presented in the table of contents.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain chapter: book, part.
+*** Children [[+]][[+]] ***
+This element contains 72_elements.
+The following elements occur in chapter: address, anchor, annotation, bibliography, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glossary, glosslist, important, index, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titlereq.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, refentry, remark, revhistory, screen, screenco, screenshot, sect1, section, segmentedlist, sidebar, simpara, simplelist, simplesect, subtitle, synopsis, table (db.cals.table), table (db.html.table),
+task, tip, title, titleabbrev, toc, variablelist, warning.
+***** See Also *****
+appendix, article, book, colophon, dedication, part, partintro, preface, set
+***** Examples *****
+  1 <chapter xmlns='http://docbook.org/ns/docbook'
+  2
+ label="6" xml:id="figures" version="5.0">
+    <info>
+  4   <title>Pictures and Figures</title>
+      <keywordset>
+  6     <keyword>images</keyword>
+        <keyword>illustrations</keyword>
+  8   </keywordset>
+      <itermset>
+ 10     <indexterm zone="figures"><primary>Figures</primary></indexterm>
+        <indexterm zone="figures"><primary>Pictures</primary></indexterm>
+ 12     <indexterm zone="notreal">
+          <primary>Sections</primary><secondary>Not Real</secondary>
+ 14     </indexterm>
+      </itermset>
+ 16 </info>
+    <epigraph>
+ 18 <attribution>William Safire</attribution>
+    <para>Knowing how things work is the basis for appreciation, and is
+ 20 thus a source of civilized delight.
+    </para>
+ 22 </epigraph>
+    <para>Pictures and figures …
+ 24 </para>
+    <sect1><title>Top Level Section</title>
+ 26 <para>…
+    </para>
+ 28 <bridgehead xml:id="notreal" renderas='sect3'>Not a Real Section</bridgehead>
+    <para>This paragraph appears to be under a Sect3 heading, but it's really
+ 30 in the same Sect1 as the preceding paragraph.
+    </para>
+ 32 </sect1>
+    </chapter>
+caution  [Up]   citation

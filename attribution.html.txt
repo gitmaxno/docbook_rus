@@ -1,0 +1,70 @@
+
+***** attribution *****
+attribution — The source of a block quote or epigraph.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o citation
+          o citetitle
+          o person
+          o personname
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An attribution identifies the source to whom a blockquote or epigraph is ascribed.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed. Although it appears at the beginning of the content model for blockquote and epigraph, it is often output at the end.
+**** Parents ****
+These elements contain attribution: blockquote, epigraph.
+*** Children [[+]][[+]] ***
+This element contains 20_elements.
+The following elements occur in attribution: text, alt, anchor, annotation, biblioref, citation, citetitle, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, person, personname, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+blockquote, epigraph
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example attribution</title>
+
+  4 <blockquote>
+    <attribution>William Shakespeare</attribution>
+  6 <literallayout>
+    What say you?  Will you yield, and this avoid?
+  8 Or, guilty in defense, be thus destroyed?
+    </literallayout>
+ 10 </blockquote>
+
+ 12 </article>
+       1 
+       2 What say you?  Will you yield, and this avoid?
+         Or, guilty in defense, be thus destroyed?
+     —William Shakespeare
+artpagenums  [Up]   audiodata

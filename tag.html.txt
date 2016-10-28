@@ -1,93 +1,116 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+[5.0]tag
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** [[5.0]]tag *****
-tag� —� A component of XML (or SGML) markup.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phrase� (db._phrase)
-          o replaceable
-          o Graphic� inlines� [[+]]� [[-]]
-                * inlinemediaobject
-          o Indexing� inlines� [[+]]� [[-]]
-                * indexterm� (db.indexterm.endofrange)
-                * indexterm� (db.indexterm.singular)
-                * indexterm� (db.indexterm.startofrange)
-          o Linking� inlines� [[+]]� [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o Ubiquitous� inlines� [[+]]� [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indexterm� (db.indexterm.endofrange)
-                * indexterm� (db.indexterm.singular)
-                * indexterm� (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+tag — A component of XML (or SGML) markup.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o “attribute”
-          o “attvalue”
-          o “element”
-          o “emptytag”
-          o “endtag”
-          o “genentity”
-          o “localname”
-          o “namespace”
-          o “numcharref”
-          o “paramentity”
-          o “pi”
-          o “prefix”
-          o “comment”
-          o “starttag”
-          o “xmlpi”
-    * namespace (anyURI)
-***** Description *****
+
+    class (enumeration)
+        “attribute”
+        “attvalue”
+        “element”
+        “emptytag”
+        “endtag”
+        “genentity”
+        “localname”
+        “namespace”
+        “numcharref”
+        “paramentity”
+        “pi”
+        “prefix”
+        “comment”
+        “starttag”
+        “xmlpi”
+    namespace (anyURI)
+
+Description
+
 A tag identifies an XML or SGML markup construct. The utility of this element is almost wholly constrained to books about markup.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline.
+
 A tag generates all the necessary punctuation before and after the construct it identifies. For example, it generates both the leading ampersand and the trailing semicolon when the class is genentity.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the nature of the tag content
-      Enumerated values:
-      “attribute�An attribute
-      “attvalue”An attribute value
-      “element” An element
-      “emptytag”An empty element tag
-      “endtag”  An end tag
-      “genentity�A general entity
-      “localname�The local name part of a qualified name
-      “namespace�A namespace
-      “numcharref�A numeric character reference
-      “paramentityA parameter entity
-      “pi”      A processing instruction
-      “prefix”  The prefix part of a qualified name
-      “comment” An SGML comment
-      “starttag”A start tag
-      “xmlpi”   An XML processing instruction
-  namespace
-      Identifies the namespace of the tag content
-*** Parents� [[+]][[+]] ***
-This element occurs in 51_elements.
-These elements contain tag: bridgehead, caption� (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasis� (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase� (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
-*** Children� [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in tag: text, alt, anchor, annotation, biblioref, indexterm� (db.indexterm.endofrange), indexterm� (db.indexterm.singular), indexterm� (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase� (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the nature of the tag content
+    Enumerated values:
+    “attribute”	
+
+    An attribute
+    “attvalue”	
+
+    An attribute value
+    “element”	
+
+    An element
+    “emptytag”	
+
+    An empty element tag
+    “endtag”	
+
+    An end tag
+    “genentity”	
+
+    A general entity
+    “localname”	
+
+    The local name part of a qualified name
+    “namespace”	
+
+    A namespace
+    “numcharref”	
+
+    A numeric character reference
+    “paramentity”	
+
+    A parameter entity
+    “pi”	
+
+    A processing instruction
+    “prefix”	
+
+    The prefix part of a qualified name
+    “comment”	
+
+    An SGML comment
+    “starttag”	
+
+    A start tag
+    “xmlpi”	
+
+    An XML processing instruction
+namespace
+
+    Identifies the namespace of the tag content
+
+Parents [+]
+This element occurs in 51 elements.
+Children [+]
+This element contains 16 elements.
+See Also
+
 computeroutput, constant, literal, markup, option, optional, parameter, prompt, replaceable, userinput, varname
-[Prev]�                [Home] � [Next]
-table (db.html.table)�  [Up]    � task
+Prev 	Home	 Next
+table (db.html.table) 	Up	 task
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

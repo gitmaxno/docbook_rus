@@ -91,3 +91,100 @@ The following elements occur in biblioentry: *:*, abbrev, abstract, acronym, add
 ***** See Also *****
 bibliomisc, bibliomixed, bibliomset, biblioset
 bibliodiv  [Up]   bibliography
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** biblioentry *****
+biblioentry — An entry in a Bibliography.
+***** Synopsis *****
+    * One or more of:
+          o citebiblioid
+          o citerefentry
+          o citetitle
+          o person
+          o personblurb
+          o personname
+          o subtitle
+          o title
+          o titleabbrev
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o “Info” elements [[+]] [[-]]
+                * *:*
+                * abstract
+                * address
+                * annotation
+                * artpagenums
+                * author
+                * authorgroup
+                * authorinitials
+                * bibliocoverage
+                * biblioid
+                * bibliomisc
+                * bibliomset
+                * bibliorelation
+                * biblioset
+                * bibliosource
+                * collab
+                * confgroup
+                * contractnum
+                * contractsponsor
+                * copyright
+                * cover
+                * date
+                * edition
+                * editor
+                * extendedlink
+                * issuenum
+                * itermset
+                * keywordset
+                * legalnotice
+                * mediaobject
+                * org
+                * orgname
+                * othercredit
+                * pagenums
+                * printhistory
+                * productname
+                * productnumber
+                * pubdate
+                * publisher
+                * publishername
+                * releaseinfo
+                * revhistory
+                * seriesvolnums
+                * subjectset
+                * volumenum
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A biblioentry is an entry in a bibliography. The contents of biblioentry are a “database” of named fields. Presentation systems frequently suppress some elements in a biblioentry.
+**** Processing expectations ****
+Formatted as a displayed block.
+A biblioentry is “raw.” It contains a database-like collection of named fields. It is the responsibility of the processing system to select elements from within a biblioentry, present them in the correct order, and add all punctuation.
+There is no expectation that a system will present all of the fields in a biblioentry or that they will be displayed in the order in which they occur.
+Correct formatting of biblioentrys is an interchange issue. See Appendix D,_Interchanging_DocBook_Documents.
+**** Parents ****
+These elements contain biblioentry: bibliodiv, bibliography, bibliolist.
+*** Children [[+]][[+]] ***
+This element contains 68_elements.
+The following elements occur in biblioentry: *:*, abbrev, abstract, acronym, address, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, biblioset, bibliosource, citebiblioid, citerefentry, citetitle, collab, confgroup, contractnum, contractsponsor, copyright, coref, cover, date, edition, editor, emphasis (db.emphasis), extendedlink, firstterm, footnote, footnoteref, foreignphrase, glossterm, issuenum, itermset, keywordset, legalnotice, mediaobject, org, orgname, othercredit, pagenums, person, personblurb, personname, phrase (db.phrase), printhistory, productname, productnumber, pubdate, publisher, publishername, quote, releaseinfo, revhistory, seriesvolnums, subjectset, subscript, subtitle, superscript, title, titleabbrev, volumenum, wordasword.
+***** See Also *****
+bibliomisc, bibliomixed, bibliomset, biblioset
+[Prev]    [Home]        [Next]
+bibliodiv  [Up]   bibliography
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

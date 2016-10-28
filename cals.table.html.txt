@@ -1,144 +1,206 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+table (db.cals.table)
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** table (db.cals.table) *****
-table� —� A formal table in a document.
-***** Synopsis *****
-    * Sequence of:
-          o One of:
-                # Sequence of:
-                      # Interleave of:
-                            # title
-                            # titleabbrev?
-                      # info?� (db.titleforbidden.info)
-                # info� (db.titleonlyreq.info)
-          o Interleave of:
-                # alt?
-                # Zero or more of:
-                      # Indexing� inlines� [[+]]� [[-]]
-                            * indexterm� (db.indexterm.endofrange)
-                            * indexterm� (db.indexterm.singular)
-                            * indexterm� (db.indexterm.startofrange)
-                # Zero or more of:
-                      # textobject
-          o One of:
-                # One or more of:
-                      # mediaobject
-                # One or more of:
-                      # tgroup
-          o caption?� (db.caption)
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+table — A formal table in a document.
+Synopsis
+
+    Sequence of:
+        One of:
+            Sequence of:
+                Interleave of:
+                    title
+                    titleabbrev?
+                info? (db.titleforbidden.info)
+            info (db.titleonlyreq.info)
+        Interleave of:
+            alt?
+            Zero or more of:
+                Indexing inlines [+]
+            Zero or more of:
+                textobject
+        One of:
+            One or more of:
+                mediaobject
+            One or more of:
+                tgroup
+        caption? (db.caption)
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * colsep (enumeration)
-          o “0”
-          o “1”
-    * floatstyle
-    * frame (enumeration)
-          o “all”
-          o “bottom”
-          o “none”
-          o “sides”
-          o “top”
-          o “topbot”
-    * label
-    * orient (enumeration)
-          o “land”
-          o “port”
-    * pgwide (enumeration)
-          o “0”
-          o “1”
-    * rowheader (enumeration)
-          o “firstcol”
-          o “norowheader”
-    * rowsep (enumeration)
-          o “0”
-          o “1”
-    * shortentry (enumeration)
-          o “0”
-          o “1”
-    * tabstyle
-    * tocentry (enumeration)
-          o “0”
-          o “1”
-***** Additional Constraints *****
-    * example must not occur in the descendants of table
-    * figure must not occur in the descendants of table
-    * equation must not occur in the descendants of table
-    * informaltable must not occur in the descendants of table
-    * caution must not occur in the descendants of table
-    * important must not occur in the descendants of table
-    * note must not occur in the descendants of table
-    * tip must not occur in the descendants of table
-    * warning must not occur in the descendants of table
-***** Description *****
+
+    colsep (enumeration)
+        “0”
+        “1”
+    floatstyle
+    frame (enumeration)
+        “all”
+        “bottom”
+        “none”
+        “sides”
+        “top”
+        “topbot”
+    label
+    orient (enumeration)
+        “land”
+        “port”
+    pgwide (enumeration)
+        “0”
+        “1”
+    rowheader (enumeration)
+        “firstcol”
+        “norowheader”
+    rowsep (enumeration)
+        “0”
+        “1”
+    shortentry (enumeration)
+        “0”
+        “1”
+    tabstyle
+    tocentry (enumeration)
+        “0”
+        “1”
+
+Additional Constraints
+
+    example must not occur in the descendants of table
+    figure must not occur in the descendants of table
+    equation must not occur in the descendants of table
+    informaltable must not occur in the descendants of table
+    caution must not occur in the descendants of table
+    important must not occur in the descendants of table
+    note must not occur in the descendants of table
+    tip must not occur in the descendants of table
+    warning must not occur in the descendants of table
+
+Description
+
 This table element identifies a formal table (one with a title). DocBook allows either CALS or HTML tables, both of which describe tables geometrically using rows, columns, and cells.
+
 Tables may include column headers and footers with thead and tfoot, respectively. Use the rowheader attribute to identify row headers.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block. This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd].
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  colsep
-      Specifies the presence or absence of the column separator
-      Enumerated values:
-      “0No column separator rule.
-      “1Provide a column separator rule on the right
-  floatstyle
-      Specifies style information to be used when rendering the float
-  frame
-      Specifies how the table is to be framed. Note that there is no way to obtain a border on only the starting edge (left, in left-to-right writing systems) of the table.
-      Enumerated values:
-      “all”Frame all four sides of the table. In some environments with limited control over table border formatting, such as HTML, this may imply additional borders.
-      “bottomFrame only the bottom of the table.
-      “none�Place no border on the table. In some environments with limited control over table border formatting, such as HTML, this may disable other borders as well.
-      “sides�Frame the left and right sides of the table.
-      “top”Frame the top of the table.
-      “topbotFrame the top and bottom of the table.
-  label
-      Specifies an identifying string for presentation purposes
-  orient
-      Specifies the orientation of the table
-      Enumerated values:
-      “land90 degrees counter-clockwise from the rest of the text flow.
-      “portThe same orientation as the rest of the text flow.
-  pgwide
-      Indicates if the element is rendered across the column or the page
-      Enumerated values:
-      “0The element should be rendered in the current text flow (with the flow column width).
-      “1The element should be rendered across the full text page.
-  rowheader
-      Indicates whether or not the entries in the first column should be considered row headers
-      Enumerated values:
-      “firstcol”Indicates that entries in the first column of the table are functionally row headers (analogous to the way that a thead provides column headers).
-      “norowheaderIndicates that entries in the first column have no special significance with respect to column headers.
-  rowsep
-      Specifies the presence or absence of the row separator
-      Enumerated values:
-      “0No row separator rule.
-      “1Provide a row separator rule below
-  shortentry
-      Indicates if the short or long title should be used in a List of Tables
-      Enumerated values:
-      “0Indicates that the full title should be used.
-      “1Indicates that the short short title (titleabbrev) should be used.
-  tabstyle
-      Specifies the table style
-  tocentry
-      Indicates if the table should appear in a List of Tables
-      Enumerated values:
-      “0Indicates that the table should not occur in the List of Tables.
-      “1Indicates that the table should appear in the List of Tables.
-*** Parents� [[+]][[+]] ***
-This element occurs in 72_elements.
-These elements contain table: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption� (db.caption), caution, chapter, colophon, constraintdef, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
-*** Children� [[+]][[+]] ***
-This element contains 12_elements.
-The following elements occur in table: alt, caption� (db.caption), indexterm� (db.indexterm.endofrange), indexterm� (db.indexterm.singular), indexterm� (db.indexterm.startofrange), info� (db.titleforbidden.info), info� (db.titleonlyreq.info), mediaobject, textobject, tgroup, title, titleabbrev.
-***** See Also *****
-colspec, entry, entrytbl, equation, example, figure, informalequation, informalexample, informalfigure, informaltable, row, spanspec, table� (db.html.table), tbody, tfoot, tgroup, thead
-***** Examples *****
+Attributes
+
+Common attributes and common linking attributes.
+
+colsep
+
+    Specifies the presence or absence of the column separator
+    Enumerated values:
+    “0”	
+
+    No column separator rule.
+    “1”	
+
+    Provide a column separator rule on the right
+floatstyle
+
+    Specifies style information to be used when rendering the float
+frame
+
+    Specifies how the table is to be framed. Note that there is no way to obtain a border on only the starting edge (left, in left-to-right writing systems) of the table.
+    Enumerated values:
+    “all”	
+
+    Frame all four sides of the table. In some environments with limited control over table border formatting, such as HTML, this may imply additional borders.
+    “bottom”	
+
+    Frame only the bottom of the table.
+    “none”	
+
+    Place no border on the table. In some environments with limited control over table border formatting, such as HTML, this may disable other borders as well.
+    “sides”	
+
+    Frame the left and right sides of the table.
+    “top”	
+
+    Frame the top of the table.
+    “topbot”	
+
+    Frame the top and bottom of the table.
+label
+
+    Specifies an identifying string for presentation purposes
+orient
+
+    Specifies the orientation of the table
+    Enumerated values:
+    “land”	
+
+    90 degrees counter-clockwise from the rest of the text flow.
+    “port”	
+
+    The same orientation as the rest of the text flow.
+pgwide
+
+    Indicates if the element is rendered across the column or the page
+    Enumerated values:
+    “0”	
+
+    The element should be rendered in the current text flow (with the flow column width).
+    “1”	
+
+    The element should be rendered across the full text page.
+rowheader
+
+    Indicates whether or not the entries in the first column should be considered row headers
+    Enumerated values:
+    “firstcol”	
+
+    Indicates that entries in the first column of the table are functionally row headers (analogous to the way that a thead provides column headers).
+    “norowheader”	
+
+    Indicates that entries in the first column have no special significance with respect to column headers.
+rowsep
+
+    Specifies the presence or absence of the row separator
+    Enumerated values:
+    “0”	
+
+    No row separator rule.
+    “1”	
+
+    Provide a row separator rule below
+shortentry
+
+    Indicates if the short or long title should be used in a List of Tables
+    Enumerated values:
+    “0”	
+
+    Indicates that the full title should be used.
+    “1”	
+
+    Indicates that the short short title (titleabbrev) should be used.
+tabstyle
+
+    Specifies the table style
+tocentry
+
+    Indicates if the table should appear in a List of Tables
+    Enumerated values:
+    “0”	
+
+    Indicates that the table should not occur in the List of Tables.
+    “1”	
+
+    Indicates that the table should appear in the List of Tables.
+
+Parents [+]
+This element occurs in 72 elements.
+Children [+]
+This element contains 12 elements.
+See Also
+
+colspec, entry, entrytbl, equation, example, figure, informalequation, informalexample, informalfigure, informaltable, row, spanspec, table (db.html.table), tbody, tfoot, tgroup, thead
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example table</title>
-
+    
   4 <table xml:id="ex.calstable" frame='all'>
     <title>Sample CALS Table</title>
   6 <tgroup cols='5' align='left' colsep='1' rowsep='1'>
@@ -184,13 +246,19 @@ colspec, entry, entrytbl, equation, example, figure, informalequation, informale
  46 </tbody>
     </tgroup>
  48 </table>
-
+    
  50 </article>
-Table� 3.� Sample CALS Table
-Horizontal Span a3 a4 a5
-f1 f2           f3 f4 f5
-b1 b2           b3 b4 Vertical Span
-c1                 c4
-d1     Span Both   d4 d5
-[Prev]�     [Home]                � [Next]
-systemitem�  [Up]  � table (db.html.table)
+
+Table 3. Sample CALS Table
+Horizontal Span	a3	a4	a5
+f1	f2	f3	f4	f5
+b1	b2	b3	b4	
+
+Vertical Span
+c1	Span Both	c4
+d1	d4	d5
+Prev 	Home	 Next
+systemitem 	Up	 table (db.html.table)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

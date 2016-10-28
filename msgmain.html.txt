@@ -23,3 +23,32 @@ These elements contain msgmain: msg.
 **** Children ****
 The following elements occur in msgmain: info (db.titleforbidden.info), info (db.titleonly.info), msgtext, title, titleabbrev.
 msglevel  [Up]   msgorig
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** msgmain *****
+msgmain — The primary component of a message in a message set .
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o msgtext
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+Every msg must have one primary message. This is stored in the msgmain. The primary message is distinguished from any number of submessages (msgsub) or related messages (msgrel) that a msg might have.
+**** Processing expectations ****
+Formatted as a displayed block.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msgmain: msg.
+**** Children ****
+The following elements occur in msgmain: info (db.titleforbidden.info), info (db.titleonly.info), msgtext, title, titleabbrev.
+[Prev]   [Home]   [Next]
+msglevel  [Up]   msgorig
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -19,3 +19,28 @@ Common_attributes.
 **** Parents ****
 These elements contain locator: extendedlink.
 literallayout  [Up]   manvolnum
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** [[5.0]]locator *****
+locator — An XLink locator in an extendedlink.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * xlink:label (NMTOKEN)
+Required attributes are shown in bold.
+***** Description *****
+A locator in an extendedlink. See XML Linking Language (XLink) Version 1.0[XLink] for more details.
+**** Processing expectations ****
+Suppressed.
+**** Attributes ****
+Common_attributes.
+  xlink:label
+      Specifies the XLink label
+**** Parents ****
+These elements contain locator: extendedlink.
+[Prev]        [Home]     [Next]
+literallayout  [Up]   manvolnum
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

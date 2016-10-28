@@ -180,3 +180,189 @@ quote, remark, replaceable, returnvalue, shortcut, subscript, superscript, symbo
 ***** See Also *****
 sect1, sect2, sect3, sect4, sect5, section, simplesect
 book    [Up]   callout
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** bridgehead *****
+bridgehead — A free-floating heading.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * At most one of:
+          o renderas (enumeration)
+                # “sect1”
+                # “sect2”
+                # “sect3”
+                # “sect4”
+                # “sect5”
+          o All or none of:
+                # renderas (enumeration)
+                      # “other”
+                # otherrenderas (NMTOKEN)
+***** Description *****
+Some documents, usually legacy documents, use headings that are not tied to the normal sectional hierarchy. These headings may be represented in DocBook with the bridgehead element.
+A bridgehead may also be useful in fiction or journalistic works that don’t have a nested hierarchy.
+**** Processing expectations ****
+A bridgehead is formatted as a block, using the same display properties as the section heading which it masquerades as. The renderas attribute controls which heading it mimics.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  otherrenderas
+      Identifies the nature of the non-standard rendering
+  renderas
+      Indicates how the bridge head should be rendered
+      Enumerated values:
+      “sect1Render as a first-level section
+      “sect2Render as a second-level section
+      “sect3Render as a third-level section
+      “sect4Render as a fourth-level section
+      “sect5Render as a fifth-level section
+  renderas
+      Indicates how the bridge head should be rendered
+      Enumerated values:
+      “otherIdentifies a non-standard rendering
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain bridgehead: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in bridgehead: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property,
+quote, remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+sect1, sect2, sect3, sect4, sect5, section, simplesect
+[Prev] [Home]   [Next]
+book    [Up]   callout
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

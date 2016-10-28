@@ -1,51 +1,66 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+indexterm (db.indexterm.singular)
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** indexterm (db.indexterm.singular) *****
-indextermÂ â€”Â A wrapper for an indexed term.
-***** Synopsis *****
-    * Sequence of:
-          o primary?
-          o Optionally one of:
-                # Sequence of:
-                      # secondary
-                      # Optionally one of:
-                            # Sequence of:
-                                  # tertiary
-                                  # Optionally one of:
-                                        # One or more of:
-                                              # seealso
-                                        # see
-                            # One or more of:
-                                  # seealso
-                            # see
-                # One or more of:
-                      # seealso
-                # see
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+indexterm â€” A wrapper for an indexed term.
+Synopsis
+
+    Sequence of:
+        primary?
+        Optionally one of:
+            Sequence of:
+                secondary
+                Optionally one of:
+                    Sequence of:
+                        tertiary
+                        Optionally one of:
+                            One or more of:
+                                seealso
+                            see
+                    One or more of:
+                        seealso
+                    see
+            One or more of:
+                seealso
+            see
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o â€œsingularâ€
-    * pagenum
-    * scope (enumeration)
-          o â€œallâ€
-          o â€œglobalâ€
-          o â€œlocalâ€
-    * significance (enumeration)
-          o â€œnormalâ€
-          o â€œpreferredâ€
-    * type
-    * zone (IDREFS)
-***** Description *****
+
+    class (enumeration)
+        â€œsingularâ€
+    pagenum
+    scope (enumeration)
+        â€œallâ€
+        â€œglobalâ€
+        â€œlocalâ€
+    significance (enumeration)
+        â€œnormalâ€
+        â€œpreferredâ€
+    type
+    zone (IDREFS)
+
+Description
+
 An indexterm identifies text that is to be placed in the index. In the simplest case, the placement of the indexterm in the document identifies the location of the term in the text. In other words, the indexterm is placed in the flow of the document where the indexentry in the index should point. In other cases, attributes on indexterm are used to identify the location of the term in the text.
+
 An indexterm marks either a single point in the document or a range. A single point is marked with an indexterm placed in the text at the point of reference. There are two ways to identify a range of text:
-    * Place an indexterm at the beginning of the range with class set to startofrange and give this term an xml:id. Place another indexterm at the end of the range with startref pointing to the xml:id of the starting indexterm. This second indexterm must be empty.
-      The advantage of this method is that the range can span unbalanced element boundaries. (For example, a range could span from the middle of one paragraph to the middle of the next.)
-    * Place the indexterm anywhere you like and point to the element that contains the range of text you wish to index with the zone attribute on the indexterm. Note that zone is defined as IDREFS, so a single indexterm can point to multiple ranges.
-      The advantage of this method is that indexterms can be collected together or even stored totally outside the flow of the document (e.g., in the info).
-**** Processing expectations ****
+
+    Place an indexterm at the beginning of the range with class set to startofrange and give this term an xml:id. Place another indexterm at the end of the range with startref pointing to the xml:id of the starting indexterm. This second indexterm must be empty.
+
+    The advantage of this method is that the range can span unbalanced element boundaries. (For example, a range could span from the middle of one paragraph to the middle of the next.)
+
+    Place the indexterm anywhere you like and point to the element that contains the range of text you wish to index with the zone attribute on the indexterm. Note that zone is defined as IDREFS, so a single indexterm can point to multiple ranges.
+
+    The advantage of this method is that indexterms can be collected together or even stored totally outside the flow of the document (e.g., in the info).
+
+Processing expectations
+
 The indexterms are suppressed in the primary text flow, although they contribute to the population of an index and serve as anchors for cross-references. Under no circumstances is the actual content of indexterm rendered in the primary flow. For example, consider:
-ExampleÂ 26.Â Example index terms
+Example 26. Example index terms
+
   1 <para>USB<indexterm>
   2 <primary>USB</primary><see>Universal Serial Bus</see>
     </indexterm><indexterm>
@@ -54,119 +69,172 @@ ExampleÂ 26.Â Example index terms
   6 common interface technologies for external hard drives, although
     eSATA<indexterm><primary>eSATA</primary><seealso>Serial ATA</seealso>
   8 </indexterm> is also used.</para>
+
 When rendered, either on paper or in online form, this paragraph always appears without any of the content of the index terms:
-     USB and Firewire are common interface technologies for external hard drives, although eSATA is also used.
+
+    USB and Firewire are common interface technologies for external hard drives, although eSATA is also used.
+
 For most elements, the processing expectations of an indexterm are straightforward: the location of the term serves as an anchor for the cross-reference from the index. If the word â€œFirewireâ€ appears on page 75 of the document, then page 75 appears in the index entry for â€œFirewireâ€. In an online presentation, thereâ€™s an anchor for â€œFirewareâ€ immediately after that word in the paragraph.
+
 Several aspects of index markup require special attention: whitespace around index terms, â€œSeeâ€ and â€œSee alsoâ€ entries, index markup in repeating and floating elements, and multiple indexes.
-*** Whitespace around index terms ***
+Whitespace around index terms
+
 Special care should be taken when entering indexterms into text, especially when one of the final output formats for your document is paginated. Most processing systems are forgiving about the amount of whitespace that you use. Outside of â€œline-specificâ€ environments such as literallayout and programlisting, you can indent lines, insert tabs or spaces at will, and otherwise rely on the processor to coalesce multiple spaces into a single space.
+
 However, when the processor is determining where a line or page break will occur in a long block of text, itâ€™s an almost universal convention that such breaks occur where whitespace occurs in the markup. Sometimes words have to be hyphenated, of course, but usually itâ€™s sufficient to break a line at a space and break a page between lines.
+
 This means that you want to avoid extraneous spaces between index terms and the words with which they are associated. Consider this example:
+
   1 <para>â€¦long, rambling paragraph about wood ducks
   2 <indexterm><primary>ducks</primary><secondary>wood</secondary>
     </indexterm> and the habitat that they occupy, etc., etc., etc.
   4 </para>
+
 At first glance this seems fine, but consider what happens if the processor needs to break this paragraph across two pages. There is a small, but nonzero, chance that the page break will occur at the space (introduced by the line break) following the word â€œducksâ€. If this happens, the anchor associated with the entry â€œducks, woodâ€ will appear on the page following the relevant words. To avoid this situation, never insert whitespace between the term and the indexterm:
+
   1 <para>â€¦long, rambling paragraph about wood
   2 ducks<indexterm><primary>ducks</primary><secondary>wood</secondary>
     </indexterm> and the habitat that they occupy, etc., etc., etc.
   4 </para>
+
 The whitespace after the indexterm is necessary, of course. Without it, when the indexterm is removed for presentation, the words â€œducksâ€ and â€œandâ€ will appear to run together.
-*** Index terms between block and floating elements ***
+Index terms between block and floating elements
 [PROD: BEGIN replacement material from Norm (see RT #60317, Thu Feb 18 08:04:23 2010) â€”Tools]
+
 Just as extraneous whitespace can lead to indexing errors, placing index terms between block elements may lead to indexing errors.
+
 If an index term occurs between two paragraphs, and a page break occurs between those two paragraphs, the processing system may associate the index entry with either page.
+
 This problem can be exacerbated by floating elements. Suppose an index term appears between two figures, both of which float to subsequent pages. There is no reliable way to predict what page the processing system will associate with that index term.
+
 If the index term in question marks the beginning or end of a range, the resulting range may contain too few, too many, or perhaps even only the wrong pages!
+
 As a general rule, itâ€™s best to avoid placing index terms between block elements that may be broken across multiple pages.
-*** Index terms in repeating and floating elements ***
+Index terms in repeating and floating elements
+
 When an indexterm appears in an element whose content may be repeated in more than one place, the anchor is only associated with what would be considered the â€œprimaryâ€ presentation (or presentations) of the element in the flow of the text. For example, in a traditional printed book, the title of a chapter might appear in the table of contents, in the running header, and in the body of the book on the first page of the chapter. If an indexterm is placed in the title, it serves as an anchor to only the first page of the chapter.
+
 If the processing expectations of an element are that it may be repeated several times and that each of these occurrences is equally â€œprimary,â€[4] then any indexterm occurring in that element should generate an anchor at each location where the content is repeated.
+
 If an indexterm appears in an element whose content may float, the anchor is to the location where the term occurs in the floated text. For example, if an indexterm occurs in a figure that floats to the top of some following page, the anchor is on the page where the figure actually occurs.
 [PROD: END replacement material from Norm (see RT #60317, Thu Feb 18 08:04:23 2010) â€”Tools]
-*** â€œSeeâ€ and â€œSee alsoâ€ entries ***
+â€œSeeâ€ and â€œSee alsoâ€ entries
+
 The use of see and seealso elements in an indexterm also has special semantics.
-A see entry directs the reader to another location in the index. In ExampleÂ 26,_â€œExample_index_termsâ€, the entry for USB:
+
+A see entry directs the reader to another location in the index. In Example 26, â€œExample index termsâ€, the entry for USB:
+
   1 <indexterm>
   2 <primary>USB</primary><see>Universal Serial Bus</see>
     </indexterm><indexterm>
+
 directs the reader to the entry for Universal Serial Bus. The resulting index will look something like this:
-Â Â 1Â â€¦
-Â Â 2Â UbiquitousÂ networking,Â 34,Â 44,Â 173-199
-Â Â Â Â UniversalÂ SerialÂ Bus,Â 50-55
-Â Â 4Â UpÂ time,Â 2,Â 5
-Â Â Â Â USB,Â seeÂ UniversalÂ SerialÂ Bus
-Â Â 6Â UselessÂ bits,Â 304,Â 411
-Â Â Â Â â€¦
+  1 â€¦
+  2 Ubiquitous networking, 34, 44, 173-199
+    Universal Serial Bus, 50-55
+  4 Up time, 2, 5
+    USB, see Universal Serial Bus
+  6 Useless bits, 304, 411
+    â€¦
+
 There are no page numbers associated with a see entry. In most environments, if there is at least one see entry for a particular term, it is an error to have any other kind of entry for that term.
+
 A seealso entry, on the other hand, directs the reader to other, possibly related terms in the index. We expect the index for â€œeSATAâ€ to look something like this:
-Â Â 1Â â€¦
-Â Â 2Â EnteringÂ markup,Â 14,Â 18,Â 22-33
-Â Â Â Â eSATA,Â 56,Â 58-61
-Â Â 4Â Â Â (seeÂ alsoÂ SerialÂ ATA)
-Â Â Â Â evaluatingÂ expressions,Â 44
-Â Â 6Â â€¦
+  1 â€¦
+  2 Entering markup, 14, 18, 22-33
+    eSATA, 56, 58-61
+  4   (see also Serial ATA)
+    evaluating expressions, 44
+  6 â€¦
+
 Itâ€™s entirely possible for a term to have several seealso entries.
-*** Multiple indexes ***
+Multiple indexes
 [PROD: Shifted <refsection> â€œIndex terms in repeating and floating elementsâ€ was originally above this one (see RT #60317, Thu Feb 18 08:04:23 2010) â€”Tools]
+
 Authors can choose to have several types of indexes: for example, function, command, and concept indexes. This can be achieved in DocBook with the type attribute. All of the indexterms with a particular type will be collected together in the index with the same type.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the class of index term
-      Enumerated values:
-      â€œsingularA singular index term
-  pagenum
-      Indicates the page on which this index term occurs in some version of the printed document
-  scope
-      Specifies the scope of the index term
-      Enumerated values:
-      â€œallâ€All indexes
-      â€œglobalThe global index (as for a combined index of a set of box)
-      â€œlocalâThe local index (the index for this document only)
-  significance
-      Specifies the significance of the term
-      Enumerated values:
-      â€œnormalâ€Normal
-      â€œpreferredPreferred
-  type
-      Specifies the target index for this term
-  zone
-      Specifies the IDs of the elements to which this term applies
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 244_elements.
-These elements contain indexterm: abbrev, accel, acknowledgements, acronym, address, annotation, answer, appendix, application, arg, article, artpagenums, attribution, authorinitials, bibliocoverage, bibliodiv, bibliography, biblioid, bibliolist, bibliomisc, bibliomset, bibliorelation, bibliosource, blockquote, bridgehead, callout, calloutlist, captionÂ (db.caption), captionÂ (db.html.caption), caution, chapter, citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, colophon, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, constraintdef, contractnum, contractsponsor, contrib, country, database, dedication, edition, email, emphasisÂ (db._emphasis), emphasisÂ (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, example, exceptionname, fax, figure, filename, firstname, firstterm, footnote, foreignphrase, formalpara, funcdef, funcparams, funcsynopsisinfo, function, glossary, glossdef, glossdiv, glossentry, glosslist,
-glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, important, index, indexdiv, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), initializer, interfacename, issuenum, itemizedlist, itermset, jobtitle, keycap, keycode, keysym, label, legalnotice, lineage, lineannotation, link, listitem, literal, literallayout, manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msgexplan, msglevel, msgorig, msgtext, note, olink, option, optional, orderedlist, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, partintro, personname, phone, phraseÂ (db._phrase), phraseÂ (db.phrase), pob, postcode, preface, primary, primaryie, procedure, productname, productnumber, programlisting, prompt, property, publishername, qandadiv, qandaset, question, quote, refdescriptor, refentry, refentrytitle, refmeta, refmiscinfo, refname, refpurpose, refsect1,
-refsect2, refsect3, refsection, refsynopsisdiv, releaseinfo, remark, replaceable, returnvalue, revdescription, revnumber, revremark, screen, secondary, secondaryie, sect1, sect2, sect3, sect4, sect5, section, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, setindex, shortaffil, sidebar, simpara, simplesect, state, step, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tableÂ (db.cals.table), tag, taskprerequisites, taskrelated, tasksummary, td, term, termdef, tertiary, tertiaryie, textobject, th, tip, title, titleabbrev, toc, tocdiv, tocentry, token, trademark, type, uri, userinput, variablelist, varname, volumenum, warning, wordasword, year.
-**** Children ****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the class of index term
+    Enumerated values:
+    â€œsingularâ€	
+
+    A singular index term
+pagenum
+
+    Indicates the page on which this index term occurs in some version of the printed document
+scope
+
+    Specifies the scope of the index term
+    Enumerated values:
+    â€œallâ€	
+
+    All indexes
+    â€œglobalâ€	
+
+    The global index (as for a combined index of a set of box)
+    â€œlocalâ€	
+
+    The local index (the index for this document only)
+significance
+
+    Specifies the significance of the term
+    Enumerated values:
+    â€œnormalâ€	
+
+    Normal
+    â€œpreferredâ€	
+
+    Preferred
+type
+
+    Specifies the target index for this term
+zone
+
+    Specifies the IDs of the elements to which this term applies
+
+Parents [+]
+This element occurs in 244 elements.
+Children
+
 The following elements occur in indexterm: primary, secondary, see, seealso, tertiary.
-***** See Also *****
-indexentry, indextermÂ (db.indexterm.startofrange), primary, primaryie, secondary, secondaryie, see, seealso, seealsoie, seeie, tertiary, tertiaryie
-***** Examples *****
+See Also
+
+indexentry, indexterm (db.indexterm.startofrange), primary, primaryie, secondary, secondaryie, see, seealso, seealsoie, seeie, tertiary, tertiaryie
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example indexterm</title>
-
+    
   4 <para>The Tiger<indexterm>
     <primary>Big Cats</primary>
   6 <secondary>Tigers</secondary></indexterm>
     is a very large cat indeed.
   8 </para>
-
+    
  10 </article>
+
 An example of a zone.
+
   1 <chapter xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example Chapter</title>
-
+    
   4 <indexterm zone="a1"><primary>Network Configuration</primary></indexterm>
-
+    
   6 <!-- other content here -->
-
+    
   8 <section xml:id="a1"><title>Configuring Your Network</title>
     <para>â€¦</para>
  10 </section>
-
+    
  12 </chapter>
-========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
 [4]No elements in DocBook V5.0 have these semantics.
-[Prev]Â                              [Home]                                Â [Next]
-indexterm (db.indexterm.endofrange)Â  [Up]  Â indexterm (db.indexterm.startofrange)
+Prev 	Home	 Next
+indexterm (db.indexterm.endofrange) 	Up	 indexterm (db.indexterm.startofrange)
+Last revised by Norman Walsh on 16 Jun 2011 (git hash: 7cf44d0f3aa4244c54913b42ac9cc634bd9b7fc9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

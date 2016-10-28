@@ -65,3 +65,74 @@ funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, retu
     </article>
 int rand();
 formalpara  [Up]   funcparams
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** funcdef *****
+funcdef — A function (subroutine) name and its return type.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o function
+          o phrase (db._phrase)
+          o replaceable
+          o type
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A funcdef contains the name of a programming language function and its return type.
+Within the funcdef, the function name is identified with function, and the rest of the content is assumed to be the return type.
+In the following definition, max is the name of the function and int is the return type:
+<funcdef>int <function>max</function></funcdef>
+**** Processing expectations ****
+Formatted inline. For a complete description of the processing expectations, see funcsynopsis.
+**** Parents ****
+These elements contain funcdef: funcprototype.
+*** Children [[+]][[+]] ***
+This element contains 18_elements.
+The following elements occur in funcdef: text, alt, anchor, annotation, biblioref, function, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, type, xref.
+***** See Also *****
+funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, returnvalue, varargs, void
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example funcdef</title>
+
+  4 <funcsynopsis>
+    <funcprototype>
+  6 <funcdef>int <function>rand</function></funcdef>
+      <void/>
+  8 </funcprototype>
+    </funcsynopsis>
+ 10
+    </article>
+int rand();
+[Prev]     [Home]      [Next]
+formalpara  [Up]   funcparams
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

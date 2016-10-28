@@ -24,3 +24,33 @@ The following elements occur in revision: author, authorinitials, date, revdescr
 ***** Examples *****
 See revhistory for an example that uses this element.
 revhistory  [Up]   revnumber
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** revision *****
+revision — An entry describing a single revision in the history of the revisions to a document.
+***** Synopsis *****
+    * Sequence of:
+          o revnumber?
+          o date
+          o Zero or more of:
+                # author
+                # authorinitials
+          o Optionally one of:
+                # revdescription
+                # revremark
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A revision contains information about a single revision to a document. Revisions are identified by a number and a date. They may also include the initials of the author, and additional remarks.
+**** Processing expectations ****
+The revisions are often presented in a list or table. In a tabular presentation, each revision most likely forms a row in the table.
+**** Parents ****
+These elements contain revision: revhistory.
+**** Children ****
+The following elements occur in revision: author, authorinitials, date, revdescription, revnumber, revremark.
+***** Examples *****
+See revhistory for an example that uses this element.
+[Prev]     [Home]     [Next]
+revhistory  [Up]   revnumber
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

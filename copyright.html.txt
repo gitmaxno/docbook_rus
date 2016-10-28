@@ -36,3 +36,45 @@ legalnotice, productname, trademark
  12
     </article>
 contrib  [Up]    coref
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** copyright *****
+copyright — Copyright information about a document.
+***** Synopsis *****
+    * Sequence of:
+          o One or more of:
+                # year
+          o Zero or more of:
+                # holder
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The copyright element holds information about the date(s) and holder(s) of a document copyright. If an extended block of text describing the copyright or other legal status is required, use legalnotice.
+The copyright element is confined to meta-information. For copyright statements in running text, see trademark.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+A displayed copyright notice usually includes the copyright symbol, ©, as generated text and is formatted with commas separating multiple years. Additional generated text, such as the legend “All rights reserved,” may also be generated.
+**** Parents ****
+These elements contain copyright: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in copyright: holder, year.
+***** See Also *****
+legalnotice, productname, trademark
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example copyright</title>
+  4   <copyright>
+        <year>2009</year>
+  6     <year>2010</year>
+        <holder>O'Reilly Media, Inc.</holder>
+  8   </copyright>
+    </info>
+ 10
+    <para>…</para>
+ 12
+    </article>
+[Prev]  [Home]  [Next]
+contrib  [Up]    coref
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

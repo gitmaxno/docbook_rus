@@ -214,3 +214,223 @@ A cooked entry is formatted, including additional text, so that it is easy to re
  14
     </bibliography>
 biblioentry  [Up]   biblioid
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** bibliography *****
+bibliography — A bibliography.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o One of:
+                # One or more of:
+                      # bibliodiv
+                # One or more of:
+                      # biblioentry
+                      # bibliomixed
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A bibliography. A DocBook bibliography may contain some introductory information, but its main content is a set of bibliography entries (either biblioentry or bibliomixed). These may occur directly inside the bibliography element or inside bibliodiv elements.
+**** Processing expectations ****
+Formatted as a displayed block. A bibliography in a book frequently causes a forced page break in print media.
+Some systems may display only those entries within a bibliography that are cited in the containing document. This may be an interchange issue. See Appendix D,_Interchanging_DocBook_Documents.
+The two styles of bibliography entry have quite different processing expectations. A biblioentry is “raw”; it contains a database-like collection of named fields. A bibliomixed entry is “cooked”; the fields occur in the order in which they will be presented and additional punctuation may be sprinkled between the fields.
+See biblioentry and bibliomixed for further discussion.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+*** Parents [[+]][[+]] ***
+This element occurs in 14_elements.
+These elements contain bibliography: appendix, article, book, chapter, glossary, part, preface, sect1, sect2, sect3, sect4, sect5, section.
+*** Children [[+]][[+]] ***
+This element contains 67_elements.
+The following elements occur in bibliography: address, anchor, annotation, bibliodiv, biblioentry, bibliolist, bibliomixed, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev,
+variablelist, warning.
+***** Examples *****
+The entries in a bibliography come in two general forms, “raw” and “cooked”. A raw entry is a database-like collection of named fields:
+  1 <bibliography xmlns='http://docbook.org/ns/docbook'>
+  2 <title>A Test Bibliography</title>
+
+  4 <bibliodiv><title>Books</title>
+
+  6 <biblioentry>
+      <abbrev>AhoSethiUllman96</abbrev>
+  8   <authorgroup>
+        <author><personname>
+ 10       <firstname>Alfred V.</firstname><surname>Aho</surname>
+        </personname></author>
+ 12     <author><personname>
+          <firstname>Ravi</firstname><surname>Sethi</surname>
+ 14     </personname></author>
+        <author><personname>
+ 16       <firstname>Jeffrey D.</firstname><surname>Ullman</surname>
+        </personname></author>
+ 18   </authorgroup>
+      <copyright><year>1996</year>
+ 20              <holder>Bell Telephone Laboratories, Inc.</holder></copyright>
+      <editor><personname>
+ 22     <firstname>James T.</firstname><surname>DeWolf</surname>
+    </personname></editor>
+ 24   <biblioid class="isbn">0-201-10088-6</biblioid>
+      <publisher>
+ 26     <publishername>Addison-Wesley Publishing Company</publishername>
+      </publisher>
+ 28   <title>Compilers, Principles, Techniques, and Tools</title>
+    </biblioentry>
+ 30
+    <biblioentry xreflabel="Kites75">
+ 32   <authorgroup>
+        <author><personname>
+ 34       <firstname>Andrea</firstname><surname>Bahadur</surname>
+        </personname></author>
+ 36     <author><personname>
+          <firstname>Mark</firstname><surname>Shwarek</surname>
+ 38     </personname></author>
+      </authorgroup>
+ 40   <copyright><year>1974</year><year>1975</year>
+         <holder>Product Development International Holding N. V.</holder>
+ 42      </copyright>
+      <biblioid class="isbn">0-88459-021-6</biblioid>
+ 44   <publisher>
+        <publishername>Plenary Publications International, Inc.</publishername>
+ 46   </publisher>
+      <title>Kites</title>
+ 48   <subtitle>Ancient Craft to Modern Sport</subtitle>
+      <pagenums>988-999</pagenums>
+ 50 </biblioentry>
+
+ 52 </bibliodiv>
+    <bibliodiv><title>Periodicals</title>
+ 54
+    <biblioentry>
+ 56   <abbrev>Walsh97</abbrev>
+      <biblioset relation='journal'>
+ 58     <title>XML: Principles, Tools, and Techniques</title>
+        <publisher>
+ 60       <publishername>O'Reilly &amp; Associates, Inc.</publishername>
+        </publisher>
+ 62     <biblioid class='issn'>1085-2301</biblioid>
+        <editor><personname>
+ 64       <firstname>Dan</firstname><surname>Connolly</surname>
+        </personname></editor>
+ 66   </biblioset>
+      <biblioset relation='article'>
+ 68     <title>A Guide to XML</title>
+        <author><personname>
+ 70       <surname>Walsh</surname><firstname>Norman</firstname>
+        </personname></author>
+ 72     <copyright><year>1997</year><holder>ArborText, Inc.</holder></copyright>
+        <pagenums>97-108</pagenums>
+ 74   </biblioset>
+    </biblioentry>
+ 76
+    </bibliodiv>
+ 78
+    </bibliography>
+A cooked entry is formatted, including additional text, so that it is easy to render.
+  1 <bibliography xmlns='http://docbook.org/ns/docbook'>
+  2 <title>References</title>
+
+  4 <bibliomixed>
+      <bibliomset relation='article'>Walsh, Norman.
+  6     <title role='article'>Introduction to Cascading Style Sheets</title>.
+      </bibliomset>
+  8   <bibliomset relation='journal'>
+        <title>The World Wide Web Journal</title>
+ 10     <volumenum>2</volumenum><issuenum>1</issuenum>.
+        <publishername>O'Reilly &amp; Associates, Inc.</publishername> and
+ 12     The World Wide Web Consortium. Winter, 1996</bibliomset>.
+    </bibliomixed>
+ 14
+    </bibliography>
+[Prev]      [Home]    [Next]
+biblioentry  [Up]   biblioid
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

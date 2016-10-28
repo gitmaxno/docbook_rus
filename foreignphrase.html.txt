@@ -76,3 +76,85 @@ abbrev, acronym, emphasis, phrase, quote, wordasword
   8 </article>
 Like so many others, it became a de facto standard.
 footnoteref  [Up]   formalpara
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** foreignphrase *****
+foreignphrase — A word or phrase in a language other than the primary language of the document.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The foreignphrase element can be used to mark up the text of a foreign word or phrase. “Foreign” in this context means that it is a language other than the primary language of the document and is not intended to be pejorative in any way.
+**** Processing expectations ****
+A foreignphrase is often given special typographic treatment, such as italics.
+*** Parents [[+]][[+]] ***
+This element occurs in 54_elements.
+These elements contain foreignphrase: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** Children [[+]][[+]] ***
+This element contains 41_elements.
+The following elements occur in foreignphrase: text, abbrev, acronym, anchor, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, coref, database, date, editor, emphasis (db.emphasis), firstterm, footnote, footnoteref, foreignphrase, glossterm, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, jobtitle, link, olink, org, orgname, person, personname, phrase (db.phrase), productname, productnumber, quote, subscript, superscript, trademark, wordasword, xref.
+***** See Also *****
+abbrev, acronym, emphasis, phrase, quote, wordasword
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example foreignphrase</title>
+
+  4 <para>Like so many others, it became a <foreignphrase>de facto</foreignphrase>
+    standard.
+  6 </para>
+
+  8 </article>
+Like so many others, it became a de facto standard.
+[Prev]      [Home]      [Next]
+footnoteref  [Up]   formalpara
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

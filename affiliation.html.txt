@@ -27,3 +27,36 @@ The following elements occur in affiliation: address, jobtitle, org, orgdiv, org
 ***** See Also *****
 firstname, honorific, jobtitle, lineage, orgdiv, orgname, othername, shortaffil, surname
 address  [Up]      alt
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** affiliation *****
+affiliation — The institutional affiliation of an individual.
+***** Synopsis *****
+    * Sequence of:
+          o shortaffil?
+          o Zero or more of:
+                # jobtitle
+          o One of:
+                # org?
+                # Sequence of:
+                      # orgname?
+                      # Zero or more of:
+                            # orgdiv
+                      # Zero or more of:
+                            # address
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The institutional affiliation of an author, contributor, or other individual.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+**** Parents ****
+These elements contain affiliation: author, collab, editor, org, othercredit, person.
+**** Children ****
+The following elements occur in affiliation: address, jobtitle, org, orgdiv, orgname, shortaffil.
+***** See Also *****
+firstname, honorific, jobtitle, lineage, orgdiv, orgname, othername, shortaffil, surname
+[Prev]  [Home]  [Next]
+address  [Up]      alt
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

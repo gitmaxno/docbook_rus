@@ -37,3 +37,46 @@ confdates, confnum, confsponsor, conftitle, contractnum, contractsponsor
  14
     </article>
 confdates  [Up]   confnum
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** confgroup *****
+confgroup — A wrapper for document meta-information about a conference.
+***** Synopsis *****
+    * Zero or more of:
+          o address
+          o confdates
+          o confnum
+          o confsponsor
+          o conftitle
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+If a document—for example, an article—is written in connection with a conference, the elements in this wrapper are used to hold information about the conference: titles, sponsors, addresses, dates, etc.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+**** Parents ****
+These elements contain confgroup: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in confgroup: address, confdates, confnum, confsponsor, conftitle.
+***** See Also *****
+confdates, confnum, confsponsor, conftitle, contractnum, contractsponsor
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example confgroup</title>
+  4   <confgroup>
+        <confdates>April, 1998</confdates>
+  6     <conftitle>The World Wide Web Conference</conftitle>
+        <confnum>7</confnum>
+  8     <address>Brisbane, Australia</address>
+        <confsponsor>World Wide Web Conference Committee (W3C3)</confsponsor>
+ 10   </confgroup>
+    </info>
+ 12
+    <para>…</para>
+ 14
+    </article>
+[Prev]    [Home]   [Next]
+confdates  [Up]   confnum
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

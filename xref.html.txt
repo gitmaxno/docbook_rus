@@ -67,3 +67,76 @@ anchor, link, olink
  36 </chapter>
     </book>
 wordasword  [Up]     year
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** xref *****
+xref — A cross reference to another part of the document.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * endterm (IDREF)
+    * xrefstyle
+Required attributes are shown in bold.
+***** Description *****
+The xref element forms a cross-reference from the location of the xref to the element to which it points. Unlike link and the other cross-referencing elements, xref is empty. The processing system has to generate appropriate cross-reference text for the reader.
+**** Processing expectations ****
+Under ordinary circumstances, the xref points to some element with its linkend attribute and the processing system generates appropriate cross-reference text. There are three ways for the author to influence the generated text:
+   1. If the endterm attribute is specified on xref, the content of the element pointed to by endterm will be used as the text of the cross-reference.
+   2. Otherwise, if the object pointed to has a specified xreflabel, the content of that attribute will be used as the cross-reference text.
+   3. Finally, the author may specify a keyword (or other information) in the xrefstyle attribute. Unlike endterm and xreflabel which have rigid semantics, the content of the xrefstyle attribute is simply additional information for the processing system. What effect it has, if any, is dependent on the processing system.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  endterm
+      Points to the element whose content is to be used as the text of the link
+  xrefstyle
+      Specifies a keyword or keywords identifying additional style information
+*** Parents [[+]][[+]] ***
+This element occurs in 170_elements.
+These elements contain xref: abbrev, accel, acronym, address, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, member,
+methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
+***** See Also *****
+anchor, link, olink
+***** Examples *****
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <title>An Example Book</title>
+
+  4 <chapter xml:id="ch01"><title>XRef Samples</title>
+    <para>This paragraph demonstrates several features of <tag>XRef</tag>.
+  6 </para>
+
+  8 <itemizedlist>
+      <listitem><para>A straight link generates the cross-reference text:
+ 10     <xref linkend="ch02"/>.
+      </para></listitem>
+ 12   <listitem><para>A link to an element with an
+        <tag class="attribute">XRefLabel</tag>:
+ 14   <xref linkend="ch03"/>.
+      </para></listitem>
+ 16   <listitem><para>A link with an <tag class="attribute">EndTerm</tag>:
+        <xref linkend="ch04" endterm="ch04short"/>.
+ 18   </para></listitem>
+    </itemizedlist>
+ 20 </chapter>
+
+ 22 <chapter xml:id="ch02">
+      <title>The Second Chapter</title>
+ 24   <para>Some content here</para>
+    </chapter>
+ 26
+    <chapter xml:id="ch03" xreflabel="Chapter the Third">
+ 28   <title>The Third Chapter</title>
+      <para>Some content here</para>
+ 30 </chapter>
+
+ 32 <chapter xml:id="ch04">
+      <title>The Fourth Chapter</title>
+ 34   <titleabbrev xml:id="ch04short">Chapter 4</titleabbrev>
+      <para>Some content here</para>
+ 36 </chapter>
+    </book>
+[Prev]     [Home]  [Next]
+wordasword  [Up]     year
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

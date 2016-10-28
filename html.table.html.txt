@@ -1,176 +1,267 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+table (db.html.table)
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** table (db.html.table) *****
-table� —� A formal (captioned) HTML table in a document.
-***** Synopsis *****
-    * Sequence of:
-          o info?� (db.titleforbidden.info)
-          o caption� (db.html.caption)
-          o One of:
-                # Zero or more of:
-                      # col
-                # Zero or more of:
-                      # colgroup
-          o thead?� (db.html.thead)
-          o tfoot?� (db.html.tfoot)
-          o One of:
-                # One or more of:
-                      # tbody� (db.html.tbody)
-                # One or more of:
-                      # tr
-***** Attributes *****
-Common_attributes.
+table — A formal (captioned) HTML table in a document.
+Synopsis
+
+    Sequence of:
+        info? (db.titleforbidden.info)
+        caption (db.html.caption)
+        One of:
+            Zero or more of:
+                col
+            Zero or more of:
+                colgroup
+        thead? (db.html.thead)
+        tfoot? (db.html.tfoot)
+        One of:
+            One or more of:
+                tbody (db.html.tbody)
+            One or more of:
+                tr
+
+Attributes
+
+Common attributes.
+
 Additional attributes:
-    * floatstyle
-    * label
-    * orient (enumeration)
-          o “land”
-          o “port”
-    * pgwide (enumeration)
-          o “0”
-          o “1”
-    * summary
-    * width (enumeration)
-          o xsd:integer
-          o xsd:string (Pattern: “[0-9]+%”)
-    * border (nonNegativeInteger)
-    * frame (enumeration)
-          o “void”
-          o “above”
-          o “below”
-          o “hsides”
-          o “lhs”
-          o “rhs”
-          o “vsides”
-          o “box”
-          o “border”
-    * rules (enumeration)
-          o “none”
-          o “groups”
-          o “rows”
-          o “cols”
-          o “all”
-    * cellspacing (enumeration)
-          o xsd:integer
-          o xsd:string (Pattern: “[0-9]+%”)
-    * cellpadding (enumeration)
-          o xsd:integer
-          o xsd:string (Pattern: “[0-9]+%”)
-    * tabstyle
-***** Additional Constraints *****
-    * example must not occur in the descendants of table
-    * figure must not occur in the descendants of table
-    * equation must not occur in the descendants of table
-    * informaltable must not occur in the descendants of table
-    * caution must not occur in the descendants of table
-    * important must not occur in the descendants of table
-    * note must not occur in the descendants of table
-    * tip must not occur in the descendants of table
-    * warning must not occur in the descendants of table
-***** Description *****
+
+    floatstyle
+    label
+    orient (enumeration)
+        “land”
+        “port”
+    pgwide (enumeration)
+        “0”
+        “1”
+    summary
+    width (enumeration)
+        xsd:integer
+        xsd:string (Pattern: “[0-9]+%”)
+    border (nonNegativeInteger)
+    frame (enumeration)
+        “void”
+        “above”
+        “below”
+        “hsides”
+        “lhs”
+        “rhs”
+        “vsides”
+        “box”
+        “border”
+    rules (enumeration)
+        “none”
+        “groups”
+        “rows”
+        “cols”
+        “all”
+    cellspacing (enumeration)
+        xsd:integer
+        xsd:string (Pattern: “[0-9]+%”)
+    cellpadding (enumeration)
+        xsd:integer
+        xsd:string (Pattern: “[0-9]+%”)
+    tabstyle
+
+Additional Constraints
+
+    example must not occur in the descendants of table
+    figure must not occur in the descendants of table
+    equation must not occur in the descendants of table
+    informaltable must not occur in the descendants of table
+    caution must not occur in the descendants of table
+    important must not occur in the descendants of table
+    note must not occur in the descendants of table
+    tip must not occur in the descendants of table
+    warning must not occur in the descendants of table
+
+Description
+
 This table element identifies a formal (captioned) HTML table. DocBook allows either CALS or HTML tables, both of which describe tables geometrically using rows, columns, and cells.
+
 HTML tables may include column headers and footers. To identify a row header, use a th in the row.
-**** Why aren’t HTML tables in the HTML namespace? ****
+
 HTML tables were introduced in DocBook V4.3 which was not in a namespace and was defined normatively with a DTD. DTDs do not support namespaces very well. The Technical Committee decided to simply add the HTML element names to DocBook. This solution simplified specification, avoided issues of namespace support in DTDs, and solved the most compelling use case: cut-and-paste of simple, text-only HTML tables into DocBook.
+
 Strictly speaking, it would be incorrect to put these elements in the XHTML namespace because the DocBook common attributes are allowed on all of them and the td and th elements have very different content models than their HTML counterparts.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block. This element is expected to obey the semantics described in Tables, as specified in XHTML 1.0 [XHTML].
-**** Attributes ****
-Common_attributes.
-  border
-      Specifies the width (in pixels only) of the frame around a table.
-  cellpadding
-      Specifies the amount of space between the border of the cell and its contents. If the value of this attribute is a pixel length, all four margins should be this distance from the contents. If the value of the attribute is a percentage length, the top and bottom margins should be equally separated from the content based on a percentage of the available vertical space, and the left and right margins should be equally separated from the content based on a percentage of the available horizontal space.
-      Enumerated values:
-      xsd:integer                     An explicit padding.
-      xsd:string (Pattern: “[0-9]+%�A percentage padding.
-  cellspacing
-      Specifies how much space the user agent should leave between the left side of the table and the left-hand side of the leftmost column, the top of the table and the top side of the topmost row, and so on for the right and bottom of the table. The attribute also specifies the amount of space to leave between cells.
-      Enumerated values:
-      xsd:integer                     An explicit spacing.
-      xsd:string (Pattern: “[0-9]+%�A percentage spacing.
-  class
-      This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
-  floatstyle
-      Specifies style information to be used when rendering the float
-  frame
-      Specifies which sides of the frame surrounding a table will be visible.
-      Enumerated values:
-      “void�No sides. This is the default value.
-      “above�The top side only.
-      “below�The bottom side only.
-      “hsidesThe top and bottom sides only.
-      “lhs”The left-hand side only.
-      “rhs”The right-hand side only.
-      “vsidesThe right and left sides only.
-      “box”All four sides.
-      “borderAll four sides.
-  label
-      Specifies an identifying string for presentation purposes
-  lang
-      This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
-  onclick
-      Occurs when the pointing device button is clicked over an element.
-  ondblclick
-      Occurs when the pointing device button is double clicked over an element.
-  onkeydown
-      Occurs when a key is pressed down over an element.
-  onkeypress
-      Occurs when a key is pressed and released over an element.
-  onkeyup
-      Occurs when a key is released over an element.
-  onmousedown
-      Occurs when the pointing device button is pressed over an element.
-  onmousemove
-      Occurs when the pointing device is moved while it is over an element.
-  onmouseout
-      Occurs when the pointing device is moved away from an element.
-  onmouseover
-      Occurs when the pointing device is moved onto an element.
-  onmouseup
-      Occurs when the pointing device button is released over an element.
-  orient
-      Specifies the orientation of the table
-      Enumerated values:
-      “land90 degrees counter-clockwise from the rest of the text flow.
-      “portThe same orientation as the rest of the text flow.
-  pgwide
-      Indicates if the element is rendered across the column or the page
-      Enumerated values:
-      “0The element should be rendered in the current text flow (with the flow column width).
-      “1The element should be rendered across the full text page.
-  rules
-      Specifies which rules will appear between cells within a table. The rendering of rules is user agent dependent.
-      Enumerated values:
-      “none�No rules. This is the default value.
-      “groupsRules will appear between row groups (see thead, tfoot, and tbody) and column groups (see colgroup and col) only.
-      “rows�Rules will appear between rows only.
-      “cols�Rules will appear between columns only.
-      “all”Rules will appear between all rows and columns.
-  style
-      This attribute specifies style information for the current element.
-  summary
-      Provides a summary of the table's purpose and structure for user agents rendering to non-visual media such as speech and Braille.
-  tabstyle
-      Specifies the table style
-  title
-      This attribute offers advisory information about the element for which it is set.
-  width
-      Specifies the desired width of the entire table and is intended for visual user agents. When the value is a percentage value, the value is relative to the user agent's available horizontal space. In the absence of any width specification, table width is determined by the user agent.
-      Enumerated values:
-      xsd:integer                     An explicit width.
-      xsd:string (Pattern: “[0-9]+%�A percentage width.
-*** Parents� [[+]][[+]] ***
-This element occurs in 72_elements.
-These elements contain table: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption� (db.caption), caution, chapter, colophon, constraintdef, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
-**** Children ****
-The following elements occur in table: caption� (db.html.caption), col, colgroup, info� (db.titleforbidden.info), tbody� (db.html.tbody), tfoot� (db.html.tfoot), thead� (db.html.thead), tr.
-***** See Also *****
-colspec, entry, entrytbl, equation, example, figure, informalequation, informalexample, informalfigure, informaltable, row, spanspec, table� (db.cals.table), tbody, tfoot, tgroup, thead
-***** Examples *****
+Attributes
+
+Common attributes.
+
+border
+
+    Specifies the width (in pixels only) of the frame around a table.
+cellpadding
+
+    Specifies the amount of space between the border of the cell and its contents. If the value of this attribute is a pixel length, all four margins should be this distance from the contents. If the value of the attribute is a percentage length, the top and bottom margins should be equally separated from the content based on a percentage of the available vertical space, and the left and right margins should be equally separated from the content based on a percentage of the available horizontal space.
+    Enumerated values:
+    xsd:integer	
+
+    An explicit padding.
+    xsd:string (Pattern: “[0-9]+%”)	
+
+    A percentage padding.
+cellspacing
+
+    Specifies how much space the user agent should leave between the left side of the table and the left-hand side of the leftmost column, the top of the table and the top side of the topmost row, and so on for the right and bottom of the table. The attribute also specifies the amount of space to leave between cells.
+    Enumerated values:
+    xsd:integer	
+
+    An explicit spacing.
+    xsd:string (Pattern: “[0-9]+%”)	
+
+    A percentage spacing.
+class
+
+    This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
+floatstyle
+
+    Specifies style information to be used when rendering the float
+frame
+
+    Specifies which sides of the frame surrounding a table will be visible.
+    Enumerated values:
+    “void”	
+
+    No sides. This is the default value.
+    “above”	
+
+    The top side only.
+    “below”	
+
+    The bottom side only.
+    “hsides”	
+
+    The top and bottom sides only.
+    “lhs”	
+
+    The left-hand side only.
+    “rhs”	
+
+    The right-hand side only.
+    “vsides”	
+
+    The right and left sides only.
+    “box”	
+
+    All four sides.
+    “border”	
+
+    All four sides.
+label
+
+    Specifies an identifying string for presentation purposes
+lang
+
+    This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
+onclick
+
+    Occurs when the pointing device button is clicked over an element.
+ondblclick
+
+    Occurs when the pointing device button is double clicked over an element.
+onkeydown
+
+    Occurs when a key is pressed down over an element.
+onkeypress
+
+    Occurs when a key is pressed and released over an element.
+onkeyup
+
+    Occurs when a key is released over an element.
+onmousedown
+
+    Occurs when the pointing device button is pressed over an element.
+onmousemove
+
+    Occurs when the pointing device is moved while it is over an element.
+onmouseout
+
+    Occurs when the pointing device is moved away from an element.
+onmouseover
+
+    Occurs when the pointing device is moved onto an element.
+onmouseup
+
+    Occurs when the pointing device button is released over an element.
+orient
+
+    Specifies the orientation of the table
+    Enumerated values:
+    “land”	
+
+    90 degrees counter-clockwise from the rest of the text flow.
+    “port”	
+
+    The same orientation as the rest of the text flow.
+pgwide
+
+    Indicates if the element is rendered across the column or the page
+    Enumerated values:
+    “0”	
+
+    The element should be rendered in the current text flow (with the flow column width).
+    “1”	
+
+    The element should be rendered across the full text page.
+rules
+
+    Specifies which rules will appear between cells within a table. The rendering of rules is user agent dependent.
+    Enumerated values:
+    “none”	
+
+    No rules. This is the default value.
+    “groups”	
+
+    Rules will appear between row groups (see thead, tfoot, and tbody) and column groups (see colgroup and col) only.
+    “rows”	
+
+    Rules will appear between rows only.
+    “cols”	
+
+    Rules will appear between columns only.
+    “all”	
+
+    Rules will appear between all rows and columns.
+style
+
+    This attribute specifies style information for the current element.
+summary
+
+    Provides a summary of the table's purpose and structure for user agents rendering to non-visual media such as speech and Braille.
+tabstyle
+
+    Specifies the table style
+title
+
+    This attribute offers advisory information about the element for which it is set.
+width
+
+    Specifies the desired width of the entire table and is intended for visual user agents. When the value is a percentage value, the value is relative to the user agent's available horizontal space. In the absence of any width specification, table width is determined by the user agent.
+    Enumerated values:
+    xsd:integer	
+
+    An explicit width.
+    xsd:string (Pattern: “[0-9]+%”)	
+
+    A percentage width.
+
+Parents [+]
+This element occurs in 72 elements.
+Children
+
+The following elements occur in table: caption (db.html.caption), col, colgroup, info (db.titleforbidden.info), tbody (db.html.tbody), tfoot (db.html.tfoot), thead (db.html.thead), tr.
+See Also
+
+colspec, entry, entrytbl, equation, example, figure, informalequation, informalexample, informalfigure, informaltable, row, spanspec, table (db.cals.table), tbody, tfoot, tgroup, thead
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example table</title>
-
+    
   4 <table xml:id="ex.htmltable">
     <caption>Sample HTML Table</caption>
   6 <thead>
@@ -186,10 +277,14 @@ colspec, entry, entrytbl, equation, example, figure, informalequation, informale
  16   </tr>
     </tbody>
  18 </table>
-
+    
  20 </article>
-Head 1 Head 2
-Body 1 Body 2
+
+Head 1 	Head 2
+Body 1 	Body 2
 Sample HTML Table
-[Prev]�                [Home] � [Next]
-table (db.cals.table)�  [Up]     � tag
+Prev 	Home	 Next
+table (db.cals.table) 	Up	 tag
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

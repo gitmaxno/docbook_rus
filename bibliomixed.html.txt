@@ -91,3 +91,100 @@ The following elements occur in bibliomixed: text, *:*, abbrev, abstract, acrony
 ***** See Also *****
 biblioentry, bibliomisc, bibliomset, biblioset
 bibliomisc  [Up]   bibliomset
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** bibliomixed *****
+bibliomixed — An entry in a Bibliography.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o citebiblioid
+          o citerefentry
+          o citetitle
+          o person
+          o personblurb
+          o personname
+          o subtitle
+          o title
+          o titleabbrev
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o “Info” elements [[+]] [[-]]
+                * *:*
+                * abstract
+                * address
+                * annotation
+                * artpagenums
+                * author
+                * authorgroup
+                * authorinitials
+                * bibliocoverage
+                * biblioid
+                * bibliomisc
+                * bibliomset
+                * bibliorelation
+                * biblioset
+                * bibliosource
+                * collab
+                * confgroup
+                * contractnum
+                * contractsponsor
+                * copyright
+                * cover
+                * date
+                * edition
+                * editor
+                * extendedlink
+                * issuenum
+                * itermset
+                * keywordset
+                * legalnotice
+                * mediaobject
+                * org
+                * orgname
+                * othercredit
+                * pagenums
+                * printhistory
+                * productname
+                * productnumber
+                * pubdate
+                * publisher
+                * publishername
+                * releaseinfo
+                * revhistory
+                * seriesvolnums
+                * subjectset
+                * volumenum
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A bibliomixed is an entry in a bibliography. The contents of bibliomixed include all necessary punctuation for formatting. Presentation systems usually display all of the elements in a bibliomixed.
+**** Processing expectations ****
+Formatted as a displayed block.
+A bibliomixed entry is “cooked.” In addition to named fields, it can contain interspersed text to provide punctuation and other formatting information.
+The processing system is generally expected to present each and every element in the entry, and all interspersed #PCDATA, in the order in which it occurs.
+**** Parents ****
+These elements contain bibliomixed: bibliodiv, bibliography, bibliolist.
+*** Children [[+]][[+]] ***
+This element contains 68_elements.
+The following elements occur in bibliomixed: text, *:*, abbrev, abstract, acronym, address, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, biblioset, bibliosource, citebiblioid, citerefentry, citetitle, collab, confgroup, contractnum, contractsponsor, copyright, coref, cover, date, edition, editor, emphasis (db.emphasis), extendedlink, firstterm, footnote, footnoteref, foreignphrase, glossterm, issuenum, itermset, keywordset, legalnotice, mediaobject, org, orgname, othercredit, pagenums, person, personblurb, personname, phrase (db.phrase), printhistory, productname, productnumber, pubdate, publisher, publishername, quote, releaseinfo, revhistory, seriesvolnums, subjectset, subscript, subtitle, superscript, title, titleabbrev, volumenum, wordasword.
+***** See Also *****
+biblioentry, bibliomisc, bibliomset, biblioset
+[Prev]     [Home]      [Next]
+bibliomisc  [Up]   bibliomset
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

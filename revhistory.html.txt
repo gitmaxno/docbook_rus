@@ -54,3 +54,63 @@ Revision History
 0.91 11 Dec 1996 ndw Bug fixes
 0.90 30 Nov 1996 ndw First beta release
 revdescription  [Up]   revision
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** revhistory *****
+revhistory — A history of the revisions to a document.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # revision
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A revhistory is a structure for documenting a history of changes, specifically, a history of changes to the document or section in which it occurs.
+DocBook does not mandate an order for revisions: ascending order by date, descending order by date, and orders based on some other criteria are all equally acceptable.
+**** Processing expectations ****
+Formatted as a displayed block. A tabular or list presentation is most common.
+The order of revisions within a revhistory (e.g., ascending or descending date order) is not mandated by DocBook.
+*** Parents [[+]][[+]] ***
+This element occurs in 82_elements.
+These elements contain revhistory: acknowledgements, annotation, answer, appendix, article, bibliodiv, biblioentry, bibliography, bibliolist, bibliomixed, bibliomset, biblioset, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in revhistory: info (db.titleforbidden.info), info (db.titleonly.info), revision, title, titleabbrev.
+***** See Also *****
+date, edition, printhistory, pubdate, releaseinfo
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example revhistory</title>
+
+  4 <revhistory>
+
+  6 <revision>
+      <revnumber>0.91</revnumber>
+  8   <date>1996-12-11</date>
+      <authorinitials>ndw</authorinitials>
+ 10   <revremark>Bug fixes</revremark>
+    </revision>
+ 12
+    <revision>
+ 14   <revnumber>0.90</revnumber>
+      <date>1996-11-30</date>
+ 16   <authorinitials>ndw</authorinitials>
+      <revremark>First beta release</revremark>
+ 18 </revision>
+
+ 20 </revhistory>
+
+ 22 </article>
+Revision History
+0.91 11 Dec 1996 ndw Bug fixes
+0.90 30 Nov 1996 ndw First beta release
+[Prev]         [Home]    [Next]
+revdescription  [Up]   revision
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -28,3 +28,37 @@ The following elements occur in funcprototype: funcdef, modifier, paramdef, vara
 ***** See Also *****
 funcdef, funcparams, funcsynopsisinfo, function, paramdef, parameter, returnvalue, varargs, void
 funcparams  [Up]   funcsynopsis
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** funcprototype *****
+funcprototype — The prototype of a function.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # modifier
+          o funcdef
+          o One of:
+                # Sequence of:
+                      # One or more of:
+                            # paramdef
+                      # varargs?
+                # varargs
+                # void
+          o Zero or more of:
+                # modifier
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A wrapper for a function prototype in a funcsynopsis.
+**** Processing expectations ****
+See funcsynopsis.
+**** Parents ****
+These elements contain funcprototype: funcsynopsis.
+**** Children ****
+The following elements occur in funcprototype: funcdef, modifier, paramdef, varargs, void.
+***** See Also *****
+funcdef, funcparams, funcsynopsisinfo, function, paramdef, parameter, returnvalue, varargs, void
+[Prev]     [Home]        [Next]
+funcparams  [Up]   funcsynopsis
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -64,3 +64,73 @@ accel, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, keycap, k
  12 </article>
 To move a highlighted region, use Shift+Button1 and drag the text to the new location.
 keycode  [Up]   keysym
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** keycombo *****
+keycombo — A combination of input actions.
+***** Synopsis *****
+    * One or more of:
+          o keycap
+          o keycombo
+          o keysym
+          o mousebutton
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * Exactly one of:
+          o action (enumeration)
+                # “click”
+                # “double-click”
+                # “press”
+                # “seq”
+                # “simul”
+          o Each of:
+                # action (enumeration)
+                      # “other”
+                # otheraction
+Required attributes are shown in bold.
+***** Description *****
+For actions that require multiple keystrokes, mouse actions, or other physical input selections, the keycombo element provides a wrapper for the entire set of events.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  action
+      Identifies the nature of the action taken. If keycombo contains more than one element, simul is the default, otherwise there is no default.
+      Enumerated values:
+      “click”    A (single) mouse click.
+      “double-clickA double mouse click.
+      “press”    A mouse or key press.
+      “seq”      Sequential clicks or presses.
+      “simul”    Simultaneous clicks or presses.
+  action
+      Identifies the nature of the action taken
+      Enumerated values:
+      “otherIndicates a non-standard action
+  otheraction
+      Identifies the non-standard action in some unspecified way.
+*** Parents [[+]][[+]] ***
+This element occurs in 52_elements.
+These elements contain keycombo: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, keycombo, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, shortcut, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+**** Children ****
+The following elements occur in keycombo: keycap, keycombo, keysym, mousebutton.
+***** See Also *****
+accel, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, keycap, keycode, keysym, menuchoice, mousebutton, shortcut
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example keycombo</title>
+
+  4 <para>To move a highlighted region, use
+    <keycombo action='simul'>
+  6   <keycap>Shift</keycap>
+      <mousebutton>Button1</mousebutton>
+  8 </keycombo>
+    and drag the text to the new location.
+ 10 </para>
+
+ 12 </article>
+To move a highlighted region, use Shift+Button1 and drag the text to the new location.
+[Prev]  [Home]  [Next]
+keycode  [Up]   keysym
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

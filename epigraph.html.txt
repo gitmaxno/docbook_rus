@@ -26,3 +26,35 @@ The following elements occur in epigraph: anchor, attribution, formalpara, info 
 ***** See Also *****
 abstract, attribution, blockquote, sidebar
 envar   [Up]   equation
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** epigraph *****
+epigraph — A short inscription at the beginning of a document or component.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o attribution?
+          o One or more of:
+                # literallayout
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An epigraph is a short inscription, often a quotation or poem, set at the beginning of a document or component. Epigraphs are usually related somehow to the content that follows them and may help set the tone for the component.
+**** Processing expectations ****
+Formatted as a displayed block.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain epigraph: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in epigraph: anchor, attribution, formalpara, info (db.titleforbidden.info), literallayout, para, simpara.
+***** See Also *****
+abstract, attribution, blockquote, sidebar
+[Prev] [Home]    [Next]
+envar   [Up]   equation
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

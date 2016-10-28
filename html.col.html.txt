@@ -1,88 +1,143 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+col
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** col *****
-col� —� Specifications for a column in an HTML table.
-***** Synopsis *****
-    * empty
-***** Attributes *****
+col — Specifications for a column in an HTML table.
+Synopsis
+
+    empty
+
+Attributes
+
 Attributes:
-    * align (enumeration)
-          o “left”
-          o “center”
-          o “right”
-          o “justify”
-          o “char”
-    * char
-    * charoff (enumeration)
-          o xsd:integer
-          o xsd:string (Pattern: “[0-9]+%”)
-    * span (nonNegativeInteger)
-    * valign (enumeration)
-          o “top”
-          o “middle”
-          o “bottom”
-          o “baseline”
-    * width
-***** Description *****
+
+    align (enumeration)
+        “left”
+        “center”
+        “right”
+        “justify”
+        “char”
+    char
+    charoff (enumeration)
+        xsd:integer
+        xsd:string (Pattern: “[0-9]+%”)
+    span (nonNegativeInteger)
+    valign (enumeration)
+        “top”
+        “middle”
+        “bottom”
+        “baseline”
+    width
+
+Description
+
 Identifies a column specification in an HTML table.
-**** Processing expectations ****
+Processing expectations
+
 Processed like an HTML col.
-**** Attributes ****
-  align
-      Specifies the alignment of data and the justification of text in a cell.
-      Enumerated values:
-      “left”Left-flush data/Left-justify text. This is the default value for table data.
-      “center�Center data/Center-justify text. This is the default value for table headers.
-      “right�Right-flush data/Right-justify text.
-      “justifyDouble-justify text.
-      “char”Align text around a specific character. If a user agent doesn't support character alignment, behavior in the presence of this value is unspecified.
-  char
-      This attribute specifies a single character within a text fragment to act as an axis for alignment. The default value for this attribute is the decimal point character for the current language as set by the lang attribute (e.g., the period in English and the comma in French). User agents are not required to support this attribute.
-  charoff
-      When present, this attribute specifies the offset to the first occurrence of the alignment character on each line. If a line doesn't include the alignment character, it should be horizontally shifted to end at the alignment position. When charoff is used to set the offset of an alignment character, the direction of offset is determined by the current text direction (set by the dir attribute). In left-to-right texts (the default), offset is from the left margin. In right-to-left texts, offset is from the right margin. User agents are not required to support this attribute.
-      Enumerated values:
-      xsd:integer                     An explicit offset.
-      xsd:string (Pattern: “[0-9]+%�A percentage offset.
-  class
-      This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
-  lang
-      This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
-  onclick
-      Occurs when the pointing device button is clicked over an element.
-  ondblclick
-      Occurs when the pointing device button is double clicked over an element.
-  onkeydown
-      Occurs when a key is pressed down over an element.
-  onkeypress
-      Occurs when a key is pressed and released over an element.
-  onkeyup
-      Occurs when a key is released over an element.
-  onmousedown
-      Occurs when the pointing device button is pressed over an element.
-  onmousemove
-      Occurs when the pointing device is moved while it is over an element.
-  onmouseout
-      Occurs when the pointing device is moved away from an element.
-  onmouseover
-      Occurs when the pointing device is moved onto an element.
-  onmouseup
-      Occurs when the pointing device button is released over an element.
-  span
-      This attribute, whose value must be an integer > 0, specifies the number of columns “spanned” by the col element; the col element shares its attributes with all the columns it spans. The default value for this attribute is 1 (i.e., a single column). If the span attribute is set to N > 1, the current col element shares its attributes with the next N-1 columns.
-  style
-      This attribute specifies style information for the current element.
-  title
-      This attribute offers advisory information about the element for which it is set.
-  valign
-      Specifies the vertical position of data within a cell.
-      Enumerated values:
-      “top”  Cell data is flush with the top of the cell.
-      “middle�Cell data is centered vertically within the cell. This is the default value.
-      “bottom�Cell data is flush with the bottom of the cell.
-      “baselineAll cells in the same row as a cell whose valign attribute has this value should have their textual data positioned so that the first text line occurs on a baseline common to all cells in the row. This constraint does not apply to subsequent text lines in these cells.
-  width
-      Specifies a default width for each column spanned by the current col element. It has the same meaning as the width attribute for the colgroup element and overrides it.
-**** Parents ****
-These elements contain col: colgroup, informaltable� (db.html.informaltable), table� (db.html.table).
-[Prev]� [Home]   � [Next]
-code�    [Up]  � colgroup
+Attributes
+
+align
+
+    Specifies the alignment of data and the justification of text in a cell.
+    Enumerated values:
+    “left”	
+
+    Left-flush data/Left-justify text. This is the default value for table data.
+    “center”	
+
+    Center data/Center-justify text. This is the default value for table headers.
+    “right”	
+
+    Right-flush data/Right-justify text.
+    “justify”	
+
+    Double-justify text.
+    “char”	
+
+    Align text around a specific character. If a user agent doesn't support character alignment, behavior in the presence of this value is unspecified.
+char
+
+    This attribute specifies a single character within a text fragment to act as an axis for alignment. The default value for this attribute is the decimal point character for the current language as set by the lang attribute (e.g., the period in English and the comma in French). User agents are not required to support this attribute.
+charoff
+
+    When present, this attribute specifies the offset to the first occurrence of the alignment character on each line. If a line doesn't include the alignment character, it should be horizontally shifted to end at the alignment position. When charoff is used to set the offset of an alignment character, the direction of offset is determined by the current text direction (set by the dir attribute). In left-to-right texts (the default), offset is from the left margin. In right-to-left texts, offset is from the right margin. User agents are not required to support this attribute.
+    Enumerated values:
+    xsd:integer	
+
+    An explicit offset.
+    xsd:string (Pattern: “[0-9]+%”)	
+
+    A percentage offset.
+class
+
+    This attribute assigns a class name or set of class names to an element. Any number of elements may be assigned the same class name or names. Multiple class names must be separated by white space characters.
+lang
+
+    This attribute specifies the base language of an element's attribute values and text content. The default value of this attribute is unknown.
+onclick
+
+    Occurs when the pointing device button is clicked over an element.
+ondblclick
+
+    Occurs when the pointing device button is double clicked over an element.
+onkeydown
+
+    Occurs when a key is pressed down over an element.
+onkeypress
+
+    Occurs when a key is pressed and released over an element.
+onkeyup
+
+    Occurs when a key is released over an element.
+onmousedown
+
+    Occurs when the pointing device button is pressed over an element.
+onmousemove
+
+    Occurs when the pointing device is moved while it is over an element.
+onmouseout
+
+    Occurs when the pointing device is moved away from an element.
+onmouseover
+
+    Occurs when the pointing device is moved onto an element.
+onmouseup
+
+    Occurs when the pointing device button is released over an element.
+span
+
+    This attribute, whose value must be an integer > 0, specifies the number of columns “spanned” by the col element; the col element shares its attributes with all the columns it spans. The default value for this attribute is 1 (i.e., a single column). If the span attribute is set to N > 1, the current col element shares its attributes with the next N-1 columns.
+style
+
+    This attribute specifies style information for the current element.
+title
+
+    This attribute offers advisory information about the element for which it is set.
+valign
+
+    Specifies the vertical position of data within a cell.
+    Enumerated values:
+    “top”	
+
+    Cell data is flush with the top of the cell.
+    “middle”	
+
+    Cell data is centered vertically within the cell. This is the default value.
+    “bottom”	
+
+    Cell data is flush with the bottom of the cell.
+    “baseline”	
+
+    All cells in the same row as a cell whose valign attribute has this value should have their textual data positioned so that the first text line occurs on a baseline common to all cells in the row. This constraint does not apply to subsequent text lines in these cells.
+width
+
+    Specifies a default width for each column spanned by the current col element. It has the same meaning as the width attribute for the colgroup element and overrides it.
+
+Parents
+
+These elements contain col: colgroup, informaltable (db.html.informaltable), table (db.html.table).
+Prev 	Home	 Next
+code 	Up	 colgroup
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

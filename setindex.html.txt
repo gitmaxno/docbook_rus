@@ -115,3 +115,124 @@ These elements contain setindex: set.
 This element contains 66_elements.
 The following elements occur in setindex: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexdiv, indexentry, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
 set     [Up]   shortaffil
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** setindex *****
+setindex — An index to a set of books.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o One of:
+                # Zero or more of:
+                      # indexdiv
+                # Zero or more of:
+                      # indexentry
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+    * type
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A setindex contains the formatted index of a complete set of books. An index may begin with introductory material, followed by any number of indexentrys or indexdivs.
+**** Processing expectations ****
+Formatted as a displayed block. An index in a set usually causes a forced page break in print media.
+In many processing systems, indexes are generated automatically or semiautomatically and never appear instantiated as DocBook markup.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+  type
+      Specifies the target index for this term
+**** Parents ****
+These elements contain setindex: set.
+*** Children [[+]][[+]] ***
+This element contains 66_elements.
+The following elements occur in setindex: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexdiv, indexentry, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+[Prev] [Home]      [Next]
+set     [Up]   shortaffil
+Last revised by Norman Walsh on 10 Jun 2011 (git hash: 8cad85c36ae9cc6860fb444dc12756e00387ecbb)
+Copyright © 2010, 2011 Norman Walsh.

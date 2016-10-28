@@ -44,3 +44,53 @@ You can exit from GNU Emacs with
 <menuchoice>C-x-C-cFilesExit Emacs</menuchoice>
 .
 member  [Up]   methodname
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** menuchoice *****
+menuchoice — A selection or series of selections from a menu.
+***** Synopsis *****
+    * Sequence of:
+          o shortcut?
+          o One or more of:
+                # guibutton
+                # guiicon
+                # guilabel
+                # guimenu
+                # guimenuitem
+                # guisubmenu
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+In applications that present graphical user interfaces, it is often necessary to select an item, or a series of items, from a menu in order to accomplish some action. The menuchoice element provides a wrapper to contain the complete combination of selections.
+**** Processing expectations ****
+Formatted inline.
+A menuchoice may generate arrows or other punctuation between multiple GUI elements. The shortcut may be suppressed, or sometimes it is presented in parentheses after the rest of the items.
+*** Parents [[+]][[+]] ***
+This element occurs in 50_elements.
+These elements contain menuchoice: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+**** Children ****
+The following elements occur in menuchoice: guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, shortcut.
+***** See Also *****
+accel, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, keycap, keycode, keycombo, keysym, mousebutton, shortcut
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example menuchoice</title>
+
+  4 <para>You can exit from GNU Emacs with
+    <menuchoice>
+  6   <shortcut>
+        <keycombo><keysym>C-x</keysym><keysym>C-c</keysym></keycombo>
+  8   </shortcut>
+      <guimenu>Files</guimenu>
+ 10   <guimenuitem>Exit Emacs</guimenuitem>
+    </menuchoice>.
+ 12 </para>
+
+ 14 </article>
+You can exit from GNU Emacs with
+<menuchoice>C-x-C-cFilesExit Emacs</menuchoice>
+.
+[Prev] [Home]      [Next]
+member  [Up]   methodname
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

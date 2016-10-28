@@ -194,3 +194,203 @@ computeroutput, constant, envar, filename, lineannotation, literal, literallayou
   8 </article>
 At the system prompt, enter xyzzy to gain supervisor access to the system.
 uri     [Up]   varargs
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** userinput *****
+userinput — Data entered by the user.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Computer-output inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * co
+                * code
+                * command
+                * computeroutput
+                * constant
+                * email
+                * envar
+                * filename
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * literal
+                * markup
+                * nonterminal
+                * olink
+                * option
+                * optional
+                * package
+                * parameter
+                * prompt
+                * property
+                * remark
+                * replaceable
+                * subscript
+                * superscript
+                * symbol
+                * systemitem
+                * tag
+                * termdef
+                * token
+                * uri
+                * userinput
+                * xref
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+          o User-input inlines [[+]] [[-]]
+                * accel
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * co
+                * code
+                * command
+                * computeroutput
+                * constant
+                * email
+                * envar
+                * filename
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * link
+                * literal
+                * markup
+                * menuchoice
+                * mousebutton
+                * nonterminal
+                * olink
+                * option
+                * optional
+                * package
+                * parameter
+                * prompt
+                * property
+                * remark
+                * replaceable
+                * shortcut
+                * subscript
+                * superscript
+                * symbol
+                * systemitem
+                * tag
+                * termdef
+                * token
+                * uri
+                * userinput
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The userinput element identifies words or phrases that the user is expected to provide as input to a computer program.
+Note that userinput is not a verbatim environment, but an inline.
+**** Processing expectations ****
+Formatted inline. Often presented in a fixed-width font.
+*** Parents [[+]][[+]] ***
+This element occurs in 51_elements.
+These elements contain userinput: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+*** Children [[+]][[+]] ***
+This element contains 53_elements.
+The following elements occur in userinput: text, accel, alt, anchor, annotation, biblioref, co, code, command, computeroutput, constant, email, envar, filename, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, mousebutton, nonterminal, olink, option, optional, package, parameter, prompt, property, remark, replaceable, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, uri, userinput, xref.
+***** See Also *****
+computeroutput, constant, envar, filename, lineannotation, literal, literallayout, markup, option, optional, parameter, programlisting, prompt, replaceable, screen, screenshot, synopsis, systemitem, tag, varname
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example userinput</title>
+
+  4 <para>At the system prompt, enter <userinput>xyzzy</userinput> to gain
+    supervisor access to the system.
+  6 </para>
+
+  8 </article>
+At the system prompt, enter xyzzy to gain supervisor access to the system.
+[Prev] [Home]   [Next]
+uri     [Up]   varargs
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -1,101 +1,119 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+bibliocoverage
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** bibliocoverage *****
-bibliocoverageÂ â€”Â The spatial or temporal coverage of a document.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+bibliocoverage â€” The spatial or temporal coverage of a document.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * All of:
-          o Exactly one of:
-                # spatial (enumeration)
-                      # â€œdcmipointâ€
-                      # â€œiso3166â€
-                      # â€œdcmiboxâ€
-                      # â€œtgnâ€
-                # Each of:
-                      # spatial (enumeration)
-                            # â€œotherspatialâ€
-                      # otherspatial (NMTOKEN)
-          o Exactly one of:
-                # temporal (enumeration)
-                      # â€œdcmiperiodâ€
-                      # â€œw3c-dtfâ€
-                # Each of:
-                      # temporal (enumeration)
-                            # â€œothertemporalâ€
-                      # othertemporal (NMTOKEN)
+
+    All of:
+        Exactly one of:
+            spatial (enumeration)
+                â€œdcmipointâ€
+                â€œiso3166â€
+                â€œdcmiboxâ€
+                â€œtgnâ€
+            Each of:
+                spatial (enumeration)
+                    â€œotherspatialâ€
+                otherspatial (NMTOKEN)
+        Exactly one of:
+            temporal (enumeration)
+                â€œdcmiperiodâ€
+                â€œw3c-dtfâ€
+            Each of:
+                temporal (enumeration)
+                    â€œothertemporalâ€
+                othertemporal (NMTOKEN)
+
 Required attributes are shown in bold.
-***** Description *****
+Description
+
 The bibliocoverage element is equivalent to the coverage element of the Dublin Core Metadata Element Set [DCMI].
+
 The Dublin Core defines coverage as â€œthe extent or scope of the content of the resource.â€ It goes on to say:
-     Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies.
-     Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names Online []. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.
+
+    Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies.
+
+    Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names Online []. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.
+
 DocBook V4.2 added bibliocoverage, bibliorelation, and bibliosource to make the DocBook meta-information wrappers a superset of the Dublin Core.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline. Sometimes suppressed.
+
 This element is used for both spatial and temporal coverage, but only one should be specified at a time. In other words, on any given instance of the bibliocoverage element, specify either the spatial attribute or the temporal attribute, but not both.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  otherspatial
-      A keyword that identifies the type of non-standard coverage
-  othertemporal
-      A keyword that identifies the type of non-standard coverage
-  spatial
-      Specifies the type of spatial coverage
-      Enumerated values:
-      â€œdcmipointThe DCMI Point identifies a point in space using its geographic coordinates
-      â€œiso3166â€ISO 3166 Codes for the representation of names of countries
-      â€œdcmiboxâ€The DCMI Box identifies a region of space using its geographic limits
-      â€œtgnâ€   The Getty Thesaurus of Geographic Names
-  spatial
-      Specifies the type of spatial coverage
-      Enumerated values:
-      â€œotherspatialIdentifies a non-standard type of coverage
-  temporal
-      Specifies the type of temporal coverage
-      Enumerated values:
-      â€œdcmiperiodA specification of the limits of a time interval
-      â€œw3c-dtfâ€W3C Encoding rules for dates and timesâ€”a profile based on ISO 8601
-  temporal
-      Specifies the type of temporal coverage
-      Enumerated values:
-      â€œothertemporalSpecifies a non-standard type of coverage
-**** Parents ****
-These elements contain bibliocoverage: biblioentry, bibliomixed, bibliomset, biblioset, infoÂ (db.info), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), infoÂ (db.titleonlyreq.info), infoÂ (db.titlereq.info).
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in bibliocoverage: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-[Prev]Â         [Home]    Â [Next]
-authorinitialsÂ  [Up]  Â bibliodiv
+Attributes
+
+Common attributes and common linking attributes.
+
+otherspatial
+
+    A keyword that identifies the type of non-standard coverage
+othertemporal
+
+    A keyword that identifies the type of non-standard coverage
+spatial
+
+    Specifies the type of spatial coverage
+    Enumerated values:
+    â€œdcmipointâ€	
+
+    The DCMI Point identifies a point in space using its geographic coordinates
+    â€œiso3166â€	
+
+    ISO 3166 Codes for the representation of names of countries
+    â€œdcmiboxâ€	
+
+    The DCMI Box identifies a region of space using its geographic limits
+    â€œtgnâ€	
+
+    The Getty Thesaurus of Geographic Names
+spatial
+
+    Specifies the type of spatial coverage
+    Enumerated values:
+    â€œotherspatialâ€	
+
+    Identifies a non-standard type of coverage
+temporal
+
+    Specifies the type of temporal coverage
+    Enumerated values:
+    â€œdcmiperiodâ€	
+
+    A specification of the limits of a time interval
+    â€œw3c-dtfâ€	
+
+    W3C Encoding rules for dates and timesâ€”a profile based on ISO 8601
+temporal
+
+    Specifies the type of temporal coverage
+    Enumerated values:
+    â€œothertemporalâ€	
+
+    Specifies a non-standard type of coverage
+
+Parents
+
+These elements contain bibliocoverage: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+Children [+]
+This element contains 16 elements.
+Prev 	Home	 Next
+authorinitials 	Up	 bibliodiv
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

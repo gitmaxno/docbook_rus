@@ -124,3 +124,133 @@ That is expressed in DocBook like this:
  48
     </article>
 productionrecap  [Up]   productname
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** productionset *****
+productionset — A set of EBNF productions.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # production
+                # productionrecap
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A productionset is a collection of Extended Backus-Naur Form (EBNF) productions.
+EBNF is a notation for describing the grammar of context-free languages. Even if you aren’t conversant in the programming language concepts of context-free languages and grammars, it’s not really as hard to understand as it sounds.
+**** Processing expectations ****
+Formatted as a displayed block. The detailed processing expectations with respect to individual productions, lefthand sides, and righthand sides are quite complex.
+The productions should be numbered.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain productionset: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in productionset: info (db.titleforbidden.info), info (db.titleonly.info), production, productionrecap, title, titleabbrev.
+***** Examples *****
+A set of EBNF productions describes the legal arrangements of tokens in a language. Consider arithmetic expressions as a simple example.
+The expression “3 + 4” is valid and so is “3 + 4 - 5”, but “3 - + - 4” is not, nor is “3 + 4 6”. We can use EBNF to describe all the possible legal arrangements:
+<productionset>
+<production xml:id="ebnf.expression">
+<lhs>Expression</lhs>
+<rhs>
+<nonterminal def="#ebnf.arith">ArithExpression</nonterminal>
+|
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+Does this grammar actually get precedence right? </rhs>
+</production>
+<production xml:id="ebnf.arith">
+<lhs>ArithExpression</lhs>
+<rhs>
+<nonterminal def="#ebnf.expression">Expression</nonterminal>
+'+'
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+|
+<nonterminal def="#ebnf.expression">Expression</nonterminal>
+'-'
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+</rhs>
+</production>
+<production xml:id="ebnf.mult">
+<lhs>MultExpression</lhs>
+<rhs>
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+'*'
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+|
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+'/'
+<nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+|
+<nonterminal def="#ebnf.number">Number</nonterminal>
+</rhs>
+<constraint linkend="div0"></constraint>
+</production>
+<production xml:id="ebnf.number">
+<lhs>Number</lhs>
+<rhs>[0-9]+</rhs>
+</production>
+</productionset>
+<constraintdef xml:id="div0">
+Division by zero is an error.
+</constraintdef>
+That is expressed in DocBook like this:
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example productionset</title>
+
+  4 <simplesect><title>EBNF Grammar</title>
+
+  6 <productionset><title>Arithemetic Expressions</title>
+    <production xml:id="ebnf.expression">
+  8   <lhs>Expression</lhs>
+      <rhs><nonterminal def="#ebnf.arith">ArithExpression</nonterminal> |
+ 10        <nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+      <lineannotation>Does this grammar actually get precedence right?
+ 12   </lineannotation>
+      </rhs>
+ 14 </production>
+    <production xml:id="ebnf.arith">
+ 16   <lhs>ArithExpression</lhs>
+      <rhs><nonterminal def="#ebnf.expression">Expression</nonterminal>
+ 18        '+'
+           <nonterminal def="#ebnf.mult">MultExpression</nonterminal> |
+ 20        <nonterminal def="#ebnf.expression">Expression</nonterminal>
+           '-'
+ 22        <nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+      </rhs>
+ 24 </production>
+    <production xml:id="ebnf.mult">
+ 26   <lhs>MultExpression</lhs>
+      <rhs><nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+ 28        '*'
+           <nonterminal def="#ebnf.mult">MultExpression</nonterminal> |
+ 30        <nonterminal def="#ebnf.mult">MultExpression</nonterminal>
+           '/'
+ 32        <nonterminal def="#ebnf.mult">MultExpression</nonterminal> |
+           <nonterminal def="#ebnf.number">Number</nonterminal>
+ 34   </rhs>
+      <constraint linkend="div0"/>
+ 36 </production>
+    <production xml:id="ebnf.number">
+ 38   <lhs>Number</lhs>
+      <rhs>[0-9]+</rhs>
+ 40 </production>
+    </productionset>
+ 42
+    <constraintdef xml:id="div0">
+ 44 <title>Division by Zero</title>
+    <para>Division by zero is an error.</para>
+ 46 </constraintdef>
+    </simplesect>
+ 48
+    </article>
+[Prev]          [Home]       [Next]
+productionrecap  [Up]   productname
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

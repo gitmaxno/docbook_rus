@@ -59,3 +59,68 @@ computeroutput, constant, literal, option, optional, parameter, prompt, replacea
     </article>
 A presentation system using TeX as a back end might allow you to insert inline markup, such as $x^2$, using TeX syntax directly.
 manvolnum  [Up]   mathphrase
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** markup *****
+markup — A string of formatting markup in text that is to be represented literally.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A markup element contains a string of formatting markup that is to be represented literally in the text. The utility of this element is almost wholly constrained to books about document formatting tools.
+**** Processing expectations ****
+Formatted inline.
+*** Parents [[+]][[+]] ***
+This element occurs in 51_elements.
+These elements contain markup: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in markup: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+computeroutput, constant, literal, option, optional, parameter, prompt, replaceable, tag, userinput, varname
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example markup</title>
+
+  4 <para>A presentation system using TeX as a back end might allow you
+    to insert inline markup, such as <markup role="tex">$x^2$</markup>,
+  6 using TeX syntax directly.
+    </para>
+  8
+    </article>
+A presentation system using TeX as a back end might allow you to insert inline markup, such as $x^2$, using TeX syntax directly.
+[Prev]    [Home]      [Next]
+manvolnum  [Up]   mathphrase
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

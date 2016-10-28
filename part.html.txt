@@ -81,3 +81,90 @@ appendix, article, book, chapter, colophon, dedication, partintro, preface, set
  28 <chapter xml:id="jnut-ch-09"><title/><para>...</para></chapter>
     </part>
 parameter  [Up]   partintro
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** part *****
+part — A division in a book.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info (db.titlereq.info)
+          o partintro?
+          o One or more of:
+                # acknowledgements
+                # appendix
+                # article
+                # bibliography
+                # chapter
+                # colophon
+                # dedication
+                # glossary
+                # index
+                # preface
+                # refentry
+                # reference
+                # toc
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+The parts segment a book into divisions. Each division can contain a number of component-level elements, such as chapters.
+**** Processing expectations ****
+Formatted as a displayed block. Each part almost always introduces a forced page break. Sometimes parts start on the next recto page. Frequently, they also produce a part separator page, on which may be printed the content of the partintro.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain part: book.
+*** Children [[+]][[+]] ***
+This element contains 19_elements.
+The following elements occur in part: acknowledgements, appendix, article, bibliography, chapter, colophon, dedication, glossary, index, info (db.titleforbidden.info), info (db.titlereq.info), partintro, preface, refentry, reference, subtitle, title, titleabbrev, toc.
+***** See Also *****
+appendix, article, book, chapter, colophon, dedication, partintro, preface, set
+***** Examples *****
+  1 <part xmlns='http://docbook.org/ns/docbook'
+  2       label="II">
+    <title>Programming with the Java API</title>
+  4 <partintro>
+    <para>The sections in Part II present real-world examples of
+  6 programming with Java.  You can study and learn from the
+    examples, and you can adapt them for use in your own programs.
+  8 </para>
+
+ 10 <para>The example code in these chapters is available for downloading.
+    See <systemitem role="url">http://www.ora.com/catalog/books/javanut</systemitem>.
+ 12 </para>
+
+ 14 <literallayout>
+    <xref linkend="jnut-ch-04"/>
+ 16 <xref linkend="jnut-ch-05"/>
+    <xref linkend="jnut-ch-06"/>
+ 18 <xref linkend="jnut-ch-07"/>
+    <xref linkend="jnut-ch-08"/>
+ 20 <xref linkend="jnut-ch-09"/>
+    </literallayout>
+ 22 </partintro>
+    <chapter xml:id="jnut-ch-04"><title/><para>...</para></chapter>
+ 24 <chapter xml:id="jnut-ch-05"><title/><para>...</para></chapter>
+    <chapter xml:id="jnut-ch-06"><title/><para>...</para></chapter>
+ 26 <chapter xml:id="jnut-ch-07"><title/><para>...</para></chapter>
+    <chapter xml:id="jnut-ch-08"><title/><para>...</para></chapter>
+ 28 <chapter xml:id="jnut-ch-09"><title/><para>...</para></chapter>
+    </part>
+[Prev]    [Home]     [Next]
+parameter  [Up]   partintro
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -67,3 +67,76 @@ Example 27. The Grand Unified Theory
 Some details are still a bit shaky
 … Q.E.D.
 releaseinfo  [Up]   replaceable
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** remark *****
+remark — A remark (or comment) intended for presentation in a draft manuscript.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The remark element is designed to hold remarks—for example, editorial comments—that are useful while the document is in the draft stage, but are not intended for final publication.
+Remarks are available almost anywhere and have a particularly broad content model. Your processing system may or may not support either the use of comments everywhere they are allowed or the full generality of the remark content model.
+Prior to version 4.0 of DocBook, this element was named comment.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Remarks are often printed only in draft versions of a document and suppressed otherwise. This may be controlled by the status attribute of an ancestor element (e.g., chapter), or by external processes, such as selecting an alternate stylesheet when publishing.
+*** Parents [[+]][[+]] ***
+This element occurs in 237_elements.
+These elements contain remark: abbrev, accel, acknowledgements, acronym, address, annotation, answer, appendix, application, arg, article, artpagenums, attribution, authorinitials, bibliocoverage, bibliodiv, bibliography, biblioid, bibliolist, bibliomisc, bibliomset, bibliorelation, bibliosource, blockquote, bridgehead, callout, calloutlist, caption (db.caption), caption (db.html.caption), caution, chapter, citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, colophon, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, constraintdef, contractnum, contractsponsor, contrib, country, cover, database, dedication, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, example, exceptionname, fax, figure, filename, firstname, firstterm, footnote, funcdef, funcparams, funcsynopsisinfo, function, glossary, glossdef, glossdiv, glosslist, glosssee, glossseealso, glossterm,
+guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, important, index, indexdiv, informalexample, informalfigure, initializer, interfacename, issuenum, itemizedlist, jobtitle, keycap, keycode, keysym, label, legalnotice, lineage, lineannotation, link, listitem, literal, literallayout, manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msgexplan, msglevel, msgorig, msgtext, note, olink, option, optional, orderedlist, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, partintro, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, preface, primary, primaryie, procedure, productname, productnumber, programlisting, prompt, property, publishername, qandadiv, qandaset, question, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, releaseinfo, remark, replaceable, returnvalue, revdescription,
+revnumber, revremark, screen, secondary, secondaryie, sect1, sect2, sect3, sect4, sect5, section, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, setindex, shortaffil, sidebar, simpara, simplesect, state, step, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, taskprerequisites, taskrelated, tasksummary, td, term, termdef, tertiary, tertiaryie, textobject, th, tip, title, titleabbrev, toc, tocdiv, tocentry, token, trademark, type, uri, userinput, variablelist, varname, volumenum, warning, wordasword, year.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in remark: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example remark</title>
+
+  4 <example xml:id="gut-qed">
+    <title>The Grand Unified Theory</title>
+  6
+    <para><remark>Some details are still a bit shaky</remark>
+  8 …
+    Q.E.D.
+ 10 </para>
+    </example>
+ 12
+    </article>
+Example 27. The Grand Unified Theory
+Some details are still a bit shaky
+… Q.E.D.
+[Prev]      [Home]       [Next]
+releaseinfo  [Up]   replaceable
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

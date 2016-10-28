@@ -87,3 +87,96 @@ These elements contain msgtext: msgmain, msgrel, msgsub, simplemsgentry.
 This element contains 59_elements.
 The following elements occur in msgtext: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
 msgsub  [Up]   nonterminal
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** msgtext *****
+msgtext — The actual text of a message component in a message set.
+***** Synopsis *****
+    * One or more of:
+          o annotation
+          o bridgehead
+          o remark
+          o revhistory
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Admonition elements [[+]] [[-]]
+                * caution
+                * important
+                * note
+                * tip
+                * warning
+          o Formal elements [[+]] [[-]]
+                * equation
+                * example
+                * figure
+                * table (db.cals.table)
+                * table (db.html.table)
+          o Graphic elements [[+]] [[-]]
+                * mediaobject
+                * screenshot
+          o Informal elements [[+]] [[-]]
+                * informalequation
+                * informalexample
+                * informalfigure
+                * informaltable (db.cals.informaltable)
+                * informaltable (db.html.informaltable)
+          o List elements [[+]] [[-]]
+                * bibliolist
+                * calloutlist
+                * glosslist
+                * itemizedlist
+                * orderedlist
+                * procedure
+                * qandaset
+                * segmentedlist
+                * simplelist
+                * variablelist
+          o Paragraph elements [[+]] [[-]]
+                * anchor
+                * formalpara
+                * para
+                * simpara
+          o Publishing elements [[+]] [[-]]
+                * address
+                * blockquote
+                * epigraph
+                * sidebar
+          o Synopsis elements [[+]] [[-]]
+                * classsynopsis
+                * cmdsynopsis
+                * constructorsynopsis
+                * destructorsynopsis
+                * fieldsynopsis
+                * funcsynopsis
+                * methodsynopsis
+          o Technical elements [[+]] [[-]]
+                * constraintdef
+                * msgset
+                * procedure
+                * productionset
+                * task
+          o Verbatim elements [[+]] [[-]]
+                * literallayout
+                * programlisting
+                * programlistingco
+                * screen
+                * screenco
+                * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The msgtext is the actual content of the message in a msgmain, msgsub, or msgrel.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msgtext: msgmain, msgrel, msgsub, simplemsgentry.
+*** Children [[+]][[+]] ***
+This element contains 59_elements.
+The following elements occur in msgtext: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
+[Prev] [Home]       [Next]
+msgsub  [Up]   nonterminal
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

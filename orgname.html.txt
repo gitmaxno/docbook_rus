@@ -1,78 +1,81 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+orgname
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** orgname *****
-orgnameÂ â€”Â The name of an organization.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+orgname â€” The name of an organization.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * At most one of:
-          o class (enumeration)
-                # â€œconsortiumâ€
-                # â€œcorporationâ€
-                # â€œinformalâ€
-                # â€œnonprofitâ€
-          o Each of:
-                # class (enumeration)
-                      # â€œotherâ€
-                # otherclass
-***** Description *****
+
+    At most one of:
+        class (enumeration)
+            â€œconsortiumâ€
+            â€œcorporationâ€
+            â€œinformalâ€
+            â€œnonprofitâ€
+        Each of:
+            class (enumeration)
+                â€œotherâ€
+            otherclass
+
+Description
+
 An orgname identifies the name of an organization or corporation.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline. Sometimes suppressed.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Specifies the nature of the organization
-      Enumerated values:
-      â€œconsortiumâA consortium
-      â€œcorporationA corporation
-      â€œinformalâ€An informal organization
-      â€œnonprofitâ€A non-profit organization
-  class
-      Specifies the nature of the organization
-      Enumerated values:
-      â€œotherIndicates a non-standard organization class
-  otherclass
-      Identifies the non-standard nature of the organization
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 65_elements.
-These elements contain orgname: affiliation, author, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, collab, editor, emphasisÂ (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, infoÂ (db.info), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), infoÂ (db.titleonlyreq.info), infoÂ (db.titlereq.info), link, literallayout, member, olink, org, orgdiv, othercredit, para, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in orgname: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Specifies the nature of the organization
+    Enumerated values:
+    â€œconsortiumâ€	
+
+    A consortium
+    â€œcorporationâ€	
+
+    A corporation
+    â€œinformalâ€	
+
+    An informal organization
+    â€œnonprofitâ€	
+
+    A non-profit organization
+class
+
+    Specifies the nature of the organization
+    Enumerated values:
+    â€œotherâ€	
+
+    Indicates a non-standard organization class
+otherclass
+
+    Identifies the non-standard nature of the organization
+
+Parents [+]
+This element occurs in 65 elements.
+Children [+]
+This element contains 16 elements.
+See Also
+
 affiliation, jobtitle, orgdiv, publishername, shortaffil
-[Prev]Â [Home]    Â [Next]
-orgdivÂ  [Up]  Â otheraddr
+Prev 	Home	 Next
+orgdiv 	Up	 otheraddr
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

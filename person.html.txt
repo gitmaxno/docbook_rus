@@ -33,3 +33,42 @@ The following elements occur in person: address, affiliation, email, personblurb
     </article>
 The principle author of this document is Norman Walsh.
 partintro  [Up]   personblurb
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** [[5.0]]person *****
+person — A person and associated metadata.
+***** Synopsis *****
+    * Sequence of:
+          o personname
+          o Zero or more of:
+                # address
+                # affiliation
+                # email
+                # personblurb
+                # uri
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A person associates a personal name with other information about an individual.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context.
+*** Parents [[+]][[+]] ***
+This element occurs in 56_elements.
+These elements contain person: attribution, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, collab, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in person: address, affiliation, email, personblurb, personname, uri.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example person</title>
+
+  4 <para>The principle author of this document is
+    <person><personname><firstname>Norman</firstname>
+  6 <surname>Walsh</surname></personname><email>ndw@nwalsh.com</email>
+    </person>.</para>
+  8
+    </article>
+The principle author of this document is Norman Walsh.
+[Prev]    [Home]       [Next]
+partintro  [Up]   personblurb
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

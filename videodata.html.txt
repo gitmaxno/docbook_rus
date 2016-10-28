@@ -1,81 +1,129 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+videodata
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** videodata *****
-videodata� —� Pointer to external video data.
-***** Synopsis *****
-    * info?� (db.titleforbidden.info)
-***** Attributes *****
-Common_attributes.
+videodata — Pointer to external video data.
+Synopsis
+
+    info? (db.titleforbidden.info)
+
+Attributes
+
+Common attributes.
+
 Additional attributes:
-    * align (enumeration)
-          o “center”
-          o “char”
-          o “justify”
-          o “left”
-          o “right”
-    * contentdepth
-    * contentwidth
-    * depth
-    * Each of:
-          o format
-          o Exactly one of:
-                # fileref (anyURI)
-                # entityref (ENTITY)
-    * scale (positiveInteger)
-    * scalefit (enumeration)
-          o “0”
-          o “1”
-    * valign (enumeration)
-          o “bottom”
-          o “middle”
-          o “top”
-    * width
+
+    align (enumeration)
+        “center”
+        “char”
+        “justify”
+        “left”
+        “right”
+    contentdepth
+    contentwidth
+    depth
+    Each of:
+        format
+        Exactly one of:
+            fileref (anyURI)
+            entityref (ENTITY)
+    scale (positiveInteger)
+    scalefit (enumeration)
+        “0”
+        “1”
+    valign (enumeration)
+        “bottom”
+        “middle”
+        “top”
+    width
+
 Required attributes are shown in bold.
-***** Description *****
+Description
+
 This element points to an external entity containing video data.
-**** Processing expectations ****
+Processing expectations
+
 May be formatted inline or as a displayed block, depending on context. Rendering a video is usually accomplished by reserving a rectangular area on the display and “running” the video in that frame.
+
 There are two ways to provide content for videodata: entityref or fileref. It is best to use only one of these methods. However, if multiple sources are provided, entityref will be used in favor of fileref.
-**** Attributes ****
-Common_attributes.
-  align
-      Specifies the (horizontal) alignment of the video data
-      Enumerated values:
-      “center�Centered horizontally
-      “char”Aligned horizontally on the specified character
-      “justifyFully justified (left and right margins or edges)
-      “left”Left aligned
-      “right�Right aligned
-  contentdepth
-      Specifies the depth of the content rectangle
-  contentwidth
-      Specifies the width of the content rectangle
-  depth
-      Specifies the depth of the element
-  entityref
-      Identifies the location of the data by external identifier (entity name)
-  fileref
-      Indentifies the location of the data by URI
-  format
-      Specifies the format of the data
-  scale
-      Specifies the scaling factor
-  scalefit
-      Determines if anamorphic scaling is forbidden
-      Enumerated values:
-      “0False (do not scale-to-fit; anamorphic scaling may occur)
-      “1True (scale-to-fit; anamorphic scaling is forbidden)
-  valign
-      Specifies the vertical alignment of the video data
-      Enumerated values:
-      “bottomAligned on the bottom of the region
-      “middleCentered vertically
-      “top”Aligned on the top of the region
-  width
-      Specifies the width of the element
-**** Parents ****
+Attributes
+
+Common attributes.
+
+align
+
+    Specifies the (horizontal) alignment of the video data
+    Enumerated values:
+    “center”	
+
+    Centered horizontally
+    “char”	
+
+    Aligned horizontally on the specified character
+    “justify”	
+
+    Fully justified (left and right margins or edges)
+    “left”	
+
+    Left aligned
+    “right”	
+
+    Right aligned
+contentdepth
+
+    Specifies the depth of the content rectangle
+contentwidth
+
+    Specifies the width of the content rectangle
+depth
+
+    Specifies the depth of the element
+entityref
+
+    Identifies the location of the data by external identifier (entity name)
+fileref
+
+    Indentifies the location of the data by URI
+format
+
+    Specifies the format of the data
+scale
+
+    Specifies the scaling factor
+scalefit
+
+    Determines if anamorphic scaling is forbidden
+    Enumerated values:
+    “0”	
+
+    False (do not scale-to-fit; anamorphic scaling may occur)
+    “1”	
+
+    True (scale-to-fit; anamorphic scaling is forbidden)
+valign
+
+    Specifies the vertical alignment of the video data
+    Enumerated values:
+    “bottom”	
+
+    Aligned on the bottom of the region
+    “middle”	
+
+    Centered vertically
+    “top”	
+
+    Aligned on the top of the region
+width
+
+    Specifies the width of the element
+
+Parents
+
 These elements contain videodata: videoobject.
-**** Children ****
-The following elements occur in videodata: info� (db.titleforbidden.info).
-[Prev]�  [Home]      � [Next]
-varname�  [Up]  � videoobject
+Children
+
+The following elements occur in videodata: info (db.titleforbidden.info).
+Prev 	Home	 Next
+varname 	Up	 videoobject
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

@@ -72,3 +72,81 @@ audioobject, caption, imageobject, inlinemediaobject, textobject, videoobject
 [D]
 [The DocBook: TDG Duck]
 mathphrase  [Up]   member
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** mediaobject *****
+mediaobject — A displayed media object (video, audio, image, etc.).
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o alt?
+          o One or more of:
+                # audioobject
+                # imageobject
+                # imageobjectco
+                # textobject
+                # videoobject
+          o caption? (db.caption)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+This element contains a set of alternative “media objects.” Exactly one object will be selected and rendered.
+**** Processing expectations ****
+Formatted as a displayed block. The primary purpose of the mediaobject is to provide a wrapper around a set of alternative presentations of the same information.
+If possible, the processing system should use the content of the first object within the mediaobject. If the first object cannot be used, the remaining objects should be considered in the order that they occur. A processor should use the first object that it can, although it is free to choose any of the remaining objects if the primary one cannot be used.
+Under no circumstances should more than one object in a mediaobject be used or presented at the same time.
+For example, a mediaobject might contain a video, a high-resolution image, a low-resolution image, a long text description, and a short text description. In a “high-end” online system, the video is used. For print publishing, the high-resolution image is used. For other online systems, either the high- or the low-resolution image is used, possibly including the short text description as the online alternative. In a text-only environment, either the long or the short text description is used.
+*** Parents [[+]][[+]] ***
+This element occurs in 87_elements.
+These elements contain mediaobject: acknowledgements, annotation, answer, appendix, article, bibliodiv, biblioentry, bibliography, bibliolist, bibliomixed, bibliomset, biblioset, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, equation, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, screenshot, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, table (db.cals.table), taskprerequisites, taskrelated,
+tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in mediaobject: alt, audioobject, caption (db.caption), imageobject, imageobjectco, info (db.titleforbidden.info), textobject, videoobject.
+***** See Also *****
+audioobject, caption, imageobject, inlinemediaobject, textobject, videoobject
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'
+  2
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Example mediaobject</title>
+  4
+    <mediaobject>
+  6   <info>
+        <othercredit>
+  8       <orgname>O'Reilly Media</orgname>
+        </othercredit>
+ 10     <othercredit>
+          <orgname>Dover Archives</orgname>
+ 12     </othercredit>
+      </info>
+ 14   <alt>The DocBook: TDG Duck</alt>
+      <imageobject>
+ 16     <imagedata align="right" width="6in" format="PNG"
+
+       fileref="figs/web/duck-small.png"/>
+ 18   </imageobject>
+      <imageobject>
+ 20     <imagedata align="right" width="6in" format="GIF"
+
+       fileref="figs/web/duck-small.gif"/>
+ 22   </imageobject>
+      <textobject>
+ 24     <para>The bird on the cover of <citetitle>DocBook: The Definitive
+    Guide</citetitle> is a wood duck.  Often considered one of the most
+ 26 beautiful ducks in North America, the male wood duck has a metallic
+    purple and green head with white streaks extending from its bill
+ 28 around the eyes and down to its blue and green, gold-flecked
+    wings. It has a white neck, chestnut-colored chest, a white or red
+ 30 bill, and yellow-orange legs and feet. Females have more brown, gray,
+    and subdueed hues.</para>
+ 32
+      </textobject>
+ 34 </mediaobject>
+
+ 36 </article>
+[D]
+[The DocBook: TDG Duck]
+[Prev]     [Home]  [Next]
+mathphrase  [Up]   member
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

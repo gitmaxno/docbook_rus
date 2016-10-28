@@ -23,3 +23,32 @@ These elements contain nonterminal: bridgehead, caption (db.html.caption), citat
 ***** Examples *****
 See productionset.
 msgtext  [Up]     note
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** nonterminal *****
+nonterminal — A non-terminal in an EBNF production.
+***** Synopsis *****
+    * text
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * def (anyURI)
+Required attributes are shown in bold.
+***** Description *****
+A nonterminal is a symbol in an EBNF production that represents a portion of the grammar.
+**** Processing expectations ****
+Formatted inline.
+Notice that the def attribute is not an IDREF, it is a URI. References to nonterminals often cross document boundaries, making ID/IDREF linking impossible.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  def
+      Specifies a URI that points to a production where the nonterminal is defined
+*** Parents [[+]][[+]] ***
+This element occurs in 52_elements.
+These elements contain nonterminal: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, rhs, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+***** Examples *****
+See productionset.
+[Prev]  [Home]  [Next]
+msgtext  [Up]     note
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

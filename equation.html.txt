@@ -98,3 +98,107 @@ Alternatively, for relatively simple equations such as Fermat's Last Theorem, ma
 xn + yn ≠ zn ∀ n ≠ 2
 Equation 2. Fermat's Last Theorem
 epigraph  [Up]   errorcode
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** equation *****
+equation — A displayed mathematical equation.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o alt?
+          o One of:
+                # One or more of:
+                      # mediaobject
+                # One or more of:
+                      # mathphrase
+                # One or more of:
+                      # mml:*
+          o caption? (db.caption)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * floatstyle
+    * label
+    * pgwide (enumeration)
+          o “0”
+          o “1”
+***** Additional Constraints *****
+    * example must not occur in the descendants of equation
+    * figure must not occur in the descendants of equation
+    * table must not occur in the descendants of equation
+    * equation must not occur in the descendants of equation
+    * caution must not occur in the descendants of equation
+    * important must not occur in the descendants of equation
+    * note must not occur in the descendants of equation
+    * tip must not occur in the descendants of equation
+    * warning must not occur in the descendants of equation
+***** Description *****
+An equation is a formal mathematical equation (with an optional rather than a required title).
+If the MathML Module is used, equation can also contain the mml:math element.
+**** Processing expectations ****
+Formatted as a displayed block. For an inline equation, use inlineequation.
+Processing systems that number equations or build a table of equations at the beginning of a document may have difficulty correctly formatting documents that contain both equations with titles and equations without titles. You are advised to use informalequation for equations without titles.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  floatstyle
+      Specifies style information to be used when rendering the float
+  label
+      Specifies an identifying string for presentation purposes
+  pgwide
+      Indicates if the element is rendered across the column or the page
+      Enumerated values:
+      “0The element should be rendered in the current text flow (with the flow column width).
+      “1The element should be rendered across the full text page.
+*** Parents [[+]][[+]] ***
+This element occurs in 72_elements.
+These elements contain equation: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in equation: alt, caption (db.caption), info (db.titleforbidden.info), info (db.titleonly.info), mathphrase, mediaobject, mml:*, title, titleabbrev.
+***** See Also *****
+example, figure, informalequation, informalexample, informalfigure, informaltable, inlineequation, subscript, superscript, table
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example equation</title>
+
+  4 <equation xml:id="eq.fermat">
+    <title>Fermat's Last Theorem</title>
+  6   <alt>x^n + y^n ≠ z^n ∀ n ≠ 2</alt>
+      <mediaobject>
+  8     <imageobject condition="print">
+          <imagedata fileref="figs/print/db5d_refeqn01.pdf"/>
+ 10     </imageobject>
+        <imageobject condition="web">
+ 12       <imagedata fileref="figs/web/db5d_refeqn01.png"/>
+        </imageobject>
+ 14   </mediaobject>
+    </equation>
+ 16
+    </article>
+[figs/web/db5d_refeqn01.png]
+Equation 1. Fermat's Last Theorem
+Alternatively, for relatively simple equations such as Fermat's Last Theorem, mathphrase is often sufficient:
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example equation</title>
+
+  4 <equation xml:id="eq.fermat.mathphrase">
+    <title>Fermat's Last Theorem</title>
+  6   <alt>x^n + y^n ≠ z^n ∀ n ≠ 2</alt>
+      <mathphrase>x<superscript>n</superscript>
+  8 + y<superscript>n</superscript>
+    ≠ z<superscript>n</superscript>
+ 10 ∀ n ≠ 2</mathphrase>
+    </equation>
+ 12
+    </article>
+xn + yn ≠ zn ∀ n ≠ 2
+Equation 2. Fermat's Last Theorem
+[Prev]   [Home]     [Next]
+epigraph  [Up]   errorcode
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

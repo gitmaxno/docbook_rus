@@ -58,3 +58,67 @@ funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parame
   8 </article>
 The open function returns 2 (ENOFILE) if the file does not exist.
 replaceable  [Up]   revdescription
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** returnvalue *****
+returnvalue — The value returned by a function.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A returnvalue identifies the value returned by a function or command.
+**** Processing expectations ****
+Formatted inline.
+*** Parents [[+]][[+]] ***
+This element occurs in 50_elements.
+These elements contain returnvalue: bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, code, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in returnvalue: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, varargs, void
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example returnvalue</title>
+
+  4 <para>The <function>open</function> function returns <returnvalue>2</returnvalue>
+    (<errorname>ENOFILE</errorname>) if the file does not exist.
+  6 </para>
+
+  8 </article>
+The open function returns 2 (ENOFILE) if the file does not exist.
+[Prev]      [Home]          [Next]
+replaceable  [Up]   revdescription
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

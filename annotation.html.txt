@@ -121,3 +121,130 @@ The following elements occur in annotation: address, anchor, annotation, bibliol
  12
     </article>
 anchor  [Up]   answer
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** annotation *****
+annotation — An annotation.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * annotates
+***** Additional Constraints *****
+    * annotation must not occur in the descendants of annotation
+***** Description *****
+The annotation element is a “block” annotation. Block annotations can be used for pop ups and other “out of line” effects.
+An annotation element is associated with another element by using a reference to an xml:id value. The association can go in either direction. An annotation element can use an annotates attribute on itself to point to an xml:id on another element. Or the other element can use an annotations attribute (one of the common attributes) on itself to point to an xml:id on an annotation element. There is no assumption that an annotation element is associated with its parent or any other ancestor element.
+The attribute type of annotations and annotates is plain text, not IDREF or IDREFS. That enables modular content files to form associations with elements in other files without generating validation errors.
+**** Processing expectations ****
+Application specific.
+**** Attributes ****
+Common_attributes.
+  annotates
+      Identifies one ore more elements to which this annotation applies
+*** Parents [[+]][[+]] ***
+This element occurs in 244_elements.
+These elements contain annotation: abbrev, accel, acknowledgements, acronym, address, annotation, answer, appendix, application, arg, article, artpagenums, attribution, authorinitials, bibliocoverage, bibliodiv, biblioentry, bibliography, biblioid, bibliolist, bibliomisc, bibliomixed, bibliomset, bibliorelation, biblioset, bibliosource, blockquote, bridgehead, callout, calloutlist, caption (db.caption), caption (db.html.caption), caution, chapter, citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, colophon, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, constraintdef, contractnum, contractsponsor, contrib, country, database, dedication, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, example, exceptionname, fax, figure, filename, firstname, firstterm, footnote, funcdef, funcparams, funcsynopsisinfo, function, glossary, glossdef, glossdiv, glosslist,
+glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, important, index, indexdiv, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), informalexample, informalfigure, initializer, interfacename, issuenum, itemizedlist, jobtitle, keycap, keycode, keysym, label, legalnotice, lineage, lineannotation, link, listitem, literal, literallayout, manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msgexplan, msglevel, msgorig, msgtext, note, olink, option, optional, orderedlist, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, partintro, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, preface, primary, primaryie, procedure, productname, productnumber, programlisting, prompt, property, publishername, qandadiv, qandaset, question, quote, refdescriptor,
+refentrytitle, refmiscinfo, refname, refpurpose, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, releaseinfo, remark, replaceable, returnvalue, revdescription, revnumber, revremark, screen, secondary, secondaryie, sect1, sect2, sect3, sect4, sect5, section, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, setindex, shortaffil, sidebar, simpara, simplesect, state, step, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, taskprerequisites, taskrelated, tasksummary, td, term, termdef, tertiary, tertiaryie, textobject, th, tip, title, titleabbrev, toc, tocdiv, tocentry, token, trademark, type, uri, userinput, variablelist, varname, volumenum, warning, wordasword, year.
+*** Children [[+]][[+]] ***
+This element contains 63_elements.
+The following elements occur in annotation: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titleonly.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example of an annotation</title>
+
+  4 <annotation xml:id="note-parts-list">
+      <para>This list is not comprehensive.</para>
+  6 </annotation>
+
+  8 <para annotations="note-parts-list">
+      An automobile contains an engine,
+ 10   wheels, doors, and windows.
+    </para>
+ 12
+    </article>
+[Prev] [Home]  [Next]
+anchor  [Up]   answer
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -258,3 +258,267 @@ A simple paragraph.
   8 </article>
 Just the text, ma'am.
 pagenums  [Up]   paramdef
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** para *****
+para — A paragraph.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o Zero or more of:
+                # text
+                # bridgehead
+                # revhistory
+                # Bibliography inlines [[+]] [[-]]
+                      * author
+                      * citation
+                      * citebiblioid
+                      * citerefentry
+                      * citetitle
+                      * editor
+                      * jobtitle
+                      * org
+                      * orgname
+                      * person
+                      * personname
+                # Error inlines [[+]] [[-]]
+                      * errorcode
+                      * errorname
+                      * errortext
+                      * errortype
+                # Graphic inlines [[+]] [[-]]
+                      * inlinemediaobject
+                # GUI inlines [[+]] [[-]]
+                      * guibutton
+                      * guiicon
+                      * guilabel
+                      * guimenu
+                      * guimenuitem
+                      * guisubmenu
+                      * menuchoice
+                      * mousebutton
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Keyboard inlines [[+]] [[-]]
+                      * accel
+                      * keycap
+                      * keycode
+                      * keycombo
+                      * keysym
+                      * shortcut
+                # Linking inlines [[+]] [[-]]
+                      * anchor
+                      * biblioref
+                      * link
+                      * olink
+                      * xref
+                # Markup inlines [[+]] [[-]]
+                      * code
+                      * constant
+                      * email
+                      * literal
+                      * markup
+                      * symbol
+                      * tag
+                      * token
+                      * uri
+                # Math inlines [[+]] [[-]]
+                      * inlineequation
+                # Object-oriented programming inlines [[+]] [[-]]
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                # Operating system inlines [[+]] [[-]]
+                      * command
+                      * computeroutput
+                      * envar
+                      * filename
+                      * prompt
+                      * userinput
+                # Product inlines [[+]] [[-]]
+                      * application
+                      * database
+                      * hardware
+                      * productname
+                      * productnumber
+                      * trademark
+                # Programming inlines [[+]] [[-]]
+                      * classname
+                      * exceptionname
+                      * function
+                      * initializer
+                      * interfacename
+                      * methodname
+                      * modifier
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                      * parameter
+                      * returnvalue
+                      * type
+                      * varname
+                # Publishing inlines [[+]] [[-]]
+                      * abbrev
+                      * acronym
+                      * coref
+                      * date
+                      * emphasis (db.emphasis)
+                      * firstterm
+                      * footnote
+                      * footnoteref
+                      * foreignphrase
+                      * glossterm
+                      * phrase (db.phrase)
+                      * quote
+                      * subscript
+                      * superscript
+                      * wordasword
+                # Technical inlines [[+]] [[-]]
+                      * nonterminal
+                      * option
+                      * optional
+                      * package
+                      * parameter
+                      * property
+                      * replaceable
+                      * systemitem
+                      * termdef
+                # Ubiquitous inlines [[+]] [[-]]
+                      * alt
+                      * anchor
+                      * annotation
+                      * biblioref
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                      * inlinemediaobject
+                      * link
+                      * olink
+                      * remark
+                      * subscript
+                      * superscript
+                      * xref
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A para is a paragraph. Paragraphs in DocBook may contain almost all inlines and most block elements. Sectioning and higher-level structural elements are excluded. DocBook offers two variants of paragraph: simpara, which cannot contain block elements, and formalpara, which has a title.
+Some processing systems may find the presence of block elements in a paragraph difficult to handle. On the other hand, it is frequently most logical, from a structural point of view, to include block elements, especially informal block elements, in the paragraphs that describe their content. There is no easy answer to this problem.
+**** Processing expectations ****
+Formatted as a displayed block.
+*** Parents [[+]][[+]] ***
+This element occurs in 77_elements.
+These elements contain para: abstract, acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, epigraph, example, figure, footnote, formalpara, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, partintro, personblurb, preface, printhistory, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 151_elements.
+The following elements occur in para: text, abbrev, accel, acronym, address, alt, anchor, annotation, application, author, bibliolist, biblioref, blockquote, bridgehead, calloutlist, caution, citation, citebiblioid, citerefentry, citetitle, classname, classsynopsis, cmdsynopsis, code, command, computeroutput, constant, constraintdef, constructorsynopsis, coref, database, date, destructorsynopsis, editor, email, emphasis (db.emphasis), envar, epigraph, equation, errorcode, errorname, errortext, errortype, example, exceptionname, fieldsynopsis, figure, filename, firstterm, footnote, footnoteref, foreignphrase, funcsynopsis, function, glosslist, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable 
+(db.html.informaltable), initializer, inlineequation, inlinemediaobject, interfacename, itemizedlist, jobtitle, keycap, keycode, keycombo, keysym, link, literal, literallayout, markup, mediaobject, menuchoice, methodname, methodsynopsis, modifier, mousebutton, msgset, nonterminal, note, olink, ooclass, ooexception, oointerface, option, optional, orderedlist, org, orgname, package, parameter, person, personname, phrase (db.phrase), procedure, productionset, productname, productnumber, programlisting, programlistingco, prompt, property, qandaset, quote, remark, replaceable, returnvalue, revhistory, screen, screenco, screenshot, segmentedlist, shortcut, sidebar, simplelist, subscript, superscript, symbol, synopsis, systemitem, table (db.cals.table), table (db.html.table), tag, task, termdef, tip, token, trademark, type, uri, userinput, variablelist, varname, warning, wordasword, xref.
+***** See Also *****
+formalpara, simpara
+***** Examples *****
+An ordinary paragraph.
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example para</title>
+
+  4 <para>The component suffered from three failings:
+    <itemizedlist>
+  6 <listitem><para>It was slow</para></listitem>
+    <listitem><para>It ran hot</para></listitem>
+  8 <listitem><para>It didn't actually work</para></listitem>
+    </itemizedlist>
+ 10 Of these three, the last was probably the most important.
+    </para>
+ 12
+    </article>
+The component suffered from three failings:
+    * It was slow
+    * It ran hot
+    * It didn't actually work
+Of these three, the last was probably the most important.
+A formal paragraph.
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example para</title>
+
+  4 <formalpara><title>A Test</title>
+    <para>This is a test.  This is only a test.  Had this been a real
+  6 example, it would have made more sense.
+    </para>
+  8 </formalpara>
+
+ 10 </article>
+This is a test. This is only a test. Had this been a real example, it would have made more sense.
+A simple paragraph.
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example para</title>
+
+  4 <simpara>
+    Just the text, ma'am.
+  6 </simpara>
+
+  8 </article>
+Just the text, ma'am.
+[Prev]   [Home]    [Next]
+pagenums  [Up]   paramdef
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

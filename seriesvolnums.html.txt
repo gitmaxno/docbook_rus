@@ -77,3 +77,86 @@ biblioid, issuenum, productnumber, volumenum
  28 </article>
 [Aho72]  Alfred V. Aho and Jeffrey D. Ullman.The Theory of Parsing, Translation, and Compiling:Series in Automatic Computation I: Parsing. Englewood Cliffs, New Jersey: Prentice Hall, 1972.
 segtitle  [Up]      set
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** seriesvolnums *****
+seriesvolnums — Numbers of the volumes in a series of books.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A seriesvolnums contains the numbers of the volumes of the books in a series. It is a wrapper for bibliographic information.
+**** Processing expectations ****
+Formatted inline. Sometimes suppressed.
+**** Parents ****
+These elements contain seriesvolnums: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in seriesvolnums: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+biblioid, issuenum, productnumber, volumenum
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example seriesvolnums</title>
+
+  4 <bibliolist>
+      <bibliomixed xml:id="Aho72">
+  6     <bibliomset relation="book">
+          <abbrev>Aho72</abbrev>
+  8       <authorgroup>
+            <author><personname>
+ 10           <firstname>Alfred V.</firstname>
+              <surname>Aho</surname></personname>
+ 12         </author>
+            <author><personname>
+ 14           <firstname>Jeffrey D.</firstname>
+              <surname>Ullman</surname></personname>
+ 16         </author>
+          </authorgroup>.
+ 18       <title>The Theory of Parsing, Translation, and Compiling:</title>
+          <subtitle>Series in Automatic Computation</subtitle>
+ 20       <seriesvolnums>I: Parsing</seriesvolnums>.
+          <address>Englewood Cliffs, New Jersey</address>:
+ 22       <publishername>Prentice Hall</publishername>,
+          <pubdate>1972</pubdate>.
+ 24     </bibliomset>
+      </bibliomixed>
+ 26 </bibliolist>
+
+ 28 </article>
+[Aho72]  Alfred V. Aho and Jeffrey D. Ullman.The Theory of Parsing, Translation, and Compiling:Series in Automatic Computation I: Parsing. Englewood Cliffs, New Jersey: Prentice Hall, 1972.
+[Prev]   [Home]  [Next]
+segtitle  [Up]      set
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -17,3 +17,26 @@ keywordset, subject, subjectset, subjectterm
 ***** Examples *****
 See keywordset for an example that uses this element.
 keysym  [Up]   keywordset
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** keyword *****
+keyword — One of a set of keywords describing the content of a document.
+***** Synopsis *****
+    * text
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A keyword is a term describing the content of a document. The keyword applies to the document component that contains it.
+**** Processing expectations ****
+Keywords are rarely displayed to a reader. Usually, they are reserved for searching and retrieval purposes. If they are displayed, they may be displayed either inline or as a displayed block, depending on context.
+Unlike subjectterms, which should be drawn from a controlled vocabulary, keywords may be chosen freely.
+**** Parents ****
+These elements contain keyword: keywordset.
+***** See Also *****
+keywordset, subject, subjectset, subjectterm
+***** Examples *****
+See keywordset for an example that uses this element.
+[Prev] [Home]      [Next]
+keysym  [Up]   keywordset
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

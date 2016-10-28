@@ -159,3 +159,168 @@ remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, syst
 ***** See Also *****
 indexentry, indexterm, primary, primaryie, secondary, secondaryie, seealso, seealsoie, seeie, tertiary, tertiaryie
 section  [Up]   seealso
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** see *****
+see — Part of an index term directing the reader instead to another entry in the index.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The use of see in an indexterm indicates that the reader should be directed elsewhere in the index when encountering this term.
+The content of see identifies another term in the index which the reader should consult instead of the current term.
+**** Processing expectations ****
+Suppressed. This element provides data for processing but it is not rendered in the primary flow of text.
+It is possible for multiple indexterms, taken together, to form an illogical index. For example, given the following indexterms:
+  1 <indexterm><primary>Extensible Markup Language</primary>
+  2   <see>XML</see></indexterm>
+    <indexterm><primary>Extensible Markup Language</primary>
+  4   <secondary>definition of</secondary>
+    </indexterm>
+there’s no way to construct a logical index because an entry in the index should never have both a see and other content.
+DocBook cannot detect these errors. You will have to rely on an external process to find them.
+**** Parents ****
+These elements contain see: indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange).
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in see: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property, quote,
+remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+indexentry, indexterm, primary, primaryie, secondary, secondaryie, seealso, seealsoie, seeie, tertiary, tertiaryie
+[Prev]  [Home]   [Next]
+section  [Up]   seealso
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

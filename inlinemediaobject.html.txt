@@ -54,3 +54,63 @@ audioobject, caption, imageobject, mediaobject, textobject, videoobject
     </article>
 Einstein's most famous equation, [E=mc2], expresses the relationship between matter and energy.
 inlineequation  [Up]   interfacename
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** inlinemediaobject *****
+inlinemediaobject — An inline media object (video, audio, image, and so on).
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o alt?
+          o One or more of:
+                # audioobject
+                # imageobject
+                # imageobjectco
+                # textobject
+                # videoobject
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The inlinemediaobject element contains a set of alternative “graphical objects”: videoobject, audioobject, and imageobject. Additional textual descriptions may be provided with textobjects.
+An inlinemediaobject provides a wrapper for a set of alternative presentations for some, usually graphical, information. It is the “inline” equivalent of mediaobject.
+In almost all contexts where text is allowed, inlinemediaobject is also allowed. This allows an author to provide a graphic for a character or glyph—for example, one that is not available in the publisher’s fonts or perhaps is not available in Unicode. Authors should exercise care when using inlinemediaobject for this purpose as graphics may be difficult or impossible to display in some contexts on some presentation systems.
+**** Processing expectations ****
+Formatted inline.
+If possible, the processing system should use the content of the first object within the inlinemediaobject. If the first object cannot be used, the remaining objects should be considered in the order that they occur. A processor should use the first object that it can, although it is free to choose any of the remaining objects if the primary one cannot be used.
+Under no circumstances may more than one object in an inlinemediaobject be used or presented at the same time.
+For example, an inlinemediaobject might contain a high-resolution image, a low-resolution image, and a text description. For print publishing, the high-resolution image is used; for online systems, either the high- or low-resolution image is used, possibly including the text description as an online alternative. In a text-only environment, the text description is used.
+*** Parents [[+]][[+]] ***
+This element occurs in 172_elements.
+These elements contain inlinemediaobject: abbrev, accel, acronym, address, alt, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, inlineequation, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout,
+manvolnum, markup, mathphrase, member, methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
+**** Children ****
+The following elements occur in inlinemediaobject: alt, audioobject, imageobject, imageobjectco, info (db.titleforbidden.info), textobject, videoobject.
+***** See Also *****
+audioobject, caption, imageobject, mediaobject, textobject, videoobject
+***** Examples *****
+  1 <?xml version="1.0" encoding="UTF-8"?>
+  2 <article xmlns="http://docbook.org/ns/docbook">
+    <title>Example inlinemediaobject</title>
+  4
+    <para>Einstein's most famous equation,
+  6 <inlineequation>
+      <inlinemediaobject>
+  8     <imageobject condition="print">
+          <imagedata fileref="figs/print/db5d_refeqn03.pdf"/>
+ 10     </imageobject>
+        <imageobject condition="web">
+ 12       <imagedata fileref="figs/web/db5d_refeqn03.png"/>
+        </imageobject>
+ 14     <textobject>
+          <phrase>E=mc<superscript>2</superscript></phrase>
+ 16     </textobject>
+      </inlinemediaobject>
+ 18   </inlineequation>, expresses the relationship between matter and energy.
+    </para>
+ 20
+    </article>
+Einstein's most famous equation, [E=mc2], expresses the relationship between matter and energy.
+[Prev]         [Home]         [Next]
+inlineequation  [Up]   interfacename
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

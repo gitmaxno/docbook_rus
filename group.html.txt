@@ -1,55 +1,86 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+group
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** group *****
-group� —� A group of elements in a CmdSynopsis.
-***** Synopsis *****
-    * One or more of:
-          o arg
-          o group
-          o option
-          o replaceable
-          o sbr
-          o synopfragmentref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+group — A group of elements in a CmdSynopsis.
+Synopsis
+
+    One or more of:
+        arg
+        group
+        option
+        replaceable
+        sbr
+        synopfragmentref
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * choice (enumeration) [default=“opt”]
-          o “opt”
-          o “plain”
-          o “req”
-    * rep (enumeration) [default=“norepeat”]
-          o “norepeat”
-          o “repeat”
-***** Description *****
+
+    choice (enumeration) [default=“opt”]
+        “opt”
+        “plain”
+        “req”
+    rep (enumeration) [default=“norepeat”]
+        “norepeat”
+        “repeat”
+
+Description
+
 A group surrounds several related items. Usually, they are grouped because they are mutually exclusive. The user is expected to select one of the items.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline. The additional processing expectations of a group are significant. For a complete discussion, see cmdsynopsis.
-    * Multiple arguments within a group are considered exclusive and are separated by vertical bars.
-    * Brackets are used to distinguish between optional, required, or plain arguments. Usually square brackets are placed around optional arguments, [-f | -g], and curly brackets are placed around required arguments, {-f | -g}. Plain arguments are required, but are not decorated with brackets.
-    * Repeatable arguments are followed by an ellipsis.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  choice
-      Indicates optionality.
-      Enumerated values:
-      “opt�Formatted to indicate that it is optional.
-      “plainFormatted without indication.
-      “req�Formatted to indicate that it is required.
-  rep
-      Indicates whether or not repetition is possible.
-      Enumerated values:
-      “norepeatCan not be repeated.
-      “repeat�Can be repeated.
-**** Parents ****
+
+    Multiple arguments within a group are considered exclusive and are separated by vertical bars.
+
+    Brackets are used to distinguish between optional, required, or plain arguments. Usually square brackets are placed around optional arguments, [-f | -g], and curly brackets are placed around required arguments, {-f | -g}. Plain arguments are required, but are not decorated with brackets.
+
+    Repeatable arguments are followed by an ellipsis.
+
+Attributes
+
+Common attributes and common linking attributes.
+
+choice
+
+    Indicates optionality.
+    Enumerated values:
+    “opt”	
+
+    Formatted to indicate that it is optional.
+    “plain”	
+
+    Formatted without indication.
+    “req”	
+
+    Formatted to indicate that it is required.
+rep
+
+    Indicates whether or not repetition is possible.
+    Enumerated values:
+    “norepeat”	
+
+    Can not be repeated.
+    “repeat”	
+
+    Can be repeated.
+
+Parents
+
 These elements contain group: arg, cmdsynopsis, group, synopfragment.
-**** Children ****
+Children
+
 The following elements occur in group: arg, group, option, replaceable, sbr, synopfragmentref.
-***** See Also *****
+See Also
+
 arg, cmdsynopsis, refsynopsisdiv, sbr, synopfragment, synopfragmentref
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example group in cmdsynopsis</title>
-
+    
   4 <cmdsynopsis>
       <command>mycmd</command>
   6   <group>
@@ -66,8 +97,12 @@ arg, cmdsynopsis, refsynopsisdiv, sbr, synopfragment, synopfragmentref
       </group>
  18   <arg rep="repeat">parameters</arg>
     </cmdsynopsis>
- 20
+ 20 
     </article>
+
 mycmd [[-r revision] [ -h | -l | -p ]] { URL | filename } [parameters...]
-[Prev]�    [Home]    � [Next]
-glossterm�  [Up]  � guibutton
+Prev 	Home	 Next
+glossterm 	Up	 guibutton
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

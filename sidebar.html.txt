@@ -122,3 +122,131 @@ abstract, blockquote, epigraph
 
  20 </article>
 shortcut  [Up]   simpara
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** sidebar *****
+sidebar — A portion of a document that is isolated from the main narrative flow.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Additional Constraints *****
+    * sidebar must not occur in the descendants of sidebar
+***** Description *****
+A sidebar is a short piece of text, rarely longer than a single column or page, that is presented outside the narrative flow of the main text.
+Sidebars are often used for digressions or interesting observations that are related, but not directly relevant, to the main text.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes sidebars are boxed or shaded.
+DocBook does not specify the location of the sidebar within the final displayed flow of text. The wrapper may float or remain where it is located.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain sidebar: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 63_elements.
+The following elements occur in sidebar: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titleonly.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+***** See Also *****
+abstract, blockquote, epigraph
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example sidebar</title>
+
+  4 <section><title>An Example Section</title>
+
+  6 <para>Some narrative text.
+    </para>
+  8
+    <sidebar><title>A Sidebar</title>
+ 10 <para>Sidebar content.
+    </para>
+ 12 </sidebar>
+
+ 14 <para>The continuing flow of the narrative text, as if the
+    sidebar was not present.
+ 16 </para>
+
+ 18 </section>
+
+ 20 </article>
+[Prev]   [Home]   [Next]
+shortcut  [Up]   simpara
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

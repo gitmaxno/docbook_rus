@@ -125,3 +125,134 @@ biblioentry, bibliomisc, bibliomixed, bibliomset
 
  26 </bibliography>
 bibliorelation  [Up]   bibliosource
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** biblioset *****
+biblioset — A raw container for related bibliographic information.
+***** Synopsis *****
+    * One or more of:
+          o citebiblioid
+          o citerefentry
+          o citetitle
+          o person
+          o personblurb
+          o personname
+          o subtitle
+          o title
+          o titleabbrev
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o “Info” elements [[+]] [[-]]
+                * *:*
+                * abstract
+                * address
+                * annotation
+                * artpagenums
+                * author
+                * authorgroup
+                * authorinitials
+                * bibliocoverage
+                * biblioid
+                * bibliomisc
+                * bibliomset
+                * bibliorelation
+                * biblioset
+                * bibliosource
+                * collab
+                * confgroup
+                * contractnum
+                * contractsponsor
+                * copyright
+                * cover
+                * date
+                * edition
+                * editor
+                * extendedlink
+                * issuenum
+                * itermset
+                * keywordset
+                * legalnotice
+                * mediaobject
+                * org
+                * orgname
+                * othercredit
+                * pagenums
+                * printhistory
+                * productname
+                * productnumber
+                * pubdate
+                * publisher
+                * publishername
+                * releaseinfo
+                * revhistory
+                * seriesvolnums
+                * subjectset
+                * volumenum
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * relation
+***** Description *****
+A biblioset is a “raw” wrapper for a collection of bibliographic information.
+The purpose of this wrapper is to assert the relationship that binds the collection. For example, in a biblioentry for an article in a journal, you might use two bibliosets to wrap the fields related to the article and the fields related to the journal.
+**** Processing expectations ****
+Formatted as a displayed block.
+A biblioset is “raw.” It contains a database-like collection of named fields. It is the responsibility of the processing system to select elements from within a biblioset, present them in the correct order, and add all punctuation.
+There is no expectation that a system will present all of the fields in a biblioset or that they will be displayed in the order in which they occur.
+Correct formatting of bibliosets is an interchange issue. See Appendix D,_Interchanging_DocBook_Documents.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  relation
+      Identifies the relationship between the bibliographic elemnts
+**** Parents ****
+These elements contain biblioset: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+*** Children [[+]][[+]] ***
+This element contains 68_elements.
+The following elements occur in biblioset: *:*, abbrev, abstract, acronym, address, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, biblioset, bibliosource, citebiblioid, citerefentry, citetitle, collab, confgroup, contractnum, contractsponsor, copyright, coref, cover, date, edition, editor, emphasis (db.emphasis), extendedlink, firstterm, footnote, footnoteref, foreignphrase, glossterm, issuenum, itermset, keywordset, legalnotice, mediaobject, org, orgname, othercredit, pagenums, person, personblurb, personname, phrase (db.phrase), printhistory, productname, productnumber, pubdate, publisher, publishername, quote, releaseinfo, revhistory, seriesvolnums, subjectset, subscript, subtitle, superscript, title, titleabbrev, volumenum, wordasword.
+***** See Also *****
+biblioentry, bibliomisc, bibliomixed, bibliomset
+***** Examples *****
+  1 <bibliography xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example biblioset</title>
+
+  4 <biblioentry>
+      <abbrev>Walsh97</abbrev>
+  6   <biblioset relation='journal'>
+        <title>XML: Principles, Tools, and Techniques</title>
+  8     <publisher>
+          <publishername>O'Reilly &amp; Associates, Inc.</publishername>
+ 10     </publisher>
+        <biblioid class='issn'>1085-2301</biblioid>
+ 12     <editor><personname>
+          <firstname>Dan</firstname><surname>Connolly</surname>
+ 14     </personname></editor>
+      </biblioset>
+ 16   <biblioset relation='article'>
+        <title>A Guide to XML</title>
+ 18     <author><personname>
+          <surname>Walsh</surname><firstname>Norman</firstname>
+ 20     </personname></author>
+        <copyright><year>1997</year><holder>ArborText, Inc.</holder></copyright>
+ 22     <artpagenums>97-108</artpagenums>
+      </biblioset>
+ 24 </biblioentry>
+
+ 26 </bibliography>
+[Prev]         [Home]        [Next]
+bibliorelation  [Up]   bibliosource
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

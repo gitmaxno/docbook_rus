@@ -1,124 +1,87 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+qandaset
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** qandaset *****
-qandasetÂ â€”Â A question-and-answer set.
-***** Synopsis *****
-    * Sequence of:
-          o One of:
-                # Sequence of:
-                      # Interleave of:
-                            # title?
-                            # titleabbrev?
-                      # info?Â (db.titleforbidden.info)
-                # infoÂ (db.titleonly.info)
-          o Zero or more of:
-                # annotation
-                # bridgehead
-                # remark
-                # revhistory
-                # IndexingÂ inlinesÂ [[+]]Â [[-]]
-                      * indextermÂ (db.indexterm.endofrange)
-                      * indextermÂ (db.indexterm.singular)
-                      * indextermÂ (db.indexterm.startofrange)
-                # AdmonitionÂ elementsÂ [[+]]Â [[-]]
-                      * caution
-                      * important
-                      * note
-                      * tip
-                      * warning
-                # FormalÂ elementsÂ [[+]]Â [[-]]
-                      * equation
-                      * example
-                      * figure
-                      * tableÂ (db.cals.table)
-                      * tableÂ (db.html.table)
-                # GraphicÂ elementsÂ [[+]]Â [[-]]
-                      * mediaobject
-                      * screenshot
-                # InformalÂ elementsÂ [[+]]Â [[-]]
-                      * informalequation
-                      * informalexample
-                      * informalfigure
-                      * informaltableÂ (db.cals.informaltable)
-                      * informaltableÂ (db.html.informaltable)
-                # ListÂ elementsÂ [[+]]Â [[-]]
-                      * bibliolist
-                      * calloutlist
-                      * glosslist
-                      * itemizedlist
-                      * orderedlist
-                      * procedure
-                      * qandaset
-                      * segmentedlist
-                      * simplelist
-                      * variablelist
-                # ParagraphÂ elementsÂ [[+]]Â [[-]]
-                      * anchor
-                      * formalpara
-                      * para
-                      * simpara
-                # PublishingÂ elementsÂ [[+]]Â [[-]]
-                      * address
-                      * blockquote
-                      * epigraph
-                      * sidebar
-                # SynopsisÂ elementsÂ [[+]]Â [[-]]
-                      * classsynopsis
-                      * cmdsynopsis
-                      * constructorsynopsis
-                      * destructorsynopsis
-                      * fieldsynopsis
-                      * funcsynopsis
-                      * methodsynopsis
-                # TechnicalÂ elementsÂ [[+]]Â [[-]]
-                      * constraintdef
-                      * msgset
-                      * procedure
-                      * productionset
-                      * task
-                # VerbatimÂ elementsÂ [[+]]Â [[-]]
-                      * literallayout
-                      * programlisting
-                      * programlistingco
-                      * screen
-                      * screenco
-                      * synopsis
-          o One of:
-                # One or more of:
-                      # qandadiv
-                # One or more of:
-                      # qandaentry
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+qandaset â€” A question-and-answer set.
+Synopsis
+
+    Sequence of:
+        One of:
+            Sequence of:
+                Interleave of:
+                    title?
+                    titleabbrev?
+                info? (db.titleforbidden.info)
+            info (db.titleonly.info)
+        Zero or more of:
+            annotation
+            bridgehead
+            remark
+            revhistory
+            Indexing inlines [+]
+            Admonition elements [+]
+            Formal elements [+]
+            Graphic elements [+]
+            Informal elements [+]
+            List elements [+]
+            Paragraph elements [+]
+            Publishing elements [+]
+            Synopsis elements [+]
+            Technical elements [+]
+            Verbatim elements [+]
+        One of:
+            One or more of:
+                qandadiv
+            One or more of:
+                qandaentry
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * defaultlabel (enumeration)
-          o â€œnoneâ€
-          o â€œnumberâ€
-          o â€œqandaâ€
-***** Description *****
+
+    defaultlabel (enumeration)
+        â€œnoneâ€
+        â€œnumberâ€
+        â€œqandaâ€
+
+Description
+
 A qandaset is a list consisting of questions and answers. A qandaset can be divided into sections.
+
 Every entry in a qandaset must contain a question, but answers are optional (some questions have no answers), and may be repeated (some questions have more than one answer).
+
 Common uses for qandasets include reader questionnaires and lists of Frequently Asked Questions (FAQs). For the purpose of a FAQ, DocBook V3.1 added the FAQ class to article.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block. The defaultlabel attribute has a significant influence on the presentation of questions and answers.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  defaultlabel
-      Specifies the default labelling
-      Enumerated values:
-      â€œnoneâ€No labels
-      â€œnumberNumeric labels
-      â€œqandaâ"Q:" and "A:" labels
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 73_elements.
-These elements contain qandaset: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, captionÂ (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 65_elements.
-The following elements occur in qandaset: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandadiv, qandaentry, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, tableÂ (db.cals.table), tableÂ (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
-***** Examples *****
+Attributes
+
+Common attributes and common linking attributes.
+
+defaultlabel
+
+    Specifies the default labelling
+    Enumerated values:
+    â€œnoneâ€	
+
+    No labels
+    â€œnumberâ€	
+
+    Numeric labels
+    â€œqandaâ€	
+
+    "Q:" and "A:" labels
+
+Parents [+]
+This element occurs in 73 elements.
+Children [+]
+This element contains 65 elements.
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example qandaset</title>
-
+    
   4 <qandaset defaultlabel='qanda'>
       <qandaentry>
   6     <question>
@@ -129,40 +92,58 @@ The following elements occur in qandaset: address, anchor, annotation, bibliolis
         </answer>
  12   </qandaentry>
     </qandaset>
- 14
+ 14 
     </article>
-Q: To be, or not to be?
-   That is the question.
+
+Q:	
+
+To be, or not to be?
+	
+
+That is the question.
+
   1 <article xmlns='http://docbook.org/ns/docbook'
-  2
- class="faq">
+  2 	 class="faq">
     <title>Frequently Asked Questions About Fonts</title>
-  4
+  4 
     <qandaset>
   6   <qandadiv><title>General Information</title>
-
+    
   8   <para>...</para>
-
+    
  10   <qandadiv><title>Font Houses</title>
-
+    
  12   <qandaentry><question><para>Who sells lots of fonts?</para></question>
       <answer><label>Seller</label><para>Adobe Systems, Inc.</para></answer>
  14   </qandaentry>
-
+    
  16   <qandaentry><question><para>Who sells fonts and photos?</para></question>
       <answer><label>Seller</label><para>Veer</para></answer>
  18   </qandaentry>
-
+    
  20   </qandadiv>
       </qandadiv>
  22 </qandaset>
     </article>
-**** General Information ****
+
+General Information
+
 ...
-**** Font Houses ****
-1.1.1. Who sells lots of fonts?
-.      Adobe Systems, Inc.
-1.1.2. Who sells fonts and photos?
-.      Veer
-[Prev]Â     [Home]   Â [Next]
-qandaentryÂ  [Up]  Â question
+Font Houses
+1.1.1.	
+
+Who sells lots of fonts?
+.	
+
+Adobe Systems, Inc.
+1.1.2.	
+
+Who sells fonts and photos?
+.	
+
+Veer
+Prev 	Home	 Next
+qandaentry 	Up	 question
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

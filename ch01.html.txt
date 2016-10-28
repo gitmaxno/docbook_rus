@@ -221,3 +221,229 @@ With respect to schema changes, the technical committee asserts that the followi
 By these rules, the technical committee can announce, in V5.1, for example, its plans to make a backward-incompatible change in V6.0. Then, in V6.0, if it’s been at least six months since V5.1 was released, it can make that change.
 As a general rule, the technical committee tries to avoid backward-incompatible changes.
 Part  I .  Introduction [Up]   Creating DocBook Documents
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** Getting Started with DocBook *****
+$Revision$
+This chapter provides an overview of DocBook, starting with its history. It includes a description of DocBook V5.0 and the changes from DocBook V4.x to V5.0.
+**** 1. A Short DocBook History ****
+DocBook is more than 15 years old. It began in 1991 as a joint project of HaL Computer Systems and O’Reilly & Associates (as O’Reilly Media, Inc. was then called). Its popularity grew, and eventually it spawned its own maintenance organization, the Davenport Group. In mid-1998, maintenance moved to a Technical Committee of the Organization for the Advancement of Structured Information Standards (OASIS).
+DocBook’s roots are in SGML, where it was defined with a Document Type Definition, or DTD. DocBook was released as both an SGML and an XML vocabulary starting with V4.1. The V4.x versions of DocBook, like the versions that came before them, were also defined with a DTD. Starting with DocBook V5.0, DocBook is exclusively an XML vocabulary defined with RELAX NG and Schematron.
+*** 1.1. The HaL and O’Reilly Era ***
+The DocBook DTD was originally designed and implemented by HaL Computer Systems and O’Reilly & Associates around 1991. It was developed primarily to facilitate the exchange of UNIX documentation originally marked up in troff. Its design appears to have been based partly on input from SGML interchange projects conducted by the Unix International and Open Software Foundation consortia.
+When DocBook V1.1 was published, discussion about its revision and maintenance began in earnest in the Davenport Group, a forum created by O’Reilly for computer documentation producers. DocBook V1.2 was influenced strongly by Novell and Digital.
+In 1994, the Davenport Group became an officially chartered entity responsible for DocBook’s maintenance. DocBook V1.2.2 was published simultaneously. The founding sponsors of this incarnation of Davenport include the following people with their affiliations at that time:
+    * Jon Bosak, Novell
+    * Dale Dougherty, O’Reilly & Associates
+    * Ralph Ferris, Fujitsu OSSI
+    * Dave Hollander, Hewlett-Packard
+    * Eve Maler, Digital Equipment Corporation
+    * Murray Maloney, SCO
+    * Conleth O’Connell, HaL Computer Systems
+    * Nancy Paisner, Hitachi Computer Products
+    * Mike Rogers, SunSoft
+    * Jean Tappan, Unisys
+*** 1.2. The Davenport Era ***
+Under the auspices of the Davenport Group, the DocBook DTD began to widen its scope. It was now being used by a much wider audience and for new purposes such as direct authoring with SGML-aware tools and publishing directly to paper. As the largest users of DocBook, Novell and Sun had a heavy influence on its design.
+In order to help users manage change, the new Davenport charter established the following rules for DocBook releases:
+    * Minor versions (“point releases” such as V2.2) could add to the markup model, but could not change it in a backward-incompatible way. For example, a new kind of list element could be added, but it would not be acceptable for the existing itemized list model to start requiring two list items inside it instead of only one. Thus, any document conforming to version n.0 would also conform to n.m.
+    * Major versions (such as V3.0) could both add to the markup model and make backward-incompatible changes. However, the changes would have to be announced in the last major release.
+      In 2009, the Technical Committee updated this policy to allow backward-incompatible changes in a major version, provided the change is announced in a major or minor release at least six months in advance.
+    * Major version introductions must be separated by at least a year.
+V3.0 was released in January 1997. DocBook’s audience continued to grow, but many of the Davenport Group stalwarts became involved in the XML effort, and development slowed dramatically. The idea of creating an official XML-compliant version of DocBook was discussed, but not implemented at that time.
+In July 1998, the sponsors moved the standards activities from the Davenport Group to OASIS, forming the OASIS DocBook Technical Committee with Eduardo Gutentag of Sun Microsystems as chair.
+*** 1.3. The OASIS Era ***
+The OASIS DocBook_Technical_Committee is continuing the work started by the Davenport Group. The transition from Davenport to OASIS was very smooth, in part because the core team remained essentially the same.
+DocBook V3.1, published in February 1999, was the first OASIS release. It integrated a number of changes that had been “in the wings” for some time. In March 2000, Norm Walsh became chair of the Technical Committee.
+Norm: is this date correct?
+In February 2001, OASIS made DocBook SGML V4.1 and DocBook XML V4.1.2 official_OASIS_Specifications.
+In October 2005, the DocBook Technical Committee released the first beta test version of DocBook V5.0. Development of the DocBook 4.x series continued in parallel with the development of V5.0. In October 2006, the DocBook Technical Committee released DocBook V4.5, the last release planned in the 4.x series.
+In 2008, the Publisher’s Subcommittee was chartered to develop and maintain official variants of DocBook in support of the publishing industry. The subcommittee focuses on schema customizations to support: periodicals as regularly published technical notes or journals, book publishing (such as business, legal, medical, and other nontechnical domains), educational textbooks, and other document types as appropriate for this industry.
+DocBook V5.0 became an official Committee Specification in June 2009 and became an official OASIS Standard in October 2009.
+Date may need to change if voting is delayed
+The Technical Committee continues DocBook development to ensure that the schema will continue to meet the needs of its users.
+**** 2. DocBook V5.0 ****
+DocBook V5.0 represents a major step forward for DocBook. The differences between DocBook 4.x and V5.0 are quite radical in some aspects, but the basic idea behind DocBook is still the same, and almost all element names are unchanged. Because of this it is very easy to become familiar with DocBook V5.0 if you know any previous version of DocBook.
+*** 2.1. What’s New in DocBook V5.0? ***
+In V5.0, DocBook has been rewritten as a native RELAX NG grammar (“An introduction to the RELAX NG schema language” [RNG-Intro] is an excellent introduction to the grammar). The objectives were to produce a schema that:
+   1. “Feels like” DocBook. Most existing documents should still be valid or it should be possible to transform them in simple, mechanical ways into valid documents.
+   2. Enforces as many constraints as possible in the schema. Some additional constraints are expressed with Schematron rules.
+   3. Cleans up the content models.
+   4. Gives users the flexibility to extend or subset the schema in an easy and straightforward way.
+   5. Can be used to generate XML DTD and W3C XML Schema versions of DocBook.
+Under the ordinary operating rules of DocBook evolution, the only backward-incompatible changes that could be made in DocBook V5.0 were those announced in DocBook V4.0. In light of the fact that this is a complete rewrite, the Technical Committee gave itself the freedom to make “unannounced” backward-incompatible changes for this one release.
+** 2.1.1. Renamed and removed elements **
+A number of elements have been removed from DocBook. Some have been replaced by simpler, more versatile alternatives. Others have been removed because they were no longer needed, and still others have been renamed. Table 1.1,_“Renamed_elements” lists the elements that have been renamed for DocBook V5.0.
+Table 1.1. Renamed elements
+Old name                                                                                                  New name
+sgmltag                                                                                                   tag
+bookinfo, articleinfo, chapterinfo, *info                                                                 info
+authorblurb                                                                                               personblurb
+collabname, corpauthor, corpcredit, corpname                                                              orgname
+isbn, issn, pubsnumber                                                                                    biblioid
+lot, lotentry, tocback, tocchap, tocfront, toclevel1, toclevel2, toclevel3, toclevel4, toclevel5, tocpart toc, tocdiv, and tocentry
+graphic, graphicco, inlinegraphic, mediaobjectco                                                          mediaobject and inlinemediaobject
+ulink                                                                                                     link
+ackno                                                                                                     acknowledgements
+The following elements were removed from DocBook V5.0 without direct replacements: action, beginpage, highlights, interface, invpartnumber, medialabel, modespec, structfield, and structname. If you use one or more of these elements, Table 1.2,_“Recommended_mapping_for_removed_elements” contains suggestions for recoding them in DocBook V5.0.
+Table 1.2. Recommended mapping for removed elements
+Old name                Recommended mapping
+action                  Use <phrase remap="action">.
+beginpage               Remove: beginpage is advisory only and has tended to cause confusion. A processing instruction or comment should be a workable replacement if one is needed.
+highlights              Use abstract. Note that because highlights has a broader content model, you may need to wrap contents in a para inside abstract.
+interface               Use menuchoice or one of the “gui*” elements (guibutton, guiicon, guilabel, guimenu, guimenuitem, or guisubmenu).
+invpartnumber           Use <biblioid class="other" otherclass="medialabel">. The productnumber element is another alternative.
+medialabel              Use <citetitle pubwork="mediatype">, where mediatype is the type of media being labeled (e.g., cdrom or dvd).
+modespec                No longer needed. The current processing model for olink renders modespec unnecessary.
+structfield, structname Use varname. If you need to distinguish between the two, use <varname remap="structname or structfield">. In some contexts, it may also be appropriate to use property for structfield.
+** 2.1.2. Linking and cross-referencing **
+In DocBook 4.x the id attribute is used to assign a unique identifier to an element. In DocBook V5.0 this attribute is renamed xml:id, and its usage is consistent with xml:id Version 1.0 [XML-ID], a W3C Recommendation.
+The biggest change in linking is that now nearly any inline element, not just xref or link, can be the source of a link. For example, consider the following DocBook 4.x example:
+  1 <section id="dir">
+  2   <title>DIR command</title>
+      <para>...</para>
+  4 </section>
+
+  6 <section id="ls">
+      <title>LS command</title>
+  8   <para>This command is a synonym for
+        <link linkend="dir"><command>DIR</command></link> command.
+ 10   </para>
+    </section>
+In DocBook V5.0, this can be written as the following:
+  1 <section xml:id="dir">
+  2   <title>DIR command</title>
+      <para>...</para>
+  4 </section>
+
+  6 <section xml:id="ls">
+      <title>LS command</title>
+  8   <para>This command is a synonym for
+        <command linkend="dir">DIR</command> command.
+ 10   </para>
+    </section>
+In addition, the href attribute from the XLink namespace was added to the same set of inline elements as linkend. The following example shows how you can use href. Note that you need to declare the XLink namespace in your document instance to use this attribute:
+  1 <article xmlns="http://docbook.org/ns/docbook"
+  2          xmlns:xl="http://www.w3.org/1999/xlink" version="5.0">
+      <title>Test article</title>
+  4
+      <para>
+  6     <application xl:href="http://www.gnu.org/software/emacs/">Emacs</application>
+        is my favourite text editor.</para>
+  8     ...
+    </article>
+The ulink element was removed from DocBook V5.0. It can be replaced by the link element using the XLink href attribute.
+The XLink href attribute may contain a fragment identifier to create a link within a document. For example:
+<command xl:href="#dir">DIR</command>
+**** Note ****
+XLink references are not expected to be checked during validation, but linkend references are.
+** 2.1.3. Uniform info elements **
+DocBook versions earlier than DocBook V5.0 use unique elements for block information. For example, a book element would contain a bookinfo element. This was done to support different content models for different block elements. DTDs only allow one content model for each element, so a different element name was required for each block’s information element.
+RELAX NG does not have this limitation. An element can have a different content model in different contexts. Therefore, the array of info elements (articleinfo, bookinfo, etc.) has been replaced with a single info element.
+** 2.1.4. Required title and version attributes **
+DocBook V5.0 requires the title attribute on large block elements such as article. The written specification for earlier versions of DocBook noted this, but the DTD could not enforce this constraint. With RELAX NG, this constraint can now be enforced in the schema.
+DocBook V5.0 no longer requires a Document Type Declaration. However, because processors may need to know the version of an instance, DocBook V5.0 has added the version attribute, which must appear on the root element of a DocBook document. The version attribute may also appear on other elements, and mixing of versions is allowed.
+** 2.1.5. Additional constraints **
+  HTML and CALS tables
+      DocBook 4.x did not prevent mixing of CALS and HTML table elements in a single table, even in cases where the result might be unusable. DocBook V5.0 specifically prohibits mixing.
+  Co-constraints
+      DocBook V5.0 enforces co-constraints such as the constraint that the otherclass attribute on biblioid may appear if, and only if, the class attribute exists and has the value other.
+  Data types
+      DocBook V5.0 uses some data types; for example, the col attribute on tgroup is defined as a positive integer. In some cases, the data type for a particular value may constrain it further than that value was constrained in prior releases.
+** 2.1.6. Table of contents **
+Prior to DocBook V5.0, the markup for tables of contents was clumsy and difficult to use. Although nearly all tables of contents are generated automatically, there are still cases where a table may need to be created or edited manually. Therefore, DocBook V5.0 introduces a simpler, recursive structure. See the toc, tocdiv, and tocentry reference pages for details and an example.
+** 2.1.7. Constraint definitions using Schematron **
+DocBook V5.0 uses rule-based validation for certain constraints using Schematron. These constraints, such as the requirement that the root element of a document have a version attribute, are easier to express in a rule-based language than in a schema language, even one as flexible as RELAX NG.
+** 2.1.8. Accessibility **
+Inline and block annotations are allowed in most contexts. Inline annotations use the alt element, and block annotations are supported by the new annotation element.
+**** 3. Finally in a Namespace ****
+All DocBook V5.0 elements are in the namespace http://docbook.org/ns/docbook. XML namespaces are used to distinguish between different element sets. In the past few years, almost all new XML grammars have used their own namespace. It is easy to create compound documents that contain elements from different XML vocabularies. Consider this simple article marked up in DocBook V4.5:
+  1 <!DOCTYPE article PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN'
+  2                          'http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd'>
+    <article>
+  4   <title>Sample article</title>
+      <para>This is a really short article.</para>
+  6 </article>
+The corresponding DocBook V5.0 article will look very similar:
+  1 <article xmlns="http://docbook.org/ns/docbook" version="5.0">
+  2   <title>Sample article</title>
+      <para>This is a really short article.</para>
+  4 </article>
+The only change is the addition of a default namespace declaration (xmlns="http://docbook.org/ns/docbook") on the root element (and a version attribute, which is described in the next section). This declaration applies the namespace to the root element and all nested elements. Each element is now uniquely identified by its local name and namespace.
+**** Note ****
+The namespace name http://docbook.org/ns/docbook serves only as an identifier. This resource is not fetched during processing of DocBook documents, and you are not required to have an Internet connection during processing. If you access the namespace URI with a browser, you will find a short explanatory document about the namespace. In the future, this document will probably conform to (some version of) RDDL and provide pointers to related resources.
+*** 3.1. Namespace Usage Policy ***
+DocBook is used throughout the world. As one would expect in such a broad context, DocBook is often customized to satisfy the requirements of specific organizations or projects. The DocBook Technical Committee encourages such customization and works hard to make sure that the schemas are as amenable to customization as possible.
+When customizers add new elements to DocBook, they often place those elements in the DocBook namespace. There is historical precedent for this approach as DocBook's history pre-dates namespaces and even XML. Even without precedent, users would almost certainly encourage customizers to use the same namespace. In many cases it simplifies authoring and almost always simplifies the training of new authors.
+However, a new element introduced into the DocBook namespace by a local customization is not officially part of DocBook. Only the DocBook Technical Committee can introduce new elements into DocBook officially by publishing a new version of the standard with those elements.
+This means that the practice of adding new, local elements into the DocBook namespace comes with a cost: the potential for confusion among authors familiar with different customizations and the costs associated with resolving any conflicts between interchange partners.
+The DocBook Technical Committee encourages customizers to think carefully about these costs and weight the potential tradoffs between unofficially adding elements to DocBook and using elements in their own namespace with care.
+**** 4. Relaxing with DocBook ****
+For more than a decade, the DocBook schema was defined using a DTD. However, DTDs have serious limitations, and DocBook V5.0 is thus defined using a powerful schema language called RELAX NG. Thanks to RELAX NG, it is now much easier to create customized versions of DocBook, and the content models are now cleaner and more precise.
+Using RELAX NG has an impact on the document prolog. Example 1.1,_“DocBook_V4.5_document” shows the typical prolog of a DocBook 4.x document. The version of the DocBook DTD (in this case V4.5) is indicated in the Document Type Declaration (<!DOCTYPE>) that points to a particular version of the DTD.
+Example 1.1. DocBook V4.5 document
+  1 <?xml version="1.0" encoding="utf-8"?>
+  2 <!DOCTYPE article PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN'
+                             'http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd'>
+  4 <article lang="en">
+      <title>Sample article</title>
+  6   <para>This is a very short article.</para>
+    </article>
+In contrast, DocBook V5.0 does not depend on DTDs anymore. Instead of the Document Type Declaration, the version attribute identifies the DocBook version, as shown in Example 1.2,_“DocBook_V5.0_document”.
+Example 1.2. DocBook V5.0 document
+  1 <?xml version="1.0" encoding="utf-8"?>
+  2 <article xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="en">
+      <title>Sample article</title>
+  4   <para>This is a very short article.</para>
+    </article>
+DocBook V5.0 is built on top of existing XML standards as much as possible. For example, the lang attribute is superseded by the standard xml:lang attribute.
+Another fundamental change is that there is no direct indication of the schema used. In Chapter 3,_Validating_DocBook_Documents, you will learn how you can specify a schema to be used for document validation.
+**** Note ****
+Although we recommend the RELAX NG schema for DocBook V5.0, there are also DTD and W3C XML Schema versions available (see Section 6.1,_“Where_to_Get_the_Schemas”) for tools that do not yet support RELAX NG.
+**** 5. Why Switch to DocBook V5.0? ****
+The simple answer is “because DocBook V5.0 is the future.” Apart from this marketing blurb, there are also more technical reasons:
+  DocBook 4.x is feature-frozen
+      DocBook V4.5 is the last version of DocBook in the 4.x series. Any new DocBook development, like the addition of new elements, will be done in DocBook V5.0. It is only a matter of time before new elements are added into DocBook V5.0, but they are not likely to be back-ported into DocBook 4.x. DocBook 4.x will be in maintenance mode and errata will be published if necessary.
+  DocBook V5.0 offers new functionality
+      DocBook V5.0 provides significant improvements over DocBook 4.x. For example, there is general markup for annotations, a new and more flexible system for linking, and unified markup for information sections using the info element.
+  DocBook V5.0 is more extensible
+      Having DocBook V5.0 in a separate namespace allows you to easily mix DocBook markup with other XML-based languages such as SVG, MathML, XHTML, or even FooBarML.
+  DocBook V5.0 is easier to customize
+      RELAX NG offers many powerful constructs that make customization much easier than it would be using a DTD (see Chapter 5,_Customizing_DocBook).
+**** 6. Schema Jungle ****
+Schemas for DocBook V5.0 are available in several formats at http://www.oasis-open.org/docbook/xml/5.0/ (or the mirror at http://docbook.org/xml/5.0/). Only the RELAX NG schema is normative, and it is preferred over the other schema languages. For your convenience there are also DTD and W3C XML Schema versions provided for DocBook V5.0. However, neither the DTD nor the W3C XML schema can capture all the constraints of DocBook V5.0. This means that a document that validates against the DTD or XML schema is not necessarily valid against the RELAX NG schema, and thus may not be a valid DocBook V5.0 document.
+DTD and W3C XML Schema versions of the DocBook V5.0 grammar are provided as a convenience for users who want to use DocBook V5.0 with legacy tools that don’t support RELAX NG. Authors are encouraged to switch to RELAX NG-based tools as soon as possible, or at least to validate documents against the RELAX NG schema before further processing.
+Some document constraints can’t be expressed in grammar-based schema languages like RELAX NG or W3C XML Schema. To define these additional constraints DocBook V5.0 uses Schematron. We recommend that you validate your document against both the RELAX NG and Schematron schemas.
+*** 6.1. Where to Get the Schemas ***
+The latest versions of schemas can be obtained from http://docbook.org/schemas/5x.html. At the time this was written the latest version was 5.0. Individual schemas are available at the following locations:
+  RELAX NG schema
+      http://docbook.org/xml/5.0/rng/docbook.rng
+  RELAX NG schema in compact syntax
+      http://docbook.org/xml/5.0/rng/docbook.rnc
+  DTD
+      http://docbook.org/xml/5.0/dtd/docbook.dtd
+  W3C XML Schema
+      http://docbook.org/xml/5.0/xsd/docbook.xsd
+  Schematron schema with additional checks
+      http://docbook.org/xml/5.0/sch/docbook.sch
+These schemas are also available from the mirror at http://www.oasis-open.org/docbook/xml/5.0/.
+*** 6.2. DocBook Documentation ***
+Detailed documentation about each DocBook V5.0 element can be found in
+DocBook XSL: The Complete Guide [Stayton07] by Bob Stayton is the essential reference for the DocBook stylesheets.
+**** 7. Backward Compatibility ****
+Whether you’re just getting started with DocBook, or curating a collection of tens of thousands of DocBook documents, one question that you have to consider is “how stable is DocBook?” Will the documents that you write today still be useful tomorrow, or next year, or in the next century?
+This question may seem particularly pertinent if you’re in the process of converting a collection of DocBook 4.x documents to DocBook V5.0 because we introduced a number of backward-incompatible changes in V5.0.
+The DocBook Technical Committee understands that the community benefits from the long-term stability of the DocBook family of schemas. We also understand that DocBook must continue to adapt and change in order to remain relevant in a changing world.
+All changes, and especially changes that are backward incompatible (changes that make a currently valid document no longer valid under a new version of the schema), have a cost associated with them. The technical committee must balance those costs against the need to remain responsive to the community’s desire to see DocBook grow to cover the new use cases that inevitably arise in documentation.
+With that in mind, the DocBook Technical Committee has adopted the following policy on backward-incompatible changes. This policy spells out when backward-incompatible changes can occur and how much notice the technical committee must provide before adopting a schema that is backward incompatible with the current release.
+This policy allows DocBook to continue to change and adapt while simultaneously guaranteeing that existing users will have sufficient advance notice to develop reasonable migration plans.
+With respect to schema changes, the technical committee asserts that the following points will always apply:
+    * A point release (X.1 to X.2, X.2 to X.3, X.1 to X.1.2, etc.) will not contain any backward-incompatible changes.
+    * A major release (X.1 to Y.0, X.2 to Y.0, X.1.2 to Y.0, etc.) may contain backward-incompatible changes if:
+          o the change was announced in the release notes for the previous version (major or minor) and
+          o the change was announced in a release that occurred at least six months previously.
+By these rules, the technical committee can announce, in V5.1, for example, its plans to make a backward-incompatible change in V6.0. Then, in V6.0, if it’s been at least six months since V5.1 was released, it can make that change.
+As a general rule, the technical committee tries to avoid backward-incompatible changes.
+[Prev]                  [Home]                      [Next]
+Part  I .  Introduction [Up]   Creating DocBook Documents
+Copyright © 2010, 2011 Norman Walsh.

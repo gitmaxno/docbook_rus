@@ -33,3 +33,42 @@ This element occurs in 170_elements.
 These elements contain biblioref: abbrev, accel, acronym, address, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, member,
 methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
 bibliomset  [Up]   bibliorelation
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** biblioref *****
+biblioref — A cross-reference to a bibliographic entry.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * begin (token)
+    * end (token)
+    * endterm (IDREF)
+    * units (token)
+    * xrefstyle
+Required attributes are shown in bold.
+***** Description *****
+A biblioref is a special-purpose cross-reference element. It is used for references to bibliography entries where additional formatting is necessary.
+**** Processing expectations ****
+Formatted inline.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  begin
+      Identifies the beginning of a reference; the location within the work that is being referenced.
+  end
+      Identifies the end of a reference.
+  endterm
+      Points to the element whose content is to be used as the text of the link
+  units
+      The units (for example, pages) used to identify the beginning and ending of a reference.
+  xrefstyle
+      Specifies a keyword or keywords identifying additional style information
+*** Parents [[+]][[+]] ***
+This element occurs in 170_elements.
+These elements contain biblioref: abbrev, accel, acronym, address, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, member,
+methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
+[Prev]     [Home]          [Next]
+bibliomset  [Up]   bibliorelation
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

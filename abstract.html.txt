@@ -42,3 +42,51 @@ blockquote, epigraph, sidebar
 
  12 </article>
 abbrev  [Up]    accel
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** abstract *****
+abstract — A summary.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An abstract can occur in most components of DocBook. It is expected to contain some sort of summary of the content with which it is associated (by containment).
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed. Often presented in alternate outputs.
+**** Parents ****
+These elements contain abstract: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in abstract: anchor, formalpara, info (db.titleforbidden.info), info (db.titleonly.info), para, simpara, title, titleabbrev.
+***** See Also *****
+blockquote, epigraph, sidebar
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example abstract</title>
+  4   <abstract>
+        <para>In brief, …
+  6     </para>
+      </abstract>
+  8 </info>
+
+ 10 <para>…</para>
+
+ 12 </article>
+[Prev] [Home]  [Next]
+abbrev  [Up]    accel
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

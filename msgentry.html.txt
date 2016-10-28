@@ -20,3 +20,29 @@ These elements contain msgentry: msgset.
 **** Children ****
 The following elements occur in msgentry: msg, msgexplan, msginfo.
 msgaud  [Up]   msgexplan
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** msgentry *****
+msgentry — A wrapper for an entry in a message set.
+***** Synopsis *****
+    * Sequence of:
+          o One or more of:
+                # msg
+          o msginfo?
+          o Zero or more of:
+                # msgexplan
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+In a msgset, each msgentry contains some number of messages (msgs) and additional informative and explanatory material about them.
+**** Processing expectations ****
+Formatted as a displayed block.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msgentry: msgset.
+**** Children ****
+The following elements occur in msgentry: msg, msgexplan, msginfo.
+[Prev] [Home]     [Next]
+msgaud  [Up]   msgexplan
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

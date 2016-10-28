@@ -121,3 +121,130 @@ appendix, article, book, chapter, dedication, part, partintro, preface, set
  10
     </book>
 collab  [Up]   colspec
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** colophon *****
+colophon — Text at the back of a book describing facts about its production.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o One or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A colophon, if present, almost always occurs at the very end of a book. It contains factual information about the book, especially about its production, and includes details about typographic style, the fonts used, the paper used, and perhaps the binding method of the book.
+Font geeks like Norm think every book should have one.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain colophon: article, book, part.
+*** Children [[+]][[+]] ***
+This element contains 64_elements.
+The following elements occur in colophon: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.info), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, subtitle, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, variablelist, warning.
+***** See Also *****
+appendix, article, book, chapter, dedication, part, partintro, preface, set
+***** Examples *****
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example colophon</title>
+
+  4 <colophon>
+    <para>Draft versions of the first edition of this book were produced
+  6 with the DocBook DSSSL Stylesheets. Final production was performed
+    with Troff.</para>
+  8 <para>XSLT and XSL were used to produce the second edition.</para>
+    </colophon>
+ 10
+    </book>
+[Prev] [Home]   [Next]
+collab  [Up]   colspec
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

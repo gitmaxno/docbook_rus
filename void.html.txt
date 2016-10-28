@@ -14,3 +14,23 @@ These elements contain void: constructorsynopsis, destructorsynopsis, funcprotot
 ***** See Also *****
 funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, returnvalue, varargs
 videoobject  [Up]   volumenum
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** void *****
+void — An empty element in a function synopsis indicating that the function in question takes no arguments.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The void element indicates explicitly that a function has no arguments.
+**** Processing expectations ****
+The void element produces generated text that indicates the function has no arguments (or returns nothing). The exact generated text may vary. One common result is void.
+**** Parents ****
+These elements contain void: constructorsynopsis, destructorsynopsis, funcprototype, methodsynopsis.
+***** See Also *****
+funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, returnvalue, varargs
+[Prev]      [Home]     [Next]
+videoobject  [Up]   volumenum
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

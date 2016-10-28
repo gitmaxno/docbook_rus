@@ -1,80 +1,129 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+[5.0]imagedata (db.imagedata.mathml)
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** [[5.0]]imagedata (db.imagedata.mathml) *****
-imagedata� —� A MathML expression in a media object.
-***** Synopsis *****
-    * Sequence of:
-          o info?� (db.titleforbidden.info)
-          o One or more of:
-                # mml:*
-***** Attributes *****
-Common_attributes.
+imagedata — A MathML expression in a media object.
+Synopsis
+
+    Sequence of:
+        info? (db.titleforbidden.info)
+        One or more of:
+            mml:*
+
+Attributes
+
+Common attributes.
+
 Additional attributes:
-    * align (enumeration)
-          o “center”
-          o “char”
-          o “justify”
-          o “left”
-          o “right”
-    * contentdepth
-    * contentwidth
-    * depth
-    * format (enumeration)
-          o “mathml”
-    * scale (positiveInteger)
-    * scalefit (enumeration)
-          o “0”
-          o “1”
-    * valign (enumeration)
-          o “bottom”
-          o “middle”
-          o “top”
-    * width
-***** Description *****
+
+    align (enumeration)
+        “center”
+        “char”
+        “justify”
+        “left”
+        “right”
+    contentdepth
+    contentwidth
+    depth
+    format (enumeration)
+        “mathml”
+    scale (positiveInteger)
+    scalefit (enumeration)
+        “0”
+        “1”
+    valign (enumeration)
+        “bottom”
+        “middle”
+        “top”
+    width
+
+Description
+
 This element contains one or more MathML elements.
-**** Processing expectations ****
+Processing expectations
+
 Render the image. May be formatted inline or as a displayed block, depending on context.
+
 See imagedata for more details about the processing expectations.
-**** Attributes ****
-Common_attributes.
-  align
-      Specifies the (horizontal) alignment of the image data
-      Enumerated values:
-      “center�Centered horizontally
-      “char”Aligned horizontally on the specified character
-      “justifyFully justified (left and right margins or edges)
-      “left”Left aligned
-      “right�Right aligned
-  contentdepth
-      Specifies the depth of the content rectangle
-  contentwidth
-      Specifies the width of the content rectangle
-  depth
-      Specifies the depth of the element
-  format
-      Specifies that the format of the data is MathML
-      Enumerated values:
-      “mathmlSpecifies MathML.
-  scale
-      Specifies the scaling factor
-  scalefit
-      Determines if anamorphic scaling is forbidden
-      Enumerated values:
-      “0False (do not scale-to-fit; anamorphic scaling may occur)
-      “1True (scale-to-fit; anamorphic scaling is forbidden)
-  valign
-      Specifies the vertical alignment of the image data
-      Enumerated values:
-      “bottomAligned on the bottom of the region
-      “middleCentered vertically
-      “top”Aligned on the top of the region
-  width
-      Specifies the width of the element
-**** Parents ****
+Attributes
+
+Common attributes.
+
+align
+
+    Specifies the (horizontal) alignment of the image data
+    Enumerated values:
+    “center”	
+
+    Centered horizontally
+    “char”	
+
+    Aligned horizontally on the specified character
+    “justify”	
+
+    Fully justified (left and right margins or edges)
+    “left”	
+
+    Left aligned
+    “right”	
+
+    Right aligned
+contentdepth
+
+    Specifies the depth of the content rectangle
+contentwidth
+
+    Specifies the width of the content rectangle
+depth
+
+    Specifies the depth of the element
+format
+
+    Specifies that the format of the data is MathML
+    Enumerated values:
+    “mathml”	
+
+    Specifies MathML.
+scale
+
+    Specifies the scaling factor
+scalefit
+
+    Determines if anamorphic scaling is forbidden
+    Enumerated values:
+    “0”	
+
+    False (do not scale-to-fit; anamorphic scaling may occur)
+    “1”	
+
+    True (scale-to-fit; anamorphic scaling is forbidden)
+valign
+
+    Specifies the vertical alignment of the image data
+    Enumerated values:
+    “bottom”	
+
+    Aligned on the bottom of the region
+    “middle”	
+
+    Centered vertically
+    “top”	
+
+    Aligned on the top of the region
+width
+
+    Specifies the width of the element
+
+Parents
+
 These elements contain imagedata: imageobject.
-**** Children ****
-The following elements occur in imagedata: info� (db.titleforbidden.info), mml:*.
-***** See Also *****
-imagedata� (db.imagedata)
-[Prev]�                   [Home]                       � [Next]
-imagedata (db.imagedata)�  [Up]  � imagedata (db.imagedata.svg)
+Children
+
+The following elements occur in imagedata: info (db.titleforbidden.info), mml:*.
+See Also
+
+imagedata (db.imagedata)
+Prev 	Home	 Next
+imagedata (db.imagedata) 	Up	 imagedata (db.imagedata.svg)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

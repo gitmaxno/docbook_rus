@@ -1,116 +1,152 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+systemitem
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** systemitem *****
-systemitem� —� A system-related item or term.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o co
-          o phrase� (db._phrase)
-          o replaceable
-          o Graphic� inlines� [[+]]� [[-]]
-                * inlinemediaobject
-          o Indexing� inlines� [[+]]� [[-]]
-                * indexterm� (db.indexterm.endofrange)
-                * indexterm� (db.indexterm.singular)
-                * indexterm� (db.indexterm.startofrange)
-          o Linking� inlines� [[+]]� [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o Ubiquitous� inlines� [[+]]� [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indexterm� (db.indexterm.endofrange)
-                * indexterm� (db.indexterm.singular)
-                * indexterm� (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+systemitem — A system-related item or term.
+Synopsis
+
+    Zero or more of:
+        text
+        co
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o “daemon”
-          o “domainname”
-          o “etheraddress”
-          o “event”
-          o “eventhandler”
-          o “filesystem”
-          o “fqdomainname”
-          o “groupname”
-          o “ipaddress”
-          o “library”
-          o “macro”
-          o “netmask”
-          o “newsgroup”
-          o “osname”
-          o “process”
-          o “protocol”
-          o “resource”
-          o “server”
-          o “service”
-          o “systemname”
-          o “username”
-***** Description *****
+
+    class (enumeration)
+        “daemon”
+        “domainname”
+        “etheraddress”
+        “event”
+        “eventhandler”
+        “filesystem”
+        “fqdomainname”
+        “groupname”
+        “ipaddress”
+        “library”
+        “macro”
+        “netmask”
+        “newsgroup”
+        “osname”
+        “process”
+        “protocol”
+        “resource”
+        “server”
+        “service”
+        “systemname”
+        “username”
+
+Description
+
 A systemitem identifies any system-related item or term. The class attribute defines a number of common system-related terms.
+
 Many inline elements in DocBook are, in fact, system related. Some of the objects identified by the class attribute on systemitem may eventually migrate out to become separate inline elements, and some inline elements may migrate into systemitem.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the nature of the system item
-      Enumerated values:
-      “daemon”   A daemon or other system process (syslogd)
-      “domainname�A domain name (example.com)
-      “etheraddressAn ethernet address (00:05:4E:49:FD:8E)
-      “event”    An event of some sort (SIGHUP)
-      “eventhandlerAn event handler of some sort (hangup)
-      “filesystem�A filesystem (ext3)
-      “fqdomainnameA fully qualified domain name (my.example.com)
-      “groupname”A group name (wheel)
-      “ipaddress”An IP address (127.0.0.1)
-      “library”  A library (libncurses)
-      “macro”    A macro
-      “netmask”  A netmask (255.255.255.192)
-      “newsgroup”A newsgroup (comp.text.xml)
-      “osname”   An operating system name (Hurd)
-      “process”  A process (gnome-cups-icon)
-      “protocol” A protocol (ftp)
-      “resource” A resource
-      “server”   A server (mail.example.com)
-      “service”  A service (ppp)
-      “systemname�A system name (hephaistos)
-      “username” A user name (ndw)
-*** Parents� [[+]][[+]] ***
-This element occurs in 51_elements.
-These elements contain systemitem: bridgehead, caption� (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasis� (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phrase� (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
-*** Children� [[+]][[+]] ***
-This element contains 17_elements.
-The following elements occur in systemitem: text, alt, anchor, annotation, biblioref, co, indexterm� (db.indexterm.endofrange), indexterm� (db.indexterm.singular), indexterm� (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase� (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the nature of the system item
+    Enumerated values:
+    “daemon”	
+
+    A daemon or other system process (syslogd)
+    “domainname”	
+
+    A domain name (example.com)
+    “etheraddress”	
+
+    An ethernet address (00:05:4E:49:FD:8E)
+    “event”	
+
+    An event of some sort (SIGHUP)
+    “eventhandler”	
+
+    An event handler of some sort (hangup)
+    “filesystem”	
+
+    A filesystem (ext3)
+    “fqdomainname”	
+
+    A fully qualified domain name (my.example.com)
+    “groupname”	
+
+    A group name (wheel)
+    “ipaddress”	
+
+    An IP address (127.0.0.1)
+    “library”	
+
+    A library (libncurses)
+    “macro”	
+
+    A macro
+    “netmask”	
+
+    A netmask (255.255.255.192)
+    “newsgroup”	
+
+    A newsgroup (comp.text.xml)
+    “osname”	
+
+    An operating system name (Hurd)
+    “process”	
+
+    A process (gnome-cups-icon)
+    “protocol”	
+
+    A protocol (ftp)
+    “resource”	
+
+    A resource
+    “server”	
+
+    A server (mail.example.com)
+    “service”	
+
+    A service (ppp)
+    “systemname”	
+
+    A system name (hephaistos)
+    “username”	
+
+    A user name (ndw)
+
+Parents [+]
+This element occurs in 51 elements.
+Children [+]
+This element contains 17 elements.
+See Also
+
 computeroutput, envar, filename, prompt, userinput
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'
   2          xmlns:xlink='http://www.w3.org/1999/xlink'>
     <title>Example systemitem</title>
-  4
-    <para>For many years, O'Reilly's primary web server,
+  4 
+    <para>For many years, O'Reilly's primary web server, 
   6 <link xlink:href="http://www.oreilly.com/">http://www.oreilly.com/</link>,
     was hosted by <application>WN</application> on
   8 <systemitem class="systemname">helio.oreilly.com</systemitem>.
     </para>
- 10
+ 10 
     </article>
+
 For many years, O'Reilly's primary web server, http://www.oreilly.com/, was hosted by WN on helio.oreilly.com.
-[Prev]�   [Home]                � [Next]
-synopsis�  [Up]  � table (db.cals.table)
+Prev 	Home	 Next
+synopsis 	Up	 table (db.cals.table)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

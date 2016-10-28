@@ -1,123 +1,85 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+variablelist
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** variablelist *****
-variablelistÂ â€”Â A list in which each entry is composed of a set of one or more terms and an associated description.
-***** Synopsis *****
-    * Sequence of:
-          o One of:
-                # Sequence of:
-                      # Interleave of:
-                            # title?
-                            # titleabbrev?
-                      # info?Â (db.titleforbidden.info)
-                # infoÂ (db.titleonly.info)
-          o Zero or more of:
-                # annotation
-                # bridgehead
-                # remark
-                # revhistory
-                # IndexingÂ inlinesÂ [[+]]Â [[-]]
-                      * indextermÂ (db.indexterm.endofrange)
-                      * indextermÂ (db.indexterm.singular)
-                      * indextermÂ (db.indexterm.startofrange)
-                # AdmonitionÂ elementsÂ [[+]]Â [[-]]
-                      * caution
-                      * important
-                      * note
-                      * tip
-                      * warning
-                # FormalÂ elementsÂ [[+]]Â [[-]]
-                      * equation
-                      * example
-                      * figure
-                      * tableÂ (db.cals.table)
-                      * tableÂ (db.html.table)
-                # GraphicÂ elementsÂ [[+]]Â [[-]]
-                      * mediaobject
-                      * screenshot
-                # InformalÂ elementsÂ [[+]]Â [[-]]
-                      * informalequation
-                      * informalexample
-                      * informalfigure
-                      * informaltableÂ (db.cals.informaltable)
-                      * informaltableÂ (db.html.informaltable)
-                # ListÂ elementsÂ [[+]]Â [[-]]
-                      * bibliolist
-                      * calloutlist
-                      * glosslist
-                      * itemizedlist
-                      * orderedlist
-                      * procedure
-                      * qandaset
-                      * segmentedlist
-                      * simplelist
-                      * variablelist
-                # ParagraphÂ elementsÂ [[+]]Â [[-]]
-                      * anchor
-                      * formalpara
-                      * para
-                      * simpara
-                # PublishingÂ elementsÂ [[+]]Â [[-]]
-                      * address
-                      * blockquote
-                      * epigraph
-                      * sidebar
-                # SynopsisÂ elementsÂ [[+]]Â [[-]]
-                      * classsynopsis
-                      * cmdsynopsis
-                      * constructorsynopsis
-                      * destructorsynopsis
-                      * fieldsynopsis
-                      * funcsynopsis
-                      * methodsynopsis
-                # TechnicalÂ elementsÂ [[+]]Â [[-]]
-                      * constraintdef
-                      * msgset
-                      * procedure
-                      * productionset
-                      * task
-                # VerbatimÂ elementsÂ [[+]]Â [[-]]
-                      * literallayout
-                      * programlisting
-                      * programlistingco
-                      * screen
-                      * screenco
-                      * synopsis
-          o One or more of:
-                # varlistentry
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+variablelist â€” A list in which each entry is composed of a set of one or more terms and an associated description.
+Synopsis
+
+    Sequence of:
+        One of:
+            Sequence of:
+                Interleave of:
+                    title?
+                    titleabbrev?
+                info? (db.titleforbidden.info)
+            info (db.titleonly.info)
+        Zero or more of:
+            annotation
+            bridgehead
+            remark
+            revhistory
+            Indexing inlines [+]
+            Admonition elements [+]
+            Formal elements [+]
+            Graphic elements [+]
+            Informal elements [+]
+            List elements [+]
+            Paragraph elements [+]
+            Publishing elements [+]
+            Synopsis elements [+]
+            Technical elements [+]
+            Verbatim elements [+]
+        One or more of:
+            varlistentry
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * spacing (enumeration)
-          o â€œcompactâ€
-          o â€œnormalâ€
-    * termlength
-***** Description *****
+
+    spacing (enumeration)
+        â€œcompactâ€
+        â€œnormalâ€
+    termlength
+
+Description
+
 A variablelist is a list consisting of terms and their definitions or descriptions.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block.
-There are many ways to present a variable list. DocBook does not mandate any particular presentation. The termlength attribute may influence the presentation of terms. The termlength attribute is often specified as a number of characters, but other forms are possible. This is an interchange_issue.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  spacing
-      Specifies (a hint about) the spacing of the content
-      Enumerated values:
-      â€œcompactThe spacing should be "compact".
-      â€œnormalâThe spacing should be "normal".
-  termlength
-      Indicates a length beyond which the presentation system may consider a term too long and select an alternate presentation for that term, item, or list
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 73_elements.
-These elements contain variablelist: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, captionÂ (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 64_elements.
-The following elements occur in variablelist: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, tableÂ (db.cals.table), tableÂ (db.html.table), task, tip, title, titleabbrev, variablelist, varlistentry, warning.
-***** See Also *****
+
+There are many ways to present a variable list. DocBook does not mandate any particular presentation. The termlength attribute may influence the presentation of terms. The termlength attribute is often specified as a number of characters, but other forms are possible. This is an interchange issue.
+Attributes
+
+Common attributes and common linking attributes.
+
+spacing
+
+    Specifies (a hint about) the spacing of the content
+    Enumerated values:
+    â€œcompactâ€	
+
+    The spacing should be "compact".
+    â€œnormalâ€	
+
+    The spacing should be "normal".
+termlength
+
+    Indicates a length beyond which the presentation system may consider a term too long and select an alternate presentation for that term, item, or list
+
+Parents [+]
+This element occurs in 73 elements.
+Children [+]
+This element contains 64 elements.
+See Also
+
 calloutlist, itemizedlist, listitem, orderedlist, segmentedlist, simplelist
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2   <title>Example variablelist</title>
-
+    
   4  <variablelist><title>Font Filename Extensions</title>
       <varlistentry>
   6     <term><filename>TTF</filename></term>
@@ -137,12 +99,20 @@ calloutlist, itemizedlist, listitem, orderedlist, segmentedlist, simplelist
  20     </listitem>
       </varlistentry>
  22  </variablelist>
-
+    
  24 </article>
+
 Font Filename Extensions
-  TTF
-      TrueType fonts.
-  PFA, PFB
-      PostScript fonts. PFA files are common on UNIX systems, PFB files are more common on Windows systems.
-[Prev]Â  [Home]       Â [Next]
-varargsÂ  [Up]  Â varlistentry
+
+TTF
+
+    TrueType fonts.
+PFA, PFB
+
+    PostScript fonts. PFA files are common on UNIX systems, PFB files are more common on Windows systems. 
+
+Prev 	Home	 Next
+varargs 	Up	 varlistentry
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

@@ -1,72 +1,102 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+othercredit
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** othercredit *****
-othercredit� —� A person or entity, other than an author or editor, credited in a document.
-***** Synopsis *****
-    * One of:
-          o Sequence of:
-                # personname
-                # Zero or more of:
-                      # address
-                      # affiliation
-                      # contrib
-                      # email
-                      # personblurb
-                      # uri
-          o Sequence of:
-                # orgname
-                # Zero or more of:
-                      # address
-                      # affiliation
-                      # contrib
-                      # email
-                      # orgdiv
-                      # uri
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+othercredit — A person or entity, other than an author or editor, credited in a document.
+Synopsis
+
+    One of:
+        Sequence of:
+            personname
+            Zero or more of:
+                address
+                affiliation
+                contrib
+                email
+                personblurb
+                uri
+        Sequence of:
+            orgname
+            Zero or more of:
+                address
+                affiliation
+                contrib
+                email
+                orgdiv
+                uri
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * Exactly one of:
-          o class (enumeration)
-                # “copyeditor”
-                # “graphicdesigner”
-                # “other”
-                # “productioneditor”
-                # “technicaleditor”
-                # “translator”
-          o All of:
-                # class (enumeration)
-                      # “other”
-                # otherclass (NMTOKEN)
+
+    Exactly one of:
+        class (enumeration)
+            “copyeditor”
+            “graphicdesigner”
+            “other”
+            “productioneditor”
+            “technicaleditor”
+            “translator”
+        All of:
+            class (enumeration)
+                “other”
+            otherclass (NMTOKEN)
+
 Required attributes are shown in bold.
-***** Description *****
+Description
+
 DocBook allows you to directly identify authors and editors. The othercredit element provides a mechanism for identifying other individuals—for example, contributors or production editors—in a similar context.
-**** Processing expectations ****
+Processing expectations
+
 May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the nature of the contributor
-      Enumerated values:
-      “copyeditor”   A copy editor
-      “graphicdesigner�A graphic designer
-      “other”        Some other contributor
-      “productioneditorA production editor
-      “technicaleditor�A technical editor
-      “translator”   A translator
-  class
-      Identifies the nature of the contributor
-      Enumerated values:
-      “otherIdentifies a non-standard contribution
-  otherclass
-      Identifies the nature of the non-standard contribution
-*** Parents� [[+]][[+]] ***
-This element occurs in 11_elements.
-These elements contain othercredit: authorgroup, biblioentry, bibliomixed, bibliomset, biblioset, info� (db.info), info� (db.titleforbidden.info), info� (db.titleonly.info), info� (db.titleonlyreq.info), info� (db.titlereq.info).
-**** Children ****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the nature of the contributor
+    Enumerated values:
+    “copyeditor”	
+
+    A copy editor
+    “graphicdesigner”	
+
+    A graphic designer
+    “other”	
+
+    Some other contributor
+    “productioneditor”	
+
+    A production editor
+    “technicaleditor”	
+
+    A technical editor
+    “translator”	
+
+    A translator
+class
+
+    Identifies the nature of the contributor
+    Enumerated values:
+    “other”	
+
+    Identifies a non-standard contribution
+otherclass
+
+    Identifies the nature of the non-standard contribution
+
+Parents [+]
+This element occurs in 11 elements.
+Children
+
 The following elements occur in othercredit: address, affiliation, contrib, email, orgdiv, orgname, personblurb, personname, uri.
-***** See Also *****
+See Also
+
 author, authorgroup, collab, contrib, editor, personblurb, personname
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <info>
       <title>Example othercredit</title>
@@ -86,9 +116,13 @@ author, authorgroup, collab, contrib, editor, personblurb, personname
       </othercredit>
  18   <biblioid>5</biblioid>
     </info>
- 20
+ 20 
     <para>…</para>
- 22
+ 22 
     </article>
-[Prev]�    [Home]    � [Next]
-otheraddr�  [Up]  � othername
+
+Prev 	Home	 Next
+otheraddr 	Up	 othername
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright © 2010, 2011 Norman Walsh.

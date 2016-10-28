@@ -391,3 +391,399 @@ Example 5.15. Adding a value to an enumeration
   6 # add a value to an enumeration
     db.spacing.enumeration |= "large"
 Publishing DocBook Documents  [Up]   Part  II .  Reference
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** Customizing DocBook *****
+$Revision$
+For some applications, DocBook “out of the box” may not be exactly what you need. Perhaps you need additional inline elements or perhaps you want to remove elements that you never want your authors to use. By design, DocBook makes this sort of customization easy.
+It is even easier to customize DocBook 5.0 than it was to customize earlier releases. This is because DocBook 5.0 uses RELAX NG to express its schema. RELAX NG provides better support for modifications than DTDs, and the DocBook schema takes full advantage of that support.
+This chapter describes the organization of the RELAX NG schema for DocBook and how to make your own customization layer. It contains methods and examples for adding, removing, and modifying elements and attributes, and conventions for naming and versioning DocBook customizations. It assumes some familiarity with RELAX NG. If you are unfamiliar with RELAX NG, you can find a tutorial introduction in the RELAX NG Tutorial [RNG-Intro].
+You can use customization layers to extend DocBook or subset it. Creating a schema that is a strict subset of DocBook means that all of your instances are still completely valid DocBook instances, which may be important to your tools and stylesheets, and to other people with whom you share documents. An extension adds new structures, or changes the schema in a way that is not compatible with DocBook. Extensions can be very useful, but might have a great impact on your environment.
+Customization layers can be as small as restricting an attribute value or as large as adding an entirely different hierarchy on top of the inline elements.
+**** 1. Should You Do This? ****
+Changing a schema can have a wide-ranging impact on the tools and stylesheets that you use. It can have an impact on your authors and on your legacy documents. This is especially true if you make an extension. If you rely on your support staff to install and maintain your authoring and publishing tools, check with them before you invest a lot of time modifying the schema. There may be additional issues that are outside your immediate control. Proceed with caution.
+That said, DocBook is designed to be easy to modify. This chapter assumes that you are comfortable with XML and RELAX NG grammar syntax, but the examples presented should be a good springboard to learning the syntax if it’s not already familiar to you.
+**** 2. If You Change DocBook, It’s Not DocBook Anymore! ****
+The license agreement under which DocBook is distributed gives you complete freedom to change, modify, reuse, and generally hack the schema in any way you want, except that you must not call your alterations “DocBook.”
+*** 2.1. Namespace and Version ***
+Starting with DocBook V5.0, DocBook is identified by its namespace, http://docbook.org/ns/docbook. The particular version of DocBook to which an element conforms is identified by its version attribute. If the element does not specify a version, the version of the closest ancestor DocBook element that does specify a version is assumed. The version attribute is required on the root DocBook element.
+Here is how these attributes would appear on the book element.
+  1 <book xmlns="http://docbook.org/ns/docbook"
+  2       version="5.0">
+      …
+  4 </book>
+If you change the DocBook schema, the namespace remains the same, but you must provide an alternate version identifier for the schema and the modules you changed. The version attribute identifies the version of DocBook the alternate is based on, specifies what type of variant it is, and names the variant and any additional modules. While the format for the version string is not part of the normative specification, the DocBook Technical Committee recommends the following format:
+base_version-(subset|extension|variant) (name[-version])+
+For example, version 1.0 of Acme Corporation’s extension of DocBook V5.0 could be identified as “5.0-extension acme-1.0”.
+If your schema is a proper subset, use the subset keyword in the version. If your schema extends the markup model, use the extension keyword. If you’d rather not characterize your variant specifically as a subset or an extension, use the variant keyword.
+*** 2.2. Public Identifiers ***
+Although not directly supported by RELAX NG, in some cases it may still be valuable to identify a DocBook V5.0 customization layer with a public identifier. A public identifier for DocBook V5.0 is:
+-//OASIS//DTD DocBook V5.0//EN
+If you make any changes to the structure of the schema, you must change the public identifier. You should change both the owner identifier and the description. Formal public identifiers for the base DocBook modules would have identifiers with the following syntax:
+-//OASIS//text-class DocBook description Vversion//EN
+Your public identifiers should use the following syntax:
+-//Owner-ID//text-class DocBook Vversion-Based (Subset|Extension|Variant) \
+Description-and-version//lang
+For example:
+-//O'Reilly//DTD DocBook V5.0-Based Subset V1.1//EN
+If your schema is a proper subset, use the Subset keyword in the description. If your schema extends the markup model, use the Extension keyword. If you’d rather not characterize your variant specifically as a subset or an extension, use the Variant keyword.
+**** 3. Customization Layers ****
+A RELAX NG grammar is a collection of patterns. These patterns can be stored in a single file or in a collection of files that import each other. Patterns can augment each other in a variety of ways. A complete grammar is the union of the specified patterns.
+For convenience, the DocBook grammar is distributed in a single file.
+*** 3.1. RELAX NG Syntax ***
+There are two standard syntaxes for RELAX NG, an XML syntax and a “compact” text syntax. The two forms have the same expressive power; it is possible to transform between them with no loss of information.
+Many users find the relative terseness of the compact syntax makes it a convenient form for reading and writing RELAX NG. We will use compact syntax in our examples.
+*** 3.2. DocBook Schema Structure ***
+The DocBook RELAX NG schema is highly modular, using named patterns extensively. Every element, attribute, attribute list, and enumeration has its own named pattern. In addition, there are named patterns for logical combinations of elements and attributes. These named patterns provide “hooks” into the schema that allow you to do a wide range of customization by simply redefining one or more of the named patterns.
+The names of the patterns used in a RELAX NG grammar can be defined in any way the schema designer chooses. To make it easier to navigate, the DocBook RELAX NG grammar employs the following naming conventions:
+  db.*.attlist
+      Defines the list of attributes associated with an element. For example, db.emphasis.attlist is the pattern that matches all of the attributes of the emphasis element.
+  db.*.attribute
+      Defines a single attribute. For example, db.conformance.attribute is the pattern that matches the conformance attribute on all of the elements where it occurs.
+  db.*.attributes
+      Defines a collection of attributes. For example, db.effectivity.attributes is all of the effectivity attributes (arch, audience, etc.).
+  db.*.blocks
+      Defines a list (a choice) of a set of related block elements. For example, db.list.blocks is a pattern that matches any of the list elements.
+  db.*.contentmodel
+      Defines a fragment of a content model shared by several elements.
+  db.*.enumeration
+      Defines an enumeration, usually one used in an attribute value. For example, db.revisionflag.enumeration is a pattern that matches the list of values that can be used as the value of a revisionflag attribute.
+  db.*.info
+      Defines the info element for a particular element. For example, db.example.info is the pattern that matches info on the example element.
+      Almost all of the info elements are the same, but they are described with distinct patterns so that customizers can change them individually.
+  db.*.inlines
+      Defines a list (a choice) of a set of related inline elements. For example, db.link.inlines is a pattern that matches any of the linking-related elements.
+  db.*.role.attribute
+      Defines the role attribute for a particular element. For example, db.emphasis.role is the pattern that matches role on the emphasis element.
+      All of the role attributes are the same, but they are described with distinct patterns so that customizers can change them selectively.
+  db.*
+      Defines a particular DocBook element. For example, db.title is the pattern that matches the title element.
+      RELAX NG allows multiple patterns to match the same element, so sometimes these patterns come in flavors, for example, db.indexterm.singular, db.indexterm.startofrange, and db.indexterm.endofrange. Each of these patterns matches indexterm with varying attributes.
+These are conventions, not hard and fast rules. There are patterns that don’t follow these conventions.
+*** 3.3. The General Structure of Customization Layers ***
+Creating a customized schema is similar to creating a customization layer for XSL. The schema customization layer is a new RELAX NG schema that defines your changes and includes the standard DocBook schema. You then validate using the schema customization as your schema. Although customization layers vary in complexity, most of them have the same general structure as other customization layers of similar complexity.
+In the most common case, you probably want to include all of DocBook, but you want to make some small changes. These customization layers tend to look like this:
+<screenco>
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 # perhaps other namespace declarations
+
+  4 include "docbook.rnc"
+
+  6 # new patterns and augmented patterns
+[1] Start by importing the base DocBook schema.
+[2] Then you can add new patterns or augment existing patterns.
+</screenco>
+If you want to completely replace a pattern (e.g., to remove or completely change an element), the template is a little different.
+<screenco>
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 # perhaps other namespace declarations
+
+  4 include "docbook.rnc" {
+       # redefinitions of DocBook patterns
+  6 }
+
+  8 # new patterns and augmented patterns
+[1] You can redefine patterns in the body of an import statement. These patterns completely replace any that appear in the imported schema.
+[2] As before, patterns outside the include statement can augment existing patterns (even redefined ones).
+</screenco>
+There are other possibilities as well; these examples are illustrative, not exhaustive.
+**** 4. Writing, Testing, and Using a Customization Layer ****
+The procedure for writing, testing, and using a customization layer is always about the same. In this section, we’ll go through the process in some detail. The rest of the sections in this chapter describe a range of useful customization layers.
+*** 4.1. Deciding What to Change ***
+If you’re considering writing a customization layer, there must be something that you want to change. Perhaps you want to add an element or attribute, remove one, or change some other aspect of the schema.
+Adding an element, particularly an inline element, is one possibility. For example, if you’re writing about cryptography, you might want to add a “cleartext” element. The next section describes how to create a customization layer to do this.
+*** 4.2. Deciding How to Change a Customization Layer ***
+Figuring out what to change may be the hardest part of the process. For the cleartext example, there are several patterns that you could possibly change. The choice will depend on the exact focus of your document. Here are several candidates, all of which look plausible: technical inlines, programming inlines, and domain inlines. Let’s suppose you chose the domain inlines.
+As shown in Example 5.1,_“Adding_cleartext_with_a_customization_layer”, your customization would import the DocBook schema, extend the domain inlines, and then provide a pattern that matches the new element.
+Example 5.1. Adding cleartext with a customization layer
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 default namespace = "http://docbook.org/ns/docbook"
+
+  4 include "docbook.rnc"
+
+  6 db.domain.inlines |= db.cleartext                [1]
+
+  8 # Define a new cleartext element:                [2]
+
+ 10 db.cleartext.role.attribute = attribute role { text }   [3]
+    db.cleartext.attlist =                           [4]
+ 12    db.cleartext.role.attribute?
+     & db.common.attributes
+ 14  & db.common.linking.attributes
+
+ 16 db.cleartext =                                   [5]
+       element cleartext {
+ 18       db.cleartext.attlist,
+          db._text
+ 20    }
+[1] The |= operator adds a new choice to a pattern. So this line makes the db.cleartext pattern a valid option anywhere that db.domain.inlines appears.
+[2] Next, we create a pattern for the cleartext element. The convention in the DocBook schema is to create three patterns, one for the role attribute, one for all the attributes, and one for the element. By following this convention, we make it easier for someone to customize our customization.
+[3] Defining a separate pattern for the role attribute makes it easy for customizers to change it on a per-element basis.
+[4] Defining a separate pattern for the attributes makes it easy for customizers to change them on a per-element basis. This pattern includes the pattern we just created for the role attribute.
+[5] The pattern for the element pulls it all together. The pattern db._text matches text plus a number of ubiquitous or nearly ubiquitous inlines. Use this pattern unless you really want only text.
+*** 4.3. Using Your Customization Layer ***
+Using a customization layer is simple. Just put the customization into a file—for example, mycustomization.rnc—and then refer to that file instead of the DocBook schema when your tools offer the option.
+*** 4.4. Testing Your Work ***
+Schemas, by their nature, contain many complex, interrelated patterns. Whenever you make a change to the schema, it’s always wise to use a validator to check your work.
+Start by validating a document that’s plain, vanilla DocBook, one that you know is valid according to the DocBook standard schema. This will help you identify any errors that you’ve introduced to the schema. Once you are confident the schema is correct, begin testing with instances that you expect (and don’t expect) to be valid against it.
+The following sections contain examples for several common customizations.
+**** 5. Removing Elements ****
+DocBook has a large number of elements. In some authoring environments, it may be useful or necessary to remove unneeded elements.
+*** 5.1. Removing msgset ***
+The msgset element is a favorite target. It has a complex internal structure designed for describing interrelated error messages, especially on systems that may exhibit messages from several different components. Many technical documents can do without it, and removing it leaves one less complexity to explain to your authors.
+Example 5.2,_“Removing_msgset” shows a customization layer that removes the msgset element.
+Example 5.2. Removing msgset
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.msgset = notAllowed
+    }
+The complexity of msgset is really in its msgentry children. DocBook V4.5 introduced a simple alternative, simplemsgentry. Example 5.3,_“Removing_msgentry” demonstrates how you could allow msgset but only support the simpler alternative.
+Example 5.3. Removing msgentry
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.msgentry = notAllowed
+    }
+Closer examination of the msgentry content model will reveal that it contains a number of descendants. It isn’t necessary, but it wouldn’t be wrong, to define their patterns as notAllowed as well.
+*** 5.2. Removing Computer Inlines ***
+DocBook contains a large number of computer inlines. The DocBook inlines define a domain-specific vocabulary. If you’re working in another domain, many of them may be unnecessary.
+They’re defined in a set of patterns that ultimately roll up to the db.domain.inlines pattern. If you make that pattern notAllowed, you’ll remove them all in one fell swoop. Example 5.4,_“Removing_computer_inlines” is a customization that does this.
+Example 5.4. Removing computer inlines
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.domain.inlines = notAllowed
+    }
+If you want to be more selective, you might consider making one or more of the following notAllowed instead:
+    * db.error.inlines: errors and error messages
+    * db.gui.inlines: GUI elements
+    * db.keyboard.inlines: key and keyboard elements
+    * db.markup.inlines: markup elements
+    * db.math.inlines: mathematical expressions
+    * db.os.inlines: operating system inlines
+    * db.programming.inlines: programming-related inlines
+**** Caution ****
+Be aware that a customization layer that removed this many technical inlines would also remove some larger technical structures or make them unusable.
+*** 5.3. Removing Synopsis Elements ***
+Another possibility is removing the complex synopsis elements. The customization layer in Example 5.5,_“Removing_cmdsynopsis_and_funcsynopsis” removes cmdsynopsis and funcsynopsis.
+Example 5.5. Removing cmdsynopsis and funcsynopsis
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.funcsynopsis = notAllowed
+       db.cmdsynopsis = notAllowed
+  6 }
+*** 5.4. Removing Sectioning Elements ***
+Perhaps you want to restrict your authors to only three levels of sectioning. To do that, you could remove the sect4 and sect5 elements, as shown in Example 5.6,_“Removing_the_sect4_and_sect5_elements”.
+Example 5.6. Removing the sect4 and sect5 elements
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.sect4 = notAllowed
+
+  6    # Strictly speaking, we don't need to remove sect5 because, having removed
+       # sect4, there's no way to reach it. But it seems cleaner to do so.
+  8    db.sect5 = notAllowed
+    }
+This technique works if your authors are using numbered sections, which you could require them to do by removing the section element. But suppose instead you want to allow them to use recursive sections, but limit them to only three levels.
+One way to do this would be to define new section2 and section3 patterns, as shown in Example 5.7,_“Limiting_recursive_sections_to_three_levels”.
+Example 5.7. Limiting recursive sections to three levels
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 default namespace = "http://docbook.org/ns/docbook"
+
+  4 include "docbook.rnc" {
+       db.section =
+  6       element section {
+             db.section.attlist,
+  8          db.section.info,
+             db.recursive.blocks.or.section2s,
+ 10          db.navigation.components*
+          }
+ 12 }
+
+ 14 db.recursive.section2s = (db.section2+, db.simplesect*) | db.simplesect+
+
+ 16 db.recursive.blocks.or.section2s =
+      (db.all.blocks+, db.recursive.section2s?) | db.recursive.section2s
+ 18
+    db.section2 =
+ 20    element section {
+          db.section.attlist,
+ 22       db.section.info,
+          db.recursive.blocks.or.section3s,
+ 24       db.navigation.components*
+       }
+ 26
+    db.recursive.section3s = (db.section3+, db.simplesect*) | db.simplesect+
+ 28
+    db.recursive.blocks.or.section3s =
+ 30   (db.all.blocks+, db.recursive.section3s?) | db.recursive.section3s
+
+ 32 db.section3 =
+       element section {
+ 34       db.section.attlist,
+          db.section.info,
+ 36       db.all.blocks+
+          db.navigation.components*
+ 38    }
+Another solution, assuming your validation environment supports Schematron, is simply to add a new rule, as shown in Example 5.8,_“Limiting_recursive_sections_to_three_levels_using_Schematron”.
+Example 5.8. Limiting recursive sections to three levels using Schematron
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 namespace s = "http://www.ascc.net/xml/schematron"
+    default namespace = "http://docbook.org/ns/docbook"
+  4
+    include "docbook.rnc" {
+  6    db.section =
+          [
+  8          s:pattern [
+                name = "Limit depth of sections"
+ 10             s:rule [
+                   context = "db:section"
+ 12                s:assert [
+                      test = "count(ancestor::db:section) < 2"
+ 14                   "Sections can be no more than three levels deep"
+                   ]
+ 16             ]
+             ]
+ 18       ]
+          element section {
+ 20          db.section.attlist,
+             db.section.info,
+ 22          db.recursive.blocks.or.sections,
+             db.navigation.components*
+ 24       }
+    }
+In this example, we’ve put the Schematron pattern inline in the RELAX NG grammar. If your validation strategy requires that they be in a separate document, it may be more convenient to simply create them separately.
+*** 5.5. Removing Admonitions from Table Entries ***
+ Sometimes what you want to do is not as simple as entirely removing an element. Instead, you may want to remove it only from some contexts. The way to do this is to redefine the patterns used to calculate the elements allowed in those contexts.
+Standard DocBook allows any inline element or any block element to appear in a table cell. You might decide that it’s unreasonable to allow admonitions (note, caution, warning, etc.) to appear in a table cell.
+In order to remove them, you must change what is allowed in the entry element, as shown in Example 5.9,_“Removing_admonitions_from_tables”.
+Example 5.9. Removing admonitions from tables
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 default namespace = "http://docbook.org/ns/docbook"
+
+  4 include "docbook.rnc" {
+       db.entry = element entry {
+  6       db.entry.attlist,
+          (db.all.inlines* | db.some.blocks*)
+  8    }
+    }
+ 10
+    db.some.blocks =
+ 12    db.somenopara.blocks
+     | db.para.blocks
+ 14  | db.extension.blocks
+
+ 16 db.somenopara.blocks =
+       db.list.blocks
+ 18  | db.formal.blocks
+     | db.informal.blocks
+ 20  | db.publishing.blocks
+     | db.graphic.blocks
+ 22  | db.technical.blocks
+     | db.verbatim.blocks
+ 24  | db.bridgehead
+     | db.remark
+ 26  | db.revhistory
+     | db.indexterm
+ 28  | db.synopsis.blocks
+The extent to which any particular change is easy or hard depends in part on how many patterns need to be changed. The DocBook Technical Committee is generally open to the idea of adding more patterns if it improves the readability of customization layers. If you think some refactoring would make your job easier, feel free to ask.
+**** 6. Removing Attributes ****
+Just as there may be more elements than you need, there may be more attributes.
+Suppose your processing system doesn’t support “continued” lists. You want to remove the continuation attribute from the orderedlist element. There are two ways you could accomplish this. One way would be to redefine the db.orderedlist.continuation.attribute pattern as not allowed; the other would be to redefine the db.orderedlist.attlist pattern so that it does not include the continuation attribute. Either will accomplish the goal. Example 5.10,_“Removing_continuation_from_orderedlist” uses the first method.
+Example 5.10. Removing continuation from orderedlist
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.orderedlist.continuation.attribute = empty
+    }
+*** 6.1. Subsetting the Common Attributes ***
+ DocBook defines a set of “common attributes,” which appear on every element. Depending on how you process your documents, removing some of them can both simplify the authoring task and improve processing speed.
+Some obvious candidates are:
+  Effectivity attributes (arch, os, condition...)
+      If you’re not using all of the effectivity attributes in your documents, you can get rid of up to seven attributes in one fell swoop.
+  xml:lang
+      If you’re not producing multilingual documents, you can remove xml:lang.
+  remap
+      The remap attribute is designed to hold the name of a semantically equivalent construct from a previous markup scheme (e.g., a Microsoft Word–style template name, if you’re converting from Word). If you’re authoring from scratch, or not preserving previous constructs with remap, you can get rid of it.
+  xreflabel
+      If your processing system isn’t using xreflabel, it’s a candidate as well.
+The customization layer in Example 5.11,_“Removing_common_attributes” reduces the common attributes to just xml:id, version, and xml:lang.
+Example 5.11. Removing common attributes
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.common.base.attributes =
+          db.version.attribute?
+  6     & db.xml.lang.attribute?
+    }
+**** 7. Adding Elements ****
+Adding a new inline or block element is generally a straightforward matter of creating a pattern for the new element and using |= to add it to the right pattern, as we did in Example 5.1,_“Adding_cleartext_with_a_customization_layer”. But if your new element is more intimately related to the existing structure of the document, it may require more surgery.
+Example 5.12,_“Adding_a_sect6_element” extends DocBook by adding a sect6 element.
+Example 5.12. Adding a sect6 element
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 default namespace = "http://docbook.org/ns/docbook"
+
+  4 include "docbook.rnc" {
+       db.sect5.sections = (db.sect6+, db.simplesect*) | db.simplesect+
+  6 }
+
+  8 db.sect6.sections = db.simplesect+
+
+ 10 db.sect6.status.attribute = db.status.attribute
+    db.sect6.role.attribute = attribute role { text }
+ 12 db.sect6.attlist =
+       db.sect6.role.attribute?
+ 14  & db.common.attributes
+     & db.common.linking.attributes
+ 16  & db.label.attribute?
+     & db.sect6.status.attribute?
+ 18
+    db.sect6.info = db._info.title.req
+ 20
+    db.sect6 =
+ 22    element sect6 {
+          db.sect6.attlist,
+ 24       db.sect6.info,
+          ((db.all.blocks+, db.sect6.sections?)
+ 26        | db.sect6.sections),
+          db.navigation.components*
+ 28    }
+Here we’ve redefined sect5 to include sect6 and provided a pattern for sect6.
+**** 8. Adding Attributes ****
+The simplest way to add an attribute to a single element is to add it to the attlist pattern for that element. Example 5.13,_“Adding_born_and_died_attributes” adds the optional attributes born and died to the attribute list for author. The db.author.attlist pattern is redefined to interleave the two new optional attributes with the existing attributes on the list.
+Example 5.13. Adding born and died attributes
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 default namespace = "http://docbook.org/ns/docbook"
+
+  4 include "docbook.rnc"
+
+  6 db.author.attlist &=                             [1]
+      attribute born { db.date.contentmodel }?       [2]
+  8   & attribute died { db.date.contentmodel }?
+[1] &= interleaves the two new optional attributes with the existing attributes on the list.
+[2] db.date.contentmodel is a pattern used for any attribute or element that represents a date.
+**** 9. Other Modifications ****
+*** 9.1. Changing the Contents of the role Attribute ***
+The role attribute, found on almost all of the elements in DocBook, is a text attribute that can be used to subclass an element. In some applications, it may be useful to modify the definition of role so that authors must choose one of a specific set of possible values.
+In Example 5.14,_“Changing_role_on_procedure”, the role attribute on the procedure element is constrained to the value required or optional.
+Example 5.14. Changing role on procedure
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2
+    include "docbook.rnc" {
+  4    db.procedure.role.attribute = attribute role { "required" | "optional" }
+    }
+*** 9.2. Adding a Value to an Enumerated Attribute ***
+Example 5.15,_“Adding_a_value_to_an_enumeration” adds the value “large” to the db.spacing.enumeration pattern. Any attribute that is defined using db.spacing.enumeration will now have large as a legal value. Note that while it is easy to add a value to an enumeration, to remove a value from an enumeration you need to redefine the entire enumeration, minus the values you don’t need.
+Example 5.15. Adding a value to an enumeration
+  1 namespace db = "http://docbook.org/ns/docbook"
+  2 default namespace = "http://docbook.org/ns/docbook"
+
+  4 include "docbook.rnc"
+
+  6 # add a value to an enumeration
+    db.spacing.enumeration |= "large"
+[Prev]                       [Home]                 [Next]
+Publishing DocBook Documents  [Up]   Part  II .  Reference
+Copyright © 2010, 2011 Norman Walsh.

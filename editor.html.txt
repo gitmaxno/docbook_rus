@@ -35,3 +35,44 @@ The following elements occur in editor: address, affiliation, contrib, email, or
 ***** See Also *****
 author, authorgroup, collab, contrib, othercredit, personblurb, personname
 edition  [Up]    email
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** editor *****
+editor — The name of the editor of a document.
+***** Synopsis *****
+    * One of:
+          o Sequence of:
+                # personname
+                # Zero or more of:
+                      # address
+                      # affiliation
+                      # contrib
+                      # email
+                      # personblurb
+                      # uri
+          o Sequence of:
+                # orgname
+                # Zero or more of:
+                      # address
+                      # affiliation
+                      # contrib
+                      # email
+                      # orgdiv
+                      # uri
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The name of the editor of a document.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+*** Parents [[+]][[+]] ***
+This element occurs in 60_elements.
+These elements contain editor: authorgroup, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info), link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+**** Children ****
+The following elements occur in editor: address, affiliation, contrib, email, orgdiv, orgname, personblurb, personname, uri.
+***** See Also *****
+author, authorgroup, collab, contrib, othercredit, personblurb, personname
+[Prev]  [Home]  [Next]
+edition  [Up]    email
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

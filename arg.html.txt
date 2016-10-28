@@ -1,77 +1,81 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+arg
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** arg *****
-argÂ â€”Â An argument in a CmdSynopsis.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o arg
-          o group
-          o option
-          o phraseÂ (db._phrase)
-          o replaceable
-          o sbr
-          o synopfragmentref
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+arg â€” An argument in a CmdSynopsis.
+Synopsis
+
+    Zero or more of:
+        text
+        arg
+        group
+        option
+        phrase (db._phrase)
+        replaceable
+        sbr
+        synopfragmentref
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * choice (enumeration) [default=â€œoptâ€]
-          o â€œoptâ€
-          o â€œplainâ€
-          o â€œreqâ€
-    * rep (enumeration) [default=â€œnorepeatâ€]
-          o â€œnorepeatâ€
-          o â€œrepeatâ€
-***** Description *****
+
+    choice (enumeration) [default=â€œoptâ€]
+        â€œoptâ€
+        â€œplainâ€
+        â€œreqâ€
+    rep (enumeration) [default=â€œnorepeatâ€]
+        â€œnorepeatâ€
+        â€œrepeatâ€
+
+Description
+
 Used in cmdsynopsis for command arguments. See cmdsynopsis for more information and examples.
-**** Processing expectations ****
+Processing expectations
+
 May be formatted inline or as a displayed block, depending on context.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  choice
-      Indicates optionality.
-      Enumerated values:
-      â€œoptâ€Formatted to indicate that it is optional.
-      â€œplainFormatted without indication.
-      â€œreqâ€Formatted to indicate that it is required.
-  rep
-      Indicates whether or not repetition is possible.
-      Enumerated values:
-      â€œnorepeatCan not be repeated.
-      â€œrepeatâ€Can be repeated.
-**** Parents ****
+Attributes
+
+Common attributes and common linking attributes.
+
+choice
+
+    Indicates optionality.
+    Enumerated values:
+    â€œoptâ€	
+
+    Formatted to indicate that it is optional.
+    â€œplainâ€	
+
+    Formatted without indication.
+    â€œreqâ€	
+
+    Formatted to indicate that it is required.
+rep
+
+    Indicates whether or not repetition is possible.
+    Enumerated values:
+    â€œnorepeatâ€	
+
+    Can not be repeated.
+    â€œrepeatâ€	
+
+    Can be repeated.
+
+Parents
+
 These elements contain arg: arg, cmdsynopsis, group, synopfragment.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 21_elements.
-The following elements occur in arg: text, alt, anchor, annotation, arg, biblioref, group, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, option, phraseÂ (db._phrase), remark, replaceable, sbr, subscript, superscript, synopfragmentref, xref.
-***** See Also *****
+Children [+]
+This element contains 21 elements.
+See Also
+
 cmdsynopsis, group, refsynopsisdiv, sbr, synopfragment, synopfragmentref
-[Prev]Â   [Home]  Â [Next]
-areaspecÂ  [Up]  Â article
+Prev 	Home	 Next
+areaspec 	Up	 article
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

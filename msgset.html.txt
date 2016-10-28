@@ -76,3 +76,85 @@ Origin:server
 Audience:all
 Indicates that some sort of error occurred while attempting to load a record from the database. Retry. If failure persists,contact the database administrator.
 msgrel  [Up]   msgsub
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** msgset *****
+msgset — A detailed set of messages, usually error messages.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One of:
+                # One or more of:
+                      # msgentry
+                # One or more of:
+                      # simplemsgentry
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A msgset is a complex structure designed to hold a detailed set of messages, usually error messages. In addition to the actual text of each message, it can contain additional information about each message and the messages related to it.
+**** Processing expectations ****
+Formatted as a displayed block.
+On the whole, the semantics of msgset are not clearly defined.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain msgset: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in msgset: info (db.titleforbidden.info), info (db.titleonly.info), msgentry, simplemsgentry, title, titleabbrev.
+***** See Also *****
+errorcode, errorname, errortext, errortype
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example msgset</title>
+
+  4 <msgset>
+      <msgentry>
+  6     <msg>
+           <msgmain>
+  8           <msgtext><para>Record failed CRC</para></msgtext>
+           </msgmain>
+ 10        <msgsub>
+              <msgtext><para>Record <replaceable>n</replaceable>
+ 12                     in <replaceable>database</replaceable></para></msgtext>
+           </msgsub>
+ 14        <msgrel>
+              <msgtext><para>File read error on
+ 16                    <replaceable>database</replaceable></para></msgtext>
+           </msgrel>
+ 18        <msgrel>
+              <msgtext><para>Panic! Corrupt record!</para></msgtext>
+ 20        </msgrel>
+         </msg>
+ 22      <msginfo>
+            <msglevel>severe</msglevel>
+ 24         <msgorig>server</msgorig>
+            <msgaud>all</msgaud>
+ 26      </msginfo>
+         <msgexplan>
+ 28         <para>Indicates that some sort of error occurred while
+            attempting to load a record from the database.  Retry.
+ 30         If failure persists,contact the database administrator.
+            </para>
+ 32      </msgexplan>
+     </msgentry>
+ 34  <!-- more entries -->
+    </msgset>
+ 36
+    </article>
+Record failed CRC
+Record n in database
+File read error on database
+Panic! Corrupt record!
+Level:severe
+Origin:server
+Audience:all
+Indicates that some sort of error occurred while attempting to load a record from the database. Retry. If failure persists,contact the database administrator.
+[Prev] [Home]  [Next]
+msgrel  [Up]   msgsub
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

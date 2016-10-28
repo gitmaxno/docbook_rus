@@ -65,3 +65,74 @@ author, authorgroup, collab, contrib, editor, othercredit, personblurb
   8 </article>
 Starting in DocBook 4.2, personal names, like Albert Einstein can be marked-up inline.
 personblurb  [Up]    phone
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** personname *****
+personname — The personal name of an individual.
+***** Synopsis *****
+    * One of:
+          o Zero or more of:
+                # text
+                # phrase (db._phrase)
+                # replaceable
+                # Graphic inlines [[+]] [[-]]
+                      * inlinemediaobject
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Linking inlines [[+]] [[-]]
+                      * anchor
+                      * biblioref
+                      * link
+                      * olink
+                      * xref
+                # Ubiquitous inlines [[+]] [[-]]
+                      * alt
+                      * anchor
+                      * annotation
+                      * biblioref
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                      * inlinemediaobject
+                      * link
+                      * olink
+                      * remark
+                      * subscript
+                      * superscript
+                      * xref
+          o One or more of:
+                # firstname
+                # honorific
+                # lineage
+                # othername
+                # surname
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The personname identifies the personal name of an individual.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context.
+*** Parents [[+]][[+]] ***
+This element occurs in 61_elements.
+These elements contain personname: address, attribution, author, biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, collab, editor, emphasis (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, othercredit, para, person, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
+*** Children [[+]][[+]] ***
+This element contains 21_elements.
+The following elements occur in personname: text, alt, anchor, annotation, biblioref, firstname, honorific, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, lineage, link, olink, othername, phrase (db._phrase), remark, replaceable, subscript, superscript, surname, xref.
+***** See Also *****
+author, authorgroup, collab, contrib, editor, othercredit, personblurb
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example personname</title>
+
+  4 <para>Starting in DocBook 4.2, personal names, like
+    <personname><firstname>Albert</firstname><surname>Einstein</surname></personname>
+  6 can be marked-up inline.</para>
+
+  8 </article>
+Starting in DocBook 4.2, personal names, like Albert Einstein can be marked-up inline.
+[Prev]      [Home]  [Next]
+personblurb  [Up]    phone
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

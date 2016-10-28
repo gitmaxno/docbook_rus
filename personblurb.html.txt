@@ -31,3 +31,40 @@ author, authorgroup, collab, contrib, editor, othercredit, personname
 ***** Examples *****
 See authorgroup for an example that uses this element.
 person  [Up]   personname
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** personblurb *****
+personblurb — A short description or note about a person.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o One or more of:
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A short description of a person.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed.
+**** Parents ****
+These elements contain personblurb: author, biblioentry, bibliomixed, bibliomset, biblioset, editor, othercredit, person.
+**** Children ****
+The following elements occur in personblurb: anchor, formalpara, info (db.titleforbidden.info), info (db.titleonly.info), para, simpara, title, titleabbrev.
+***** See Also *****
+author, authorgroup, collab, contrib, editor, othercredit, personname
+***** Examples *****
+See authorgroup for an example that uses this element.
+[Prev] [Home]      [Next]
+person  [Up]   personname
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

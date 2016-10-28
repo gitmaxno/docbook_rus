@@ -69,3 +69,78 @@ confdates, confgroup, confnum, confsponsor, conftitle, contractnum
  20
     </article>
 contractnum  [Up]   contrib
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** contractsponsor *****
+contractsponsor — The sponsor of a contract.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The contractsponsor element that occurs in bibliographic metadata contains information about the sponser of a contract under which a document was written.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+**** Parents ****
+These elements contain contractsponsor: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in contractsponsor: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+confdates, confgroup, confnum, confsponsor, conftitle, contractnum
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Retrofitting Class A Widgets</title>
+  4   <contractsponsor>Xyzzy Engineering Resources</contractsponsor>
+      <contractnum>314-592-7</contractnum>
+  6   <biblioid>XER-314-7A</biblioid>
+      <author>
+  8     <orgname>Technical Documentation Consultants, Inc.</orgname>
+      </author>
+ 10   <collab>
+        <personname>
+ 12       <firstname>John</firstname>
+          <surname>Whorfin</surname>
+ 14     </personname>
+        <affiliation><orgname>Yoyodyne Propulsion Systems</orgname></affiliation>
+ 16   </collab>
+    </info>
+ 18
+    <para>…</para>
+ 20
+    </article>
+[Prev]      [Home]   [Next]
+contractnum  [Up]   contrib
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

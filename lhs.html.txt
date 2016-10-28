@@ -10,3 +10,19 @@ The lefthand side (lhs) of a production is a nonterminal defined in terms of the
 **** Parents ****
 These elements contain lhs: production.
 legalnotice  [Up]   lineage
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** lhs *****
+lhs — The left-hand side of an EBNF production.
+***** Synopsis *****
+    * text
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The lefthand side (lhs) of a production is a nonterminal defined in terms of the righthand side (rhs) of the production.
+**** Parents ****
+These elements contain lhs: production.
+[Prev]      [Home]   [Next]
+legalnotice  [Up]   lineage
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

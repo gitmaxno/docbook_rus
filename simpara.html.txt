@@ -163,3 +163,172 @@ formalpara, para
   8 </article>
 Just the text, ma'am.
 sidebar  [Up]   simplelist
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** simpara *****
+simpara — A paragraph that contains only text and inline markup, no block elements.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o Zero or more of:
+                # text
+                # Bibliography inlines [[+]] [[-]]
+                      * author
+                      * citation
+                      * citebiblioid
+                      * citerefentry
+                      * citetitle
+                      * editor
+                      * jobtitle
+                      * org
+                      * orgname
+                      * person
+                      * personname
+                # Error inlines [[+]] [[-]]
+                      * errorcode
+                      * errorname
+                      * errortext
+                      * errortype
+                # Graphic inlines [[+]] [[-]]
+                      * inlinemediaobject
+                # GUI inlines [[+]] [[-]]
+                      * guibutton
+                      * guiicon
+                      * guilabel
+                      * guimenu
+                      * guimenuitem
+                      * guisubmenu
+                      * menuchoice
+                      * mousebutton
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Keyboard inlines [[+]] [[-]]
+                      * accel
+                      * keycap
+                      * keycode
+                      * keycombo
+                      * keysym
+                      * shortcut
+                # Linking inlines [[+]] [[-]]
+                      * anchor
+                      * biblioref
+                      * link
+                      * olink
+                      * xref
+                # Markup inlines [[+]] [[-]]
+                      * code
+                      * constant
+                      * email
+                      * literal
+                      * markup
+                      * symbol
+                      * tag
+                      * token
+                      * uri
+                # Math inlines [[+]] [[-]]
+                      * inlineequation
+                # Object-oriented programming inlines [[+]] [[-]]
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                # Operating system inlines [[+]] [[-]]
+                      * command
+                      * computeroutput
+                      * envar
+                      * filename
+                      * prompt
+                      * userinput
+                # Product inlines [[+]] [[-]]
+                      * application
+                      * database
+                      * hardware
+                      * productname
+                      * productnumber
+                      * trademark
+                # Programming inlines [[+]] [[-]]
+                      * classname
+                      * exceptionname
+                      * function
+                      * initializer
+                      * interfacename
+                      * methodname
+                      * modifier
+                      * ooclass
+                      * ooexception
+                      * oointerface
+                      * parameter
+                      * returnvalue
+                      * type
+                      * varname
+                # Publishing inlines [[+]] [[-]]
+                      * abbrev
+                      * acronym
+                      * coref
+                      * date
+                      * emphasis (db.emphasis)
+                      * firstterm
+                      * footnote
+                      * footnoteref
+                      * foreignphrase
+                      * glossterm
+                      * phrase (db.phrase)
+                      * quote
+                      * subscript
+                      * superscript
+                      * wordasword
+                # Technical inlines [[+]] [[-]]
+                      * nonterminal
+                      * option
+                      * optional
+                      * package
+                      * parameter
+                      * property
+                      * replaceable
+                      * systemitem
+                      * termdef
+                # Ubiquitous inlines [[+]] [[-]]
+                      * alt
+                      * anchor
+                      * annotation
+                      * biblioref
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                      * inlinemediaobject
+                      * link
+                      * olink
+                      * remark
+                      * subscript
+                      * superscript
+                      * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A simpara is a “simple paragraph,” one that may contain only character data and inline elements. The para element is less restrictive; it may also contain block-level structures (lists, figures, etc.).
+**** Processing expectations ****
+Formatted as a displayed block.
+*** Parents [[+]][[+]] ***
+This element occurs in 76_elements.
+These elements contain simpara: abstract, acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, epigraph, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, partintro, personblurb, preface, printhistory, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+*** Children [[+]][[+]] ***
+This element contains 101_elements.
+The following elements occur in simpara: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname,
+productnumber, prompt, property, quote, remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+formalpara, para
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example simpara</title>
+
+  4 <simpara>
+    Just the text, ma'am.
+  6 </simpara>
+
+  8 </article>
+Just the text, ma'am.
+[Prev]  [Home]      [Next]
+sidebar  [Up]   simplelist
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

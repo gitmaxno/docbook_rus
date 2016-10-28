@@ -30,3 +30,39 @@ These elements contain destructorsynopsis: acknowledgements, annotation, answer,
 **** Children ****
 The following elements occur in destructorsynopsis: exceptionname, methodname, methodparam, modifier, void.
 dedication  [Up]   edition
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** destructorsynopsis *****
+destructorsynopsis — A syntax summary for a destructor.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # modifier
+          o methodname?
+          o One of:
+                # One or more of:
+                      # methodparam
+                # void?
+          o Zero or more of:
+                # exceptionname
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * language
+***** Description *****
+A destructorsynopsis contains the syntax summary of a destructor in an object-oriented programming language. Unlike a methodsynopsis, which it closely resembles, it may not identify a return type and the methodname is optional (in some languages, destructors have an immutable name which may be generated automatically).
+**** Processing expectations ****
+For the most part, the processing application is expected to generate all of the parentheses, semicolons, commas, and so on required in the rendered synopsis.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  language
+      Identifies the language (i.e. programming language) of the content.
+*** Parents [[+]][[+]] ***
+This element occurs in 74_elements.
+These elements contain destructorsynopsis: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, classsynopsis, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in destructorsynopsis: exceptionname, methodname, methodparam, modifier, void.
+[Prev]     [Home]   [Next]
+dedication  [Up]   edition
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

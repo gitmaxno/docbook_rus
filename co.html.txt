@@ -1,35 +1,48 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+co
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** co *****
-coÂ â€”Â The location of a callout embedded in text.
-***** Synopsis *****
-    * empty
-***** Attributes *****
-Common_attributes (ID required).
+co â€” The location of a callout embedded in text.
+Synopsis
+
+    empty
+
+Attributes
+
+Common attributes (ID required).
+
 Additional attributes:
-    * label
+
+    label
+
 Required attributes are shown in bold.
-***** Description *****
+Description
+
 A co identifies (by its location) a point of reference for a callout. See callout.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline.
-**** Attributes ****
-Common_attributes (ID required).
-  label
-      Specifies an identifying string for presentation purposes
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 12_elements.
-These elements contain co: classsynopsisinfo, computeroutput, funcsynopsisinfo, literallayout, programlisting, prompt, replaceable, screen, synopsis, systemitem, userinput.
-***** See Also *****
+Attributes
+
+Common attributes (ID required).
+
+label
+
+    Specifies an identifying string for presentation purposes
+
+Parents [+]
+This element occurs in 12 elements.
+See Also
+
 areaspec, calloutlist, coref, imageobjectco, programlistingco, screenco
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook' version="5.0">
   2 <title>Example co</title>
-
+    
   4 <informalexample>
     <screen> Volume in drive C is SYSTEM         Serial number is 2350:717C
   6  Directory of  C:\
-
+    
   8 10/17/97   9:04         &lt;DIR>    bin
     10/16/97  14:11         &lt;DIR>    DOS            <co xml:id="co.dos"/>
  10 10/16/97  14:40         &lt;DIR>    Program Files
@@ -48,12 +61,12 @@ areaspec, calloutlist, coref, imageobjectco, programlistingco, screenco
     NT</trademark>.
  24 </para>
     </callout>
- 26
+ 26 
     <callout arearefs="co.autoexec.bat co.command.com co.config.sys">
  28 <para>System startup code for DOS.
     </para>
  30 </callout>
-
+    
  32 <callout arearefs="co.wina20.386">
     <para>Some sort of <trademark>Windows 3.1</trademark> hack for some
  34 386 processors, as I recall.
@@ -61,25 +74,42 @@ areaspec, calloutlist, coref, imageobjectco, programlistingco, screenco
  36 </callout>
     </calloutlist>
  38 </informalexample>
-
+    
  40 </article>
+
   1  Volume in drive C is SYSTEM         Serial number is 2350:717C
   2  Directory of  C:\
-
+    
   4 10/17/97   9:04         <DIR>    bin
-    10/16/97  14:11         <DIR>    DOS            [3]
+    10/16/97  14:11         <DIR>    DOS            3
   6 10/16/97  14:40         <DIR>    Program Files
     10/16/97  14:46         <DIR>    TEMP
   8 10/17/97   9:04         <DIR>    tmp
     10/16/97  14:37         <DIR>    WINNT
- 10 10/16/97  14:25             119  AUTOEXEC.BAT   [4]
-     2/13/94   6:21          54,619  COMMAND.COM    [5]
- 12 10/16/97  14:25             115  CONFIG.SYS     [6]
+ 10 10/16/97  14:25             119  AUTOEXEC.BAT   4
+     2/13/94   6:21          54,619  COMMAND.COM    5
+ 12 10/16/97  14:25             115  CONFIG.SYS     6
     11/16/97  17:17      61,865,984  pagefile.sys
- 14  2/13/94   6:21           9,349  WINA20.386     [7]
-[3]Â Â        This directory holds MS-DOSâ„¢, the operating system that was installed before Windows NTâ„¢.
-[4]Â [5]Â [6]ÂSystem startup code for DOS.
-[7]Â Â        Some sort of Windows 3.1â„¢ hack for some 386 processors, as I recall.
+ 14  2/13/94   6:21           9,349  WINA20.386     7
+
+3  
+	
+
+This directory holds MS-DOSâ„¢, the operating system that was installed before Windows NTâ„¢.
+
+4 5 6  
+	
+
+System startup code for DOS.
+
+7  
+	
+
+Some sort of Windows 3.1â„¢ hack for some 386 processors, as I recall.
+
 Compare this example with the example for screenco.
-[Prev]Â      [Home] Â [Next]
-cmdsynopsisÂ  [Up]    Â code
+Prev 	Home	 Next
+cmdsynopsis 	Up	 code
+Last revised by Norman Walsh on 9 Jun 2011 (git hash: 8b56299e266638d7740ab38b86833eeafed584e9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

@@ -1,152 +1,250 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+imagedata (db.imagedata)
 
-� [Home]� [Prev]� [Up]� [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** imagedata (db.imagedata) *****
-imagedata� —� Pointer to external image data.
-***** Synopsis *****
-    * info?� (db.titleforbidden.info)
-***** Attributes *****
-Common_attributes.
+imagedata — Pointer to external image data.
+Synopsis
+
+    info? (db.titleforbidden.info)
+
+Attributes
+
+Common attributes.
+
 Additional attributes:
-    * align (enumeration)
-          o “center”
-          o “char”
-          o “justify”
-          o “left”
-          o “right”
-    * contentdepth
-    * contentwidth
-    * depth
-    * Each of:
-          o format
-          o Exactly one of:
-                # fileref (anyURI)
-                # entityref (ENTITY)
-    * scale (positiveInteger)
-    * scalefit (enumeration)
-          o “0”
-          o “1”
-    * valign (enumeration)
-          o “bottom”
-          o “middle”
-          o “top”
-    * width
+
+    align (enumeration)
+        “center”
+        “char”
+        “justify”
+        “left”
+        “right”
+    contentdepth
+    contentwidth
+    depth
+    Each of:
+        format
+        Exactly one of:
+            fileref (anyURI)
+            entityref (ENTITY)
+    scale (positiveInteger)
+    scalefit (enumeration)
+        “0”
+        “1”
+    valign (enumeration)
+        “bottom”
+        “middle”
+        “top”
+    width
+
 Required attributes are shown in bold.
-***** Description *****
+Description
+
 This element points to an external entity containing graphical image data.
-**** Processing expectations ****
+Processing expectations
+
 Render the image. May be formatted inline or as a displayed block, depending on context.
+
 There are two ways to provide content for imagedata: entityref or fileref. It is best to use only one of these methods; however, if multiple sources are provided, entityref will be used in favor of fileref.
+
 The imagedata provides a selection of attributes that can be used to control how the image is rendered. These attributes define two rectangles, the viewport area and the content area, and how these rectangles are related to each other. The intrinsic size of the image is a third rectangle that sometimes influences the way an image is rendered.
-It is important to understand the distinction between these three areas. When rendering an image, the viewport area defines the space reserved in the flow of content for the image. If a 6in� ×� 4in viewport area is specified, that’s how much space will be reserved for the image, independent of the actual size of the rendered image. The content area defines the actual size of the rendered image, independent of the intrinsic size of the image. The intrinsic size of the image is its actual, real size.
+
+It is important to understand the distinction between these three areas. When rendering an image, the viewport area defines the space reserved in the flow of content for the image. If a 6in × 4in viewport area is specified, that’s how much space will be reserved for the image, independent of the actual size of the rendered image. The content area defines the actual size of the rendered image, independent of the intrinsic size of the image. The intrinsic size of the image is its actual, real size.
+
 DocBook provides three mutually exclusive mechanisms for specifying the content area of an image: it can be specified directly, it can be specified by selecting a scale factor, or it can be specified to be the same size as the viewport area.
+
 Finally, DocBook provides two attributes, align and valign, to specify the alignment of the content area within the viewport area.
+
 DocBook provides no mechanism for specifying how an image should be rendered if the content area exceeds the viewport area in either or both dimensions. Implementations are free to perform clipping, allow the image to overflow, and/or generate errors.
-*** Units of measure ***
+Units of measure
+
 The sizes of the viewport area and the content area are defined in terms of lengths (width and depth).
+
 Lengths must be expressed as a decimal value followed immediately by an optional unit of measure or a percentage. Six and one eighth inches, for example, must be expressed as “6.125in”. It is an error to put a space or other punctuation between the decimal value and the unit of measure.
+
 Examples of common units of measure include:
-pt Points (1/72 of an inch)
-cm Centimeters
-mm Millimeters
-in Inches
-pc Picas (1/6 of an inch)
-px Pixels
-em Ems
+pt	Points (1/72 of an inch)
+cm	Centimeters
+mm	Millimeters
+in	Inches
+pc	Picas (1/6 of an inch)
+px	Pixels
+em	Ems
+
 If no unit of measure is provided, px is assumed. Note that pixels have no universally accepted absolute size and ems are relative units of measure. Implementations may define pixel sizes differently and stylesheets may or may not be able to determine the current font size in order to correctly calculate the absolute size of an em. It is best to avoid these units of measure.
+
 Percentages are expressed as a decimal value followed immediately by a % sign.
-*** Specifying the viewport area ***
+Specifying the viewport area
+
 The viewport area is specified by the width and depth attributes.
+
 If neither width nor depth is specified, an implementation is free to choose defaults. These defaults may be influenced by context. For example, when rendering an inline graphic, the viewport area often defaults to the size of the content area. For block graphics, the width often defaults to the column width while the depth defaults to the depth of the content area.
+
 If only one of width or depth is specified, an implementation is free to choose a default for the other dimension.
+
 Viewport area dimensions expressed as a percentage are a percentage of the available area. For example, a width of 50% when an implementation is rendering in a column 6in wide is equivalent to specifying a width of 3in.
+
 Percentages must be used with care. Some media are unbounded in one or more directions (e.g., web pages are generally unbounded in depth). Specifying a percentage of an unbounded dimension is undefined. Implementations may choose arbitrary defaults or may generate errors.
-*** Specifying the content area ***
+Specifying the content area
+
 The content area is specified by the contentwidth and contentdepth attributes.
+
 If neither content width nor content depth is specified, an implementation is expected to render the image at its intrinsic size (unless scaling or scaling to fit is requested). If only one of content width or content depth is specified, an implementation is expected to choose a default for the other dimension such that the image is scaled proportionally. For example, if an image has an intrinsic size of one square inch and the content width is specified as 2in, the content depth must default to 2in.
+
 Content area dimensions expressed as a percentage are a percentage of the intrinsic size of the image.
+
 Percentages must be used with care. Some implementations may be unable to determine the intrinsic size of an image and will therefore be forced to make compromises. Implementations may choose arbitrary values or may generate errors if the intrinsic size cannot be obtained.
-*** Scaling ***
+Scaling
+
 Scaling can be specified in two ways: with the scale attribute or with the scalefit attribute.
+
 If scale is specified, it must be a positive integer. It is always interpreted to be a percentage value, where 100 represents 100%.
+
 The legal values of scalefit are 0 (false) or 1 (true). If scaling to fit is requested, the content area is scaled until either the content width is the same as the viewport width (and the content depth is less than or equal to the viewport depth) or the content depth is the same as the viewport depth (and the content width is less than or equal to the viewport width), whichever comes first. In other words, scaling to fit never causes anamorphic scaling; it simply scales the image as large as possible without overflowing the bounds of the viewport area.
+
 Specification of content area, scaling, and scaling to fit are mutually exclusive. If a content area (contentwidth, contentdepth, or both) is specified, both scaling and scaling to fit are ignored. If the content area is not specified and both scaling and scaling to fit are specified, scalefit is ignored.
+
 In order to achieve a level of backward compatibility with previous versions of DocBook (which did not have attributes for specifying a content area) while maintaining coherent semantics, the default value of scalefit depends on other attributes.
-Viewport area Content area scalefit default
- Unspecified  Unspecified      Irrelevant
-   Specified  Unspecified             1
- Unspecified    Specified             0
-   Specified    Specified             0
+Viewport area	Content area	scalefit default
+Unspecified	Unspecified	Irrelevant
+Specified	Unspecified	1
+Unspecified	Specified	0
+Specified	Specified	0
+
 If a viewport area is specified (and neither a content area nor scaling is specified) and scalefit is explicitly 0, the viewport area specification must be ignored, and the image must not be resized.
-*** Alignment ***
+Alignment
+
 Two alignment attributes are provided: align and valign.
+
 If specified, align indicates how the content area should be aligned horizontally within the viewport area. If not specified, implementations are free to choose any default value.
+
 If specified, valign indicates how the content area should be aligned vertically within the viewport area. If not specified, implementations are free to choose any default value.
-*** Examples ***
+Examples
+
 If nothing is specified about the size of an image, it is rendered in a content area that is the same as its intrinsic size in a viewport area that is implementation defined:
+
 <imagedata fileref="image.png"/>
-[An image at its intrinsic size]
+
+An image at its intrinsic size
+
 If a viewport area is specified, the image is rendered in a content area that is the same as its intrinsic size in the specified viewport area:
+
 <imagedata fileref="image.png" width="6in" depth="5.5in" scalefit="0"/>
-[An image at its intrinsic size in a viewport]
+
+An image at its intrinsic size in a viewport
+
 If a content area is specified, the image is scaled (possibly anamorphically) to that size and rendered in a viewport area that is implementation defined:
+
 <imagedata fileref="image.png" contentwidth="4in" contentdepth="3in"/>
-[An image at a specified content size]
+
+An image at a specified content size
+
 If a scaling factor is specified, the intrinsic size is scaled uniformly by that amount to obtain the content area which is rendered in a viewport area that is implementation defined:
+
 <imagedata fileref="image.png" scale="300"/>
-[An image scaled]
+
+An image scaled
+
 If a viewport area is specified and scaling to fit is requested, the intrinsic size is scaled (uniformly) as large as possible without extending beyond the bounds of the viewport area which is rendered as specified:
+
 <imagedata fileref="image.png" width="6in" depth="5.5in"/>
 <!-- note that scalefit="1" is the default in this case -->
-[An image scaled to fit]
+
+An image scaled to fit
+
 If the viewport area and content area are specified, the image is scaled (possibly anamorphically) to the content area size and rendered in the specified viewport area:
+
 <imagedata fileref="image.png" width="6in" depth="5.5in"
            contentwidth="4in" contentdepth="3in"/>
-[An image at a specified size in a specified&#xA;                viewport]
+
+An image at a specified size in a specified viewport
+
 If the viewport area and a scaling factor are specified, the intrinsic size is scaled uniformly by the scaling factor amount to obtain the content area which is rendered in the specified viewport area:
+
 <imagedata fileref="image.png" width="6in" depth="5.5in" scale="300"/>
-[An image scaled in a specified viewport]
-**** Attributes ****
-Common_attributes.
-  align
-      Specifies the (horizontal) alignment of the image data
-      Enumerated values:
-      “center�Centered horizontally
-      “char”Aligned horizontally on the specified character
-      “justifyFully justified (left and right margins or edges)
-      “left”Left aligned
-      “right�Right aligned
-  contentdepth
-      Specifies the depth of the content rectangle
-  contentwidth
-      Specifies the width of the content rectangle
-  depth
-      Specifies the depth of the element
-  entityref
-      Identifies the location of the data by external identifier (entity name)
-  fileref
-      Indentifies the location of the data by URI
-  format
-      Specifies the format of the data
-  scale
-      Specifies the scaling factor
-  scalefit
-      Determines if anamorphic scaling is forbidden
-      Enumerated values:
-      “0False (do not scale-to-fit; anamorphic scaling may occur)
-      “1True (scale-to-fit; anamorphic scaling is forbidden)
-  valign
-      Specifies the vertical alignment of the image data
-      Enumerated values:
-      “bottomAligned on the bottom of the region
-      “middleCentered vertically
-      “top”Aligned on the top of the region
-  width
-      Specifies the width of the element
-**** Parents ****
+
+An image scaled in a specified viewport
+Attributes
+
+Common attributes.
+
+align
+
+    Specifies the (horizontal) alignment of the image data
+    Enumerated values:
+    “center”	
+
+    Centered horizontally
+    “char”	
+
+    Aligned horizontally on the specified character
+    “justify”	
+
+    Fully justified (left and right margins or edges)
+    “left”	
+
+    Left aligned
+    “right”	
+
+    Right aligned
+contentdepth
+
+    Specifies the depth of the content rectangle
+contentwidth
+
+    Specifies the width of the content rectangle
+depth
+
+    Specifies the depth of the element
+entityref
+
+    Identifies the location of the data by external identifier (entity name)
+fileref
+
+    Indentifies the location of the data by URI
+format
+
+    Specifies the format of the data
+scale
+
+    Specifies the scaling factor
+scalefit
+
+    Determines if anamorphic scaling is forbidden
+    Enumerated values:
+    “0”	
+
+    False (do not scale-to-fit; anamorphic scaling may occur)
+    “1”	
+
+    True (scale-to-fit; anamorphic scaling is forbidden)
+valign
+
+    Specifies the vertical alignment of the image data
+    Enumerated values:
+    “bottom”	
+
+    Aligned on the bottom of the region
+    “middle”	
+
+    Centered vertically
+    “top”	
+
+    Aligned on the top of the region
+width
+
+    Specifies the width of the element
+
+Parents
+
 These elements contain imagedata: imageobject.
-**** Children ****
-The following elements occur in imagedata: info� (db.titleforbidden.info).
-***** See Also *****
-imagedata� (db.imagedata.mathml)
-[Prev]�    [Home]                          � [Next]
-honorific�  [Up]  � imagedata (db.imagedata.mathml)
+Children
+
+The following elements occur in imagedata: info (db.titleforbidden.info).
+See Also
+
+imagedata (db.imagedata.mathml)
+Prev 	Home	 Next
+honorific 	Up	 imagedata (db.imagedata.mathml)
+Last revised by Norman Walsh on 8 Jun 2011 (git hash: 2c1f37c0d526e0e9f3453b4abc91361bd458dfa0)
+
+Copyright © 2010, 2011 Norman Walsh.

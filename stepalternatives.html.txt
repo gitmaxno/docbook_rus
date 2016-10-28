@@ -29,3 +29,38 @@ These elements contain stepalternatives: step.
 **** Children ****
 The following elements occur in stepalternatives: info (db.titleforbidden.info), step.
 step    [Up]   street
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** stepalternatives *****
+stepalternatives — Alternative steps in a procedure.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One or more of:
+                # step
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * performance (enumeration)
+          o “optional”
+          o “required”
+***** Description *****
+Most steps in a procedure are sequential: do the first, then the second, then the third. Sometimes procedures provide an explicit ordering: do step 7 next.
+The stepalternatives element was added to support the semantics of alternative steps: perform exactly one of the following steps. The reader is presumably given some criteria for deciding which one to choose, but the significant difference is that only one of the steps is performed.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  performance
+      Specifies if the content is required or optional.
+      Enumerated values:
+      “optionalThe content describes an optional step or steps.
+      “requiredThe content describes a required step or steps.
+**** Parents ****
+These elements contain stepalternatives: step.
+**** Children ****
+The following elements occur in stepalternatives: info (db.titleforbidden.info), step.
+[Prev] [Home]  [Next]
+step    [Up]   street
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

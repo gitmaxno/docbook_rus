@@ -188,3 +188,197 @@ anchor, olink, xref
  18
     </article>
 lineannotation  [Up]   listitem
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** link *****
+link — A hypertext link.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * endterm (IDREF)
+    * xrefstyle
+Required attributes are shown in bold.
+***** Description *****
+The link is a general-purpose hypertext element. Usually, link surrounds the text that should be made “hot” (unlike xref which must generate the text), but the endterm attribute can be used to copy text from another element.
+The link can have either a linkend attribute or an xlink:href attribute. If it has an xlink:href attribute, link is the equivalent of an HTML anchor (<html:a href="...">) for cross-reference with a Uniform Resource Identifier (URI).
+**** Processing expectations with linkend ****
+Formatted inline.
+If the link element has content, then that content is processed for output as the “hot” text. If the link element has content and an endterm attribute, then the content is used and the endterm is ignored. If the link element has an endterm attribute and no content, then the content of the element pointed to by endterm should be repeated at the location of the link and used as the “hot” text.
+**** Processing expectations with xlink:href ****
+Formatted inline.
+When rendered online, it is natural to make the content of the link element an active link. When rendered in print media, the URI might be ignored, printed after the text of the link, or printed as a footnote.
+When the content of the link element is empty, the content of the xlink:href attribute should be rendered as the text of the link.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  endterm
+      Points to the element whose content is to be used as the text of the link
+  xrefstyle
+      Specifies a keyword or keywords identifying additional style information
+*** Parents [[+]][[+]] ***
+This element occurs in 170_elements.
+These elements contain link: abbrev, accel, acronym, address, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, member,
+methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in link: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property, quote,
+remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+anchor, olink, xref
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example link</title>
+
+  4 <section>
+      <title>Examples of <tag>link</tag></title>
+  6   <para>
+        In this sentence <link linkend='nextsect'>this</link>
+  8     word is hot and points to the following section.
+      </para>
+ 10   <section xml:id='nextsect'>
+        <title xml:id='nextsect.title'>A Subsection</title>
+ 12     <para>
+          This section only exists to be the target of a couple
+ 14       of links.
+        </para>
+ 16   </section>
+    </section>
+ 18
+    </article>
+[Prev]         [Home]    [Next]
+lineannotation  [Up]   listitem
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

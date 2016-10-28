@@ -50,3 +50,59 @@ The following elements occur in email: text, alt, anchor, annotation, biblioref,
 ***** See Also *****
 address, city, country, fax, otheraddr, phone, pob, postcode, state, street
 editor  [Up]   emphasis (db.emphasis)
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** email *****
+email — An email address.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+Inline markup identifying an email address.
+**** Processing expectations ****
+Formatted inline. An email may generate surrounding punctuation, such as angle brackets. This is an interchange issue. See Appendix D,_Interchanging_DocBook_Documents.
+In some processing environments, email may automatically generate a hypertext link (a mailto: URL).
+In an address, this element may inherit the verbatim qualities of an address.
+*** Parents [[+]][[+]] ***
+This element occurs in 57_elements.
+These elements contain email: address, author, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, editor, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, org, orgdiv, othercredit, para, person, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in email: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+address, city, country, fax, otheraddr, phone, pob, postcode, state, street
+[Prev] [Home]                  [Next]
+editor  [Up]   emphasis (db.emphasis)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

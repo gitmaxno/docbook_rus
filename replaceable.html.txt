@@ -1,72 +1,73 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+replaceable
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** replaceable *****
-replaceableÂ â€”Â Content that may or must be replaced by the user.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o co
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+replaceable â€” Content that may or must be replaced by the user.
+Synopsis
+
+    Zero or more of:
+        text
+        co
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o â€œcommandâ€
-          o â€œfunctionâ€
-          o â€œoptionâ€
-          o â€œparameterâ€
-***** Description *****
+
+    class (enumeration)
+        â€œcommandâ€
+        â€œfunctionâ€
+        â€œoptionâ€
+        â€œparameterâ€
+
+Description
+
 A replaceable is used to mark text that describes what a user is supposed to enter, but not the actual text that the user is supposed to enter.
+
 It is used to identify a class of object in the document, in which the user is expected to replace the text that identifies the class with some specific instance of that class. A canonical example is:
+
 <replaceable>filename</replaceable>
+
 in which the user is expected to provide the name of some specific file to replace the text â€œfilename.â€
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline. Usually, the text is given special typographic treatment, such as italics, as a clue to the user that this is replaceable text. Often the font used is described in a â€œconventionsâ€ section at the beginning of the document.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the nature of the replaceable text
-      Enumerated values:
-      â€œcommandâ€A command
-      â€œfunctionâA function
-      â€œoptionâ€An option
-      â€œparameterA parameter
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 170_elements.
-These elements contain replaceable: abbrev, accel, acronym, address, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, captionÂ (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasisÂ (db._emphasis), emphasisÂ (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, group, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, member,
-methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phraseÂ (db._phrase), phraseÂ (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 17_elements.
-The following elements occur in replaceable: text, alt, anchor, annotation, biblioref, co, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the nature of the replaceable text
+    Enumerated values:
+    â€œcommandâ€	
+
+    A command
+    â€œfunctionâ€	
+
+    A function
+    â€œoptionâ€	
+
+    An option
+    â€œparameterâ€	
+
+    A parameter
+
+Parents [+]
+This element occurs in 170 elements.
+Children [+]
+This element contains 17 elements.
+See Also
+
 command, computeroutput, constant, literal, markup, option, optional, parameter, prompt, tag, userinput, varname
-[Prev]Â [Home]      Â [Next]
-remarkÂ  [Up]  Â returnvalue
+Prev 	Home	 Next
+remark 	Up	 returnvalue
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

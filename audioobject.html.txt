@@ -32,3 +32,41 @@ caption, imageobject, inlinemediaobject, mediaobject, textobject, videoobject
  12
     </article>
 audiodata  [Up]   author
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** audioobject *****
+audioobject — A wrapper for audio data and its associated meta-information.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o audiodata
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An audioobject is a wrapper for audiodata.
+**** Processing expectations ****
+Its content is rendered aurally or not at all. It might not be rendered, depending on its placement within a mediaobject or inlinemediaobject and the constraints on the publishing system. For a more detailed description of the semantics involved, see mediaobject.
+**** Parents ****
+These elements contain audioobject: inlinemediaobject, mediaobject.
+**** Children ****
+The following elements occur in audioobject: audiodata, info (db.titleforbidden.info).
+***** See Also *****
+caption, imageobject, inlinemediaobject, mediaobject, textobject, videoobject
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example audioobject</title>
+
+  4 <mediaobject>
+      <audioobject>
+  6     <audiodata fileref="phaser.wav"/>
+      </audioobject>
+  8   <textobject>
+        <phrase>A <trademark>Star Trek</trademark> phaser sound effect</phrase>
+ 10   </textobject>
+    </mediaobject>
+ 12
+    </article>
+[Prev]    [Home]  [Next]
+audiodata  [Up]   author
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

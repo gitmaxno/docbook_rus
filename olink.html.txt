@@ -178,3 +178,187 @@ remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, syst
 ***** See Also *****
 anchor, link, xref
 note    [Up]   ooclass
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** olink *****
+olink — A link that addresses its target indirectly.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Bibliography inlines [[+]] [[-]]
+                * author
+                * citation
+                * citebiblioid
+                * citerefentry
+                * citetitle
+                * editor
+                * jobtitle
+                * org
+                * orgname
+                * person
+                * personname
+          o Error inlines [[+]] [[-]]
+                * errorcode
+                * errorname
+                * errortext
+                * errortype
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o GUI inlines [[+]] [[-]]
+                * guibutton
+                * guiicon
+                * guilabel
+                * guimenu
+                * guimenuitem
+                * guisubmenu
+                * menuchoice
+                * mousebutton
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Keyboard inlines [[+]] [[-]]
+                * accel
+                * keycap
+                * keycode
+                * keycombo
+                * keysym
+                * shortcut
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Markup inlines [[+]] [[-]]
+                * code
+                * constant
+                * email
+                * literal
+                * markup
+                * symbol
+                * tag
+                * token
+                * uri
+          o Math inlines [[+]] [[-]]
+                * inlineequation
+          o Object-oriented programming inlines [[+]] [[-]]
+                * ooclass
+                * ooexception
+                * oointerface
+          o Operating system inlines [[+]] [[-]]
+                * command
+                * computeroutput
+                * envar
+                * filename
+                * prompt
+                * userinput
+          o Product inlines [[+]] [[-]]
+                * application
+                * database
+                * hardware
+                * productname
+                * productnumber
+                * trademark
+          o Programming inlines [[+]] [[-]]
+                * classname
+                * exceptionname
+                * function
+                * initializer
+                * interfacename
+                * methodname
+                * modifier
+                * ooclass
+                * ooexception
+                * oointerface
+                * parameter
+                * returnvalue
+                * type
+                * varname
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Technical inlines [[+]] [[-]]
+                * nonterminal
+                * option
+                * optional
+                * package
+                * parameter
+                * property
+                * replaceable
+                * systemitem
+                * termdef
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * localinfo
+    * targetdoc (anyURI)
+    * targetptr
+    * type
+    * xrefstyle
+***** Description *****
+Unlike link, the semantics of olink are application specific. The olink element provides a mechanism for establishing links across documents, where ID/IDREF linking is not possible and URI-based linking may be inappropriate.
+In general terms, the strategy employed by olink is to point to the target document by URI, and point into that document in some application-specific way.
+Other elements can also behave like olink by using the common linking attributes xlink:href and xlink:role. When an element has an xlink:role="http://docbook.org/xlink/role/olink" attribute, then its xlink:href attribute is interpreted using olink semantics. That is, the part of xlink:href before the fragment identifier (#) is interpreted as equivalent to an olink targetdoc attribute value instead of a URI, and the part after the fragment identifier as an olink targetptr attribute value.
+**** Processing expectations ****
+Formatted inline.
+An olink points to its target primarily with the targetdoc attribute. The targetdoc is a URI that identifies a target document.
+The semantics of the link are controlled by three other attributes: targetptr, localinfo, and type.
+The targetptr attribute (possibly in conjunction with localinfo) points into the document in some fashion. The type may provide some additional, application-specific information about the link. DocBook does not provide any semantics for the values of these attributes.
+**** Note ****
+The targetptr and localinfo attributes were developed somewhat independently and arguably have somewhat overlapping semantics. While almost all applications can certainly get by with one or the other, the Technical Committee has decided that removing localinfo simply for semantic cleanliness isn’t worth the effort.
+Linking elements must not be nested within other linking elements (including themselves). The processing of nested linking elements is undefined.
+**** Attributes ****
+Common_attributes.
+  localinfo
+      Holds additional information that may be used by the applicatoin when resolving the link
+  targetdoc
+      Specifies the URI of the document in which the link target appears
+  targetptr
+      Specifies the location of the link target in the document
+  type
+      Identifies application-specific customization of the link behavior
+  xrefstyle
+      Specifies a keyword or keywords identifying additional style information
+*** Parents [[+]][[+]] ***
+This element occurs in 170_elements.
+These elements contain olink: abbrev, accel, acronym, address, application, arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, foreignphrase, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, initializer, interfacename, issuenum, jobtitle, keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, member,
+methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword, year.
+*** Children [[+]][[+]] ***
+This element contains 100_elements.
+The following elements occur in olink: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, code, command, computeroutput, constant, coref, database, date, editor, email, emphasis (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phrase (db.phrase), productname, productnumber, prompt, property, quote,
+remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, token, trademark, type, uri, userinput, varname, wordasword, xref.
+***** See Also *****
+anchor, link, xref
+[Prev] [Home]   [Next]
+note    [Up]   ooclass
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

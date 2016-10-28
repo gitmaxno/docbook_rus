@@ -16,3 +16,25 @@ These elements contain extendedlink: biblioentry, bibliomixed, bibliomset, bibli
 **** Children ****
 The following elements occur in extendedlink: arc, locator.
 exceptionname  [Up]      fax
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** [[5.0]]extendedlink *****
+extendedlink — An XLink extended link.
+***** Synopsis *****
+    * One or more of:
+          o arc
+          o locator
+***** Attributes *****
+Common_attributes.
+***** Description *****
+An XLink extended link. See XLink for more details.
+**** Processing expectations ****
+Suppressed.
+**** Parents ****
+These elements contain extendedlink: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in extendedlink: arc, locator.
+[Prev]        [Home]  [Next]
+exceptionname  [Up]      fax
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

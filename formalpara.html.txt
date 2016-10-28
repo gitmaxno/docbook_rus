@@ -42,3 +42,51 @@ para, simpara
  10 </article>
 This is a test. This is only a test. Had this been a real example, it would have made more sense. Or less.
 foreignphrase  [Up]   funcdef
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** formalpara *****
+formalpara — A paragraph with a title.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonlyreq.info)
+          o Zero or more of:
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+          o para
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+Formal paragraphs have a title.
+**** Processing expectations ****
+Formatted as a displayed block. The title of a formalpara is often rendered as a run-in head.
+*** Parents [[+]][[+]] ***
+This element occurs in 76_elements.
+These elements contain formalpara: abstract, acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, epigraph, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, partintro, personblurb, preface, printhistory, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in formalpara: indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titleonlyreq.info), para, title, titleabbrev.
+***** See Also *****
+para, simpara
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example formalpara</title>
+
+  4 <formalpara><title>This Paragraph Has a Title</title>
+    <para>This is a test.  This is only a test.  Had this been a real
+  6 example, it would have made more sense.  Or less.
+    </para>
+  8 </formalpara>
+
+ 10 </article>
+This is a test. This is only a test. Had this been a real example, it would have made more sense. Or less.
+[Prev]        [Home]   [Next]
+foreignphrase  [Up]   funcdef
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

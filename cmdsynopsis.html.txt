@@ -109,3 +109,118 @@ chgrp [-R [[-H] | [-L] | [-P]] ] [-f] group file...
 emacs [-t file] [-q] [-u user] [+number] [-f function...]
 [-l file...] file...
 classsynopsisinfo  [Up]       co
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** cmdsynopsis *****
+cmdsynopsis — A syntax summary for a software command.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One or more of:
+                # arg
+                # command
+                # group
+                # sbr
+          o Zero or more of:
+                # synopfragment
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * cmdlength
+    * label
+    * sepchar
+***** Description *****
+A cmdsynopsis summarizes the options and parameters of a command started from a text prompt. This is usually a program started from the DOS, Windows, or UNIX shell prompt.
+A cmdsynopsis operates under the following general model: commands have arguments that may be grouped; arguments and groups may be required or optional and may be repeated.
+**** Processing expectations ****
+The processing expectations of cmdsynopsis are fairly complex:
+    * Arguments are generally identified with a prefix character.
+      In the UNIX world, this character is almost universally the dash or hyphen, although plus signs and double dashes have become more common in recent years.
+      In the DOS/Windows world, forward slashes are somewhat more common than dashes.
+      The DocBook processing expectations on this point are intentionally vague. In some environments it may be most convenient to generate these characters automatically; in other environments it may be more convenient to insert them literally in the content.
+      Whichever processing model you choose, note that this will be an interchange issue if you share documents with other users (see Appendix D,_Interchanging_DocBook_Documents).
+    * Brackets are used to distinguish between optional, required, or plain arguments. Usually square brackets are placed around optional arguments, [-g], and curly brackets are placed around required arguments, {-g}. Plain arguments are required, but are not decorated with brackets.
+    * Repeatable arguments are followed by an ellipsis.
+    * Multiple arguments within a group are considered exclusive and are separated by vertical bars.
+    * Groups, like arguments, may be optional, required, or plain and may or may not repeat. The same brackets and ellipses that are used to indicate these characteristics on arguments are used on groups.
+    * Arguments and groups may nest more or less arbitrarily.
+    * The element is formatted as a displayed block. The processing system is free to introduce line breaks where required, but the sbr element may be introduced by the author to provide an explicit break location.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  cmdlength
+      Indicates the displayed length of the command; this information may be used to intelligently indent command synopses which extend beyond one line
+  label
+      Specifies an identifying string for presentation purposes
+  sepchar
+      Specifies the character that should separate the command and its top-level arguments
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain cmdsynopsis: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in cmdsynopsis: arg, command, group, info (db.titleforbidden.info), sbr, synopfragment.
+***** See Also *****
+arg, funcsynopsis, group, refsynopsisdiv, sbr, synopfragment, synopfragmentref, synopsis
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example cmdsynopsis</title>
+
+  4 <cmdsynopsis>
+      <command>cd</command>
+  6   <arg choice='req'><replaceable>directory</replaceable></arg>
+    </cmdsynopsis>
+  8
+    </article>
+cd {directory}
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example cmdsynopsis</title>
+
+  4 <cmdsynopsis>
+      <command>cal</command>
+  6   <arg>-j</arg>
+      <arg>-y</arg>
+  8   <arg>month <arg>year</arg></arg>
+    </cmdsynopsis>
+ 10
+    </article>
+cal [-j] [-y] [month [year]]
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example cmdsynopsis</title>
+
+  4 <cmdsynopsis>
+      <command>chgrp</command>
+  6   <arg>-R
+        <group>
+  8       <arg>-H</arg>
+          <arg>-L</arg>
+ 10       <arg>-P</arg>
+        </group>
+ 12   </arg>
+      <arg>-f</arg>
+ 14   <arg choice='plain'><replaceable>group</replaceable></arg>
+      <arg rep='repeat' choice='plain'><replaceable>file</replaceable></arg>
+ 16 </cmdsynopsis>
+
+ 18 </article>
+chgrp [-R [[-H] | [-L] | [-P]] ] [-f] group file...
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example cmdsynopsis</title>
+
+  4 <cmdsynopsis>
+      <command>emacs</command>
+  6   <arg>-t <replaceable>file</replaceable></arg>
+      <arg>-q</arg>
+  8   <arg>-u <replaceable>user</replaceable></arg>
+      <arg>+<replaceable>number</replaceable></arg>
+ 10   <arg rep='repeat'>-f <replaceable>function</replaceable></arg>
+      <sbr/>
+ 12   <arg rep='repeat'>-l <replaceable>file</replaceable></arg>
+      <arg rep='repeat' choice='plain'><replaceable>file</replaceable></arg>
+ 14 </cmdsynopsis>
+
+ 16 </article>
+emacs [-t file] [-q] [-u user] [+number] [-f function...]
+[-l file...] file...
+[Prev]            [Home]  [Next]
+classsynopsisinfo  [Up]       co
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

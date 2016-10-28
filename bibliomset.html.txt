@@ -145,3 +145,154 @@ biblioentry, bibliomisc, bibliomixed, biblioset
 
  16 </bibliography>
 bibliomixed  [Up]   biblioref
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** bibliomset *****
+bibliomset — A cooked container for related bibliographic information.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o citebiblioid
+          o citerefentry
+          o citetitle
+          o person
+          o personblurb
+          o personname
+          o phrase (db._phrase)
+          o replaceable
+          o subtitle
+          o title
+          o titleabbrev
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Publishing inlines [[+]] [[-]]
+                * abbrev
+                * acronym
+                * coref
+                * date
+                * emphasis (db.emphasis)
+                * firstterm
+                * footnote
+                * footnoteref
+                * foreignphrase
+                * glossterm
+                * phrase (db.phrase)
+                * quote
+                * subscript
+                * superscript
+                * wordasword
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+          o “Info” elements [[+]] [[-]]
+                * *:*
+                * abstract
+                * address
+                * annotation
+                * artpagenums
+                * author
+                * authorgroup
+                * authorinitials
+                * bibliocoverage
+                * biblioid
+                * bibliomisc
+                * bibliomset
+                * bibliorelation
+                * biblioset
+                * bibliosource
+                * collab
+                * confgroup
+                * contractnum
+                * contractsponsor
+                * copyright
+                * cover
+                * date
+                * edition
+                * editor
+                * extendedlink
+                * issuenum
+                * itermset
+                * keywordset
+                * legalnotice
+                * mediaobject
+                * org
+                * orgname
+                * othercredit
+                * pagenums
+                * printhistory
+                * productname
+                * productnumber
+                * pubdate
+                * publisher
+                * publishername
+                * releaseinfo
+                * revhistory
+                * seriesvolnums
+                * subjectset
+                * volumenum
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * relation
+***** Description *****
+A bibliomset is a “cooked” wrapper for a collection of bibliographic information.
+The purpose of this wrapper is to assert the relationship that binds the collection. For example, in a bibliomixed entry for an article in a journal, you might use two bibliomsets to wrap the fields related to the article and the fields related to the journal.
+**** Processing expectations ****
+Formatted as a displayed block.
+A bibliomset is “cooked.” In addition to named fields, it can contain interspersed text to provide punctuation and other formatting information.
+The processing system is generally expected to present each and every element in the set, all interspersed #PCDATA, in the order in which it occurs.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  relation
+      Identifies the relationship between the bibliographic elemnts
+**** Parents ****
+These elements contain bibliomset: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+*** Children [[+]][[+]] ***
+This element contains 81_elements.
+The following elements occur in bibliomset: text, *:*, abbrev, abstract, acronym, address, alt, anchor, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, biblioref, bibliorelation, biblioset, bibliosource, citebiblioid, citerefentry, citetitle, collab, confgroup, contractnum, contractsponsor, copyright, coref, cover, date, edition, editor, emphasis (db.emphasis), extendedlink, firstterm, footnote, footnoteref, foreignphrase, glossterm, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, issuenum, itermset, keywordset, legalnotice, link, mediaobject, olink, org, orgname, othercredit, pagenums, person, personblurb, personname, phrase (db._phrase), phrase (db.phrase), printhistory, productname, productnumber, pubdate, publisher, publishername, quote, releaseinfo, remark, replaceable, revhistory, seriesvolnums, subjectset, subscript, subtitle,
+superscript, title, titleabbrev, volumenum, wordasword, xref.
+***** See Also *****
+biblioentry, bibliomisc, bibliomixed, biblioset
+***** Examples *****
+  1 <bibliography xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example bibliomset</title>
+
+  4 <bibliomixed>
+      <bibliomset relation='article'>Walsh, Norman.
+  6     <title role='article'>Introduction to Cascading Style Sheets</title>.
+      </bibliomset>
+  8   <bibliomset relation='journal'>
+        <title>The World Wide Web Journal</title>
+ 10     <volumenum>2</volumenum><issuenum>1</issuenum>.
+        <publishername>O'Reilly &amp; Associates, Inc.</publishername> and
+ 12     The World Wide Web Consortium. Winter, 1996.
+      </bibliomset>
+ 14 </bibliomixed>
+
+ 16 </bibliography>
+[Prev]      [Home]     [Next]
+bibliomixed  [Up]   biblioref
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

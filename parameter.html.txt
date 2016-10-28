@@ -1,76 +1,76 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+parameter
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** parameter *****
-parameterÂ â€”Â A value or a symbolic reference to a value.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+parameter â€” A value or a symbolic reference to a value.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o â€œcommandâ€
-          o â€œfunctionâ€
-          o â€œoptionâ€
-***** Description *****
+
+    class (enumeration)
+        â€œcommandâ€
+        â€œfunctionâ€
+        â€œoptionâ€
+
+Description
+
 A parameter identifies something passed from one part of a computer system to another. In this regard parameter is fairly generic, but it may have a more constrained semantic in some contexts (e.g., in a paramdef).
+
 In a document that describes more than one kind of parameterâ€”for example, parameters to functions and commandsâ€”the class attribute can be used to distinguish between them, if necessary.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the class of parameter
-      Enumerated values:
-      â€œcommandâA command
-      â€œfunctionA function
-      â€œoptionâ€An option
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 54_elements.
-These elements contain parameter: bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, code, computeroutput, emphasisÂ (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, methodparam, olink, orgdiv, para, paramdef, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in parameter: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the class of parameter
+    Enumerated values:
+    â€œcommandâ€	
+
+    A command
+    â€œfunctionâ€	
+
+    A function
+    â€œoptionâ€	
+
+    An option
+
+Parents [+]
+This element occurs in 54 elements.
+Children [+]
+This element contains 16 elements.
+See Also
+
 computeroutput, constant, funcdef, funcparams, funcprototype, funcsynopsisinfo, function, literal, markup, option, optional, paramdef, prompt, replaceable, returnvalue, tag, userinput, varargs, varname, void
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example parameter</title>
-
+    
   4 <para>Using the <parameter class='command'>-l</parameter> parameter on the
     Linux <command>ls</command> command prints a long directory listing.
   6 </para>
-
+    
   8 </article>
+
 Using the -l parameter on the Linux ls command prints a long directory listing.
-[Prev]Â   [Home] Â [Next]
-paramdefÂ  [Up]    Â part
+Prev 	Home	 Next
+paramdef 	Up	 part
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

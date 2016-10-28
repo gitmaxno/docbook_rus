@@ -1,44 +1,65 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+simplelist
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** simplelist *****
-simplelistÂ â€”Â An undecorated list of single words or short phrases.
-***** Synopsis *****
-    * One or more of:
-          o member
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+simplelist â€” An undecorated list of single words or short phrases.
+Synopsis
+
+    One or more of:
+        member
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * columns (integer)
-    * type (enumeration) [default=â€œvertâ€]
-          o â€œhorizâ€
-          o â€œvertâ€
-          o â€œinlineâ€
-***** Description *****
+
+    columns (integer)
+    type (enumeration) [default=â€œvertâ€]
+        â€œhorizâ€
+        â€œvertâ€
+        â€œinlineâ€
+
+Description
+
 A simplelist is a list of words or phrases. It offers a convenient alternative to the other list elements for inline content.
-**** Processing expectations ****
+Processing expectations
+
 Ironically, the processing expectations of a simplelist are quite complex. The value of the type attribute determines if the list is presented inline, or in a row- or column-major table. In the table cases, the columns attribute determines the number of columns in the table.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  columns
-      Specifies the number of columns for horizontal or vertical presentation
-  type
-      Specifies the type of list presentation.
-      Enumerated values:
-      â€œhorizâA tabular presentation in row-major order.
-      â€œvertâ€A tabular presentation in column-major order.
-      â€œinlineAn inline presentation, usually a comma-delimited list.
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 73_elements.
-These elements contain simplelist: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, captionÂ (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
-**** Children ****
+Attributes
+
+Common attributes and common linking attributes.
+
+columns
+
+    Specifies the number of columns for horizontal or vertical presentation
+type
+
+    Specifies the type of list presentation.
+    Enumerated values:
+    â€œhorizâ€	
+
+    A tabular presentation in row-major order.
+    â€œvertâ€	
+
+    A tabular presentation in column-major order.
+    â€œinlineâ€	
+
+    An inline presentation, usually a comma-delimited list.
+
+Parents [+]
+This element occurs in 73 elements.
+Children
+
 The following elements occur in simplelist: member.
-***** See Also *****
+See Also
+
 calloutlist, itemizedlist, listitem, orderedlist, segmentedlist, variablelist
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example simplelist</title>
-
-  4 <para>Here is a <tag>SimpleList</tag>, rendered inline:
+    
+  4 <para>Here is a <tag>SimpleList</tag>, rendered inline: 
     <simplelist type='inline'>
   6 <member>A</member>
     <member>B</member>
@@ -49,13 +70,15 @@ calloutlist, itemizedlist, listitem, orderedlist, segmentedlist, variablelist
  12 <member>G</member>
     </simplelist>
  14 </para>
-
+    
  16 </article>
+
 Here is a SimpleList, rendered inline: A, B, C, D, E, F, G
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example simplelist</title>
-
-  4 <para>Here is the same <tag>SimpleList</tag> rendered horizontally with
+    
+  4 <para>Here is the same <tag>SimpleList</tag> rendered horizontally with 
     three columns:
   6 <simplelist type='horiz' columns='3'>
     <member>A</member>
@@ -67,15 +90,17 @@ Here is a SimpleList, rendered inline: A, B, C, D, E, F, G
     <member>G</member>
  14 </simplelist>
     </para>
- 16
+ 16 
     </article>
+
 Here is the same SimpleList rendered horizontally with three columns:
-A B C
-D E F
-G Â Â 
+A	B	C
+D	E	F
+G	 	 
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example simplelist</title>
-
+    
   4 <para>Finally, here is the list rendered vertically:
     <simplelist type='vert' columns='3'>
   6 <member>A</member>
@@ -87,11 +112,16 @@ G Â Â
  12 <member>G</member>
     </simplelist>
  14 </para>
-
+    
  16 </article>
+
 Finally, here is the list rendered vertically:
-A D G
-B E Â 
-C F Â 
-[Prev]Â  [Home]         Â [Next]
-simparaÂ  [Up]  Â simplemsgentry
+A	D	G
+B	E	 
+C	F	 
+
+Prev 	Home	 Next
+simpara 	Up	 simplemsgentry
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

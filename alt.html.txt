@@ -22,3 +22,31 @@ year.
 **** Children ****
 The following elements occur in alt: text, inlinemediaobject.
 affiliation  [Up]   anchor
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** alt *****
+alt — A text-only annotation, often used for accessibility.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+***** Attributes *****
+Common_attributes.
+***** Description *****
+The alt element was originally added to DocBook to provide an alternative, usually text, presentation for graphical elements. In DocBook V5.0, it was made a “ubiquitous” element so that it's available almost everywhere. The semantic intent of alt is simply that it provides alternative text, often for accessibility.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. It is not usually rendered where it occurs, rather it is used to annotate some other aspect of the presentation.
+For example, in an HTML presentation, the alt for a media object would likely provide the text of the alt attribute for the HTML img element.
+In the context of an acronym, the alt could provide the title attribute for the HTML abbr element allowing the expansion to be presented appropriately to the user (as a “tooltip”, for example, or read aloud).
+*** Parents [[+]][[+]] ***
+This element occurs in 178_elements.
+These elements contain alt: abbrev, accel, acronym, address, application, area (db.area), area (db.area.inareaset), arg, artpagenums, attribution, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, bibliosource, bridgehead, caption (db.html.caption), citation, citebiblioid, citetitle, city, classname, classsynopsisinfo, code, command, computeroutput, confdates, confnum, confsponsor, conftitle, constant, contractnum, contractsponsor, contrib, country, database, edition, email, emphasis (db._emphasis), emphasis (db.emphasis), entry, envar, equation, errorcode, errorname, errortext, errortype, exceptionname, fax, filename, firstname, firstterm, funcdef, funcparams, funcsynopsisinfo, function, glosssee, glossseealso, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, holder, honorific, informalequation, informaltable (db.cals.informaltable), initializer, inlineequation, inlinemediaobject, interfacename, issuenum, jobtitle,
+keycap, keycode, keysym, label, lineage, lineannotation, link, literal, literallayout, manvolnum, markup, mathphrase, mediaobject, member, methodname, modifier, mousebutton, msgaud, msglevel, msgorig, olink, option, optional, orgdiv, orgname, otheraddr, othername, package, pagenums, para, paramdef, parameter, personname, phone, phrase (db._phrase), phrase (db.phrase), pob, postcode, primary, primaryie, productname, productnumber, programlisting, prompt, property, publishername, quote, refdescriptor, refentrytitle, refmiscinfo, refname, refpurpose, releaseinfo, remark, replaceable, returnvalue, revnumber, revremark, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, seriesvolnums, shortaffil, simpara, state, street, subscript, subtitle, superscript, surname, symbol, synopsis, systemitem, table (db.cals.table), tag, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, token, trademark, type, uri, userinput, varname, volumenum, wordasword,
+year.
+**** Children ****
+The following elements occur in alt: text, inlinemediaobject.
+[Prev]      [Home]  [Next]
+affiliation  [Up]   anchor
+Last revised by Norman Walsh on 24 Jun 2011 (git hash: d28688be264806aeddbb88adf828e21a6da7e045)
+Copyright © 2010, 2011 Norman Walsh.

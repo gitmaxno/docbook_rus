@@ -22,3 +22,31 @@ arg, cmdsynopsis, group, refsynopsisdiv, sbr, synopfragment
 ***** Examples *****
 See synopfragment for an example using this element.
 synopfragment  [Up]   synopsis
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** synopfragmentref *****
+synopfragmentref — A reference to a fragment of a command synopsis.
+***** Synopsis *****
+    * text
+***** Attributes *****
+Common_attributes.
+***** Additional Constraints *****
+    * @linkend on synopfragmentref must point to a synopfragment.
+***** Description *****
+A complex cmdsynopsis can be made more manageable with synopfragments. Rather than attempting to present the entire synopsis in one large piece, parts of the synopsis can be extracted and presented elsewhere.
+At the point where each piece was extracted, insert a synopfragmentref that points to the fragment. The content of the synopfragmentref will be presented inline.
+The extracted pieces are placed in synopfragments at the end of the cmdsynopsis.
+**** Processing expectations ****
+Formatted as a displayed block.
+The presentation system is responsible for generating text that makes the reader aware of the link. This can be done with numbered bullets, or any other appropriate mechanism.
+Online systems have additional flexibility. They may generate hot links between the references and the fragments, for example, or place the fragments in pop-up windows.
+**** Parents ****
+These elements contain synopfragmentref: arg, group.
+***** See Also *****
+arg, cmdsynopsis, group, refsynopsisdiv, sbr, synopfragment
+***** Examples *****
+See synopfragment for an example using this element.
+[Prev]        [Home]    [Next]
+synopfragment  [Up]   synopsis
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

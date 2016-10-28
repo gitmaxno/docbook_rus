@@ -34,3 +34,43 @@ keyword, subject, subjectset, subjectterm
 
  12 </article>
 keyword  [Up]    label
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** keywordset *****
+keywordset — A set of keywords describing the content of a document.
+***** Synopsis *****
+    * One or more of:
+          o keyword
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A set of keywords, provided by the author, editor, publisher, and so on, can be stored in the document meta-information in a keywordset.
+Keywords can form an important part of an automated indexing or searching strategy for a collection of documents.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Keywords are rarely displayed to a reader. Usually, they are reserved for searching and retrieval purposes.
+Unlike subjectterms, which should be drawn from a controlled vocabulary, keywords may be chosen freely.
+Although more than one keywordset may appear in the meta-information for a document, neither a relationship nor a specific facility for constructing a relationship is defined by DocBook.
+Additionally, no relationship is defined between the keywordsets of a document component and the keywordsets of its parents or children.
+**** Parents ****
+These elements contain keywordset: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in keywordset: keyword.
+***** See Also *****
+keyword, subject, subjectset, subjectterm
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example keywordset</title>
+    <info>
+  4   <keywordset>
+        <keyword>DocBook</keyword>
+  6     <keyword>standard</keyword>
+        <keyword>OASIS</keyword>
+  8   </keywordset>
+    </info>
+ 10 <para>...</para>
+
+ 12 </article>
+[Prev]  [Home]  [Next]
+keyword  [Up]    label
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

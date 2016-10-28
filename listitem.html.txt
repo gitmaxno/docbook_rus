@@ -94,3 +94,103 @@ The following elements occur in listitem: address, anchor, annotation, bibliolis
 ***** See Also *****
 calloutlist, itemizedlist, orderedlist, segmentedlist, simplelist, variablelist
 link    [Up]   literal
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** listitem *****
+listitem — A wrapper for the elements of a list item.
+***** Synopsis *****
+    * One or more of:
+          o annotation
+          o bridgehead
+          o remark
+          o revhistory
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Admonition elements [[+]] [[-]]
+                * caution
+                * important
+                * note
+                * tip
+                * warning
+          o Formal elements [[+]] [[-]]
+                * equation
+                * example
+                * figure
+                * table (db.cals.table)
+                * table (db.html.table)
+          o Graphic elements [[+]] [[-]]
+                * mediaobject
+                * screenshot
+          o Informal elements [[+]] [[-]]
+                * informalequation
+                * informalexample
+                * informalfigure
+                * informaltable (db.cals.informaltable)
+                * informaltable (db.html.informaltable)
+          o List elements [[+]] [[-]]
+                * bibliolist
+                * calloutlist
+                * glosslist
+                * itemizedlist
+                * orderedlist
+                * procedure
+                * qandaset
+                * segmentedlist
+                * simplelist
+                * variablelist
+          o Paragraph elements [[+]] [[-]]
+                * anchor
+                * formalpara
+                * para
+                * simpara
+          o Publishing elements [[+]] [[-]]
+                * address
+                * blockquote
+                * epigraph
+                * sidebar
+          o Synopsis elements [[+]] [[-]]
+                * classsynopsis
+                * cmdsynopsis
+                * constructorsynopsis
+                * destructorsynopsis
+                * fieldsynopsis
+                * funcsynopsis
+                * methodsynopsis
+          o Technical elements [[+]] [[-]]
+                * constraintdef
+                * msgset
+                * procedure
+                * productionset
+                * task
+          o Verbatim elements [[+]] [[-]]
+                * literallayout
+                * programlisting
+                * programlistingco
+                * screen
+                * screenco
+                * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * override (NMTOKEN)
+***** Description *****
+The listitem element is a wrapper around an item in a list. In an itemizedlist or an orderedlist, the listitem surrounds the entire list item. In a variablelist, listitem surrounds the “definition” part of the list item.
+**** Processing expectations ****
+Formatted as a displayed block. List items usually generate the appropriate mark (a number or bullet) and appear indented, next to the mark. In a variablelist, the presentation may be influenced by the length of the term or terms that precede the list item and by attributes on the list itself.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  override
+      Specifies the keyword for the type of mark that should be used on this item, instead of the mark that would be used by default
+**** Parents ****
+These elements contain listitem: itemizedlist, orderedlist, varlistentry.
+*** Children [[+]][[+]] ***
+This element contains 59_elements.
+The following elements occur in listitem: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
+***** See Also *****
+calloutlist, itemizedlist, orderedlist, segmentedlist, simplelist, variablelist
+[Prev] [Home]   [Next]
+link    [Up]   literal
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

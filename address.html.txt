@@ -1,101 +1,103 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+address
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** address *****
-addressÂ â€”Â A real-world address, generally a postal address.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o city
-          o country
-          o email
-          o fax
-          o otheraddr
-          o personname
-          o phone
-          o phraseÂ (db._phrase)
-          o pob
-          o postcode
-          o replaceable
-          o state
-          o street
-          o uri
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+address â€” A real-world address, generally a postal address.
+Synopsis
+
+    Zero or more of:
+        text
+        city
+        country
+        email
+        fax
+        otheraddr
+        personname
+        phone
+        phrase (db._phrase)
+        pob
+        postcode
+        replaceable
+        state
+        street
+        uri
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * continuation (enumeration)
-          o â€œcontinuesâ€
-          o â€œrestartsâ€
-    * linenumbering (enumeration)
-          o â€œnumberedâ€
-          o â€œunnumberedâ€
-    * startinglinenumber (integer)
-    * language
-    * xml:space (enumeration)
-          o â€œpreserveâ€
-***** Description *****
+
+    continuation (enumeration)
+        â€œcontinuesâ€
+        â€œrestartsâ€
+    linenumbering (enumeration)
+        â€œnumberedâ€
+        â€œunnumberedâ€
+    startinglinenumber (integer)
+    language
+    xml:space (enumeration)
+        â€œpreserveâ€
+
+Description
+
 An address is generally a postal address, although it does contain elements for fax and email addresses as well as the catchall otheraddr.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block. This element is displayed â€œverbatimâ€; whitespace and line breaks within this element are significant.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  continuation
-      Determines whether line numbering continues from the previous element or restarts.
-      Enumerated values:
-      â€œcontinuesLine numbering continues from the immediately preceding element with the same name.
-      â€œrestartsâLine numbering restarts (begins at 1, usually).
-  language
-      Identifies the language (i.e. programming language) of the verbatim content.
-  linenumbering
-      Determines whether lines are numbered.
-      Enumerated values:
-      â€œnumberedâ€Lines are numbered.
-      â€œunnumberedLines are not numbered.
-  startinglinenumber
-      Specifies the initial line number.
-  xml:space
-      Can be used to indicate explicitly that whitespace in the verbatim environment is preserved. Whitespace must always be preserved in verbatim environments whether this attribute is specified or not.
-      Enumerated values:
-      â€œpreserveWhitespace must be preserved.
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 90_elements.
-These elements contain address: acknowledgements, affiliation, annotation, answer, appendix, article, author, bibliodiv, biblioentry, bibliography, bibliolist, bibliomixed, bibliomset, biblioset, blockquote, callout, calloutlist, captionÂ (db.caption), caution, chapter, colophon, confgroup, constraintdef, cover, dedication, editor, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, infoÂ (db.info), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), infoÂ (db.titleonlyreq.info), infoÂ (db.titlereq.info), informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, org, othercredit, para, partintro, person, preface, procedure, publisher, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip,
-toc, tocdiv, variablelist, warning.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 28_elements.
-The following elements occur in address: text, alt, anchor, annotation, biblioref, city, country, email, fax, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, otheraddr, personname, phone, phraseÂ (db._phrase), pob, postcode, remark, replaceable, state, street, subscript, superscript, uri, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+continuation
+
+    Determines whether line numbering continues from the previous element or restarts.
+    Enumerated values:
+    â€œcontinuesâ€	
+
+    Line numbering continues from the immediately preceding element with the same name.
+    â€œrestartsâ€	
+
+    Line numbering restarts (begins at 1, usually).
+language
+
+    Identifies the language (i.e. programming language) of the verbatim content.
+linenumbering
+
+    Determines whether lines are numbered.
+    Enumerated values:
+    â€œnumberedâ€	
+
+    Lines are numbered.
+    â€œunnumberedâ€	
+
+    Lines are not numbered.
+startinglinenumber
+
+    Specifies the initial line number.
+xml:space
+
+    Can be used to indicate explicitly that whitespace in the verbatim environment is preserved. Whitespace must always be preserved in verbatim environments whether this attribute is specified or not.
+    Enumerated values:
+    â€œpreserveâ€	
+
+    Whitespace must be preserved.
+
+Parents [+]
+This element occurs in 90 elements.
+Children [+]
+This element contains 28 elements.
+See Also
+
 city, country, email, fax, otheraddr, phone, pob, postcode, state, street
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example address</title>
-
+    
   4 <para>An example of a postal mail address in the United States:
     <address>
   6 John and Jane Doe
@@ -104,17 +106,19 @@ city, country, email, fax, otheraddr, phone, pob, postcode, state, street
     <country>USA</country>
  10 </address>
     </para>
- 12
+ 12 
     </article>
+
 An example of a postal mail address in the United States:
 
-JohnÂ andÂ JaneÂ Doe
-100Â MainÂ Street
-Anytown,Â NYÂ 12345
+John and Jane Doe
+100 Main Street
+Anytown, NY 12345
 USA
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example address</title>
-
+    
   4 <para>An example of a post office box address in the United States:
     <address>
   6 <pob>P.O. Box 1234</pob>
@@ -122,16 +126,18 @@ USA
   8 <country>USA</country>
     </address>
  10 </para>
-
+    
  12 </article>
+
 An example of a post office box address in the United States:
 
-P.O.Â BoxÂ 1234
-Anytown,Â MAÂ 12345
+P.O. Box 1234
+Anytown, MA 12345
 USA
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example address</title>
-
+    
   4 <para>Addresses can also include phone numbers:
     <address>
   6 John Smith
@@ -142,15 +148,20 @@ USA
     <fax>914.555.1212</fax>
  12 </address>
     </para>
- 14
+ 14 
     </article>
+
 Addresses can also include phone numbers:
 
-JohnÂ Smith
-100Â PineÂ Blvd
-Anytown,Â NYÂ 12345
+John Smith
+100 Pine Blvd
+Anytown, NY 12345
 USA
 914.555.1212
 914.555.1212
-[Prev]Â  [Home]      Â [Next]
-acronymÂ  [Up]  Â affiliation
+
+Prev 	Home	 Next
+acronym 	Up	 affiliation
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

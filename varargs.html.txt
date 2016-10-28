@@ -31,3 +31,40 @@ funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parame
 #include <varargs.h>
 int max(...);
 userinput  [Up]   variablelist
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** varargs *****
+varargs — An empty element in a function synopsis indicating a variable number of arguments.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A varargs indicates that a function takes a variable number of arguments.
+**** Processing expectations ****
+The varargs element produces generated text that indicates that the function takes a variable number of arguments. The exact generated text may vary. One common result is (…).
+**** Parents ****
+These elements contain varargs: funcprototype.
+***** See Also *****
+funcdef, funcparams, funcprototype, funcsynopsisinfo, function, paramdef, parameter, returnvalue, void
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example varargs</title>
+
+  4 <funcsynopsis>
+    <funcsynopsisinfo>
+  6 #include &lt;varargs.h&gt;
+    </funcsynopsisinfo>
+  8 <funcprototype>
+      <funcdef>int <function>max</function></funcdef>
+ 10   <varargs/>
+    </funcprototype>
+ 12 </funcsynopsis>
+
+ 14 </article>
+#include <varargs.h>
+int max(...);
+[Prev]    [Home]        [Next]
+userinput  [Up]   variablelist
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

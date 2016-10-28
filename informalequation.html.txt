@@ -51,3 +51,60 @@ The equation
 [figs/web/db5d_refeqn02.png]
 is delightful because it joins together five of the most important mathematical constants.
 info (db.titlereq.info)  [Up]   informalexample
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** informalequation *****
+informalequation — A displayed mathematical equation without a title.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o alt?
+          o One of:
+                # One or more of:
+                      # mediaobject
+                # One or more of:
+                      # mathphrase
+                # One or more of:
+                      # mml:*
+          o caption? (db.caption)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An informalequation is usually a mathematical equation or a group of related mathematical equations.
+**** Processing expectations ****
+Formatted as a displayed block.
+*** Parents [[+]][[+]] ***
+This element occurs in 73_elements.
+These elements contain informalequation: acknowledgements, annotation, answer, appendix, article, bibliodiv, bibliography, bibliolist, blockquote, callout, calloutlist, caption (db.caption), caution, chapter, colophon, constraintdef, cover, dedication, entry, example, figure, footnote, glossary, glossdef, glossdiv, glosslist, important, index, indexdiv, informalexample, informalfigure, itemizedlist, legalnotice, listitem, msgexplan, msgtext, note, orderedlist, para, partintro, preface, procedure, qandadiv, qandaset, question, refsect1, refsect2, refsect3, refsection, refsynopsisdiv, revdescription, sect1, sect2, sect3, sect4, sect5, section, setindex, sidebar, simplesect, step, taskprerequisites, taskrelated, tasksummary, td, textobject, th, tip, toc, tocdiv, variablelist, warning.
+**** Children ****
+The following elements occur in informalequation: alt, caption (db.caption), info (db.titleforbidden.info), mathphrase, mediaobject, mml:*.
+***** See Also *****
+equation, example, figure, informalexample, informalfigure, informaltable, inlineequation, subscript, superscript, table
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example informalequation</title>
+
+  4 <para>The equation
+    <informalequation>
+  6   <alt>e^(pi*i) + 1 = 0</alt>
+      <mediaobject>
+  8     <imageobject condition="print">
+          <imagedata fileref="figs/print/db5d_refeqn02.pdf"/>
+ 10     </imageobject>
+        <imageobject condition="web">
+ 12       <imagedata fileref="figs/web/db5d_refeqn02.png"/>
+        </imageobject>
+ 14   </mediaobject>
+    </informalequation>
+ 16 is delightful because it joins together five of the most
+    important mathematical constants.
+ 18 </para>
+
+ 20 </article>
+The equation
+[figs/web/db5d_refeqn02.png]
+is delightful because it joins together five of the most important mathematical constants.
+[Prev]                  [Home]           [Next]
+info (db.titlereq.info)  [Up]   informalexample
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

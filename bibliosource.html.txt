@@ -80,3 +80,89 @@ These elements contain bibliosource: biblioentry, bibliomixed, bibliomset, bibli
 This element contains 16_elements.
 The following elements occur in bibliosource: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
 biblioset  [Up]   blockquote
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** bibliosource *****
+bibliosource — The source of a document.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * Exactly one of:
+          o class (enumeration)
+                # “doi”
+                # “isbn”
+                # “isrn”
+                # “issn”
+                # “libraryofcongress”
+                # “pubsnumber”
+                # “uri”
+          o All of:
+                # class (enumeration)
+                      # “other”
+                # otherclass (NMTOKEN)
+Required attributes are shown in bold.
+***** Description *****
+The bibliosource element satisfies the source element of the Dublin_Core_Metadata_Initiative.
+The Dublin Core defines source as “a reference to a resource from which the present resource is derived.” It goes on to note that “the present resource may be derived from the source resource in whole or in part. Recommended best practice is to reference the resource by means of a string or number conforming to a formal identification system.”
+DocBook V4.2 added bibliocoverage, bibliorelation, and bibliosource to make the DocBook meta-information wrappers a complete superset of the Dublin Core.
+**** Processing expectations ****
+Formatted inline. Sometimes suppressed.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  class
+      Identifies the kind of bibliographic identifier
+      Enumerated values:
+      “doi”           A document object identifier.
+      “isbn”          An international standard book number.
+      “isrn”          An international standard technical report number (ISO 10444).
+      “issn”          An international standard serial number.
+      “libraryofcongressA Library of Congress reference number.
+      “pubsnumber”    A publication number (an internal number or possibly organizational standard).
+      “uri”           A Uniform Resource Identifier
+  class
+      Identifies the kind of bibliographic identifier
+      Enumerated values:
+      “otherIndicates that the identifier is some 'other' kind.
+  otherclass
+      Identifies the nature of the non-standard bibliographic identifier
+**** Parents ****
+These elements contain bibliosource: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in bibliosource: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+[Prev]    [Home]      [Next]
+biblioset  [Up]   blockquote
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

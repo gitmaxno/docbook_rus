@@ -1,92 +1,101 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+productname
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** productname *****
-productnameÂ â€”Â The formal name of a product.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+productname â€” The formal name of a product.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o â€œcopyrightâ€
-          o â€œregisteredâ€
-          o â€œserviceâ€
-          o â€œtradeâ€
-***** Description *****
+
+    class (enumeration)
+        â€œcopyrightâ€
+        â€œregisteredâ€
+        â€œserviceâ€
+        â€œtradeâ€
+
+Description
+
 A productname is the formal name of any product. Identifying a product this way may be useful if you need to provide explicit disclaimers about product names or information.
+
 For example, the copyright statement in most books includes a notice similar to this:
-     Many of the designations used by manufacturers and sellers to distinguish their products are claimed as trademarks. Where those designations appear in this book, and Oâ€™Reilly Media, Inc. was aware of a trademark claim, the designations have been printed in caps or initial caps.
+
+    Many of the designations used by manufacturers and sellers to distinguish their products are claimed as trademarks. Where those designations appear in this book, and Oâ€™Reilly Media, Inc. was aware of a trademark claim, the designations have been printed in caps or initial caps.
+
 If every product name were coded as a productname, you could automatically generate a complete list of all the product names and mention them explicitly in the notice.
+
 In running prose, the distinction between an application and a productname may be very subjective.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline.
+
 Two of the values of the class attribute on productname, Trade and Registered, make assertions about trademarks. DocBook also has a trademark element; presumably the same markup is intended regardless of which one is used.
+
 The service and copyright values should also generate the anticipated marks, if appropriate.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Specifies the class of product name
-      Enumerated values:
-      â€œcopyrightâA name with a copyright
-      â€œregisteredA name with a registered copyright
-      â€œserviceâ€A name of a service
-      â€œtradeâ€  A name which is trademarked
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 59_elements.
-These elements contain productname: biblioentry, bibliomixed, bibliomset, biblioset, bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, emphasisÂ (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, infoÂ (db.info), infoÂ (db.titleforbidden.info), infoÂ (db.titleonly.info), infoÂ (db.titleonlyreq.info), infoÂ (db.titlereq.info), link, literallayout, member, olink, orgdiv, para, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in productname: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Specifies the class of product name
+    Enumerated values:
+    â€œcopyrightâ€	
+
+    A name with a copyright
+    â€œregisteredâ€	
+
+    A name with a registered copyright
+    â€œserviceâ€	
+
+    A name of a service
+    â€œtradeâ€	
+
+    A name which is trademarked
+
+Parents [+]
+This element occurs in 59 elements.
+Children [+]
+This element contains 16 elements.
+See Also
+
 application, copyright, database, filename, hardware, trademark
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example productname</title>
-
+    
   4 <para><productname class='registered'>Frobozz</productname>: it's not
     just for breakfast anymore.
   6 </para>
-
+    
   8 </article>
+
 FrobozzÂ®: it's not just for breakfast anymore.
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example productname</title>
-
+    
   4 <para><trademark>Frobozz</trademark>: it's not
     just for breakfast anymore.
   6 </para>
-
+    
   8 </article>
+
 Frobozzâ„¢: it's not just for breakfast anymore.
-[Prev]Â        [Home]        Â [Next]
-productionsetÂ  [Up]  Â productnumber
+Prev 	Home	 Next
+productionset 	Up	 productnumber
+Last revised by Norman Walsh on 16 Jun 2011 (git hash: 7cf44d0f3aa4244c54913b42ac9cc634bd9b7fc9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

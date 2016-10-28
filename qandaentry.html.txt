@@ -24,3 +24,33 @@ These elements contain qandaentry: qandadiv, qandaset.
 **** Children ****
 The following elements occur in qandaentry: answer, info (db.titleforbidden.info), info (db.titleonly.info), question, title, titleabbrev.
 qandadiv  [Up]   qandaset
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** qandaentry *****
+qandaentry — A question/answer set within a QandASet.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o question
+          o Zero or more of:
+                # answer
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A qandaentry is an entry in a qandaset. Each qandaentry defines a question and (possibly) its answer or answers.
+**** Processing expectations ****
+Formatted as a displayed block. The questions are usually presented before the answers, and often the answers are indented to make the questions stand out.
+**** Parents ****
+These elements contain qandaentry: qandadiv, qandaset.
+**** Children ****
+The following elements occur in qandaentry: answer, info (db.titleforbidden.info), info (db.titleonly.info), question, title, titleabbrev.
+[Prev]   [Home]    [Next]
+qandadiv  [Up]   qandaset
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

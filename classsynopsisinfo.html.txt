@@ -1,283 +1,63 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+classsynopsis
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** classsynopsisinfo *****
-classsynopsisinfoÂ â€”Â Information supplementing the contents of a ClassSynopsis.
-***** Synopsis *****
-    * Sequence of:
-          o info?Â (db.titleforbidden.info)
-          o One of:
-                # Zero or more of:
-                      # text
-                      # lineannotation
-                      # BibliographyÂ inlinesÂ [[+]]Â [[-]]
-                            * author
-                            * citation
-                            * citebiblioid
-                            * citerefentry
-                            * citetitle
-                            * editor
-                            * jobtitle
-                            * org
-                            * orgname
-                            * person
-                            * personname
-                      # Computer-outputÂ inlinesÂ [[+]]Â [[-]]
-                            * alt
-                            * anchor
-                            * annotation
-                            * biblioref
-                            * co
-                            * code
-                            * command
-                            * computeroutput
-                            * constant
-                            * email
-                            * envar
-                            * filename
-                            * indextermÂ (db.indexterm.endofrange)
-                            * indextermÂ (db.indexterm.singular)
-                            * indextermÂ (db.indexterm.startofrange)
-                            * inlinemediaobject
-                            * link
-                            * literal
-                            * markup
-                            * nonterminal
-                            * olink
-                            * option
-                            * optional
-                            * package
-                            * parameter
-                            * prompt
-                            * property
-                            * remark
-                            * replaceable
-                            * subscript
-                            * superscript
-                            * symbol
-                            * systemitem
-                            * tag
-                            * termdef
-                            * token
-                            * uri
-                            * userinput
-                            * xref
-                      # ErrorÂ inlinesÂ [[+]]Â [[-]]
-                            * errorcode
-                            * errorname
-                            * errortext
-                            * errortype
-                      # GraphicÂ inlinesÂ [[+]]Â [[-]]
-                            * inlinemediaobject
-                      # GUIÂ inlinesÂ [[+]]Â [[-]]
-                            * guibutton
-                            * guiicon
-                            * guilabel
-                            * guimenu
-                            * guimenuitem
-                            * guisubmenu
-                            * menuchoice
-                            * mousebutton
-                      # IndexingÂ inlinesÂ [[+]]Â [[-]]
-                            * indextermÂ (db.indexterm.endofrange)
-                            * indextermÂ (db.indexterm.singular)
-                            * indextermÂ (db.indexterm.startofrange)
-                      # KeyboardÂ inlinesÂ [[+]]Â [[-]]
-                            * accel
-                            * keycap
-                            * keycode
-                            * keycombo
-                            * keysym
-                            * shortcut
-                      # LinkingÂ inlinesÂ [[+]]Â [[-]]
-                            * anchor
-                            * biblioref
-                            * link
-                            * olink
-                            * xref
-                      # MarkupÂ inlinesÂ [[+]]Â [[-]]
-                            * code
-                            * constant
-                            * email
-                            * literal
-                            * markup
-                            * symbol
-                            * tag
-                            * token
-                            * uri
-                      # MathÂ inlinesÂ [[+]]Â [[-]]
-                            * inlineequation
-                      # Object-orientedÂ programmingÂ inlinesÂ [[+]]Â [[-]]
-                            * ooclass
-                            * ooexception
-                            * oointerface
-                      # OperatingÂ systemÂ inlinesÂ [[+]]Â [[-]]
-                            * command
-                            * computeroutput
-                            * envar
-                            * filename
-                            * prompt
-                            * userinput
-                      # ProductÂ inlinesÂ [[+]]Â [[-]]
-                            * application
-                            * database
-                            * hardware
-                            * productname
-                            * productnumber
-                            * trademark
-                      # ProgrammingÂ inlinesÂ [[+]]Â [[-]]
-                            * classname
-                            * exceptionname
-                            * function
-                            * initializer
-                            * interfacename
-                            * methodname
-                            * modifier
-                            * ooclass
-                            * ooexception
-                            * oointerface
-                            * parameter
-                            * returnvalue
-                            * type
-                            * varname
-                      # PublishingÂ inlinesÂ [[+]]Â [[-]]
-                            * abbrev
-                            * acronym
-                            * coref
-                            * date
-                            * emphasisÂ (db.emphasis)
-                            * firstterm
-                            * footnote
-                            * footnoteref
-                            * foreignphrase
-                            * glossterm
-                            * phraseÂ (db.phrase)
-                            * quote
-                            * subscript
-                            * superscript
-                            * wordasword
-                      # TechnicalÂ inlinesÂ [[+]]Â [[-]]
-                            * nonterminal
-                            * option
-                            * optional
-                            * package
-                            * parameter
-                            * property
-                            * replaceable
-                            * systemitem
-                            * termdef
-                      # UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                            * alt
-                            * anchor
-                            * annotation
-                            * biblioref
-                            * indextermÂ (db.indexterm.endofrange)
-                            * indextermÂ (db.indexterm.singular)
-                            * indextermÂ (db.indexterm.startofrange)
-                            * inlinemediaobject
-                            * link
-                            * olink
-                            * remark
-                            * subscript
-                            * superscript
-                            * xref
-                      # User-inputÂ inlinesÂ [[+]]Â [[-]]
-                            * accel
-                            * alt
-                            * anchor
-                            * annotation
-                            * biblioref
-                            * co
-                            * code
-                            * command
-                            * computeroutput
-                            * constant
-                            * email
-                            * envar
-                            * filename
-                            * guibutton
-                            * guiicon
-                            * guilabel
-                            * guimenu
-                            * guimenuitem
-                            * guisubmenu
-                            * indextermÂ (db.indexterm.endofrange)
-                            * indextermÂ (db.indexterm.singular)
-                            * indextermÂ (db.indexterm.startofrange)
-                            * inlinemediaobject
-                            * keycap
-                            * keycode
-                            * keycombo
-                            * keysym
-                            * link
-                            * literal
-                            * markup
-                            * menuchoice
-                            * mousebutton
-                            * nonterminal
-                            * olink
-                            * option
-                            * optional
-                            * package
-                            * parameter
-                            * prompt
-                            * property
-                            * remark
-                            * replaceable
-                            * shortcut
-                            * subscript
-                            * superscript
-                            * symbol
-                            * systemitem
-                            * tag
-                            * termdef
-                            * token
-                            * uri
-                            * userinput
-                            * xref
-                # textobject
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+classsynopsis â€” The syntax summary for a class definition.
+Synopsis
+
+    Sequence of:
+        One or more of:
+            Object-oriented programming inlines [+]
+        Zero or more of:
+            classsynopsisinfo
+            constructorsynopsis
+            destructorsynopsis
+            fieldsynopsis
+            methodsynopsis
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * continuation (enumeration)
-          o â€œcontinuesâ€
-          o â€œrestartsâ€
-    * linenumbering (enumeration)
-          o â€œnumberedâ€
-          o â€œunnumberedâ€
-    * startinglinenumber (integer)
-    * language
-    * xml:space (enumeration)
-          o â€œpreserveâ€
-***** Description *****
-Supplementary information in a classsynopsis. See classsynopsis.
-Unlike the other info elements, classsynopsisinfo is not a container for meta-information. Instead, classsynopsisinfo is a verbatim environment for adding additional information to a class synopsis.
-**** Processing expectations ****
-This element is displayed â€œverbatimâ€; whitespace and line breaks within this element are significant.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  continuation
-      Determines whether line numbering continues from the previous element or restarts.
-      Enumerated values:
-      â€œcontinuesLine numbering continues from the immediately preceding element with the same name.
-      â€œrestartsâLine numbering restarts (begins at 1, usually).
-  language
-      Identifies the language (i.e. programming language) of the verbatim content.
-  linenumbering
-      Determines whether lines are numbered.
-      Enumerated values:
-      â€œnumberedâ€Lines are numbered.
-      â€œunnumberedLines are not numbered.
-  startinglinenumber
-      Specifies the initial line number.
-  xml:space
-      Can be used to indicate explicitly that whitespace in the verbatim environment is preserved. Whitespace must always be preserved in verbatim environments whether this attribute is specified or not.
-      Enumerated values:
-      â€œpreserveWhitespace must be preserved.
-**** Parents ****
-These elements contain classsynopsisinfo: classsynopsis.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 104_elements.
-The following elements occur in classsynopsisinfo: text, abbrev, accel, acronym, alt, anchor, annotation, application, author, biblioref, citation, citebiblioid, citerefentry, citetitle, classname, co, code, command, computeroutput, constant, coref, database, date, editor, email, emphasisÂ (db.emphasis), envar, errorcode, errorname, errortext, errortype, exceptionname, filename, firstterm, footnote, footnoteref, foreignphrase, function, glossterm, guibutton, guiicon, guilabel, guimenu, guimenuitem, guisubmenu, hardware, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), infoÂ (db.titleforbidden.info), initializer, inlineequation, inlinemediaobject, interfacename, jobtitle, keycap, keycode, keycombo, keysym, lineannotation, link, literal, markup, menuchoice, methodname, modifier, mousebutton, nonterminal, olink, ooclass, ooexception, oointerface, option, optional, org, orgname, package, parameter, person, personname, phraseÂ 
-(db.phrase), productname, productnumber, prompt, property, quote, remark, replaceable, returnvalue, shortcut, subscript, superscript, symbol, systemitem, tag, termdef, textobject, token, trademark, type, uri, userinput, varname, wordasword, xref.
-[Prev]Â        [Home]      Â [Next]
-classsynopsisÂ  [Up]  Â cmdsynopsis
+
+    class (enumeration)
+        â€œclassâ€
+        â€œinterfaceâ€
+    language
+
+Description
+
+A classsynopsis contains the syntax summary of a class (generally speaking, a class in the object-oriented programming language sense).
+
+This is one of the few places where DocBook attempts to model as well as describe. Unlike funcsynopsis, which was designed with C language function prototypes in mind, the content model of classsynopsis was designed to capture a wide range of object-oriented language semantics.
+Processing expectations
+
+For the most part, the processing application is expected to generate all of the parentheses, semicolons, commas, and so on required in the rendered synopsis. The exception to this rule is that the spacing and other punctuation inside a parameter that is a pointer to a function must be provided in the source markup.
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Specifies the nature of the synopsis
+    Enumerated values:
+    â€œclassâ€	
+
+    This is the synopsis of a class
+    â€œinterfaceâ€	
+
+    This is the synopsis of an interface
+language
+
+    Identifies the language (i.e. programming language) of the content.
+
+Parents [+]
+This element occurs in 73 elements.
+Children
+
+The following elements occur in classsynopsis: classsynopsisinfo, constructorsynopsis, destructorsynopsis, fieldsynopsis, methodsynopsis, ooclass, ooexception, oointerface.
+Prev 	Home	 Next
+classname 	Up	 classsynopsisinfo
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

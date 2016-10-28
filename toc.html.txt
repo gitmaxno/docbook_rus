@@ -167,3 +167,176 @@ tocdiv, tocentry
  62
     </book>
 titleabbrev  [Up]   tocdiv
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** toc *****
+toc — A table of contents.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                      # info? (db.titleforbidden.info)
+                # info (db.titleonly.info)
+          o Zero or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+          o Zero or more of:
+                # tocdiv
+                # tocentry
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+The toc element defines a table of contents, or more generally, a list of titles in a document.
+**** Processing expectations ****
+Formatted as a displayed block.
+In real life, tocs are usually generated automatically by the presentation system and never have to be represented explicitly in the document source.
+*** Parents [[+]][[+]] ***
+This element occurs in 14_elements.
+These elements contain toc: appendix, article, book, chapter, part, preface, sect1, sect2, sect3, sect4, sect5, section, set.
+*** Children [[+]][[+]] ***
+This element contains 65_elements.
+The following elements occur in toc: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), info (db.titleonly.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, title, titleabbrev, tocdiv, tocentry, variablelist, warning.
+***** See Also *****
+tocdiv, tocentry
+***** Examples *****
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <title>DocBook: The Definitive Guide</title>
+    <subtitle>TOC Markup Example</subtitle>
+  4
+    <toc>
+  6   <title>Table of Contents</title>
+      <tocdiv>
+  8     <title>Preface</title>
+        <tocentry>Why Read This Book?</tocentry>
+ 10     <tocentry>This Book's Audience</tocentry>
+        <!-- ... -->
+ 12   </tocdiv>
+      <tocdiv>
+ 14     <title>Part I. Introduction</title>
+        <tocdiv>
+ 16       <title>Chapter 1. Getting Started with DocBook</title>
+          <tocdiv>
+ 18         <title>A Short DocBook History</title>
+            <tocentry>The HaL and O'Reilly era</tocentry>
+ 20         <tocentry>The Davenport era</tocentry>
+            <tocentry>The OASIS era</tocentry>
+ 22       </tocdiv>
+          <tocdiv>
+ 24         <title>DocBook V5.0</title>
+            <tocdiv>
+ 26           <title>What's New in DocBook V5.0?</title>
+              <tocentry>Renamed and removed elements</tocentry>
+ 28           <!-- ... -->
+            </tocdiv>
+ 30       </tocdiv>
+        </tocdiv>
+ 32     <tocdiv>
+          <title>Chapter 2. Creating DocBook Documents</title>
+ 34       <tocdiv>
+            <title>Making an XML Document</title>
+ 36         <tocentry>An XML Declaration</tocentry>
+            <!-- ... -->
+ 38       </tocdiv>
+        </tocdiv>
+ 40   </tocdiv>
+    </toc>
+ 42
+    <preface>
+ 44   <title>Preface</title>
+      <para>DocBook provides a system for writing structured documents using
+ 46   <acronym>XML</acronym>. …</para>
+
+ 48   <!-- ... -->
+
+ 50   <section>
+        <title>Why Read This Book?</title>
+ 52
+        <para>This book is designed to be the clear, concise, normative reference to
+ 54     the DocBook schema. This book is the official documentation for DocBook.
+        </para>
+ 56
+        <!-- ... -->
+ 58   </section>
+    </preface>
+ 60
+    <!-- ... -->
+ 62
+    </book>
+[Prev]      [Home]  [Next]
+titleabbrev  [Up]   tocdiv
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

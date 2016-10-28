@@ -61,3 +61,70 @@ The following elements occur in mathphrase: text, alt, anchor, annotation, bibli
 xn + yn ≠ zn ∀ n ≠ 2
 Equation 3. Fermat's Last Theorem
 markup  [Up]   mediaobject
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** mathphrase *****
+mathphrase — A mathematical phrase, an expression that can be represented with ordinary text and a small amount of markup.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o emphasis (db._emphasis)
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A mathphrase is a simple, inline equation, one that can be represented using ordinary text, symbols, subscripts, and superscripts. A good example is: E=mc2.
+**** Processing expectations ****
+Formatted inline.
+**** Parents ****
+These elements contain mathphrase: equation, informalequation, inlineequation.
+*** Children [[+]][[+]] ***
+This element contains 17_elements.
+The following elements occur in mathphrase: text, alt, anchor, annotation, biblioref, emphasis (db._emphasis), indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example equation</title>
+
+  4 <equation xml:id="eq.fermatphrase">
+      <title>Fermat's Last Theorem</title>
+  6   <mathphrase>x<superscript>n</superscript>
+    + y<superscript>n</superscript>
+  8 ≠ z<superscript>n</superscript>
+    ∀ n ≠ 2</mathphrase>
+ 10 </equation>
+
+ 12 </article>
+xn + yn ≠ zn ∀ n ≠ 2
+Equation 3. Fermat's Last Theorem
+[Prev] [Home]       [Next]
+markup  [Up]   mediaobject
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -104,3 +104,113 @@ audioobject, caption (db.html.caption), imageobject, inlinemediaobject, mediaobj
 ***** Examples *****
 See informalfigure for and example that uses caption.
 calloutlist  [Up]   caption (db.html.caption)
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** caption (db.caption) *****
+caption — A caption.
+***** Synopsis *****
+    * Sequence of:
+          o info? (db.titleforbidden.info)
+          o One or more of:
+                # annotation
+                # bridgehead
+                # remark
+                # revhistory
+                # Indexing inlines [[+]] [[-]]
+                      * indexterm (db.indexterm.endofrange)
+                      * indexterm (db.indexterm.singular)
+                      * indexterm (db.indexterm.startofrange)
+                # Admonition elements [[+]] [[-]]
+                      * caution
+                      * important
+                      * note
+                      * tip
+                      * warning
+                # Formal elements [[+]] [[-]]
+                      * equation
+                      * example
+                      * figure
+                      * table (db.cals.table)
+                      * table (db.html.table)
+                # Graphic elements [[+]] [[-]]
+                      * mediaobject
+                      * screenshot
+                # Informal elements [[+]] [[-]]
+                      * informalequation
+                      * informalexample
+                      * informalfigure
+                      * informaltable (db.cals.informaltable)
+                      * informaltable (db.html.informaltable)
+                # List elements [[+]] [[-]]
+                      * bibliolist
+                      * calloutlist
+                      * glosslist
+                      * itemizedlist
+                      * orderedlist
+                      * procedure
+                      * qandaset
+                      * segmentedlist
+                      * simplelist
+                      * variablelist
+                # Paragraph elements [[+]] [[-]]
+                      * anchor
+                      * formalpara
+                      * para
+                      * simpara
+                # Publishing elements [[+]] [[-]]
+                      * address
+                      * blockquote
+                      * epigraph
+                      * sidebar
+                # Synopsis elements [[+]] [[-]]
+                      * classsynopsis
+                      * cmdsynopsis
+                      * constructorsynopsis
+                      * destructorsynopsis
+                      * fieldsynopsis
+                      * funcsynopsis
+                      * methodsynopsis
+                # Technical elements [[+]] [[-]]
+                      * constraintdef
+                      * msgset
+                      * procedure
+                      * productionset
+                      * task
+                # Verbatim elements [[+]] [[-]]
+                      * literallayout
+                      * programlisting
+                      * programlistingco
+                      * screen
+                      * screenco
+                      * synopsis
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Additional Constraints *****
+    * example must not occur in the descendants of caption
+    * figure must not occur in the descendants of caption
+    * table must not occur in the descendants of caption
+    * equation must not occur in the descendants of caption
+    * sidebar must not occur in the descendants of caption
+    * task must not occur in the descendants of caption
+    * caution must not occur in the descendants of caption
+    * important must not occur in the descendants of caption
+    * note must not occur in the descendants of caption
+    * tip must not occur in the descendants of caption
+    * warning must not occur in the descendants of caption
+***** Description *****
+A caption is an extended description of a mediaobject or figure or other formal or informal element. Unlike a textobject, which is an alternative to the other elements in the mediaobject, the caption augments the object.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Parents ****
+These elements contain caption: equation, example, figure, informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), mediaobject, table (db.cals.table).
+*** Children [[+]][[+]] ***
+This element contains 60_elements.
+The following elements occur in caption: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), info (db.titleforbidden.info), informalequation, informalexample, informalfigure, informaltable (db.cals.informaltable), informaltable (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, table (db.cals.table), table (db.html.table), task, tip, variablelist, warning.
+***** See Also *****
+audioobject, caption (db.html.caption), imageobject, inlinemediaobject, mediaobject, textobject, videoobject
+***** Examples *****
+See informalfigure for and example that uses caption.
+[Prev]      [Home]                     [Next]
+calloutlist  [Up]   caption (db.html.caption)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

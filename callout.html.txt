@@ -1,106 +1,80 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+callout
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** callout *****
-calloutÂ â€”Â A â€œcalled outâ€ description of a marked Area.
-***** Synopsis *****
-    * One or more of:
-          o annotation
-          o bridgehead
-          o remark
-          o revhistory
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o AdmonitionÂ elementsÂ [[+]]Â [[-]]
-                * caution
-                * important
-                * note
-                * tip
-                * warning
-          o FormalÂ elementsÂ [[+]]Â [[-]]
-                * equation
-                * example
-                * figure
-                * tableÂ (db.cals.table)
-                * tableÂ (db.html.table)
-          o GraphicÂ elementsÂ [[+]]Â [[-]]
-                * mediaobject
-                * screenshot
-          o InformalÂ elementsÂ [[+]]Â [[-]]
-                * informalequation
-                * informalexample
-                * informalfigure
-                * informaltableÂ (db.cals.informaltable)
-                * informaltableÂ (db.html.informaltable)
-          o ListÂ elementsÂ [[+]]Â [[-]]
-                * bibliolist
-                * calloutlist
-                * glosslist
-                * itemizedlist
-                * orderedlist
-                * procedure
-                * qandaset
-                * segmentedlist
-                * simplelist
-                * variablelist
-          o ParagraphÂ elementsÂ [[+]]Â [[-]]
-                * anchor
-                * formalpara
-                * para
-                * simpara
-          o PublishingÂ elementsÂ [[+]]Â [[-]]
-                * address
-                * blockquote
-                * epigraph
-                * sidebar
-          o SynopsisÂ elementsÂ [[+]]Â [[-]]
-                * classsynopsis
-                * cmdsynopsis
-                * constructorsynopsis
-                * destructorsynopsis
-                * fieldsynopsis
-                * funcsynopsis
-                * methodsynopsis
-          o TechnicalÂ elementsÂ [[+]]Â [[-]]
-                * constraintdef
-                * msgset
-                * procedure
-                * productionset
-                * task
-          o VerbatimÂ elementsÂ [[+]]Â [[-]]
-                * literallayout
-                * programlisting
-                * programlistingco
-                * screen
-                * screenco
-                * synopsis
-***** Attributes *****
-Common_attributes.
+callout â€” A â€œcalled outâ€ description of a marked Area.
+Synopsis
+
+    One or more of:
+        annotation
+        bridgehead
+        remark
+        revhistory
+        Indexing inlines [+]
+        Admonition elements [+]
+        Formal elements [+]
+        Graphic elements [+]
+        Informal elements [+]
+        List elements [+]
+        Paragraph elements [+]
+        Publishing elements [+]
+        Synopsis elements [+]
+        Technical elements [+]
+        Verbatim elements [+]
+
+Attributes
+
+Common attributes.
+
 Additional attributes:
-    * arearefs (IDREFS)
+
+    arearefs (IDREFS)
+
 Required attributes are shown in bold.
-***** Description *****
+Description
+
 A â€œcalloutâ€ is a visual device for associating annotations with an image, program listing, or similar figure. Each location is identified with a mark, and the annotation is identified with the same mark. This is somewhat analogous to the notion of footnotes in print.
+
 An example will help illustrate the concept. In the following example, the synopsis for the mv command is annotated with two marks. Note the location of the old and new filenames.
-mv [1]oldfile [2]newfile
+
+mv 1oldfile 2newfile
+
 Somewhere else in the document, usually close by, a calloutlist provides a description for each of the callouts:
-[1]Â ÂThe old filename. The mv command renames the file currently called oldfile, which must exist when mv is executed.
-[2]Â ÂThe new filename. The mv command changes the name of the old file to newfile. If newfile exists when mv is executed, it will be replaced by the old file.
+
+1  
+	
+
+The old filename. The mv command renames the file currently called oldfile, which must exist when mv is executed.
+
+2  
+	
+
+The new filename. The mv command changes the name of the old file to newfile. If newfile exists when mv is executed, it will be replaced by the old file.
+
 Each callout contains an annotation for an individual callout or a group of callouts. The callout points to the areas that it annotates with ID references. The areas are identified by coordinates in an area or areaset, or by an explicit co element.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block.
+
 A callout usually generates text that points the reader to the appropriate area on the object being augmented. Often, these are numbered bullets or other distinct visual icons. The same icons should be used in both places. In other words, whatever identifies the callouts on the object should generate the same icons on the respective callouts.
+
 In online environments, it may also be possible to establish a linking relationship between the two elements.
-The processing expectations of callouts are likely to deserve special consideration for interchange. See AppendixÂ D,_Interchanging_DocBook_Documents. This is especially true if your interchange partners are producing documentation in a medium that has restricted visual presentation features, such as aural media or Braille.
-**** Attributes ****
-Common_attributes.
-  arearefs
-      Identifies the areas described by this callout.
-**** Parents ****
+
+The processing expectations of callouts are likely to deserve special consideration for interchange. See Appendix D, Interchanging DocBook Documents. This is especially true if your interchange partners are producing documentation in a medium that has restricted visual presentation features, such as aural media or Braille.
+Attributes
+
+Common attributes.
+
+arearefs
+
+    Identifies the areas described by this callout.
+
+Parents
+
 These elements contain callout: calloutlist.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 59_elements.
-The following elements occur in callout: address, anchor, annotation, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glosslist, important, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, remark, revhistory, screen, screenco, screenshot, segmentedlist, sidebar, simpara, simplelist, synopsis, tableÂ (db.cals.table), tableÂ (db.html.table), task, tip, variablelist, warning.
-[Prev]Â     [Home]      Â [Next]
-bridgeheadÂ  [Up]  Â calloutlist
+Children [+]
+This element contains 59 elements.
+Prev 	Home	 Next
+bridgehead 	Up	 calloutlist
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

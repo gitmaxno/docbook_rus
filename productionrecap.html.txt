@@ -12,3 +12,21 @@ A productionrecap is rendered exactly like the production to which it refers. Th
 **** Parents ****
 These elements contain productionrecap: productionset.
 production  [Up]   productionset
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** productionrecap *****
+productionrecap — A cross-reference to an EBNF production.
+***** Synopsis *****
+    * empty
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+A productionrecap is a cross-reference to a production.
+**** Processing expectations ****
+A productionrecap is rendered exactly like the production to which it refers. The purpose of the productionrecap element is to allow a productionset to contain copies of productions defined elsewhere. This frequently makes it easier for readers to understand.
+**** Parents ****
+These elements contain productionrecap: productionset.
+[Prev]     [Home]         [Next]
+production  [Up]   productionset
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -18,3 +18,27 @@ These elements contain msginfo: msgentry.
 **** Children ****
 The following elements occur in msginfo: msgaud, msglevel, msgorig.
 msgexplan  [Up]   msglevel
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** msginfo *****
+msginfo — Information about a message in a message set.
+***** Synopsis *****
+    * Zero or more of:
+          o msgaud
+          o msglevel
+          o msgorig
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The msginfo element provides additional information about a msg in a msgentry.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes suppressed.
+On the whole, the semantics of msgset are not clearly defined.
+**** Parents ****
+These elements contain msginfo: msgentry.
+**** Children ****
+The following elements occur in msginfo: msgaud, msglevel, msgorig.
+[Prev]    [Home]    [Next]
+msgexplan  [Up]   msglevel
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

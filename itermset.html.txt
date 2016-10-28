@@ -17,3 +17,26 @@ These elements contain itermset: biblioentry, bibliomixed, bibliomset, biblioset
 **** Children ****
 The following elements occur in itermset: indexterm (db.indexterm.singular).
 itemizedlist  [Up]   jobtitle
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** itermset *****
+itermset — A set of index terms in the meta-information of a document.
+***** Synopsis *****
+    * One or more of:
+          o indexterm (db.indexterm.singular)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+When indexterms use the zone attribute to point to index ranges, it may be handy to hoist them out of the flow and put them in the document meta-information.
+The itermset element, which occurs in the DocBook containers for meta-information, is one place to put them. An itermset is simply a wrapper around a group of indexterms.
+**** Processing expectations ****
+Suppressed.
+Although more than one itermset may appear in the meta-information for a document, neither a relationship nor a specific facility for constructing a relationship is defined.
+**** Parents ****
+These elements contain itermset: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in itermset: indexterm (db.indexterm.singular).
+[Prev]       [Home]    [Next]
+itemizedlist  [Up]   jobtitle
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

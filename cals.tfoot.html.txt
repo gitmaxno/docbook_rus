@@ -36,3 +36,45 @@ The following elements occur in tfoot: colspec, row (db.row).
 ***** See Also *****
 colspec, entry, entrytbl, informaltable, row, spanspec, table, tbody, tfoot (db.html.tfoot), tgroup, thead
 textobject  [Up]   tfoot (db.html.tfoot)
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** tfoot (db.cals.tfoot) *****
+tfoot — A table footer consisting of one or more rows.
+***** Synopsis *****
+    * Sequence of:
+          o Zero or more of:
+                # colspec
+          o One or more of:
+                # row (db.row)
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * valign (enumeration)
+          o “bottom”
+          o “middle”
+          o “top”
+***** Description *****
+The tfoot wrapper identifies the rows of a table that form the foot of the table, as distinct from the header (thead) and body (tbody) rows.
+Footer rows are always rendered at the end of the table, despite their logical placement near the beginning.
+**** Processing expectations ****
+This element is expected to obey the semantics of the CALS Table Model Document Type Definition [calsdtd]. Footer rows are often presented in an alternate typographic style, such as boldface.
+In paged media, if a table spans across multiple pages, footer rows are printed on the bottom of each page.
+In our experience, relatively few formatters handle footer rows correctly.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  valign
+      Specifies the vertical alignment of text in an entry.
+      Enumerated values:
+      “bottomAligned on the bottom of the entry.
+      “middleAligned in the middle.
+      “top”Aligned at the top of the entry.
+**** Parents ****
+These elements contain tfoot: tgroup.
+**** Children ****
+The following elements occur in tfoot: colspec, row (db.row).
+***** See Also *****
+colspec, entry, entrytbl, informaltable, row, spanspec, table, tbody, tfoot (db.html.tfoot), tgroup, thead
+[Prev]     [Home]                 [Next]
+textobject  [Up]   tfoot (db.html.tfoot)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

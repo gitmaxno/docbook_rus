@@ -1,179 +1,153 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+article
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** article *****
-articleÂ â€”Â An article.
-***** Synopsis *****
-    * Sequence of:
-          o One of:
-                # Sequence of:
-                      # Interleave of:
-                            # title
-                            # titleabbrev?
-                            # subtitle?
-                      # info?Â (db.titleforbidden.info)
-                # infoÂ (db.titlereq.info)
-          o Zero or more of:
-                # acknowledgements
-                # appendix
-                # bibliography
-                # colophon
-                # glossary
-                # index
-                # toc
-          o One of:
-                # Sequence of:
-                      # One or more of:
-                            # annotation
-                            # bridgehead
-                            # remark
-                            # revhistory
-                            # IndexingÂ inlinesÂ [[+]]Â [[-]]
-                                  * indextermÂ (db.indexterm.endofrange)
-                                  * indextermÂ (db.indexterm.singular)
-                                  * indextermÂ (db.indexterm.startofrange)
-                            # AdmonitionÂ elementsÂ [[+]]Â [[-]]
-                                  * caution
-                                  * important
-                                  * note
-                                  * tip
-                                  * warning
-                            # FormalÂ elementsÂ [[+]]Â [[-]]
-                                  * equation
-                                  * example
-                                  * figure
-                                  * tableÂ (db.cals.table)
-                                  * tableÂ (db.html.table)
-                            # GraphicÂ elementsÂ [[+]]Â [[-]]
-                                  * mediaobject
-                                  * screenshot
-                            # InformalÂ elementsÂ [[+]]Â [[-]]
-                                  * informalequation
-                                  * informalexample
-                                  * informalfigure
-                                  * informaltableÂ (db.cals.informaltable)
-                                  * informaltableÂ (db.html.informaltable)
-                            # ListÂ elementsÂ [[+]]Â [[-]]
-                                  * bibliolist
-                                  * calloutlist
-                                  * glosslist
-                                  * itemizedlist
-                                  * orderedlist
-                                  * procedure
-                                  * qandaset
-                                  * segmentedlist
-                                  * simplelist
-                                  * variablelist
-                            # ParagraphÂ elementsÂ [[+]]Â [[-]]
-                                  * anchor
-                                  * formalpara
-                                  * para
-                                  * simpara
-                            # PublishingÂ elementsÂ [[+]]Â [[-]]
-                                  * address
-                                  * blockquote
-                                  * epigraph
-                                  * sidebar
-                            # SynopsisÂ elementsÂ [[+]]Â [[-]]
-                                  * classsynopsis
-                                  * cmdsynopsis
-                                  * constructorsynopsis
-                                  * destructorsynopsis
-                                  * fieldsynopsis
-                                  * funcsynopsis
-                                  * methodsynopsis
-                            # TechnicalÂ elementsÂ [[+]]Â [[-]]
-                                  * constraintdef
-                                  * msgset
-                                  * procedure
-                                  * productionset
-                                  * task
-                            # VerbatimÂ elementsÂ [[+]]Â [[-]]
-                                  * literallayout
-                                  * programlisting
-                                  * programlistingco
-                                  * screen
-                                  * screenco
-                                  * synopsis
-                      # Optionally one of:
-                            # Sequence of:
-                                  # One or more of:
-                                        # section
-                                  # Zero or more of:
-                                        # simplesect
-                            # One or more of:
-                                  # simplesect
-                            # Sequence of:
-                                  # One or more of:
-                                        # sect1
-                                  # Zero or more of:
-                                        # simplesect
-                            # One or more of:
-                                  # refentry
-                # Sequence of:
-                      # One or more of:
-                            # section
-                      # Zero or more of:
-                            # simplesect
-                # One or more of:
-                      # simplesect
-                # Sequence of:
-                      # One or more of:
-                            # sect1
-                      # Zero or more of:
-                            # simplesect
-                # One or more of:
-                      # refentry
-          o Zero or more of:
-                # acknowledgements
-                # appendix
-                # bibliography
-                # colophon
-                # glossary
-                # index
-                # toc
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+article â€” An article.
+Synopsis
+
+    Sequence of:
+        One of:
+            Sequence of:
+                Interleave of:
+                    title
+                    titleabbrev?
+                    subtitle?
+                info? (db.titleforbidden.info)
+            info (db.titlereq.info)
+        Zero or more of:
+            acknowledgements
+            appendix
+            bibliography
+            colophon
+            glossary
+            index
+            toc
+        One of:
+            Sequence of:
+                One or more of:
+                    annotation
+                    bridgehead
+                    remark
+                    revhistory
+                    Indexing inlines [+]
+                    Admonition elements [+]
+                    Formal elements [+]
+                    Graphic elements [+]
+                    Informal elements [+]
+                    List elements [+]
+                    Paragraph elements [+]
+                    Publishing elements [+]
+                    Synopsis elements [+]
+                    Technical elements [+]
+                    Verbatim elements [+]
+                Optionally one of:
+                    Sequence of:
+                        One or more of:
+                            section
+                        Zero or more of:
+                            simplesect
+                    One or more of:
+                        simplesect
+                    Sequence of:
+                        One or more of:
+                            sect1
+                        Zero or more of:
+                            simplesect
+                    One or more of:
+                        refentry
+            Sequence of:
+                One or more of:
+                    section
+                Zero or more of:
+                    simplesect
+            One or more of:
+                simplesect
+            Sequence of:
+                One or more of:
+                    sect1
+                Zero or more of:
+                    simplesect
+            One or more of:
+                refentry
+        Zero or more of:
+            acknowledgements
+            appendix
+            bibliography
+            colophon
+            glossary
+            index
+            toc
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o â€œfaqâ€
-          o â€œjournalarticleâ€
-          o â€œproductsheetâ€
-          o â€œspecificationâ€
-          o â€œtechreportâ€
-          o â€œwhitepaperâ€
-    * label
-    * status
-***** Additional Constraints *****
-    * The root element must have a version attribute.
-***** Description *****
+
+    class (enumeration)
+        â€œfaqâ€
+        â€œjournalarticleâ€
+        â€œproductsheetâ€
+        â€œspecificationâ€
+        â€œtechreportâ€
+        â€œwhitepaperâ€
+    label
+    status
+
+Additional Constraints
+
+    The root element must have a version attribute.
+
+Description
+
 The article element is a general-purpose container for articles. The content model is both quite complex and rather loose in order to accommodate the wide range of possible article structures. Although changes to the article element have been discussed on several occasions, no better model has been presented.
+
 An article may include a table of contents and multiple lists of tables, figures, and so on before the main text of the article. It may also include a number of common back matter components at the end.
-**** Processing expectations ****
+Processing expectations
+
 Formatted as a displayed block. Frequently causes a forced page break in print media. May be numbered separately and presented in the table of contents.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the nature of the article
-      Enumerated values:
-      â€œfaqâ€        A collection of frequently asked questions.
-      â€œjournalarticleAn article in a journal or other periodical.
-      â€œproductsheetâ€A description of a product.
-      â€œspecificationâA specification.
-      â€œtechreportâ€ A technical report.
-      â€œwhitepaperâ€ A white paper.
-  label
-      Specifies an identifying string for presentation purposes
-  status
-      Identifies the editorial or publication status of the element on which it occurs
-**** Parents ****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the nature of the article
+    Enumerated values:
+    â€œfaqâ€	
+
+    A collection of frequently asked questions.
+    â€œjournalarticleâ€	
+
+    An article in a journal or other periodical.
+    â€œproductsheetâ€	
+
+    A description of a product.
+    â€œspecificationâ€	
+
+    A specification.
+    â€œtechreportâ€	
+
+    A technical report.
+    â€œwhitepaperâ€	
+
+    A white paper.
+label
+
+    Specifies an identifying string for presentation purposes
+status
+
+    Identifies the editorial or publication status of the element on which it occurs
+
+Parents
+
 These elements contain article: book, part.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 75_elements.
-The following elements occur in article: acknowledgements, address, anchor, annotation, appendix, bibliography, bibliolist, blockquote, bridgehead, calloutlist, caution, classsynopsis, cmdsynopsis, colophon, constraintdef, constructorsynopsis, destructorsynopsis, epigraph, equation, example, fieldsynopsis, figure, formalpara, funcsynopsis, glossary, glosslist, important, index, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), infoÂ (db.titleforbidden.info), infoÂ (db.titlereq.info), informalequation, informalexample, informalfigure, informaltableÂ (db.cals.informaltable), informaltableÂ (db.html.informaltable), itemizedlist, literallayout, mediaobject, methodsynopsis, msgset, note, orderedlist, para, procedure, productionset, programlisting, programlistingco, qandaset, refentry, remark, revhistory, screen, screenco, screenshot, sect1, section, segmentedlist, sidebar, simpara, simplelist, simplesect, subtitle, synopsis, tableÂ 
-(db.cals.table), tableÂ (db.html.table), task, tip, title, titleabbrev, toc, variablelist, warning.
-***** See Also *****
+Children [+]
+This element contains 75 elements.
+See Also
+
 appendix, book, chapter, colophon, dedication, part, partintro, preface, set
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <info>
       <title>A World Wide Web Interface to CTAN</title>
@@ -200,9 +174,13 @@ appendix, book, chapter, colophon, dedication, part, partintro, preface, set
  24      </revision>
       </revhistory>
  26 </info>
-
+    
  28 <para>The body of the article â€¦</para>
-
+    
  30 </article>
-[Prev]Â [Home]      Â [Next]
-argÂ     [Up]  Â artpagenums
+
+Prev 	Home	 Next
+arg 	Up	 artpagenums
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

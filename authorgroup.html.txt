@@ -68,3 +68,77 @@ Cooperative Engineering</orgname>
 
  36 </article>
 author  [Up]   authorinitials
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** authorgroup *****
+authorgroup — Wrapper for author information when a document has multiple authors or collabarators.
+***** Synopsis *****
+    * One or more of:
+          o author
+          o editor
+          o othercredit
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The authorgroup element is a wrapper around multiple authors or other collaborators.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context. Sometimes given very special treatment, especially on title pages or other displayed areas. Sometimes suppressed.
+**** Parents ****
+These elements contain authorgroup: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in authorgroup: author, editor, othercredit.
+***** See Also *****
+author, collab, contrib, editor, othercredit, personblurb, personname
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example authorgroup</title>
+  4
+      <authorgroup>
+  6     <author>
+          <personname>
+  8
+<honorific>Dr.</honorific>
+
+<firstname>Lois</firstname>
+ 10
+<surname>Common-Demoninator</surname>
+          </personname>
+ 12       <affiliation>
+
+<shortaffil>Director, M. Behn School of Coop. Eng.</shortaffil>
+ 14
+<jobtitle>Director of Cooperative Efforts</jobtitle>
+
+<orgname>The Marguerite Behn International School of
+ 16
+Cooperative Engineering</orgname>
+          </affiliation>
+ 18     </author>
+
+ 20     <editor>
+          <personname>
+ 22
+<firstname>Peter</firstname>
+
+<surname>Parker</surname>
+ 24
+<lineage>Sr.</lineage>
+
+<othername>Spiderman</othername>
+ 26       </personname>
+          <personblurb>
+ 28
+<para>Peter's a super hero in his spare time.</para>
+          </personblurb>
+ 30     </editor>
+      </authorgroup>
+ 32 </info>
+
+ 34 <para>…</para>
+
+ 36 </article>
+[Prev] [Home]          [Next]
+author  [Up]   authorinitials
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

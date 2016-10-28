@@ -61,3 +61,70 @@ computeroutput, constant, literal, markup, optional, parameter, prompt, replacea
  10 </article>
 The -a option on the UNIX ls command or the /r option on the DOS attrib command, for example.
 oointerface  [Up]   optional
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** option *****
+option — An option for a software command.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o phrase (db._phrase)
+          o replaceable
+          o Graphic inlines [[+]] [[-]]
+                * inlinemediaobject
+          o Indexing inlines [[+]] [[-]]
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+          o Linking inlines [[+]] [[-]]
+                * anchor
+                * biblioref
+                * link
+                * olink
+                * xref
+          o Ubiquitous inlines [[+]] [[-]]
+                * alt
+                * anchor
+                * annotation
+                * biblioref
+                * indexterm (db.indexterm.endofrange)
+                * indexterm (db.indexterm.singular)
+                * indexterm (db.indexterm.startofrange)
+                * inlinemediaobject
+                * link
+                * olink
+                * remark
+                * subscript
+                * superscript
+                * xref
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+An option identifies an argument to a software command or instruction. Options may or may not be required. The optional element can be used to explicitly identify options that are not required.
+**** Processing expectations ****
+Formatted inline.
+DocBook does not specify whether or not a symbol (such as - or /) is generated before the content of option, or what that symbol might be. Generating the text may or may not be desirable, but in either case, it is an interchange issue. See Appendix D,_Interchanging_DocBook_Documents.
+*** Parents [[+]][[+]] ***
+This element occurs in 53_elements.
+These elements contain option: arg, bridgehead, caption (db.html.caption), citation, citetitle, classsynopsisinfo, computeroutput, emphasis (db.emphasis), entry, firstterm, funcsynopsisinfo, glosssee, glossseealso, glossterm, group, link, literallayout, member, olink, orgdiv, para, phrase (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry, userinput.
+*** Children [[+]][[+]] ***
+This element contains 16_elements.
+The following elements occur in option: text, alt, anchor, annotation, biblioref, indexterm (db.indexterm.endofrange), indexterm (db.indexterm.singular), indexterm (db.indexterm.startofrange), inlinemediaobject, link, olink, phrase (db._phrase), remark, replaceable, subscript, superscript, xref.
+***** See Also *****
+computeroutput, constant, literal, markup, optional, parameter, prompt, replaceable, tag, userinput, varname
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <title>Example option</title>
+
+  4 <para>The <option>-a</option> option on the <acronym>UNIX</acronym>
+    <command>ls</command> command or the <option>/r</option> option on the
+  6 <acronym>DOS</acronym> <command>attrib</command>
+    command, for example.
+  8 </para>
+
+ 10 </article>
+The -a option on the UNIX ls command or the /r option on the DOS attrib command, for example.
+[Prev]      [Home]    [Next]
+oointerface  [Up]   optional
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

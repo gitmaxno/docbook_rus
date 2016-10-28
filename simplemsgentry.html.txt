@@ -32,3 +32,41 @@ These elements contain simplemsgentry: msgset.
 **** Children ****
 The following elements occur in simplemsgentry: msgexplan, msgtext.
 simplelist  [Up]   simplesect
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** simplemsgentry *****
+simplemsgentry — A wrapper for a simpler entry in a message set.
+***** Synopsis *****
+    * Sequence of:
+          o msgtext
+          o One or more of:
+                # msgexplan
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * msgaud
+    * msglevel
+    * msgorig
+***** Description *****
+A simplemsgentry is a simpler alternative to msgentry. In a msgset, each simplemsgentry contains the text of a message and its explanation.
+**** Processing expectations ****
+Formatted as a displayed block.
+**** Backward incompatibilities ****
+In DocBook V5.0, the audience, level, and origin attributes are accidentally misspelled. The attribute “msgaud” should be spelled “audience”; the attribute “msglevel” should be spelled “level”; and the attribute “msgorig” should be spelled “origin”. Those are the spellings in DocBook V4.5.
+Unfortunately, the attribute name “audience” has subsequently been added to all elements as an effectivity attribute. Because there’s no way to resolve that conflict now, the DocBook Technical Committee has decided to accept the error and leave the misspelled attribute names in place going forward.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  msgaud
+      The audience to which the message relevant
+  msglevel
+      The level of importance or severity of a message
+  msgorig
+      The origin of the message
+**** Parents ****
+These elements contain simplemsgentry: msgset.
+**** Children ****
+The following elements occur in simplemsgentry: msgexplan, msgtext.
+[Prev]     [Home]      [Next]
+simplelist  [Up]   simplesect
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -69,3 +69,78 @@ The following elements occur in info: *:*, abstract, address, annotation, artpag
 ***** See Also *****
 info (db.titlereq.info)
 indexterm (db.indexterm.startofrange)  [Up]   info (db.titleforbidden.info)
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** [[5.0]]info (db.info) *****
+info — A wrapper for information about a component or other block.
+***** Synopsis *****
+    * Interleave of:
+          o Interleave of:
+                # title?
+                # titleabbrev?
+                # subtitle?
+          o Zero or more of:
+                # “Info” elements [[+]] [[-]]
+                      * *:*
+                      * abstract
+                      * address
+                      * annotation
+                      * artpagenums
+                      * author
+                      * authorgroup
+                      * authorinitials
+                      * bibliocoverage
+                      * biblioid
+                      * bibliomisc
+                      * bibliomset
+                      * bibliorelation
+                      * biblioset
+                      * bibliosource
+                      * collab
+                      * confgroup
+                      * contractnum
+                      * contractsponsor
+                      * copyright
+                      * cover
+                      * date
+                      * edition
+                      * editor
+                      * extendedlink
+                      * issuenum
+                      * itermset
+                      * keywordset
+                      * legalnotice
+                      * mediaobject
+                      * org
+                      * orgname
+                      * othercredit
+                      * pagenums
+                      * printhistory
+                      * productname
+                      * productnumber
+                      * pubdate
+                      * publisher
+                      * publishername
+                      * releaseinfo
+                      * revhistory
+                      * seriesvolnums
+                      * subjectset
+                      * volumenum
+***** Attributes *****
+Common_attributes.
+***** Description *****
+The info element contains meta-information about the element that contains it.
+**** Processing expectations ****
+Suppressed. Many of the elements in this wrapper may be used in presentation, but they are not generally printed as part of the formatting of the wrapper. The wrapper merely serves to identify where they occur.
+*** Parents [[+]][[+]] ***
+This element occurs in 13_elements.
+These elements contain info: acknowledgements, bibliography, book, colophon, dedication, glossary, index, partintro, refsynopsisdiv, screenshot, setindex, tocdiv.
+*** Children [[+]][[+]] ***
+This element contains 48_elements.
+The following elements occur in info: *:*, abstract, address, annotation, artpagenums, author, authorgroup, authorinitials, bibliocoverage, biblioid, bibliomisc, bibliomset, bibliorelation, biblioset, bibliosource, collab, confgroup, contractnum, contractsponsor, copyright, cover, date, edition, editor, extendedlink, issuenum, itermset, keywordset, legalnotice, mediaobject, org, orgname, othercredit, pagenums, printhistory, productname, productnumber, pubdate, publisher, publishername, releaseinfo, revhistory, seriesvolnums, subjectset, subtitle, title, titleabbrev, volumenum.
+***** See Also *****
+info (db.titlereq.info)
+[Prev]                                [Home]                         [Next]
+indexterm (db.indexterm.startofrange)  [Up]   info (db.titleforbidden.info)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

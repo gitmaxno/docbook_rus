@@ -36,3 +36,45 @@ These elements contain textdata: textobject.
 **** Children ****
 The following elements occur in textdata: info (db.titleforbidden.info).
 tertiaryie  [Up]   textobject
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** textdata *****
+textdata — Pointer to external text data.
+***** Synopsis *****
+    * info? (db.titleforbidden.info)
+***** Attributes *****
+Common_attributes.
+Additional attributes:
+    * encoding
+    * Each of:
+          o format
+          o Exactly one of:
+                # fileref (anyURI)
+                # entityref (ENTITY)
+Required attributes are shown in bold.
+***** Description *****
+This element points to an external entity containing text to be inserted.
+**** Note ****
+Any markup in the text identified with textdata will be escaped. In other words, this element is for inserting things like program listings, not parts of an XML document. To break a document into separate physical files, use XInclude or external parsed entities.
+**** Processing expectations ****
+May be formatted inline or as a displayed block, depending on context.
+There are two ways to provide content for textdata: entityref or fileref. It is best to use only one of these methods; however, if multiple sources are provided, entityref will be used in favor of fileref.
+If the encoding is such that the processor will not be able to determine the encoding of the text, the encoding can be specified in the encoding attribute. For encodings registered_(as_charsets) with the Internet Assigned Numbers Authority, recommended best practice suggests that they be referred to using their registered names.
+**** Attributes ****
+Common_attributes.
+  encoding
+      Identifies the encoding of the text in the external file
+  entityref
+      Identifies the location of the data by external identifier (entity name)
+  fileref
+      Indentifies the location of the data by URI
+  format
+      Specifies the format of the data
+**** Parents ****
+These elements contain textdata: textobject.
+**** Children ****
+The following elements occur in textdata: info (db.titleforbidden.info).
+[Prev]     [Home]      [Next]
+tertiaryie  [Up]   textobject
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

@@ -1,79 +1,82 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+trademark
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** trademark *****
-trademarkÂ â€”Â A trademark.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+trademark â€” A trademark.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * class (enumeration)
-          o â€œcopyrightâ€
-          o â€œregisteredâ€
-          o â€œserviceâ€
-          o â€œtradeâ€
-***** Description *****
+
+    class (enumeration)
+        â€œcopyrightâ€
+        â€œregisteredâ€
+        â€œserviceâ€
+        â€œtradeâ€
+
+Description
+
 A trademark identifies a legal trademark.
+
 One of the values of the class attribute on trademark is Copyright. DocBook also has a copyright element, but it is confined to meta-information. A copyright in running text is best represented as <trademark class=copyright>.
-**** Processing expectations ****
+Processing expectations
+
 Formatted inline.
+
 In addition to trademark, two of the values of the class attribute on productname make assertions about trademarks; presumably the same markup is intended for both trademark and productname when they make assertions about trademarks.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the class of trade mark
-      Enumerated values:
-      â€œcopyrightâA copyright
-      â€œregisteredA registered copyright
-      â€œserviceâ€A service
-      â€œtradeâ€  A trademark
-*** ParentsÂ [[+]][[+]] ***
-This element occurs in 52_elements.
-These elements contain trademark: abbrev, acronym, bridgehead, captionÂ (db.html.caption), citation, citetitle, classsynopsisinfo, emphasisÂ (db.emphasis), entry, firstterm, foreignphrase, funcsynopsisinfo, glosssee, glossseealso, glossterm, link, literallayout, member, olink, orgdiv, para, phraseÂ (db.phrase), primary, primaryie, programlisting, quote, refdescriptor, refentrytitle, refname, refpurpose, screen, secondary, secondaryie, see, seealso, seealsoie, seeie, seg, segtitle, simpara, subtitle, synopsis, td, term, termdef, tertiary, tertiaryie, th, title, titleabbrev, tocentry.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in trademark: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-***** See Also *****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the class of trade mark
+    Enumerated values:
+    â€œcopyrightâ€	
+
+    A copyright
+    â€œregisteredâ€	
+
+    A registered copyright
+    â€œserviceâ€	
+
+    A service
+    â€œtradeâ€	
+
+    A trademark
+
+Parents [+]
+This element occurs in 52 elements.
+Children [+]
+This element contains 16 elements.
+See Also
+
 copyright, legalnotice, productname
-***** Examples *****
+Examples
+
   1 <article xmlns='http://docbook.org/ns/docbook'>
   2 <title>Example trademark</title>
-
+    
   4 <para><trademark class='registered'>Nutshell Handbook</trademark> is a
     registered trademark of O'Reilly Media, Inc.
   6 </para>
-
+    
   8 </article>
+
 Nutshell HandbookÂ® is a registered trademark of O'Reilly Media, Inc.
-[Prev]Â [Home] Â [Next]
-trÂ      [Up]    Â type
+Prev 	Home	 Next
+tr 	Up	 type
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

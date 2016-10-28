@@ -16,3 +16,25 @@ These elements contain rhs: production.
 **** Children ****
 The following elements occur in rhs: text, lineannotation, nonterminal, sbr.
 revremark  [Up]   row (db.entrytbl.row)
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** rhs *****
+rhs — The right-hand side of an EBNF production.
+***** Synopsis *****
+    * Zero or more of:
+          o text
+          o lineannotation
+          o nonterminal
+          o sbr
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The righthand side (rhs) of a production provides a definition for the nonterminal on the lefthand side (lhs) of the production.
+**** Parents ****
+These elements contain rhs: production.
+**** Children ****
+The following elements occur in rhs: text, lineannotation, nonterminal, sbr.
+[Prev]    [Home]                 [Next]
+revremark  [Up]   row (db.entrytbl.row)
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

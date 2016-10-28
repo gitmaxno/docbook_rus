@@ -35,3 +35,44 @@ date, edition, pubdate, releaseinfo, revhistory
  12
     </article>
 primaryie  [Up]   procedure
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** printhistory *****
+printhistory — The printing history of a document.
+***** Synopsis *****
+    * One or more of:
+          o Paragraph elements [[+]] [[-]]
+                * anchor
+                * formalpara
+                * para
+                * simpara
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+***** Description *****
+The printhistory of a document identifies when various editions and revisions were printed.
+**** Processing expectations ****
+Formatted as a displayed block. Sometimes suppressed.
+**** Parents ****
+These elements contain printhistory: biblioentry, bibliomixed, bibliomset, biblioset, info (db.info), info (db.titleforbidden.info), info (db.titleonly.info), info (db.titleonlyreq.info), info (db.titlereq.info).
+**** Children ****
+The following elements occur in printhistory: anchor, formalpara, para, simpara.
+***** See Also *****
+date, edition, pubdate, releaseinfo, revhistory
+***** Examples *****
+  1 <article xmlns='http://docbook.org/ns/docbook'>
+  2 <info>
+      <title>Example printhistory</title>
+  4
+      <printhistory>
+  6     <para>September, 1996. First Printing.
+        </para>
+  8   </printhistory>
+    </info>
+ 10
+    <para>…</para>
+ 12
+    </article>
+[Prev]    [Home]     [Next]
+primaryie  [Up]   procedure
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.

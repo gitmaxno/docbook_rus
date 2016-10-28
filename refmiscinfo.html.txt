@@ -1,77 +1,83 @@
+ Home Prev Up Next	DocBook 5: The Definitive Guide (Version 1.0.4 for DocBook V5.0)
+refmiscinfo
 
-Â [Home]Â [Prev]Â [Up]Â [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
-***** refmiscinfo *****
-refmiscinfoÂ â€”Â Meta-information for a reference entry other than the title and volume number.
-***** Synopsis *****
-    * Zero or more of:
-          o text
-          o phraseÂ (db._phrase)
-          o replaceable
-          o GraphicÂ inlinesÂ [[+]]Â [[-]]
-                * inlinemediaobject
-          o IndexingÂ inlinesÂ [[+]]Â [[-]]
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-          o LinkingÂ inlinesÂ [[+]]Â [[-]]
-                * anchor
-                * biblioref
-                * link
-                * olink
-                * xref
-          o UbiquitousÂ inlinesÂ [[+]]Â [[-]]
-                * alt
-                * anchor
-                * annotation
-                * biblioref
-                * indextermÂ (db.indexterm.endofrange)
-                * indextermÂ (db.indexterm.singular)
-                * indextermÂ (db.indexterm.startofrange)
-                * inlinemediaobject
-                * link
-                * olink
-                * remark
-                * subscript
-                * superscript
-                * xref
-***** Attributes *****
-Common_attributes and common_linking_attributes.
+refmiscinfo â€” Meta-information for a reference entry other than the title and volume number.
+Synopsis
+
+    Zero or more of:
+        text
+        phrase (db._phrase)
+        replaceable
+        Graphic inlines [+]
+        Indexing inlines [+]
+        Linking inlines [+]
+        Ubiquitous inlines [+]
+
+Attributes
+
+Common attributes and common linking attributes.
+
 Additional attributes:
-    * At most one of:
-          o class (enumeration)
-                # â€œsourceâ€
-                # â€œversionâ€
-                # â€œmanualâ€
-                # â€œsectdescâ€
-                # â€œsoftwareâ€
-          o All or none of:
-                # class (enumeration)
-                      # â€œotherâ€
-                # otherclass
-***** Description *****
+
+    At most one of:
+        class (enumeration)
+            â€œsourceâ€
+            â€œversionâ€
+            â€œmanualâ€
+            â€œsectdescâ€
+            â€œsoftwareâ€
+        All or none of:
+            class (enumeration)
+                â€œotherâ€
+            otherclass
+
+Description
+
 The refmiscinfo element is an escape hatch for additional meta-information about a reference page. It may hold copyright information, release or revision information, descriptive text for use in a print header or footer, or any other information not explicitly provided for in refmeta.
-**** Processing expectations ****
+Processing expectations
+
 May be formatted inline or as a displayed block, depending on context.
-**** Attributes ****
-Common_attributes and common_linking_attributes.
-  class
-      Identifies the kind of miscellaneous information
-      Enumerated values:
-      â€œsourceâ€The name of the software product or component to which this topic applies
-      â€œversionâThe version of the software product or component to which this topic applies
-      â€œmanualâ€The section title of the reference page (e.g., User Commands)
-      â€œsectdescThe section title of the reference page (believed synonymous with "manual" but in wide use)
-      â€œsoftwareThe name of the software product or component to which this topic applies (e.g., SunOS x.y; believed synonymous with "source" but in wide use)
-  class
-      Identifies the kind of miscellaneious information
-      Enumerated values:
-      â€œotherIndicates that the information is some 'other' kind.
-  otherclass
-      Identifies the nature of non-standard miscellaneous information
-**** Parents ****
+Attributes
+
+Common attributes and common linking attributes.
+
+class
+
+    Identifies the kind of miscellaneous information
+    Enumerated values:
+    â€œsourceâ€	
+
+    The name of the software product or component to which this topic applies
+    â€œversionâ€	
+
+    The version of the software product or component to which this topic applies
+    â€œmanualâ€	
+
+    The section title of the reference page (e.g., User Commands)
+    â€œsectdescâ€	
+
+    The section title of the reference page (believed synonymous with "manual" but in wide use)
+    â€œsoftwareâ€	
+
+    The name of the software product or component to which this topic applies (e.g., SunOS x.y; believed synonymous with "source" but in wide use)
+class
+
+    Identifies the kind of miscellaneious information
+    Enumerated values:
+    â€œotherâ€	
+
+    Indicates that the information is some 'other' kind.
+otherclass
+
+    Identifies the nature of non-standard miscellaneous information
+
+Parents
+
 These elements contain refmiscinfo: refmeta.
-*** ChildrenÂ [[+]][[+]] ***
-This element contains 16_elements.
-The following elements occur in refmiscinfo: text, alt, anchor, annotation, biblioref, indextermÂ (db.indexterm.endofrange), indextermÂ (db.indexterm.singular), indextermÂ (db.indexterm.startofrange), inlinemediaobject, link, olink, phraseÂ (db._phrase), remark, replaceable, subscript, superscript, xref.
-[Prev]Â  [Home]  Â [Next]
-refmetaÂ  [Up]  Â refname
+Children [+]
+This element contains 16 elements.
+Prev 	Home	 Next
+refmeta 	Up	 refname
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+
+Copyright Â© 2010, 2011 Norman Walsh.

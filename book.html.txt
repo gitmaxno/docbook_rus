@@ -78,3 +78,87 @@ appendix, article, chapter, colophon, dedication, part, partintro, preface, set
     </appendix>
  26 </book>
 blockquote  [Up]   bridgehead
+
+ [Home] [Prev] [Up] [NeDocBook 5: The Definitive Guide (Version 1.0.4_for_DocBook_V5.0)
+***** book *****
+book — A book.
+***** Synopsis *****
+    * Sequence of:
+          o One of:
+                # Sequence of:
+                      # Interleave of:
+                            # title?
+                            # titleabbrev?
+                            # subtitle?
+                      # info? (db.titleforbidden.info)
+                # info? (db.info)
+          o Zero or more of:
+                # acknowledgements
+                # appendix
+                # article
+                # bibliography
+                # chapter
+                # colophon
+                # dedication
+                # glossary
+                # index
+                # part
+                # preface
+                # reference
+                # toc
+***** Attributes *****
+Common_attributes and common_linking_attributes.
+Additional attributes:
+    * label
+    * status
+***** Additional Constraints *****
+    * The root element must have a version attribute.
+***** Description *****
+A complete book. This is probably the most common document starting point in DocBook documents. The content model of book was made dramatically less restrictive in DocBook V3.1.
+**** Processing expectations ****
+Formatted as a displayed block. Generally causes a forced page break, restarts page numbering, and may generate additional front and back matter (e.g., tables of contents and indexes) automatically. In a set, book almost always begins on the next available recto page.
+The input order of major components is taken to be the desired output order.
+**** Attributes ****
+Common_attributes and common_linking_attributes.
+  label
+      Specifies an identifying string for presentation purposes
+  status
+      Identifies the editorial or publication status of the element on which it occurs
+**** Parents ****
+These elements contain book: set.
+*** Children [[+]][[+]] ***
+This element contains 18_elements.
+The following elements occur in book: acknowledgements, appendix, article, bibliography, chapter, colophon, dedication, glossary, index, info (db.info), info (db.titleforbidden.info), part, preface, reference, subtitle, title, titleabbrev, toc.
+***** See Also *****
+appendix, article, chapter, colophon, dedication, part, partintro, preface, set
+***** Examples *****
+  1 <book xmlns='http://docbook.org/ns/docbook'>
+  2 <title>An Example Book</title>
+    <titleabbrev>Example</titleabbrev>
+  4 <info>
+      <legalnotice><para>No notice is required.</para></legalnotice>
+  6   <author><personname>
+        <firstname>Norman</firstname><surname>Walsh</surname>
+  8   </personname></author>
+    </info>
+ 10 <dedication>
+    <para>This book is dedicated to you.
+ 12 </para>
+    </dedication>
+ 14 <preface><title>Foreword</title>
+    <para>Some content is always required.
+ 16 </para>
+    </preface>
+ 18 <chapter><title>A Chapter</title>
+    <para>Content is required in chapters too.
+ 20 </para>
+    </chapter>
+ 22 <appendix><title>Optional Appendix</title>
+    <para>Appendixes are optional.
+ 24 </para>
+    </appendix>
+ 26 </book>
+[Prev]     [Home]      [Next]
+blockquote  [Up]   bridgehead
+Last revised by Norman Walsh on 6 Jun 2011 (git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)
+Copyright © 2010, 2011 Norman Walsh.
